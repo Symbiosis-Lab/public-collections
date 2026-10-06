@@ -1,0 +1,15 @@
+.DS_Store
+
+# moss build/runtime state — regenerated locally, never tracked
+.moss/build/
+.moss/identity/
+.moss/data/*
+!.moss/data/redirects.json
+.moss/cache/
+
+# git worktrees (project-local)
+.worktrees/
+
+# moss writes an agent skill file into the vault on every build
+.claude/
+.cursor/

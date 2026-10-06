@@ -1,0 +1,84 @@
+["Chautauqua"]
+lat = 42.207955
+lng = -79.469229
+precision = "city"
+parent = "New York"
+
+["Perrysburg"]
+lat = 41.5503
+lng = -83.63
+precision = "city"
+parent = "Ohio"
+
+["Petoskey"]
+lat = 45.3733
+lng = -84.9553
+precision = "city"
+parent = "Michigan"
+
+["Hudson"]
+lat = 41.855
+lng = -84.3539
+precision = "city"
+parent = "Michigan"
+
+["Kalamazoo"]
+lat = 42.29
+lng = -85.59
+precision = "city"
+parent = "Michigan"
+
+["Saugatuck"]
+lat = 42.655
+lng = -86.2019
+precision = "city"
+parent = "Michigan"
+
+["Traverse City"]
+lat = 44.7681
+lng = -85.6222
+precision = "city"
+parent = "Michigan"
+
+["Lafayette"]
+lat = 40.4172
+lng = -86.8786
+precision = "city"
+parent = "Indiana"
+
+["Crete"]
+lat = 41.4558
+lng = -87.6189
+precision = "city"
+parent = "Illinois"
+
+["Abingdon"]
+lat = 40.8036
+lng = -90.4008
+precision = "city"
+parent = "Illinois"
+
+["Minneapolis"]
+lat = 44.9819
+lng = -93.2692
+precision = "city"
+parent = "Minnesota"
+
+["Bloomfield"]
+lat = 40.7511
+lng = -92.4169
+precision = "city"
+parent = "Iowa"
+
+["Mobile"]
+lat = 30.7277
+lng = -88.0527
+precision = "city"
+parent = "Alabama"
+
+["De Soto"]
+lat = 38.1406
+lng = -90.5575
+precision = "city"
+parent = "Missouri"
+
