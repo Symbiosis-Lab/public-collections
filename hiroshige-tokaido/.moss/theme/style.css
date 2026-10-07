@@ -1,0 +1,4 @@
+/* The prints are landscape sheets (about 3:2). moss crops a narrow card's cover to 3:4 by default, which cuts away half of each print; show the cards at the sheets' own shape. */
+:root {
+  --moss-card-cover-ratio: 3 / 2;
+}

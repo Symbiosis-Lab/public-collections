@@ -1,0 +1,8 @@
+.moss/build.nosync/
+.moss/history/
+.moss/identity/
+.moss/data/
+.moss/cache/
+.DS_Store
+.claude/
+.cursor/
