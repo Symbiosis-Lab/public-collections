@@ -1,31 +1,51 @@
 ---
 title: "Kawasaki: The Rokugo Ferry"
 uid: "58fd70a6"
-description: "Travelers and horses wait to board flat-bottomed ferries crossing the Tama River (Rokugo) at Kawasaki, with Mount Fuji faint in the distance."
+description: "Station 2 · Kawasaki Ward, Kawasaki, Kanagawa · 4.5 ri"
 author: Utagawa Hiroshige
 weight: 3
 cover: ../assets/aic-25555.jpg
-location: ["Kawasaki"]
+tags: ["Tokyo & Kanagawa"]
+station: "Kawasaki"
+ja: 川崎
+ri: 4.5
+lat: 35.5356
+lng: 139.7078
+place: "Kawasaki Ward, Kawasaki, Kanagawa"
 ---
-:::hero {.plate image=../assets/aic-25555.jpg caption="Kawasaki: The Rokugo Ferry. Utagawa Hiroshige, 1833-34. The Art Institute of Chicago. CC0."}
+::: {.trail}
+[[places|The Road]] / [[Tokyo & Kanagawa]] / Kawasaki
+:::
+
+![Kawasaki, The Rokugo Ferry: Travelers and horses wait to board flat-bottomed ferries crossing the Tama River (Rokugo)](../assets/aic-25555.jpg)
+*Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25555.jpg)*
+
+::: {.eyebrow}
+Station 2 · Kawasaki Ward, Kawasaki, Kanagawa
+:::
+
+::: {.numeral}
+2
+
+of 53
+:::
+
+::: {.slip}
+川崎
+:::
+
+::: {.subtitle}
+*Kawasaki, Rokugo watashibune*
 :::
 
 > Travelers and horses wait to board flat-bottomed ferries crossing the Tama River (Rokugo) at Kawasaki, with Mount Fuji faint in the distance.
 
-*Curator's note, written for this site from the title and the print's well-documented subject; the museum record carries no description.*
+### Where it falls on the road
 
-| | |
-|---|---|
-| Station | Kawasaki (川崎), station 2 of 53 |
-| Where it is now | Kawasaki Ward, Kawasaki, Kanagawa |
-| Distance | 4.5 ri from Nihonbashi (Edo-period register; 1 ri is about 3.9 km) |
-| Artist | Utagawa Hiroshige (歌川広重) |
-| Date | 1833-34 |
-| Series | *Fifty-three Stations of the Tōkaidō (Tōkaidō gojūsan tsugi no uchi)*, Hōeidō edition |
-| Catalogue title | Kawasaki: The Rokugo Ferry (Kawasaki, Rokugo watashibune), from the series "Fifty-three Stations of the Tokaido (Tokaido gojusan tsugi no uchi)," also known as the Hoeido Tokaido |
-| Credit | The Art Institute of Chicago |
-| Licence | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) |
-| Licence evidence | AIC API artworks/25555: is_public_domain=true |
-| Source record | [www.artic.edu/artworks/25555](https://www.artic.edu/artworks/25555) |
+::: {.ruler}
+4.5 ri, about 18 km from Nihonbashi.
+:::
 
-[[Browse|All 55 prints]] · [[places|The road on a map]]
+::: {.credit}
+Art Institute of Chicago · Public domain (CC0) · [Source record](https://www.artic.edu/artworks/25555)
+:::

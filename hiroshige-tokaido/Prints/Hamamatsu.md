@@ -1,31 +1,57 @@
 ---
 title: "Hamamatsu: Winter Scene"
 uid: "5ccdfd50"
-description: "Travelers warm themselves at a bonfire beneath a huge bare tree on the outskirts of Hamamatsu, Mount Fuji faint in the distance."
+description: "Station 29 · Chūō Ward, Hamamatsu, Shizuoka · 64.7 ri"
 author: Utagawa Hiroshige
 weight: 30
 cover: ../assets/aic-25676.jpg
-location: ["Hamamatsu"]
+tags: ["Shizuoka"]
+station: "Hamamatsu"
+ja: 浜松
+ri: 64.68
+lat: 34.7051
+lng: 137.7319
+place: "Chūō Ward, Hamamatsu, Shizuoka"
 ---
-:::hero {.plate image=../assets/aic-25676.jpg caption="Hamamatsu: Winter Scene. Utagawa Hiroshige, 1833-34. The Art Institute of Chicago. CC0."}
+::: {.trail}
+[[places|The Road]] / [[Shizuoka]] / Hamamatsu
+:::
+
+![Hamamatsu, Winter Scene: Travelers warm themselves at a bonfire beneath a huge bare tree](../assets/aic-25676.jpg)
+*Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25676.jpg)*
+
+::: {.eyebrow}
+Station 29 · Chūō Ward, Hamamatsu, Shizuoka
+:::
+
+::: {.numeral}
+29
+
+of 53
+:::
+
+::: {.slip}
+浜松
+:::
+
+::: {.subtitle}
+*Hamamatsu, fuyugare no zu*
 :::
 
 > Travelers warm themselves at a bonfire beneath a huge bare tree on the outskirts of Hamamatsu, Mount Fuji faint in the distance.
 
-*Curator's note, written for this site from the title and the print's well-documented subject; the museum record carries no description.*
+::: {.look}
+### What to look for
 
-| | |
-|---|---|
-| Station | Hamamatsu (浜松), station 29 of 53 |
-| Where it is now | Chūō Ward, Hamamatsu, Shizuoka |
-| Distance | 64.68 ri from Nihonbashi (Edo-period register; 1 ri is about 3.9 km) |
-| Artist | Utagawa Hiroshige (歌川広重) |
-| Date | 1833-34 |
-| Series | *Fifty-three Stations of the Tōkaidō (Tōkaidō gojūsan tsugi no uchi)*, Hōeidō edition |
-| Catalogue title | Hamamatsu: Winter Scene (Hamamatsu, fuyugare no zu), from the series "Fifty-three Stations of the Tokaido (Tokaido gojusan tsugi no uchi)," also known as the Hoeido Tokaido |
-| Credit | The Art Institute of Chicago |
-| Licence | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) |
-| Licence evidence | AIC API artworks/25676: is_public_domain=true |
-| Source record | [www.artic.edu/artworks/25676](https://www.artic.edu/artworks/25676) |
+The bonfire under the huge bare tree, and the travellers warming themselves.
+:::
 
-[[Browse|All 55 prints]] · [[places|The road on a map]]
+### Where it falls on the road
+
+::: {.ruler}
+64.7 ri, about 254 km from Nihonbashi.
+:::
+
+::: {.credit}
+Art Institute of Chicago · Public domain (CC0) · [Source record](https://www.artic.edu/artworks/25676)
+:::

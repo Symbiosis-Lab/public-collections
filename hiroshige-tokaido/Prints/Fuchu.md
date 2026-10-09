@@ -1,31 +1,57 @@
 ---
-title: "Fuchu: The Abe River"
+title: "Fuchū: The Abe River"
 uid: "169755e5"
-description: "Porters carry passengers and palanquins on their shoulders across the wide, shallow Abe River outside Fuch\u016b."
+description: "Station 19 · Aoi Ward, Shizuoka City · 44.7 ri"
 author: Utagawa Hiroshige
 weight: 20
 cover: ../assets/aic-18257.jpg
-location: ["Fuchū"]
+tags: ["Shizuoka"]
+station: "Fuchū"
+ja: 府中
+ri: 44.68
+lat: 34.9749
+lng: 138.3876
+place: "Aoi Ward, Shizuoka City"
 ---
-:::hero {.plate image=../assets/aic-18257.jpg caption="Fuchu: The Abe River. Utagawa Hiroshige, 1833-34. The Art Institute of Chicago. CC0."}
+::: {.trail}
+[[places|The Road]] / [[Shizuoka]] / Fuchū
+:::
+
+![Fuchū, The Abe River: Porters carry passengers and palanquins on their shoulders across the wide](../assets/aic-18257.jpg)
+*Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-18257.jpg)*
+
+::: {.eyebrow}
+Station 19 · Aoi Ward, Shizuoka City
+:::
+
+::: {.numeral}
+19
+
+of 53
+:::
+
+::: {.slip}
+府中
+:::
+
+::: {.subtitle}
+*Fuchu, Abekawa*
 :::
 
 > Porters carry passengers and palanquins on their shoulders across the wide, shallow Abe River outside Fuchū.
 
-*Curator's note, written for this site from the title and the print's well-documented subject; the museum record carries no description.*
+::: {.look}
+### What to look for
 
-| | |
-|---|---|
-| Station | Fuchū (府中), station 19 of 53 |
-| Where it is now | Aoi Ward, Shizuoka City |
-| Distance | 44.68 ri from Nihonbashi (Edo-period register; 1 ri is about 3.9 km) |
-| Artist | Utagawa Hiroshige (歌川広重) |
-| Date | 1833-34 |
-| Series | *Fifty-three Stations of the Tōkaidō (Tōkaidō gojūsan tsugi no uchi)*, Hōeidō edition |
-| Catalogue title | Fuchu: The Abe River (Fuchu, Abekawa), from the series "Fifty-three Stations of the Tokaido Road (Tokaido gojusan tsugi no uchi)," also known as the Hoeido Tokaido |
-| Credit | The Art Institute of Chicago |
-| Licence | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) |
-| Licence evidence | AIC API artworks/18257: is_public_domain=true |
-| Source record | [www.artic.edu/artworks/18257](https://www.artic.edu/artworks/18257) |
+Count the ways of crossing: some travellers are carried on shoulders, some in a palanquin.
+:::
 
-[[Browse|All 55 prints]] · [[places|The road on a map]]
+### Where it falls on the road
+
+::: {.ruler}
+44.7 ri, about 175 km from Nihonbashi.
+:::
+
+::: {.credit}
+Art Institute of Chicago · Public domain (CC0) · [Source record](https://www.artic.edu/artworks/18257)
+:::

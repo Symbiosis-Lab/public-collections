@@ -1,31 +1,77 @@
 ---
 title: "Kanbara: Evening Snow"
 uid: "c4542177"
-description: "Three muffled figures trudge through a silent, heavy snowfall in Kanbara, a scene of snow the town rarely saw."
+description: "Station 15 · Kanbara, Shimizu-ku, Shizuoka City · 37.6 ri"
 author: Utagawa Hiroshige
 weight: 16
 cover: ../assets/aic-25613.jpg
-location: ["Kanbara"]
+tags: ["Shizuoka"]
+station: "Kanbara"
+ja: 蒲原
+ri: 37.59
+lat: 35.12
+lng: 138.6055
+place: "Kanbara, Shimizu-ku, Shizuoka City"
+weather: "Snow"
 ---
-:::hero {.plate image=../assets/aic-25613.jpg caption="Kanbara: Evening Snow. Utagawa Hiroshige, 1833-34. The Art Institute of Chicago. CC0."}
+::: {.trail}
+[[places|The Road]] / [[Shizuoka]] / Kanbara
+:::
+
+![Kanbara, Evening Snow: Three muffled figures trudge through a silent, heavy snowfall in Kanbara](../assets/aic-25613.jpg)
+*Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25613.jpg)*
+
+::: {.eyebrow}
+Station 15 · Kanbara, Shimizu-ku, Shizuoka City
+:::
+
+::: {.numeral}
+15
+
+of 53
+:::
+
+::: {.slip}
+蒲原
+:::
+
+::: {.subtitle}
+*Kanbara, yoru no yuki*
 :::
 
 > Three muffled figures trudge through a silent, heavy snowfall in Kanbara, a scene of snow the town rarely saw.
 
-*Curator's note, written for this site from the title and the print's well-documented subject; the museum record carries no description.*
+::: {.look}
+### What to look for
 
-| | |
-|---|---|
-| Station | Kanbara (蒲原), station 15 of 53 |
-| Where it is now | Kanbara, Shimizu-ku, Shizuoka City |
-| Distance | 37.59 ri from Nihonbashi (Edo-period register; 1 ri is about 3.9 km) |
-| Artist | Utagawa Hiroshige (歌川広重) |
-| Date | 1833-34 |
-| Series | *Fifty-three Stations of the Tōkaidō (Tōkaidō gojūsan tsugi no uchi)*, Hōeidō edition |
-| Catalogue title | Kanbara: Evening Snow (Kanbara, yoru no yuki), from the series "Fifty-three Stations of the Tokaido (Tokaido gojusan tsugi no uchi)," also known as the Hoeido Tokaido |
-| Credit | The Art Institute of Chicago |
-| Licence | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) |
-| Licence evidence | AIC API artworks/25613: is_public_domain=true |
-| Source record | [www.artic.edu/artworks/25613](https://www.artic.edu/artworks/25613) |
+The snow is mostly bare paper, and three figures in hats and capes lean into it.
+:::
 
-[[Browse|All 55 prints]] · [[places|The road on a map]]
+### Where it falls on the road
+
+::: {.ruler}
+37.6 ri, about 148 km from Nihonbashi.
+:::
+
+### Rain, snow and mist
+
+<!-- generated:weather -->
+:::grid 3 {.weather .weather-strip}
+[[Oiso|Rain]]
++++
+[[Mishima|Mist]]
++++
+**Snow**  
+This print
++++
+[[Shono|Driving rain]]
++++
+[[Kameyama|Snow, clearing]]
++++
+[[Tsuchiyama|Spring shower]]
+:::
+<!-- /generated:weather -->
+
+::: {.credit}
+Art Institute of Chicago · Public domain (CC0) · [Source record](https://www.artic.edu/artworks/25613)
+:::

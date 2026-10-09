@@ -1,31 +1,51 @@
 ---
 title: "Okazaki: Yahagi Bridge"
 uid: "a1acf7a1"
-description: "A daimyo procession crosses the immense Yahagi Bridge into Okazaki beneath its castle, one of the longest bridges on the T\u014dkaid\u014d."
+description: "Station 38 · Okazaki, Aichi · 80.6 ri"
 author: Utagawa Hiroshige
 weight: 39
 cover: ../assets/aic-18268.jpg
-location: ["Okazaki"]
+tags: ["Aichi"]
+station: "Okazaki"
+ja: 岡崎
+ri: 80.65
+lat: 34.9579
+lng: 137.1692
+place: "Okazaki, Aichi"
 ---
-:::hero {.plate image=../assets/aic-18268.jpg caption="Okazaki: Yahagi Bridge. Utagawa Hiroshige, 1833-34. The Art Institute of Chicago. CC0."}
+::: {.trail}
+[[places|The Road]] / [[Aichi]] / Okazaki
+:::
+
+![Okazaki, Yahagi Bridge: A daimyo procession crosses the immense Yahagi Bridge into Okazaki beneath its castle](../assets/aic-18268.jpg)
+*Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-18268.jpg)*
+
+::: {.eyebrow}
+Station 38 · Okazaki, Aichi
+:::
+
+::: {.numeral}
+38
+
+of 53
+:::
+
+::: {.slip}
+岡崎
+:::
+
+::: {.subtitle}
+*Okazaki, Yahagi no hashi*
 :::
 
 > A daimyo procession crosses the immense Yahagi Bridge into Okazaki beneath its castle, one of the longest bridges on the Tōkaidō.
 
-*Curator's note, written for this site from the title and the print's well-documented subject; the museum record carries no description.*
+### Where it falls on the road
 
-| | |
-|---|---|
-| Station | Okazaki (岡崎), station 38 of 53 |
-| Where it is now | Okazaki, Aichi |
-| Distance | 80.65 ri from Nihonbashi (Edo-period register; 1 ri is about 3.9 km) |
-| Artist | Utagawa Hiroshige (歌川広重) |
-| Date | 1833-34 |
-| Series | *Fifty-three Stations of the Tōkaidō (Tōkaidō gojūsan tsugi no uchi)*, Hōeidō edition |
-| Catalogue title | Okazaki: Yahagi Bridge (Okazaki, Yahagi no hashi), from the series "Fifty-three Stations of the Tokaido (Tokaido gojusan tsugi no uchi)," also known as the Hoeido Tokaido |
-| Credit | The Art Institute of Chicago |
-| Licence | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) |
-| Licence evidence | AIC API artworks/18268: is_public_domain=true |
-| Source record | [www.artic.edu/artworks/18268](https://www.artic.edu/artworks/18268) |
+::: {.ruler}
+80.6 ri, about 317 km from Nihonbashi.
+:::
 
-[[Browse|All 55 prints]] · [[places|The road on a map]]
+::: {.credit}
+Art Institute of Chicago · Public domain (CC0) · [Source record](https://www.artic.edu/artworks/18268)
+:::

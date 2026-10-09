@@ -1,31 +1,51 @@
 ---
 title: "Fukuroi: Tea Stall"
 uid: "fc704e85"
-description: "Travelers rest at an open-air tea stall on the plain outside Fukuroi, one of the smaller stations on the route."
+description: "Station 27 · Fukuroi, Shizuoka · 59 ri"
 author: Utagawa Hiroshige
 weight: 28
 cover: ../assets/aic-25668.jpg
-location: ["Fukuroi"]
+tags: ["Shizuoka"]
+station: "Fukuroi"
+ja: 袋井
+ri: 58.98
+lat: 34.7475
+lng: 137.9232
+place: "Fukuroi, Shizuoka"
 ---
-:::hero {.plate image=../assets/aic-25668.jpg caption="Fukuroi: Tea Stall. Utagawa Hiroshige, 1833-34. The Art Institute of Chicago. CC0."}
+::: {.trail}
+[[places|The Road]] / [[Shizuoka]] / Fukuroi
+:::
+
+![Fukuroi, Tea Stall: Travelers rest at an open-air tea stall on the plain outside Fukuroi](../assets/aic-25668.jpg)
+*Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25668.jpg)*
+
+::: {.eyebrow}
+Station 27 · Fukuroi, Shizuoka
+:::
+
+::: {.numeral}
+27
+
+of 53
+:::
+
+::: {.slip}
+袋井
+:::
+
+::: {.subtitle}
+*Fukuroi, dejaya no zu*
 :::
 
 > Travelers rest at an open-air tea stall on the plain outside Fukuroi, one of the smaller stations on the route.
 
-*Curator's note, written for this site from the title and the print's well-documented subject; the museum record carries no description.*
+### Where it falls on the road
 
-| | |
-|---|---|
-| Station | Fukuroi (袋井), station 27 of 53 |
-| Where it is now | Fukuroi, Shizuoka |
-| Distance | 58.98 ri from Nihonbashi (Edo-period register; 1 ri is about 3.9 km) |
-| Artist | Utagawa Hiroshige (歌川広重) |
-| Date | 1833-34 |
-| Series | *Fifty-three Stations of the Tōkaidō (Tōkaidō gojūsan tsugi no uchi)*, Hōeidō edition |
-| Catalogue title | Fukuroi: Tea Stall (Fukuroi, dejaya no zu), from the series "Fifty-three Stations of the Tokaido (Tokaido gojusan tsugi no uchi)," also known as the Hoeido Tokaido |
-| Credit | The Art Institute of Chicago |
-| Licence | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) |
-| Licence evidence | AIC API artworks/25668: is_public_domain=true |
-| Source record | [www.artic.edu/artworks/25668](https://www.artic.edu/artworks/25668) |
+::: {.ruler}
+59 ri, about 232 km from Nihonbashi.
+:::
 
-[[Browse|All 55 prints]] · [[places|The road on a map]]
+::: {.credit}
+Art Institute of Chicago · Public domain (CC0) · [Source record](https://www.artic.edu/artworks/25668)
+:::

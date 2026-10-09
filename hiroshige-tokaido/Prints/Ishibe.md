@@ -1,31 +1,51 @@
 ---
 title: "Ishibe: Megawa Village"
 uid: "e1823df4"
-description: "Travelers pass through the small hamlet of Megawa near Ishibe as the sun rises over distant hills."
+description: "Station 51 · Ishibe, Kōnan, Shiga · 116.5 ri"
 author: Utagawa Hiroshige
 weight: 52
 cover: ../assets/aic-18270.jpg
-location: ["Ishibe"]
+tags: ["Shiga & Kyoto"]
+station: "Ishibe"
+ja: 石部
+ri: 116.49
+lat: 35.0101
+lng: 136.0546
+place: "Ishibe, Kōnan, Shiga"
 ---
-:::hero {.plate image=../assets/aic-18270.jpg caption="Ishibe: Megawa Village. Utagawa Hiroshige, 1833-34. The Art Institute of Chicago. CC0."}
+::: {.trail}
+[[places|The Road]] / [[Shiga & Kyoto]] / Ishibe
+:::
+
+![Ishibe, Megawa Village: Travelers pass through the small hamlet of Megawa near Ishibe](../assets/aic-18270.jpg)
+*Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-18270.jpg)*
+
+::: {.eyebrow}
+Station 51 · Ishibe, Kōnan, Shiga
+:::
+
+::: {.numeral}
+51
+
+of 53
+:::
+
+::: {.slip}
+石部
+:::
+
+::: {.subtitle}
+*Ishibe, Megawa no sato*
 :::
 
 > Travelers pass through the small hamlet of Megawa near Ishibe as the sun rises over distant hills.
 
-*Curator's note, written for this site from the title and the print's well-documented subject; the museum record carries no description.*
+### Where it falls on the road
 
-| | |
-|---|---|
-| Station | Ishibe (石部), station 51 of 53 |
-| Where it is now | Ishibe, Kōnan, Shiga |
-| Distance | 116.49 ri from Nihonbashi (Edo-period register; 1 ri is about 3.9 km) |
-| Artist | Utagawa Hiroshige (歌川広重) |
-| Date | 1833-34 |
-| Series | *Fifty-three Stations of the Tōkaidō (Tōkaidō gojūsan tsugi no uchi)*, Hōeidō edition |
-| Catalogue title | Ishibe: Megawa Village (Ishibe, Megawa no sato), from the series "Fifty-three Stations of the Tokaido (Tokaido gojusan tsugi no uchi)," also known as the Hoeido Tokaido |
-| Credit | The Art Institute of Chicago |
-| Licence | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) |
-| Licence evidence | AIC API artworks/18270: is_public_domain=true |
-| Source record | [www.artic.edu/artworks/18270](https://www.artic.edu/artworks/18270) |
+::: {.ruler}
+116.5 ri, about 457 km from Nihonbashi.
+:::
 
-[[Browse|All 55 prints]] · [[places|The road on a map]]
+::: {.credit}
+Art Institute of Chicago · Public domain (CC0) · [Source record](https://www.artic.edu/artworks/18270)
+:::

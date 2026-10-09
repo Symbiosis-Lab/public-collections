@@ -1,31 +1,51 @@
 ---
 title: "Maisaka: View of Imagiri"
 uid: "1ed5518a"
-description: "Sailboats cross the calm waters of Lake Hamana at the Imagiri crossing near Maisaka, with Mount Fuji on the horizon."
+description: "Station 30 · Maisaka, Chūō Ward, Hamamatsu, Shizuoka · 67.4 ri"
 author: Utagawa Hiroshige
 weight: 31
 cover: ../assets/aic-25683.jpg
-location: ["Maisaka"]
+tags: ["Shizuoka"]
+station: "Maisaka"
+ja: 舞坂
+ri: 67.45
+lat: 34.6844
+lng: 137.6089
+place: "Maisaka, Chūō Ward, Hamamatsu, Shizuoka"
 ---
-:::hero {.plate image=../assets/aic-25683.jpg caption="Maisaka: View of Imagiri. Utagawa Hiroshige, 1833-34. The Art Institute of Chicago. CC0."}
+::: {.trail}
+[[places|The Road]] / [[Shizuoka]] / Maisaka
+:::
+
+![Maisaka, View of Imagiri: Sailboats cross the calm waters of Lake Hamana at the Imagiri crossing](../assets/aic-25683.jpg)
+*Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25683.jpg)*
+
+::: {.eyebrow}
+Station 30 · Maisaka, Chūō Ward, Hamamatsu, Shizuoka
+:::
+
+::: {.numeral}
+30
+
+of 53
+:::
+
+::: {.slip}
+舞坂
+:::
+
+::: {.subtitle}
+*Maisaka, Imagiri shinkei*
 :::
 
 > Sailboats cross the calm waters of Lake Hamana at the Imagiri crossing near Maisaka, with Mount Fuji on the horizon.
 
-*Curator's note, written for this site from the title and the print's well-documented subject; the museum record carries no description.*
+### Where it falls on the road
 
-| | |
-|---|---|
-| Station | Maisaka (舞坂), station 30 of 53 |
-| Where it is now | Maisaka, Chūō Ward, Hamamatsu, Shizuoka |
-| Distance | 67.45 ri from Nihonbashi (Edo-period register; 1 ri is about 3.9 km) |
-| Artist | Utagawa Hiroshige (歌川広重) |
-| Date | 1833-34 |
-| Series | *Fifty-three Stations of the Tōkaidō (Tōkaidō gojūsan tsugi no uchi)*, Hōeidō edition |
-| Catalogue title | Maisaka: View of Imagiri (Maisaka, Imagiri shinkei), from the series "Fifty-three Stations of the Tokaido (Tokaido gojusan tsugi no uchi)," also known as the Hoeido Tokaido |
-| Credit | The Art Institute of Chicago |
-| Licence | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) |
-| Licence evidence | AIC API artworks/25683: is_public_domain=true |
-| Source record | [www.artic.edu/artworks/25683](https://www.artic.edu/artworks/25683) |
+::: {.ruler}
+67.4 ri, about 265 km from Nihonbashi.
+:::
 
-[[Browse|All 55 prints]] · [[places|The road on a map]]
+::: {.credit}
+Art Institute of Chicago · Public domain (CC0) · [Source record](https://www.artic.edu/artworks/25683)
+:::

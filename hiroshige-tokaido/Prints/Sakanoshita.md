@@ -1,31 +1,51 @@
 ---
 title: "Sakanoshita: Peak of Fudesute Mountain"
 uid: "762a4eb1"
-description: "Travelers pause at a teahouse overlooking a dramatic gorge and waterfall near the peak of Fudesute-yama."
+description: "Station 48 · Sakashita, Kameyama, Mie · 107.8 ri"
 author: Utagawa Hiroshige
 weight: 49
 cover: ../assets/aic-25769.jpg
-location: ["Sakanoshita"]
+tags: ["Mie"]
+station: "Sakanoshita"
+ja: 坂下
+ri: 107.8
+lat: 34.8886
+lng: 136.3541
+place: "Sakashita, Kameyama, Mie"
 ---
-:::hero {.plate image=../assets/aic-25769.jpg caption="Sakanoshita: Peak of Fudesute Mountain. Utagawa Hiroshige, 1833-34. The Art Institute of Chicago. CC0."}
+::: {.trail}
+[[places|The Road]] / [[Mie]] / Sakanoshita
+:::
+
+![Sakanoshita, Peak of Fudesute Mountain: Travelers pause at a teahouse overlooking a dramatic gorge and waterfall](../assets/aic-25769.jpg)
+*Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25769.jpg)*
+
+::: {.eyebrow}
+Station 48 · Sakashita, Kameyama, Mie
+:::
+
+::: {.numeral}
+48
+
+of 53
+:::
+
+::: {.slip}
+坂下
+:::
+
+::: {.subtitle}
+*Sakanoshita, Fudesute mine*
 :::
 
 > Travelers pause at a teahouse overlooking a dramatic gorge and waterfall near the peak of Fudesute-yama.
 
-*Curator's note, written for this site from the title and the print's well-documented subject; the museum record carries no description.*
+### Where it falls on the road
 
-| | |
-|---|---|
-| Station | Sakanoshita (坂下), station 48 of 53 |
-| Where it is now | Sakashita, Kameyama, Mie |
-| Distance | 107.8 ri from Nihonbashi (Edo-period register; 1 ri is about 3.9 km) |
-| Artist | Utagawa Hiroshige (歌川広重) |
-| Date | 1833-34 |
-| Series | *Fifty-three Stations of the Tōkaidō (Tōkaidō gojūsan tsugi no uchi)*, Hōeidō edition |
-| Catalogue title | Sakanoshita: Peak of Fudesute Mountain (Sakanoshita, Fudesute mine), from the series "Fifty-three Stations of the Tokaido (Tokaido gojusan tsugi no uchi)," also known as the Hoeido Tokaido |
-| Credit | The Art Institute of Chicago |
-| Licence | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) |
-| Licence evidence | AIC API artworks/25769: is_public_domain=true |
-| Source record | [www.artic.edu/artworks/25769](https://www.artic.edu/artworks/25769) |
+::: {.ruler}
+107.8 ri, about 423 km from Nihonbashi.
+:::
 
-[[Browse|All 55 prints]] · [[places|The road on a map]]
+::: {.credit}
+Art Institute of Chicago · Public domain (CC0) · [Source record](https://www.artic.edu/artworks/25769)
+:::

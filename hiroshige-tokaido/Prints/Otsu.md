@@ -1,31 +1,51 @@
 ---
-title: "Otsu: Hashirii Teahouse"
+title: "Ōtsu: Hashirii Teahouse"
 uid: "05d006f7"
-description: "Ox-carts loaded with goods pass a well-known teahouse at the edge of \u014ctsu on the final approach to Kyoto."
+description: "Station 53 · Ōtsu, Shiga · 123.2 ri"
 author: Utagawa Hiroshige
 weight: 54
 cover: ../assets/aic-25785.jpg
-location: ["Ōtsu"]
+tags: ["Shiga & Kyoto"]
+station: "Ōtsu"
+ja: 大津
+ri: 123.16
+lat: 35.006
+lng: 135.8614
+place: "Ōtsu, Shiga"
 ---
-:::hero {.plate image=../assets/aic-25785.jpg caption="Otsu: Hashirii Teahouse. Utagawa Hiroshige, 1833-34. The Art Institute of Chicago. CC0."}
+::: {.trail}
+[[places|The Road]] / [[Shiga & Kyoto]] / Ōtsu
+:::
+
+![Ōtsu, Hashirii Teahouse: Ox-carts loaded with goods pass a well-known teahouse at the edge of Ōtsu](../assets/aic-25785.jpg)
+*Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25785.jpg)*
+
+::: {.eyebrow}
+Station 53 · Ōtsu, Shiga
+:::
+
+::: {.numeral}
+53
+
+of 53
+:::
+
+::: {.slip}
+大津
+:::
+
+::: {.subtitle}
+*Otsu, Hashirii chaya*
 :::
 
 > Ox-carts loaded with goods pass a well-known teahouse at the edge of Ōtsu on the final approach to Kyoto.
 
-*Curator's note, written for this site from the title and the print's well-documented subject; the museum record carries no description.*
+### Where it falls on the road
 
-| | |
-|---|---|
-| Station | Ōtsu (大津), station 53 of 53 |
-| Where it is now | Ōtsu, Shiga |
-| Distance | 123.16 ri from Nihonbashi (Edo-period register; 1 ri is about 3.9 km) |
-| Artist | Utagawa Hiroshige (歌川広重) |
-| Date | 1833-34 |
-| Series | *Fifty-three Stations of the Tōkaidō (Tōkaidō gojūsan tsugi no uchi)*, Hōeidō edition |
-| Catalogue title | Otsu: Hashirii Teahouse (Otsu, Hashirii chaya), from the series "Fifty-three Stations of the Tokaido (Tokaido gojusan tsugi no uchi)," also known as the Hoeido Tokaido |
-| Credit | The Art Institute of Chicago |
-| Licence | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) |
-| Licence evidence | AIC API artworks/25785: is_public_domain=true |
-| Source record | [www.artic.edu/artworks/25785](https://www.artic.edu/artworks/25785) |
+::: {.ruler}
+123.2 ri, about 484 km from Nihonbashi.
+:::
 
-[[Browse|All 55 prints]] · [[places|The road on a map]]
+::: {.credit}
+Art Institute of Chicago · Public domain (CC0) · [Source record](https://www.artic.edu/artworks/25785)
+:::

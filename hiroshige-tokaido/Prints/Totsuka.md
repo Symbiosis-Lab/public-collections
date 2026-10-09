@@ -1,31 +1,51 @@
 ---
 title: "Totsuka: The Fork at Motomachi"
 uid: "21a6f07a"
-description: "A traveler dismounts at a horse-changing station where the road forks at Motomachi, near Totsuka."
+description: "Station 5 · Totsuka Ward, Yokohama · 10.5 ri"
 author: Utagawa Hiroshige
 weight: 6
 cover: ../assets/aic-25563.jpg
-location: ["Totsuka"]
+tags: ["Tokyo & Kanagawa"]
+station: "Totsuka"
+ja: 戸塚
+ri: 10.5
+lat: 35.395
+lng: 139.5299
+place: "Totsuka Ward, Yokohama"
 ---
-:::hero {.plate image=../assets/aic-25563.jpg caption="Totsuka: The Fork at Motomachi. Utagawa Hiroshige, 1833-34. The Art Institute of Chicago. CC0."}
+::: {.trail}
+[[places|The Road]] / [[Tokyo & Kanagawa]] / Totsuka
+:::
+
+![Totsuka, The Fork at Motomachi: A traveler dismounts at a horse-changing station where the road forks at Motomachi](../assets/aic-25563.jpg)
+*Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25563.jpg)*
+
+::: {.eyebrow}
+Station 5 · Totsuka Ward, Yokohama
+:::
+
+::: {.numeral}
+5
+
+of 53
+:::
+
+::: {.slip}
+戸塚
+:::
+
+::: {.subtitle}
+*Totsuka, Motomachi betsudo*
 :::
 
 > A traveler dismounts at a horse-changing station where the road forks at Motomachi, near Totsuka.
 
-*Curator's note, written for this site from the title and the print's well-documented subject; the museum record carries no description.*
+### Where it falls on the road
 
-| | |
-|---|---|
-| Station | Totsuka (戸塚), station 5 of 53 |
-| Where it is now | Totsuka Ward, Yokohama |
-| Distance | 10.5 ri from Nihonbashi (Edo-period register; 1 ri is about 3.9 km) |
-| Artist | Utagawa Hiroshige (歌川広重) |
-| Date | 1833-34 |
-| Series | *Fifty-three Stations of the Tōkaidō (Tōkaidō gojūsan tsugi no uchi)*, Hōeidō edition |
-| Catalogue title | Totsuka: The Fork at Motomachi (Totsuka, Motomachi betsudo), from the series "Fifty-three Stations of the Tokaido Road (Tokaido gojusan tsugi no uchi)," also known as the Hoeido Tokaido |
-| Credit | The Art Institute of Chicago |
-| Licence | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) |
-| Licence evidence | AIC API artworks/25563: is_public_domain=true |
-| Source record | [www.artic.edu/artworks/25563](https://www.artic.edu/artworks/25563) |
+::: {.ruler}
+10.5 ri, about 41 km from Nihonbashi.
+:::
 
-[[Browse|All 55 prints]] · [[places|The road on a map]]
+::: {.credit}
+Art Institute of Chicago · Public domain (CC0) · [Source record](https://www.artic.edu/artworks/25563)
+:::

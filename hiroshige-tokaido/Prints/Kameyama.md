@@ -1,31 +1,77 @@
 ---
 title: "Kameyama: Weather Clearing after Snow"
 uid: "4774719a"
-description: "A procession climbs a steep, snow-covered slope toward Kameyama Castle as the sky clears after a snowfall."
+description: "Station 46 · Kameyama, Mie · 104.6 ri"
 author: Utagawa Hiroshige
 weight: 47
 cover: ../assets/aic-25762.jpg
-location: ["Kameyama"]
+tags: ["Mie"]
+station: "Kameyama"
+ja: 亀山
+ri: 104.63
+lat: 34.8543
+lng: 136.4541
+place: "Kameyama, Mie"
+weather: "Snow, clearing"
 ---
-:::hero {.plate image=../assets/aic-25762.jpg caption="Kameyama: Weather Clearing after Snow. Utagawa Hiroshige, 1833-34. The Art Institute of Chicago. CC0."}
+::: {.trail}
+[[places|The Road]] / [[Mie]] / Kameyama
+:::
+
+![Kameyama, Weather Clearing after Snow: A procession climbs a steep, snow-covered slope toward Kameyama Castle](../assets/aic-25762.jpg)
+*Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25762.jpg)*
+
+::: {.eyebrow}
+Station 46 · Kameyama, Mie
+:::
+
+::: {.numeral}
+46
+
+of 53
+:::
+
+::: {.slip}
+亀山
+:::
+
+::: {.subtitle}
+*Kameyama, yukibare*
 :::
 
 > A procession climbs a steep, snow-covered slope toward Kameyama Castle as the sky clears after a snowfall.
 
-*Curator's note, written for this site from the title and the print's well-documented subject; the museum record carries no description.*
+::: {.look}
+### What to look for
 
-| | |
-|---|---|
-| Station | Kameyama (亀山), station 46 of 53 |
-| Where it is now | Kameyama, Mie |
-| Distance | 104.63 ri from Nihonbashi (Edo-period register; 1 ri is about 3.9 km) |
-| Artist | Utagawa Hiroshige (歌川広重) |
-| Date | 1833-34 |
-| Series | *Fifty-three Stations of the Tōkaidō (Tōkaidō gojūsan tsugi no uchi)*, Hōeidō edition |
-| Catalogue title | Kameyama: Weather Clearing after Snow (Kameyama, yukibare), from the series "Fifty-three Stations of the Tokaido (Tokaido gojusan tsugi no uchi)," also known as the Hoeido Tokaido |
-| Credit | The Art Institute of Chicago |
-| Licence | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) |
-| Licence evidence | AIC API artworks/25762: is_public_domain=true |
-| Source record | [www.artic.edu/artworks/25762](https://www.artic.edu/artworks/25762) |
+The procession climbing toward the castle while the sky clears behind the snow.
+:::
 
-[[Browse|All 55 prints]] · [[places|The road on a map]]
+### Where it falls on the road
+
+::: {.ruler}
+104.6 ri, about 411 km from Nihonbashi.
+:::
+
+### Rain, snow and mist
+
+<!-- generated:weather -->
+:::grid 3 {.weather .weather-strip}
+[[Oiso|Rain]]
++++
+[[Mishima|Mist]]
++++
+[[Kanbara|Snow]]
++++
+[[Shono|Driving rain]]
++++
+**Snow, clearing**  
+This print
++++
+[[Tsuchiyama|Spring shower]]
+:::
+<!-- /generated:weather -->
+
+::: {.credit}
+Art Institute of Chicago · Public domain (CC0) · [Source record](https://www.artic.edu/artworks/25762)
+:::

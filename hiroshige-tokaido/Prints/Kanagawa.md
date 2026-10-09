@@ -1,31 +1,51 @@
 ---
 title: "Kanagawa: View of the Embankment"
 uid: "2d4082b6"
-description: "Teahouse touts pull at passing travelers along a steep embankment lined with waterside inns overlooking Kanagawa Bay."
+description: "Station 3 · Kanagawa Ward, Yokohama · 7 ri"
 author: Utagawa Hiroshige
 weight: 4
 cover: ../assets/aic-25558.jpg
-location: ["Kanagawa"]
+tags: ["Tokyo & Kanagawa"]
+station: "Kanagawa"
+ja: 神奈川
+ri: 7.0
+lat: 35.4728
+lng: 139.6323
+place: "Kanagawa Ward, Yokohama"
 ---
-:::hero {.plate image=../assets/aic-25558.jpg caption="Kanagawa: View of the Embankment. Utagawa Hiroshige, 1833-34. The Art Institute of Chicago. CC0."}
+::: {.trail}
+[[places|The Road]] / [[Tokyo & Kanagawa]] / Kanagawa
+:::
+
+![Kanagawa, View of the Embankment: Teahouse touts pull at passing travelers along a steep embankment lined](../assets/aic-25558.jpg)
+*Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25558.jpg)*
+
+::: {.eyebrow}
+Station 3 · Kanagawa Ward, Yokohama
+:::
+
+::: {.numeral}
+3
+
+of 53
+:::
+
+::: {.slip}
+神奈川
+:::
+
+::: {.subtitle}
+*Kanagawa, dai no kei*
 :::
 
 > Teahouse touts pull at passing travelers along a steep embankment lined with waterside inns overlooking Kanagawa Bay.
 
-*Curator's note, written for this site from the title and the print's well-documented subject; the museum record carries no description.*
+### Where it falls on the road
 
-| | |
-|---|---|
-| Station | Kanagawa (神奈川), station 3 of 53 |
-| Where it is now | Kanagawa Ward, Yokohama |
-| Distance | 7 ri from Nihonbashi (Edo-period register; 1 ri is about 3.9 km) |
-| Artist | Utagawa Hiroshige (歌川広重) |
-| Date | 1833-34 |
-| Series | *Fifty-three Stations of the Tōkaidō (Tōkaidō gojūsan tsugi no uchi)*, Hōeidō edition |
-| Catalogue title | Kanagawa: View of the Embankment (Kanagawa, dai no kei), from the series "Fifty-three Stations of the Tokaido Road (Tokaido gojusan tsugi no uchi)," also known as the Hoeido Tokaido |
-| Credit | The Art Institute of Chicago |
-| Licence | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) |
-| Licence evidence | AIC API artworks/25558: is_public_domain=true |
-| Source record | [www.artic.edu/artworks/25558](https://www.artic.edu/artworks/25558) |
+::: {.ruler}
+7 ri, about 27 km from Nihonbashi.
+:::
 
-[[Browse|All 55 prints]] · [[places|The road on a map]]
+::: {.credit}
+Art Institute of Chicago · Public domain (CC0) · [Source record](https://www.artic.edu/artworks/25558)
+:::

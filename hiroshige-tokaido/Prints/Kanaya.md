@@ -1,31 +1,51 @@
 ---
 title: "Kanaya: The Far Bank of the Oi River"
 uid: "edc3c444"
-description: "Palanquin bearers wade the \u014ci River toward Kanaya on the river's far bank, mountains rising beyond."
+description: "Station 24 · Kanaya, Shimada, Shizuoka · 53.1 ri"
 author: Utagawa Hiroshige
 weight: 25
 cover: ../assets/aic-25657.jpg
-location: ["Kanaya"]
+tags: ["Shizuoka"]
+station: "Kanaya"
+ja: 金谷
+ri: 53.07
+lat: 34.8229
+lng: 138.1293
+place: "Kanaya, Shimada, Shizuoka"
 ---
-:::hero {.plate image=../assets/aic-25657.jpg caption="Kanaya: The Far Bank of the Oi River. Utagawa Hiroshige, 1833-34. The Art Institute of Chicago. CC0."}
+::: {.trail}
+[[places|The Road]] / [[Shizuoka]] / Kanaya
+:::
+
+![Kanaya, The Far Bank of the Oi River: Palanquin bearers wade the Ōi River toward Kanaya on the river's far bank](../assets/aic-25657.jpg)
+*Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25657.jpg)*
+
+::: {.eyebrow}
+Station 24 · Kanaya, Shimada, Shizuoka
+:::
+
+::: {.numeral}
+24
+
+of 53
+:::
+
+::: {.slip}
+金谷
+:::
+
+::: {.subtitle}
+*Kanaya, Oigawa engan*
 :::
 
 > Palanquin bearers wade the Ōi River toward Kanaya on the river's far bank, mountains rising beyond.
 
-*Curator's note, written for this site from the title and the print's well-documented subject; the museum record carries no description.*
+### Where it falls on the road
 
-| | |
-|---|---|
-| Station | Kanaya (金谷), station 24 of 53 |
-| Where it is now | Kanaya, Shimada, Shizuoka |
-| Distance | 53.07 ri from Nihonbashi (Edo-period register; 1 ri is about 3.9 km) |
-| Artist | Utagawa Hiroshige (歌川広重) |
-| Date | 1833-34 |
-| Series | *Fifty-three Stations of the Tōkaidō (Tōkaidō gojūsan tsugi no uchi)*, Hōeidō edition |
-| Catalogue title | Kanaya: The Far Bank of the Oi River (Kanaya, Oigawa engan), from the series "Fifty-three Stations of the Tokaido Road (Tokaido gojusan tsugi no uchi)," also known as the Hoeido Tokaido |
-| Credit | The Art Institute of Chicago |
-| Licence | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) |
-| Licence evidence | AIC API artworks/25657: is_public_domain=true |
-| Source record | [www.artic.edu/artworks/25657](https://www.artic.edu/artworks/25657) |
+::: {.ruler}
+53.1 ri, about 208 km from Nihonbashi.
+:::
 
-[[Browse|All 55 prints]] · [[places|The road on a map]]
+::: {.credit}
+Art Institute of Chicago · Public domain (CC0) · [Source record](https://www.artic.edu/artworks/25657)
+:::
