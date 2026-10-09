@@ -1,6 +1,6 @@
 ---
 title: "Mie"
-uid: "857850f4"
+uid: "cd1777f2"
 description: "7 prints · Kuwana to Sakanoshita · 96–107.8 ri"
 cover: ../assets/aic-25748.jpg
 url: mie

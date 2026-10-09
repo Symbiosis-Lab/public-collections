@@ -16,7 +16,7 @@ place: "Kuwana, Mie"
 [[places|The Road]] / [[Mie]] / Kuwana
 :::
 
-![Kuwana, The Landing of the Shichiri Ferry Crossing: Sailboats approach the pier at Kuwana after the seven-ri sea crossing from Miya](../assets/aic-25748.jpg)
+![Kuwana, The Landing of the Shichiri Ferry Crossing: Sailboats approach the pier at Kuwana](../assets/aic-25748.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25748.jpg)*
 
 ::: {.eyebrow}

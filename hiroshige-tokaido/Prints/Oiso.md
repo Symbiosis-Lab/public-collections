@@ -17,7 +17,7 @@ weather: "Rain"
 [[places|The Road]] / [[Tokyo & Kanagawa]] / Oiso
 :::
 
-![Oiso, Tora's Rain: Travelers are caught in a sudden shower on the shore road at Ōiso](../assets/aic-25579.jpg)
+![Oiso, Tora's Rain: Travelers are caught in a sudden shower on the shore road](../assets/aic-25579.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25579.jpg)*
 
 ::: {.eyebrow}

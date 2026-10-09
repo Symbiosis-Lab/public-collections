@@ -16,7 +16,7 @@ place: "Chūō, Tokyo"
 [[places|The Road]] / [[Tokyo & Kanagawa]] / Nihonbashi
 :::
 
-![Nihon Bridge, Morning Scene: A daimyo procession sets off across Nihonbashi at dawn as fish vendors](../assets/aic-25544.jpg)
+![Nihon Bridge, Morning Scene: A daimyo procession sets off across Nihonbashi at dawn](../assets/aic-25544.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25544.jpg)*
 
 ::: {.eyebrow}

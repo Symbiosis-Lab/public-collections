@@ -16,7 +16,7 @@ place: "Okabe, Fujieda, Shizuoka"
 [[places|The Road]] / [[Shizuoka]] / Okabe
 :::
 
-![Okabe, Utsu Mountain: A line of travelers threads a narrow](../assets/aic-18260.jpg)
+![Okabe, Utsu Mountain: a line of travelers on a tree-shaded mountain path](../assets/aic-18260.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-18260.jpg)*
 
 ::: {.eyebrow}

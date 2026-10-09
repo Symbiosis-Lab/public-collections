@@ -17,7 +17,7 @@ weather: "Driving rain"
 [[places|The Road]] / [[Mie]] / Shōno
 :::
 
-![Shōno, Driving Rain: Travelers and porters are caught in a sudden](../assets/aic-25761.jpg)
+![Shōno, Driving Rain: travelers and porters hurry through a driving rainstorm](../assets/aic-25761.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25761.jpg)*
 
 ::: {.eyebrow}

@@ -16,7 +16,7 @@ place: "Sakashita, Kameyama, Mie"
 [[places|The Road]] / [[Mie]] / Sakanoshita
 :::
 
-![Sakanoshita, Peak of Fudesute Mountain: Travelers pause at a teahouse overlooking a dramatic gorge and waterfall](../assets/aic-25769.jpg)
+![Sakanoshita, Peak of Fudesute Mountain: Travelers pause at a teahouse overlooking a dramatic gorge](../assets/aic-25769.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25769.jpg)*
 
 ::: {.eyebrow}

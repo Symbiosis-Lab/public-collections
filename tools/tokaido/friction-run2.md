@@ -97,6 +97,15 @@ Learned from `moss-cli guide all`, `guide import-and-redesign`, `describe --json
 - what would have helped: a nav layout option for the menu breakpoint and a search field variant.
 - CEILING.
 
+### C10. A card's link name is longer than the print's title
+- wanted: link names on cards equal to the print's title (addendum).
+- looked up: `describe --css .moss-card`, the built card markup, and the computed accessible name in Playwright (`ariaSnapshot`).
+- found: a card is one `<a>` around cover, title and description, so its name reads "Rain cover Rain Station 8 · Ōiso, Kanagawa · 16.8 ri" on a weather card and "Nihon Bridge: Morning Scene cover Nihon Bridge: Morning Scene The start of the road · Chūō, Tokyo · 0 ri" on the index. The cover alt is "<title> cover", so the title is read twice, and the one-line description is read after it. The description is the short caption, not the whole note, but the name is still not the title alone.
+- did: nothing; moss gives no way to scope a card's link name (no `aria-labelledby` on the title, no way to hide the description or cover alt from the name). Reported as a fail against the addendum.
+- confidence: high (read from the accessibility tree, not guessed).
+- what would have helped: card links named by the title only (`aria-labelledby` on the title), with the description as `aria-describedby`.
+- CEILING.
+
 ## FLOOR
 
 ### F1. Always-two-row header
@@ -210,6 +219,14 @@ Learned from `moss-cli guide all`, `guide import-and-redesign`, `describe --json
 - confidence: high.
 - FLOOR.
 
+### F15. moss gives the article a bottom margin that stacks into a 120px band above the footer
+- wanted: no empty band above the footer on any page (addendum).
+- looked up: measured the gap from the last visible element in `main` to the footer's top on eight pages at three widths.
+- found: 120px on index, list and text pages (56px footer margin plus the article's own 64px bottom margin, read from computed styles), 56px on print pages where the series nav ends `main`.
+- did: `main > article { margin-block-end: 0 }`. Patches a default. My first guess, padding on `main`, was wrong and changed nothing.
+- confidence: high.
+- FLOOR.
+
 ### F14. The card description is the meta description
 - wanted: a card caption "Station 10 · Hakone, Kanagawa · 25 ri".
 - found: a card shows the page's `description:`, so the same text is the page's meta description and share text.
@@ -220,8 +237,8 @@ Learned from `moss-cli guide all`, `guide import-and-redesign`, `describe --json
 
 ## Rules that only patch a moss default (all also listed above)
 
-Header split (F1), `content_width: full` and the site max-width token (F2), grid column ratio overrides, the 190 px scroll track and phone `grid-template-columns` (F3, F7), card surface, tint, radius, hover and date slot (F6), series-nav link width (F8), footer pseudo-element, shared column and colophon pull-up (F9), heading-anchor hide and button colours (F10).
+Header split (F1), `content_width: full` and the site max-width token (F2), grid column ratio overrides, the 190 px scroll track and phone `grid-template-columns` (F3, F7), card surface, tint, radius, hover and date slot (F6), series-nav link width (F8), footer pseudo-element, shared column and colophon pull-up (F9), heading-anchor hide and button colours (F10), the article bottom margin (F15).
 
 ## Counts
 
-CEILING 9 (C1 to C9), FLOOR 14 (F1 to F14). Top five: C1 (no editable schematic map; generated SVG plus script), C2 (image `sizes` ignores page width, so plates are soft at 1x), C3 (facts cannot reach templates), F3/F4 (grids silently capped at four columns and cells separated by an undocumented `+++`), C4/C5 (series nav and breadcrumb cannot carry the road trail and neighbour plates).
+CEILING 10 (C1 to C10), FLOOR 15 (F1 to F15). Top five: C1 (no editable schematic map; generated SVG plus script), C2 (image `sizes` ignores page width, so plates are soft at 1x), C3 (facts cannot reach templates), F3/F4 (grids silently capped at four columns and cells separated by an undocumented `+++`), C4/C5 (series nav and breadcrumb cannot carry the road trail and neighbour plates).

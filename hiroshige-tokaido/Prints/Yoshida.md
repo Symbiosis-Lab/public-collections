@@ -1,7 +1,7 @@
 ---
 title: "Yoshida: The Toyo River Bridge"
 uid: "c9a9d050"
-description: "Station 34 · Toyohashi, Aichi · 73.6 ri"
+description: "Station 34 · Toyohashi, Aichi · 73.7 ri"
 author: Utagawa Hiroshige
 weight: 35
 cover: ../assets/aic-59092.jpg
@@ -16,7 +16,7 @@ place: "Toyohashi, Aichi"
 [[places|The Road]] / [[Aichi]] / Yoshida
 :::
 
-![Yoshida, The Toyo River Bridge: Workers repair the long wooden bridge over the Toyo River at Yoshida](../assets/aic-59092.jpg)
+![Yoshida, The Toyo River Bridge: workers repair the long wooden bridge](../assets/aic-59092.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-59092.jpg)*
 
 ::: {.eyebrow}
@@ -42,7 +42,7 @@ of 53
 ### Where it falls on the road
 
 ::: {.ruler}
-73.6 ri, about 289 km from Nihonbashi.
+73.7 ri, about 289 km from Nihonbashi.
 :::
 
 ::: {.credit}

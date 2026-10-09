@@ -1,6 +1,6 @@
 ---
 title: "Shizuoka"
-uid: "b33aee08"
+uid: "d930b2d0"
 description: "22 prints · Mishima to Shirasuka · 28.8–70.6 ri"
 cover: ../assets/aic-25625.jpg
 url: shizuoka

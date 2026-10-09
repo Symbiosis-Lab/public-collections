@@ -16,7 +16,7 @@ place: "Midori Ward, Nagoya"
 [[places|The Road]] / [[Aichi]] / Narumi
 :::
 
-![Narumi, Famous Tie-dyed Fabrics of Arimatsu: Shops in Narumi display bolts of the tie-dyed cotton (Arimatsu shibori)](../assets/aic-25741.jpg)
+![Narumi, Famous Tie-dyed Fabrics of Arimatsu: shops display bolts of tie-dyed cotton](../assets/aic-25741.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25741.jpg)*
 
 ::: {.eyebrow}

@@ -16,7 +16,7 @@ place: "Shimada, Shizuoka"
 [[places|The Road]] / [[Shizuoka]] / Shimada
 :::
 
-![Shimada, The Suruga Bank of the Oi River: Porters and mounted travelers gather on the Suruga-side bank of the Ōi River](../assets/aic-25653.jpg)
+![Shimada, The Suruga Bank of the Oi River: porters and travelers gather on the bank](../assets/aic-25653.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25653.jpg)*
 
 ::: {.eyebrow}

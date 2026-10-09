@@ -16,7 +16,7 @@ place: "Hakone, Kanagawa"
 [[places|The Road]] / [[Tokyo & Kanagawa]] / Hakone
 :::
 
-![Hakone, View of the Lake: A daimyo procession winds along a jagged mountain trail above Lake Ashi](../assets/aic-25585.jpg)
+![Hakone, View of the Lake: A daimyo procession winds along a jagged mountain trail](../assets/aic-25585.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25585.jpg)*
 
 ::: {.eyebrow}

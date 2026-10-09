@@ -16,7 +16,7 @@ place: "Kakegawa, Shizuoka"
 [[places|The Road]] / [[Shizuoka]] / Kakegawa
 :::
 
-![Kakegawa, Distant View of Mount Akiba: A kite flies over a river crossing near Kakegawa](../assets/aic-25663.jpg)
+![Kakegawa, Distant View of Mount Akiba: A kite flies over a river crossing](../assets/aic-25663.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25663.jpg)*
 
 ::: {.eyebrow}

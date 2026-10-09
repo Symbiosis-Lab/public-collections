@@ -16,7 +16,7 @@ place: "Goyu, Toyokawa, Aichi"
 [[places|The Road]] / [[Aichi]] / Goyu
 :::
 
-![Goyu, Women Stopping Travelers: Innkeepers' women physically pull passing travelers by the sleeve into competing lodging houses](../assets/aic-16581.jpg)
+![Goyu, Women Stopping Travelers: Innkeepers' women physically pull passing travelers by the sleeve](../assets/aic-16581.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-16581.jpg)*
 
 ::: {.eyebrow}

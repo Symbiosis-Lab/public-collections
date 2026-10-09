@@ -16,7 +16,7 @@ place: "Fujieda, Shizuoka"
 [[places|The Road]] / [[Shizuoka]] / Fujieda
 :::
 
-![Fujieda, Changing Porters and Horses: Porters and packhorses are exchanged at the station entrance to Fujieda](../assets/aic-25649.jpg)
+![Fujieda, Changing Porters and Horses: porters and packhorses exchanged at the station entrance](../assets/aic-25649.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25649.jpg)*
 
 ::: {.eyebrow}

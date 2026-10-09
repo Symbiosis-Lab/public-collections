@@ -16,7 +16,7 @@ place: "Ishiyakushi, Suzuka, Mie"
 [[places|The Road]] / [[Mie]] / Ishiyakushi
 :::
 
-![Ishiyakushi, Ishiyakushi Temple: A quiet view of Ishiyakushi Temple and its surrounding pines is seen](../assets/aic-25759.jpg)
+![Ishiyakushi, Ishiyakushi Temple: the temple among its surrounding pines](../assets/aic-25759.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25759.jpg)*
 
 ::: {.eyebrow}

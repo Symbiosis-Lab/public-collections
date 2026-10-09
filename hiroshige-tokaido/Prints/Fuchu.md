@@ -16,7 +16,7 @@ place: "Aoi Ward, Shizuoka City"
 [[places|The Road]] / [[Shizuoka]] / Fuchū
 :::
 
-![Fuchū, The Abe River: Porters carry passengers and palanquins on their shoulders across the wide](../assets/aic-18257.jpg)
+![Fuchū, The Abe River: porters carry passengers and palanquins across the river](../assets/aic-18257.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-18257.jpg)*
 
 ::: {.eyebrow}

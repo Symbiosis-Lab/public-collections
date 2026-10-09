@@ -1,7 +1,7 @@
 ---
 title: "Okazaki: Yahagi Bridge"
 uid: "a1acf7a1"
-description: "Station 38 · Okazaki, Aichi · 80.6 ri"
+description: "Station 38 · Okazaki, Aichi · 80.7 ri"
 author: Utagawa Hiroshige
 weight: 39
 cover: ../assets/aic-18268.jpg
@@ -16,7 +16,7 @@ place: "Okazaki, Aichi"
 [[places|The Road]] / [[Aichi]] / Okazaki
 :::
 
-![Okazaki, Yahagi Bridge: A daimyo procession crosses the immense Yahagi Bridge into Okazaki beneath its castle](../assets/aic-18268.jpg)
+![Okazaki, Yahagi Bridge: A daimyo procession crosses the immense Yahagi Bridge into Okazaki](../assets/aic-18268.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-18268.jpg)*
 
 ::: {.eyebrow}
@@ -42,7 +42,7 @@ of 53
 ### Where it falls on the road
 
 ::: {.ruler}
-80.6 ri, about 317 km from Nihonbashi.
+80.7 ri, about 317 km from Nihonbashi.
 :::
 
 ::: {.credit}

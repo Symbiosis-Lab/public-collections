@@ -16,7 +16,7 @@ place: "Kusatsu, Shiga"
 [[places|The Road]] / [[Shiga & Kyoto]] / Kusatsu
 :::
 
-![Kusatsu, Famous Post House: Palanquin bearers and travelers crowd a large post-house courtyard at Kusatsu](../assets/aic-25783.jpg)
+![Kusatsu, Famous Post House: Palanquin bearers and travelers crowd a large post-house courtyard](../assets/aic-25783.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25783.jpg)*
 
 ::: {.eyebrow}

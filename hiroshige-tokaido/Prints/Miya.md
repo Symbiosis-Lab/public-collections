@@ -16,7 +16,7 @@ place: "Atsuta Ward, Nagoya"
 [[places|The Road]] / [[Aichi]] / Miya
 :::
 
-![Miya, Religious Festival at Atsuta Shrine: Wrestlers perform sumo before a crowd during a festival at Atsuta Shrine](../assets/aic-25744.jpg)
+![Miya, Religious Festival at Atsuta Shrine: wrestlers perform sumo before a crowd](../assets/aic-25744.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25744.jpg)*
 
 ::: {.eyebrow}

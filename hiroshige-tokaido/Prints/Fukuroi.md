@@ -16,7 +16,7 @@ place: "Fukuroi, Shizuoka"
 [[places|The Road]] / [[Shizuoka]] / Fukuroi
 :::
 
-![Fukuroi, Tea Stall: Travelers rest at an open-air tea stall on the plain outside Fukuroi](../assets/aic-25668.jpg)
+![Fukuroi, Tea Stall: Travelers rest at an open-air tea stall on the plain](../assets/aic-25668.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25668.jpg)*
 
 ::: {.eyebrow}

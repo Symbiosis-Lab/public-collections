@@ -16,7 +16,7 @@ place: "Seki, Kameyama, Mie"
 [[places|The Road]] / [[Mie]] / Seki
 :::
 
-![Seki, Early Departure from the Main Camp: Porters and a palanquin assemble in the pre-dawn dark](../assets/aic-25766.jpg)
+![Seki, Early Departure from the Main Camp: porters and a palanquin assemble before dawn](../assets/aic-25766.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25766.jpg)*
 
 ::: {.eyebrow}

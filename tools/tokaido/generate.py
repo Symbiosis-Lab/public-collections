@@ -9,6 +9,7 @@
                       assets/road.json (read by theme/script.js)
 """
 import difflib, json, math, pathlib, re, sys, unicodedata
+from decimal import Decimal, ROUND_HALF_UP
 
 HERE = pathlib.Path(__file__).resolve().parent
 SITE = HERE.parent.parent / "hiroshige-tokaido"
@@ -29,8 +30,9 @@ def stretch_of(n):
 
 
 def fmt_ri(r):
-    r = round(r * 10) / 10
-    return str(int(r)) if r == int(r) else str(r)
+    """One decimal, a half rounds up (8.25 -> 8.3). The same string goes to road.json, so no other code rounds."""
+    d = Decimal(str(r)).quantize(Decimal("0.1"), rounding=ROUND_HALF_UP)
+    return str(int(d)) if d == int(d) else str(d)
 
 
 def km(r):
@@ -84,15 +86,15 @@ def fold(s):
 BREAKS = {"as", "while", "with", "near", "at", "on", "in", "into", "across", "beneath", "above", "outside", "from", "over", "toward", "after", "before", "by", "for", "and", "beyond", "marking", "towering"}
 
 
-ALT_OVERRIDE = {"Ejiri": "Ejiri, Distant View of Miho: boats sail Suruga Bay off Ejiri"}  # the cut rule leaves this one dangling
 STOP = {"a", "an", "the", "of", "on", "in", "at", "to", "and", "by", "with", "as", "while", "from", "over", "near", "its", "their", "his", "her", "into", "across", "beneath", "above"}
 
 
-def alt_for(h1, note, limit=13):
+def alt_for(h1, note, total=14):
     """Title plus what the print shows: the note cut at its last natural break within `limit` words."""
     words = note.rstrip(".").split()
+    limit = max(5, total - len(h1.split()))  # the title counts toward the twelve-or-so words
     if len(words) > limit:
-        cuts = [i for i, w in enumerate(words[:limit + 1]) if i >= 5 and (w in BREAKS or words[i - 1].endswith(","))]
+        cuts = [i for i, w in enumerate(words[:limit + 1]) if i >= 4 and (w in BREAKS or words[i - 1].endswith(","))]
         words = words[:cuts[-1] if cuts else limit]
     text = " ".join(words)
     head, comma, tail = text.rpartition(",")
@@ -142,7 +144,7 @@ def seed():
         fm.append("---")
         body = [
             "::: {.trail}", f"[[places|The Road]] / [[{stretch[1]}]] / {s['en']}", ":::", "",
-            f"![{ALT_OVERRIDE.get(s['en']) or alt_for(title, s['note'])}]({img})",
+            f"![{s.get('alt') or alt_for(title, s['note'])}]({img})",
             f"*Utagawa Hiroshige, 1833–34, colour woodblock. [Full size]({img})*", "",
             "::: {.eyebrow}", f"{pos} · {place}", ":::", "",
             "::: {.numeral}", numeral, *(["", of] if of else []), ":::", "",
@@ -339,7 +341,7 @@ def chips(current):
 
 def blocks():
     S = load_prints()
-    road = [dict(n=s["n"], file=s["file"].lower(), name=s["station"], ja=s["ja"], ri=s["ri"], km=km(s["ri"]),
+    road = [dict(n=s["n"], file=s["file"].lower(), name=s["station"], ja=s["ja"], ri=s["ri"], ri_s=fmt_ri(s["ri"]), km=km(s["ri"]),
                  place=s["place"], img=s["cover"], title=s["title"], note=read_page(PRINTS / f"{s['file']}.md")[1].split("\n> ")[1].split("\n")[0],
                  stretch=stretch_of(s["n"])[1]) for s in S]
     (SITE / "assets/road.json").write_text(json.dumps(dict(

@@ -16,7 +16,7 @@ place: "Futagawa, Toyohashi, Aichi"
 [[places|The Road]] / [[Aichi]] / Futagawa
 :::
 
-![Futagawa, Sarugababa Plateau: A modest teahouse stands alone on the windswept Sarugababa plateau outside Futagawa](../assets/aic-25710.jpg)
+![Futagawa, Sarugababa Plateau: A modest teahouse stands alone on the windswept Sarugababa plateau](../assets/aic-25710.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25710.jpg)*
 
 ::: {.eyebrow}

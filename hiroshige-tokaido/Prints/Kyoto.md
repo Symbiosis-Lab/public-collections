@@ -16,7 +16,7 @@ place: "Nakagyo/Higashiyama Ward, Kyoto"
 [[places|The Road]] / [[Shiga & Kyoto]] / Kyoto
 :::
 
-![Kyoto, The Great Bridge at Sanjo: Travelers and ox-carts cross the Sanjō Ōhashi bridge into Kyoto](../assets/aic-25789.jpg)
+![Kyoto, The Great Bridge at Sanjo: travelers and ox-carts cross the bridge into Kyoto](../assets/aic-25789.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25789.jpg)*
 
 ::: {.eyebrow}

@@ -1,7 +1,7 @@
 ---
 title: "Hodogaya: Shinmachi Bridge"
 uid: "1a427053"
-description: "Station 4 · Hodogaya Ward, Yokohama · 8.2 ri"
+description: "Station 4 · Hodogaya Ward, Yokohama · 8.3 ri"
 author: Utagawa Hiroshige
 weight: 5
 cover: ../assets/aic-25561.jpg
@@ -16,7 +16,7 @@ place: "Hodogaya Ward, Yokohama"
 [[places|The Road]] / [[Tokyo & Kanagawa]] / Hodogaya
 :::
 
-![Hodogaya, Shinmachi Bridge: A pack-horse train crosses the Shinmachi Bridge outside Hodogaya beneath windswept pines](../assets/aic-25561.jpg)
+![Hodogaya, Shinmachi Bridge: a pack-horse train crosses the bridge beneath windswept pines](../assets/aic-25561.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25561.jpg)*
 
 ::: {.eyebrow}
@@ -42,7 +42,7 @@ of 53
 ### Where it falls on the road
 
 ::: {.ruler}
-8.2 ri, about 32 km from Nihonbashi.
+8.3 ri, about 32 km from Nihonbashi.
 :::
 
 ::: {.credit}

@@ -34,7 +34,8 @@
   "ri": 4.5,
   "modern": "Kawasaki Ward, Kawasaki, Kanagawa",
   "title": "Kawasaki: The Rokugo Ferry (Kawasaki, Rokugo watashibune)",
-  "note": "Travelers and horses wait to board flat-bottomed ferries crossing the Tama River (Rokugo) at Kawasaki, with Mount Fuji faint in the distance."
+  "note": "Travelers and horses wait to board flat-bottomed ferries crossing the Tama River (Rokugo) at Kawasaki, with Mount Fuji faint in the distance.",
+  "alt": "Kawasaki, The Rokugo Ferry: travelers and horses wait to board ferries"
  },
  {
   "n": 3,
@@ -46,7 +47,8 @@
   "ri": 7.0,
   "modern": "Kanagawa Ward, Yokohama",
   "title": "Kanagawa: View of the Embankment (Kanagawa, dai no kei)",
-  "note": "Teahouse touts pull at passing travelers along a steep embankment lined with waterside inns overlooking Kanagawa Bay."
+  "note": "Teahouse touts pull at passing travelers along a steep embankment lined with waterside inns overlooking Kanagawa Bay.",
+  "alt": "Kanagawa, View of the Embankment: teahouse touts pull at passing travelers"
  },
  {
   "n": 4,
@@ -58,7 +60,8 @@
   "ri": 8.25,
   "modern": "Hodogaya Ward, Yokohama",
   "title": "Hodogaya: Shinmachi Bridge (Hodogaya, Shinmachibashi)",
-  "note": "A pack-horse train crosses the Shinmachi Bridge outside Hodogaya beneath windswept pines."
+  "note": "A pack-horse train crosses the Shinmachi Bridge outside Hodogaya beneath windswept pines.",
+  "alt": "Hodogaya, Shinmachi Bridge: a pack-horse train crosses the bridge beneath windswept pines"
  },
  {
   "n": 5,
@@ -70,7 +73,8 @@
   "ri": 10.5,
   "modern": "Totsuka Ward, Yokohama",
   "title": "Totsuka: The Fork at Motomachi (Totsuka, Motomachi betsudo)",
-  "note": "A traveler dismounts at a horse-changing station where the road forks at Motomachi, near Totsuka."
+  "note": "A traveler dismounts at a horse-changing station where the road forks at Motomachi, near Totsuka.",
+  "alt": "Totsuka, The Fork at Motomachi: a traveler dismounts where the road forks"
  },
  {
   "n": 6,
@@ -94,7 +98,8 @@
   "ri": 16.0,
   "modern": "Hiratsuka, Kanagawa",
   "title": "Hiratsuka: Nawate Road (Hiratsuka, Nawate michi)",
-  "note": "Two travelers hurry along the straight embankment road (nawate) into Hiratsuka with Mount Ōyama rising behind them."
+  "note": "Two travelers hurry along the straight embankment road (nawate) into Hiratsuka with Mount Ōyama rising behind them.",
+  "alt": "Hiratsuka, Nawate Road: two travelers hurry along a straight embankment road"
  },
  {
   "n": 8,
@@ -119,7 +124,8 @@
   "ri": 20.75,
   "modern": "Odawara, Kanagawa",
   "title": "Odawara: The Sakawa River (Odawara, Sakawagawa)",
-  "note": "Porters carry a palanquin and baggage across the shallow Sakawa River on the approach to Odawara Castle, visible on the far bank."
+  "note": "Porters carry a palanquin and baggage across the shallow Sakawa River on the approach to Odawara Castle, visible on the far bank.",
+  "alt": "Odawara, The Sakawa River: porters carry a palanquin and baggage across the river"
  },
  {
   "n": 10,
@@ -159,7 +165,8 @@
   "modern": "Numazu, Shizuoka",
   "title": "Numazu: Twilight (Numazu, tasogare zu)",
   "note": "A pilgrim in a tengu mask and a pack-laden traveler walk along the Kano River at dusk beneath a full moon, geese overhead.",
-  "look": "The traveller with a tengu mask on his back, the full moon, and the geese crossing the sky."
+  "look": "The traveller with a tengu mask on his back, the full moon, and the geese crossing the sky.",
+  "alt": "Numazu, Twilight: a pilgrim in a tengu mask and a traveler with a pack"
  },
  {
   "n": 13,
@@ -184,7 +191,8 @@
   "ri": 34.76,
   "modern": "Fuji, Shizuoka",
   "title": "Yoshiwara: Mount Fuji on the Left (Yoshiwara, hidari Fuji)",
-  "note": "Riders and porters follow a bend in the road at Yoshiwara from which Mount Fuji unusually appears on the left side of the frame."
+  "note": "Riders and porters follow a bend in the road at Yoshiwara from which Mount Fuji unusually appears on the left side of the frame.",
+  "alt": "Yoshiwara, Mount Fuji on the Left: riders and porters follow a bend in the road"
  },
  {
   "n": 15,
@@ -198,7 +206,8 @@
   "title": "Kanbara: Evening Snow (Kanbara, yoru no yuki)",
   "note": "Three muffled figures trudge through a silent, heavy snowfall in Kanbara, a scene of snow the town rarely saw.",
   "look": "The snow is mostly bare paper, and three figures in hats and capes lean into it.",
-  "weather": "Snow"
+  "weather": "Snow",
+  "alt": "Kanbara, Evening Snow: three muffled figures trudge through heavy snowfall"
  },
  {
   "n": 16,
@@ -234,7 +243,8 @@
   "ri": 41.98,
   "modern": "Shimizu-ku, Shizuoka City",
   "title": "Ejiri: Distant View of Miho (Ejiri, Miho enbo)",
-  "note": "Boats sail Suruga Bay off Ejiri as the pine-covered spit of Miho stretches into the distance beneath Mount Fuji."
+  "note": "Boats sail Suruga Bay off Ejiri as the pine-covered spit of Miho stretches into the distance beneath Mount Fuji.",
+  "alt": "Ejiri, Distant View of Miho: boats sail Suruga Bay off Ejiri"
  },
  {
   "n": 19,
@@ -247,7 +257,8 @@
   "modern": "Aoi Ward, Shizuoka City",
   "title": "Fuchu: The Abe River (Fuchu, Abekawa)",
   "note": "Porters carry passengers and palanquins on their shoulders across the wide, shallow Abe River outside Fuchū.",
-  "look": "Count the ways of crossing: some travellers are carried on shoulders, some in a palanquin."
+  "look": "Count the ways of crossing: some travellers are carried on shoulders, some in a palanquin.",
+  "alt": "Fuchū, The Abe River: porters carry passengers and palanquins across the river"
  },
  {
   "n": 20,
@@ -259,7 +270,8 @@
   "ri": 46.12,
   "modern": "Suruga Ward, Shizuoka City",
   "title": "Mariko: Famous Tea Shop (Mariko, meibutsu chamise)",
-  "note": "Travelers stop at a thatched roadside teahouse in Mariko famous for its grated-yam (tororo) soup, served by a woman with a child."
+  "note": "Travelers stop at a thatched roadside teahouse in Mariko famous for its grated-yam (tororo) soup, served by a woman with a child.",
+  "alt": "Mariko, Famous Tea Shop: travelers stop at a thatched roadside teahouse"
  },
  {
   "n": 21,
@@ -271,7 +283,8 @@
   "ri": 48.12,
   "modern": "Okabe, Fujieda, Shizuoka",
   "title": "Okabe: Utsu Mountain (Okabe, Utsu no yama)",
-  "note": "A line of travelers threads a narrow, tree-shaded mountain path over the Utsu Pass near Okabe."
+  "note": "A line of travelers threads a narrow, tree-shaded mountain path over the Utsu Pass near Okabe.",
+  "alt": "Okabe, Utsu Mountain: a line of travelers on a tree-shaded mountain path"
  },
  {
   "n": 22,
@@ -283,7 +296,8 @@
   "ri": 49.84,
   "modern": "Fujieda, Shizuoka",
   "title": "Fujieda: Changing Porters and Horses (Fujieda, jinba tsugitate)",
-  "note": "Porters and packhorses are exchanged at the station entrance to Fujieda as a new relay team takes over the baggage."
+  "note": "Porters and packhorses are exchanged at the station entrance to Fujieda as a new relay team takes over the baggage.",
+  "alt": "Fujieda, Changing Porters and Horses: porters and packhorses exchanged at the station entrance"
  },
  {
   "n": 23,
@@ -295,7 +309,8 @@
   "ri": 52.07,
   "modern": "Shimada, Shizuoka",
   "title": "Shimada: The Suruga Bank of the Oi River (Shimada, Oigawa Sungan)",
-  "note": "Porters and mounted travelers gather on the Suruga-side bank of the Ōi River at Shimada, waiting to be carried across since no bridge was permitted."
+  "note": "Porters and mounted travelers gather on the Suruga-side bank of the Ōi River at Shimada, waiting to be carried across since no bridge was permitted.",
+  "alt": "Shimada, The Suruga Bank of the Oi River: porters and travelers gather on the bank"
  },
  {
   "n": 24,
@@ -428,7 +443,8 @@
   "ri": 73.65,
   "modern": "Toyohashi, Aichi",
   "title": "Yoshida: The Toyo River Bridge (Yoshida, Toyokawabashi)",
-  "note": "Workers repair the long wooden bridge over the Toyo River at Yoshida beneath the walls of Yoshida Castle."
+  "note": "Workers repair the long wooden bridge over the Toyo River at Yoshida beneath the walls of Yoshida Castle.",
+  "alt": "Yoshida, The Toyo River Bridge: workers repair the long wooden bridge"
  },
  {
   "n": 35,
@@ -501,7 +517,8 @@
   "ri": 87.3,
   "modern": "Midori Ward, Nagoya",
   "title": "Narumi: Famous Tie-dyed Fabrics of Arimatsu (Narumi, meibutsu Arimatsu shibori)",
-  "note": "Shops in Narumi display bolts of the tie-dyed cotton (Arimatsu shibori) for which the town was famous, as travelers browse."
+  "note": "Shops in Narumi display bolts of the tie-dyed cotton (Arimatsu shibori) for which the town was famous, as travelers browse.",
+  "alt": "Narumi, Famous Tie-dyed Fabrics of Arimatsu: shops display bolts of tie-dyed cotton"
  },
  {
   "n": 41,
@@ -513,7 +530,8 @@
   "ri": 88.96,
   "modern": "Atsuta Ward, Nagoya",
   "title": "Miya: Religious Festival at Atsuta Shrine (Miya, Atsuta shinji)",
-  "note": "Wrestlers perform sumo before a crowd during a festival at Atsuta Shrine, the landmark of the port town of Miya."
+  "note": "Wrestlers perform sumo before a crowd during a festival at Atsuta Shrine, the landmark of the port town of Miya.",
+  "alt": "Miya, Religious Festival at Atsuta Shrine: wrestlers perform sumo before a crowd"
  },
  {
   "n": 42,
@@ -550,7 +568,8 @@
   "ri": 101.94,
   "modern": "Ishiyakushi, Suzuka, Mie",
   "title": "Ishiyakushi: Ishiyakushi Temple (Ishiyakushi, Ishiyakushiji)",
-  "note": "A quiet view of Ishiyakushi Temple and its surrounding pines is seen from the road, with little traffic on this small station."
+  "note": "A quiet view of Ishiyakushi Temple and its surrounding pines is seen from the road, with little traffic on this small station.",
+  "alt": "Ishiyakushi, Ishiyakushi Temple: the temple among its surrounding pines"
  },
  {
   "n": 45,
@@ -564,7 +583,8 @@
   "title": "Shono: Driving Rain (Shono hakuu)",
   "note": "Travelers and porters are caught in a sudden, driving rainstorm as they hurry along the road at Shōno.",
   "look": "The rain is drawn as slanting lines, and the bamboo and the hurrying travellers bend with it.",
-  "weather": "Driving rain"
+  "weather": "Driving rain",
+  "alt": "Shōno, Driving Rain: travelers and porters hurry through a driving rainstorm"
  },
  {
   "n": 46,
@@ -578,7 +598,8 @@
   "title": "Kameyama: Weather Clearing after Snow (Kameyama, yukibare)",
   "note": "A procession climbs a steep, snow-covered slope toward Kameyama Castle as the sky clears after a snowfall.",
   "look": "The procession climbing toward the castle while the sky clears behind the snow.",
-  "weather": "Snow, clearing"
+  "weather": "Snow, clearing",
+  "alt": "Kameyama, Weather Clearing after Snow: a procession climbs a snowy slope"
  },
  {
   "n": 47,
@@ -590,7 +611,8 @@
   "ri": 106.13,
   "modern": "Seki, Kameyama, Mie",
   "title": "Seki: Early Departure from the Main Camp (Seki, honjin hayadachi)",
-  "note": "Porters and a palanquin assemble in the pre-dawn dark outside the honjin (main inn) at Seki as a party prepares to depart."
+  "note": "Porters and a palanquin assemble in the pre-dawn dark outside the honjin (main inn) at Seki as a party prepares to depart.",
+  "alt": "Seki, Early Departure from the Main Camp: porters and a palanquin assemble before dawn"
  },
  {
   "n": 48,
@@ -627,7 +649,8 @@
   "ri": 112.99,
   "modern": "Minakuchi, Kōka, Shiga",
   "title": "Minakuchi: Dried Gourd Shavings, A Local Specialty (Minakuchi, meibutsu kanpyo)",
-  "note": "Women prepare and dry kanpyō (gourd shavings), the local specialty of Minakuchi, on racks outside a farmhouse."
+  "note": "Women prepare and dry kanpyō (gourd shavings), the local specialty of Minakuchi, on racks outside a farmhouse.",
+  "alt": "Minakuchi, Dried Gourd Shavings, A Local Specialty: women dry kanpyō"
  },
  {
   "n": 51,
@@ -663,7 +686,8 @@
   "ri": 123.16,
   "modern": "Ōtsu, Shiga",
   "title": "Otsu: Hashirii Teahouse (Otsu, Hashirii chaya)",
-  "note": "Ox-carts loaded with goods pass a well-known teahouse at the edge of Ōtsu on the final approach to Kyoto."
+  "note": "Ox-carts loaded with goods pass a well-known teahouse at the edge of Ōtsu on the final approach to Kyoto.",
+  "alt": "Ōtsu, Hashirii Teahouse: ox-carts loaded with goods pass a teahouse"
  },
  {
   "n": 54,
@@ -676,6 +700,7 @@
   "modern": "Nakagyo/Higashiyama Ward, Kyoto",
   "title": "Kyoto: The Great Bridge at Sanjo (Keishi, Sanjo ohashi)",
   "note": "Travelers and ox-carts cross the Sanjō Ōhashi bridge into Kyoto, with the city and hills beyond marking the end of the Tōkaidō.",
-  "look": "The Sanjō Ōhashi bridge, ox-carts crossing, the hills of Kyoto behind. This is the end of the road."
+  "look": "The Sanjō Ōhashi bridge, ox-carts crossing, the hills of Kyoto behind. This is the end of the road.",
+  "alt": "Kyoto, The Great Bridge at Sanjo: travelers and ox-carts cross the bridge into Kyoto"
  }
 ]

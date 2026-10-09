@@ -16,7 +16,7 @@ place: "Fujikawa, Okazaki, Aichi"
 [[places|The Road]] / [[Aichi]] / Fujikawa
 :::
 
-![Fujikawa, View of Post Outskirts: A small daimyo procession passes a solitary teahouse at the edge of Fujikawa](../assets/aic-20264.jpg)
+![Fujikawa, View of Post Outskirts: A small daimyo procession passes a solitary teahouse](../assets/aic-20264.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-20264.jpg)*
 
 ::: {.eyebrow}

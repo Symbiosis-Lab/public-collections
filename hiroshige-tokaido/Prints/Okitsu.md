@@ -16,7 +16,7 @@ place: "Okitsu, Shimizu-ku, Shizuoka City"
 [[places|The Road]] / [[Shizuoka]] / Okitsu
 :::
 
-![Okitsu, The Okitsu River: Porters ford the shallow Okitsu River carrying a mounted traveler and baggage](../assets/aic-25618.jpg)
+![Okitsu, The Okitsu River: Porters ford the shallow Okitsu River carrying a mounted traveler](../assets/aic-25618.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25618.jpg)*
 
 ::: {.eyebrow}

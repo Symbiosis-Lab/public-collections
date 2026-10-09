@@ -16,7 +16,7 @@ place: "Fuji, Shizuoka"
 [[places|The Road]] / [[Shizuoka]] / Yoshiwara
 :::
 
-![Yoshiwara, Mount Fuji on the Left: Riders and porters follow a bend in the road at Yoshiwara](../assets/aic-10929.jpg)
+![Yoshiwara, Mount Fuji on the Left: riders and porters follow a bend in the road](../assets/aic-10929.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-10929.jpg)*
 
 ::: {.eyebrow}

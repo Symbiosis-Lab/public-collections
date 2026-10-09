@@ -17,7 +17,7 @@ weather: "Snow"
 [[places|The Road]] / [[Shizuoka]] / Kanbara
 :::
 
-![Kanbara, Evening Snow: Three muffled figures trudge through a silent, heavy snowfall in Kanbara](../assets/aic-25613.jpg)
+![Kanbara, Evening Snow: three muffled figures trudge through heavy snowfall](../assets/aic-25613.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25613.jpg)*
 
 ::: {.eyebrow}

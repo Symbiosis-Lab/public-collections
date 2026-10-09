@@ -16,7 +16,7 @@ place: "Ōtsu, Shiga"
 [[places|The Road]] / [[Shiga & Kyoto]] / Ōtsu
 :::
 
-![Ōtsu, Hashirii Teahouse: Ox-carts loaded with goods pass a well-known teahouse at the edge of Ōtsu](../assets/aic-25785.jpg)
+![Ōtsu, Hashirii Teahouse: ox-carts loaded with goods pass a teahouse](../assets/aic-25785.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25785.jpg)*
 
 ::: {.eyebrow}

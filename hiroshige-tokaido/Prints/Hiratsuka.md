@@ -16,7 +16,7 @@ place: "Hiratsuka, Kanagawa"
 [[places|The Road]] / [[Tokyo & Kanagawa]] / Hiratsuka
 :::
 
-![Hiratsuka, Nawate Road: Two travelers hurry along the straight embankment road (nawate) into Hiratsuka](../assets/aic-25574.jpg)
+![Hiratsuka, Nawate Road: two travelers hurry along a straight embankment road](../assets/aic-25574.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25574.jpg)*
 
 ::: {.eyebrow}

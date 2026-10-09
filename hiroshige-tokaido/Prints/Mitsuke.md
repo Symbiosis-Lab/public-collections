@@ -16,7 +16,7 @@ place: "Iwata, Shizuoka"
 [[places|The Road]] / [[Shizuoka]] / Mitsuke
 :::
 
-![Mitsuke, View of the Tenryu River: Ferrymen pole passengers across the broad Tenryū River near Mitsuke](../assets/aic-18262.jpg)
+![Mitsuke, View of the Tenryu River: Ferrymen pole passengers across the broad Tenryū River](../assets/aic-18262.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-18262.jpg)*
 
 ::: {.eyebrow}

@@ -1,6 +1,6 @@
 ---
 title: "Tokyo & Kanagawa"
-uid: "4acb5a73"
+uid: "865f4648"
 description: "11 prints · Nihonbashi to Hakone · 0–25 ri"
 cover: ../assets/aic-25544.jpg
 url: tokyo-kanagawa

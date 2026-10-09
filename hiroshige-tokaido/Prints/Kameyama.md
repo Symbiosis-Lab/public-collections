@@ -17,7 +17,7 @@ weather: "Snow, clearing"
 [[places|The Road]] / [[Mie]] / Kameyama
 :::
 
-![Kameyama, Weather Clearing after Snow: A procession climbs a steep, snow-covered slope toward Kameyama Castle](../assets/aic-25762.jpg)
+![Kameyama, Weather Clearing after Snow: a procession climbs a snowy slope](../assets/aic-25762.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25762.jpg)*
 
 ::: {.eyebrow}

@@ -16,7 +16,7 @@ place: "Odawara, Kanagawa"
 [[places|The Road]] / [[Tokyo & Kanagawa]] / Odawara
 :::
 
-![Odawara, The Sakawa River: Porters carry a palanquin and baggage across the shallow Sakawa River](../assets/aic-18253.jpg)
+![Odawara, The Sakawa River: porters carry a palanquin and baggage across the river](../assets/aic-18253.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-18253.jpg)*
 
 ::: {.eyebrow}

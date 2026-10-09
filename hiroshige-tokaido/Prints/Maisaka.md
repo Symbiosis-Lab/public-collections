@@ -1,7 +1,7 @@
 ---
 title: "Maisaka: View of Imagiri"
 uid: "1ed5518a"
-description: "Station 30 · Maisaka, Chūō Ward, Hamamatsu, Shizuoka · 67.4 ri"
+description: "Station 30 · Maisaka, Chūō Ward, Hamamatsu, Shizuoka · 67.5 ri"
 author: Utagawa Hiroshige
 weight: 31
 cover: ../assets/aic-25683.jpg
@@ -16,7 +16,7 @@ place: "Maisaka, Chūō Ward, Hamamatsu, Shizuoka"
 [[places|The Road]] / [[Shizuoka]] / Maisaka
 :::
 
-![Maisaka, View of Imagiri: Sailboats cross the calm waters of Lake Hamana at the Imagiri crossing](../assets/aic-25683.jpg)
+![Maisaka, View of Imagiri: Sailboats cross the calm waters of Lake Hamana](../assets/aic-25683.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25683.jpg)*
 
 ::: {.eyebrow}
@@ -42,7 +42,7 @@ of 53
 ### Where it falls on the road
 
 ::: {.ruler}
-67.4 ri, about 265 km from Nihonbashi.
+67.5 ri, about 265 km from Nihonbashi.
 :::
 
 ::: {.credit}

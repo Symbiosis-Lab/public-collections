@@ -1,6 +1,6 @@
 ---
 title: "Aichi"
-uid: "7e55eea6"
+uid: "54ddd6e1"
 description: "9 prints · Futagawa to Miya · 72.1–89 ri"
 cover: ../assets/aic-25720.jpg
 url: aichi

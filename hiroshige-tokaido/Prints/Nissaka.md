@@ -16,7 +16,7 @@ place: "Nissaka, Kakegawa, Shizuoka"
 [[places|The Road]] / [[Shizuoka]] / Nissaka
 :::
 
-![Nissaka, Sayo Mountain Pass: A traveler rests beside a huge roadside boulder on the steep Sayo-no-Nakayama pass](../assets/aic-25660.jpg)
+![Nissaka, Sayo Mountain Pass: A traveler rests beside a huge roadside boulder](../assets/aic-25660.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25660.jpg)*
 
 ::: {.eyebrow}

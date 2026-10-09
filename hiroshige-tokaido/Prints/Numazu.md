@@ -1,7 +1,7 @@
 ---
 title: "Numazu: Twilight"
 uid: "2130c130"
-description: "Station 12 · Numazu, Shizuoka · 30.2 ri"
+description: "Station 12 · Numazu, Shizuoka · 30.3 ri"
 author: Utagawa Hiroshige
 weight: 13
 cover: ../assets/aic-25594.jpg
@@ -16,7 +16,7 @@ place: "Numazu, Shizuoka"
 [[places|The Road]] / [[Shizuoka]] / Numazu
 :::
 
-![Numazu, Twilight: A pilgrim in a tengu mask](../assets/aic-25594.jpg)
+![Numazu, Twilight: a pilgrim in a tengu mask and a traveler with a pack](../assets/aic-25594.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25594.jpg)*
 
 ::: {.eyebrow}
@@ -48,7 +48,7 @@ The traveller with a tengu mask on his back, the full moon, and the geese crossi
 ### Where it falls on the road
 
 ::: {.ruler}
-30.2 ri, about 119 km from Nihonbashi.
+30.3 ri, about 119 km from Nihonbashi.
 :::
 
 ::: {.credit}

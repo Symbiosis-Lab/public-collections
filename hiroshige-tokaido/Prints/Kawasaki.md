@@ -16,7 +16,7 @@ place: "Kawasaki Ward, Kawasaki, Kanagawa"
 [[places|The Road]] / [[Tokyo & Kanagawa]] / Kawasaki
 :::
 
-![Kawasaki, The Rokugo Ferry: Travelers and horses wait to board flat-bottomed ferries crossing the Tama River (Rokugo)](../assets/aic-25555.jpg)
+![Kawasaki, The Rokugo Ferry: travelers and horses wait to board ferries](../assets/aic-25555.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25555.jpg)*
 
 ::: {.eyebrow}

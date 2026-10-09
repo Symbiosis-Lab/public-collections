@@ -16,7 +16,7 @@ place: "Kanagawa Ward, Yokohama"
 [[places|The Road]] / [[Tokyo & Kanagawa]] / Kanagawa
 :::
 
-![Kanagawa, View of the Embankment: Teahouse touts pull at passing travelers along a steep embankment lined](../assets/aic-25558.jpg)
+![Kanagawa, View of the Embankment: teahouse touts pull at passing travelers](../assets/aic-25558.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25558.jpg)*
 
 ::: {.eyebrow}

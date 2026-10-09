@@ -1,6 +1,6 @@
 ---
 title: "Shiga & Kyoto"
-uid: "47979d0a"
+uid: "f227e25f"
 description: "6 prints · Tsuchiyama to Kyoto · 110.3–126.2 ri"
 cover: ../assets/aic-25789.jpg
 url: shiga-kyoto

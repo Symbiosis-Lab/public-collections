@@ -16,7 +16,7 @@ place: "Suruga Ward, Shizuoka City"
 [[places|The Road]] / [[Shizuoka]] / Mariko
 :::
 
-![Mariko, Famous Tea Shop: Travelers stop at a thatched roadside teahouse in Mariko famous](../assets/aic-25630.jpg)
+![Mariko, Famous Tea Shop: travelers stop at a thatched roadside teahouse](../assets/aic-25630.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25630.jpg)*
 
 ::: {.eyebrow}

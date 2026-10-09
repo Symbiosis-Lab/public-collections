@@ -16,7 +16,7 @@ place: "Totsuka Ward, Yokohama"
 [[places|The Road]] / [[Tokyo & Kanagawa]] / Totsuka
 :::
 
-![Totsuka, The Fork at Motomachi: A traveler dismounts at a horse-changing station where the road forks at Motomachi](../assets/aic-25563.jpg)
+![Totsuka, The Fork at Motomachi: a traveler dismounts where the road forks](../assets/aic-25563.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25563.jpg)*
 
 ::: {.eyebrow}

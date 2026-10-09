@@ -3,8 +3,7 @@
 (function () {
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
-  var ri = function (r) { r = Math.round(r * 10) / 10; return String(r); };
-  var esc = function (t) { return String(t).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
+    var esc = function (t) { return String(t).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
   var rulers = $$(".ruler"), map = $(".road-map:not(.road-map-compact)");
   if (!rulers.length && !map) return;
 
@@ -19,9 +18,9 @@
       }).join("");
       if (cur) {
         var l = cur.ri / LAST * 100, al = l > 78 ? "r" : l < 22 ? "l" : "";
-        h += '<span class="lab ' + al + '" style="left:' + l.toFixed(3) + '%"><b>' + esc(cur.name) + "</b> · " + ri(cur.ri) + " ri</span>";
+        h += '<span class="lab ' + al + '" style="left:' + l.toFixed(3) + '%"><b>' + esc(cur.name) + "</b> · " + cur.ri_s + " ri</span>";
       }
-      h += '<div class="ends"><span>0 · Nihonbashi</span><span>' + ri(LAST) + " ri · Kyoto</span></div></div>";
+      h += '<div class="ends"><span>0 · Nihonbashi</span><span>' + D.stations[54].ri_s + " ri · Kyoto</span></div></div>";
       if (el.classList.contains("ruler-bands")) {
         var w = D.stretches.map(function (x) {
           var a = x.a ? S[x.a - 1].ri : 0; return ((S[x.b].ri - a) / LAST * 100).toFixed(3);
@@ -47,7 +46,7 @@
       links.forEach(function (a) { a.classList.toggle("sel", +a.dataset.n === n); });
       var pos = n === 0 ? "The start of the road" : n === 54 ? "The end of the road" : "Station " + n;
       panel.innerHTML = '<img src="/assets/' + s.img.replace(".jpg", ".w800.webp") + '" alt="" width="230" height="153">' +
-        '<div><div class="eyebrow">' + pos + " · " + ri(s.ri) + " ri · about " + s.km + ' km from Nihonbashi</div><p class="nm">' + esc(s.name) + "<span lang=\"ja\">" + esc(s.ja) + "</span></p><p>" + esc(s.note) + "</p></div>" +
+        '<div><div class="eyebrow">' + pos + " · " + s.ri_s + " ri · about " + s.km + ' km from Nihonbashi</div><p class="nm">' + esc(s.name) + "<span lang=\"ja\">" + esc(s.ja) + "</span></p><p>" + esc(s.note) + "</p></div>" +
         '<a class="open" href="/prints/' + s.file + '/">Open the print →</a>';
       var rl = $(".ruler-bands .axis");
       if (rl) {
