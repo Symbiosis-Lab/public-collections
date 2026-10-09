@@ -5,7 +5,6 @@ description: "Station 23 · Shimada, Shizuoka · 52.1 ri"
 author: Utagawa Hiroshige
 weight: 24
 cover: ../assets/aic-25653.jpg
-tags: ["Shizuoka"]
 station: "Shimada"
 ja: 島田
 ri: 52.07

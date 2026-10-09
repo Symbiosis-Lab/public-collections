@@ -5,7 +5,6 @@ description: "Station 17 · Okitsu, Shimizu-ku, Shizuoka City · 40.9 ri"
 author: Utagawa Hiroshige
 weight: 18
 cover: ../assets/aic-25618.jpg
-tags: ["Shizuoka"]
 station: "Okitsu"
 ja: 興津
 ri: 40.93

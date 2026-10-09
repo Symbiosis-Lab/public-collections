@@ -5,7 +5,6 @@ description: "Station 25 · Nissaka, Kakegawa, Shizuoka · 54.7 ri"
 author: Utagawa Hiroshige
 weight: 26
 cover: ../assets/aic-25660.jpg
-tags: ["Shizuoka"]
 station: "Nissaka"
 ja: 日坂
 ri: 54.73

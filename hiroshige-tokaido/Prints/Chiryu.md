@@ -5,7 +5,6 @@ description: "Station 39 · Chiryū, Aichi · 84.5 ri"
 author: Utagawa Hiroshige
 weight: 40
 cover: ../assets/aic-25738.jpg
-tags: ["Aichi"]
 station: "Chiryū"
 ja: 池鯉鮒
 ri: 84.46

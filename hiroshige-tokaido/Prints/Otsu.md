@@ -5,7 +5,6 @@ description: "Station 53 · Ōtsu, Shiga · 123.2 ri"
 author: Utagawa Hiroshige
 weight: 54
 cover: ../assets/aic-25785.jpg
-tags: ["Shiga & Kyoto"]
 station: "Ōtsu"
 ja: 大津
 ri: 123.16

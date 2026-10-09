@@ -5,7 +5,6 @@ description: "Station 42 · Kuwana, Mie · 96 ri"
 author: Utagawa Hiroshige
 weight: 43
 cover: ../assets/aic-25748.jpg
-tags: ["Mie"]
 station: "Kuwana"
 ja: 桑名
 ri: 95.96

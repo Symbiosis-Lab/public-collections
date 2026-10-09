@@ -5,7 +5,6 @@ description: "Station 7 · Hiratsuka, Kanagawa · 16 ri"
 author: Utagawa Hiroshige
 weight: 8
 cover: ../assets/aic-25574.jpg
-tags: ["Tokyo & Kanagawa"]
 station: "Hiratsuka"
 ja: 平塚
 ri: 16.0

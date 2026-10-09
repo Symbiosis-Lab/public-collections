@@ -5,7 +5,6 @@ description: "Station 50 · Minakuchi, Kōka, Shiga · 113 ri"
 author: Utagawa Hiroshige
 weight: 51
 cover: ../assets/aic-25775.jpg
-tags: ["Shiga & Kyoto"]
 station: "Minakuchi"
 ja: 水口
 ri: 112.99

@@ -5,7 +5,6 @@ description: "Station 49 · Tsuchiyama, Kōka, Shiga · 110.3 ri"
 author: Utagawa Hiroshige
 weight: 50
 cover: ../assets/aic-25772.jpg
-tags: ["Shiga & Kyoto"]
 station: "Tsuchiyama"
 ja: 土山
 ri: 110.3

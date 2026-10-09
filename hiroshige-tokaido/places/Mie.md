@@ -1,11 +1,11 @@
 ---
 title: "Mie"
-uid: "300ecb70"
-tag_page: "Mie"
+uid: "857850f4"
 description: "7 prints · Kuwana to Sakanoshita · 96–107.8 ri"
 cover: ../assets/aic-25748.jpg
 url: mie
 weight: 43
+children: false
 ---
 <!-- generated:chips -->
 ::: {.chips}
@@ -17,3 +17,21 @@ weight: 43
 - [[Shiga & Kyoto|Shiga & Kyoto 6]]
 :::
 <!-- /generated:chips -->
+
+<!-- generated:rows -->
+:::grid 1 {.rows}
+[[Kuwana]]
++++
+[[Yokkaichi]]
++++
+[[Ishiyakushi]]
++++
+[[Shono]]
++++
+[[Kameyama]]
++++
+[[Seki]]
++++
+[[Sakanoshita]]
+:::
+<!-- /generated:rows -->

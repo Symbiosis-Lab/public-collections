@@ -5,7 +5,6 @@ description: "Station 29 · Chūō Ward, Hamamatsu, Shizuoka · 64.7 ri"
 author: Utagawa Hiroshige
 weight: 30
 cover: ../assets/aic-25676.jpg
-tags: ["Shizuoka"]
 station: "Hamamatsu"
 ja: 浜松
 ri: 64.68

@@ -5,7 +5,6 @@ description: "Station 36 · Akasaka, Toyokawa, Aichi · 76.7 ri"
 author: Utagawa Hiroshige
 weight: 37
 cover: ../assets/aic-25720.jpg
-tags: ["Aichi"]
 station: "Akasaka"
 ja: 赤坂
 ri: 76.7

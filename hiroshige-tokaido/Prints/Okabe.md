@@ -5,7 +5,6 @@ description: "Station 21 · Okabe, Fujieda, Shizuoka · 48.1 ri"
 author: Utagawa Hiroshige
 weight: 22
 cover: ../assets/aic-18260.jpg
-tags: ["Shizuoka"]
 station: "Okabe"
 ja: 岡部
 ri: 48.12

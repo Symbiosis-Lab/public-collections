@@ -5,7 +5,6 @@ description: "Station 47 · Seki, Kameyama, Mie · 106.1 ri"
 author: Utagawa Hiroshige
 weight: 48
 cover: ../assets/aic-25766.jpg
-tags: ["Mie"]
 station: "Seki"
 ja: 関
 ri: 106.13

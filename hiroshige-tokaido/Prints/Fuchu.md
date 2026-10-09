@@ -5,7 +5,6 @@ description: "Station 19 · Aoi Ward, Shizuoka City · 44.7 ri"
 author: Utagawa Hiroshige
 weight: 20
 cover: ../assets/aic-18257.jpg
-tags: ["Shizuoka"]
 station: "Fuchū"
 ja: 府中
 ri: 44.68

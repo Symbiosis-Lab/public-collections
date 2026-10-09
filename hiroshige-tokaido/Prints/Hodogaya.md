@@ -5,7 +5,6 @@ description: "Station 4 · Hodogaya Ward, Yokohama · 8.2 ri"
 author: Utagawa Hiroshige
 weight: 5
 cover: ../assets/aic-25561.jpg
-tags: ["Tokyo & Kanagawa"]
 station: "Hodogaya"
 ja: 保土ヶ谷
 ri: 8.25

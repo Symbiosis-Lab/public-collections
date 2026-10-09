@@ -5,7 +5,6 @@ description: "Station 35 · Goyu, Toyokawa, Aichi · 76.3 ri"
 author: Utagawa Hiroshige
 weight: 36
 cover: ../assets/aic-16581.jpg
-tags: ["Aichi"]
 station: "Goyu"
 ja: 御油
 ri: 76.26

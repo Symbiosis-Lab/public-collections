@@ -5,7 +5,6 @@ description: "Station 8 · Ōiso, Kanagawa · 16.8 ri"
 author: Utagawa Hiroshige
 weight: 9
 cover: ../assets/aic-25579.jpg
-tags: ["Tokyo & Kanagawa"]
 station: "Oiso"
 ja: 大磯
 ri: 16.75

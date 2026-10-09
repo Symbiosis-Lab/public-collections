@@ -5,7 +5,6 @@ description: "Station 9 · Odawara, Kanagawa · 20.8 ri"
 author: Utagawa Hiroshige
 weight: 10
 cover: ../assets/aic-18253.jpg
-tags: ["Tokyo & Kanagawa"]
 station: "Odawara"
 ja: 小田原
 ri: 20.75

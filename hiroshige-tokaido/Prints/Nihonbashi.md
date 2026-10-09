@@ -5,7 +5,6 @@ description: "The start of the road · Chūō, Tokyo · 0 ri"
 author: Utagawa Hiroshige
 weight: 1
 cover: ../assets/aic-25544.jpg
-tags: ["Tokyo & Kanagawa"]
 station: "Nihonbashi"
 ja: 日本橋
 ri: 0.0

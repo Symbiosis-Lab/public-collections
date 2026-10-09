@@ -5,7 +5,6 @@ description: "Station 34 · Toyohashi, Aichi · 73.6 ri"
 author: Utagawa Hiroshige
 weight: 35
 cover: ../assets/aic-59092.jpg
-tags: ["Aichi"]
 station: "Yoshida"
 ja: 吉田
 ri: 73.65

@@ -5,7 +5,6 @@ description: "Station 3 · Kanagawa Ward, Yokohama · 7 ri"
 author: Utagawa Hiroshige
 weight: 4
 cover: ../assets/aic-25558.jpg
-tags: ["Tokyo & Kanagawa"]
 station: "Kanagawa"
 ja: 神奈川
 ri: 7.0

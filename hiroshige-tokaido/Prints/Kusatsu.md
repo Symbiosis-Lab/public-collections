@@ -5,7 +5,6 @@ description: "Station 52 · Kusatsu, Shiga · 119.5 ri"
 author: Utagawa Hiroshige
 weight: 53
 cover: ../assets/aic-25783.jpg
-tags: ["Shiga & Kyoto"]
 station: "Kusatsu"
 ja: 草津
 ri: 119.49

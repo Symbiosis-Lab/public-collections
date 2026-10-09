@@ -5,7 +5,6 @@ description: "Station 2 · Kawasaki Ward, Kawasaki, Kanagawa · 4.5 ri"
 author: Utagawa Hiroshige
 weight: 3
 cover: ../assets/aic-25555.jpg
-tags: ["Tokyo & Kanagawa"]
 station: "Kawasaki"
 ja: 川崎
 ri: 4.5

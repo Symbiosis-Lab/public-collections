@@ -1,11 +1,11 @@
 ---
 title: "Tokyo & Kanagawa"
-uid: "6bf31299"
-tag_page: "Tokyo & Kanagawa"
+uid: "4acb5a73"
 description: "11 prints · Nihonbashi to Hakone · 0–25 ri"
 cover: ../assets/aic-25544.jpg
 url: tokyo-kanagawa
 weight: 1
+children: false
 ---
 <!-- generated:chips -->
 ::: {.chips}
@@ -17,3 +17,29 @@ weight: 1
 - [[Shiga & Kyoto|Shiga & Kyoto 6]]
 :::
 <!-- /generated:chips -->
+
+<!-- generated:rows -->
+:::grid 1 {.rows}
+[[Nihonbashi]]
++++
+[[Shinagawa]]
++++
+[[Kawasaki]]
++++
+[[Kanagawa]]
++++
+[[Hodogaya]]
++++
+[[Totsuka]]
++++
+[[Fujisawa]]
++++
+[[Hiratsuka]]
++++
+[[Oiso]]
++++
+[[Odawara]]
++++
+[[Hakone]]
+:::
+<!-- /generated:rows -->

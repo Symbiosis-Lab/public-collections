@@ -5,7 +5,6 @@ description: "Station 16 · Yui, Shimizu-ku, Shizuoka City · 38.6 ri"
 author: Utagawa Hiroshige
 weight: 17
 cover: ../assets/aic-18255.jpg
-tags: ["Shizuoka"]
 station: "Yui"
 ja: 由比
 ri: 38.59

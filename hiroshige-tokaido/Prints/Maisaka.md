@@ -5,7 +5,6 @@ description: "Station 30 · Maisaka, Chūō Ward, Hamamatsu, Shizuoka · 67.4 ri
 author: Utagawa Hiroshige
 weight: 31
 cover: ../assets/aic-25683.jpg
-tags: ["Shizuoka"]
 station: "Maisaka"
 ja: 舞坂
 ri: 67.45

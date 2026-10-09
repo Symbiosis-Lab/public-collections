@@ -5,7 +5,6 @@ description: "Station 11 · Mishima, Shizuoka · 28.8 ri"
 author: Utagawa Hiroshige
 weight: 12
 cover: ../assets/aic-10926.jpg
-tags: ["Shizuoka"]
 station: "Mishima"
 ja: 三島
 ri: 28.75

@@ -5,7 +5,6 @@ description: "Station 45 · Shōno, Suzuka, Mie · 102.6 ri"
 author: Utagawa Hiroshige
 weight: 46
 cover: ../assets/aic-25761.jpg
-tags: ["Mie"]
 station: "Shōno"
 ja: 庄野
 ri: 102.63

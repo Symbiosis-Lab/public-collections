@@ -5,7 +5,6 @@ description: "Station 51 · Ishibe, Kōnan, Shiga · 116.5 ri"
 author: Utagawa Hiroshige
 weight: 52
 cover: ../assets/aic-18270.jpg
-tags: ["Shiga & Kyoto"]
 station: "Ishibe"
 ja: 石部
 ri: 116.49

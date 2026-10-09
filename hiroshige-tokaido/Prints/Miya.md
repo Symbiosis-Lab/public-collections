@@ -5,7 +5,6 @@ description: "Station 41 · Atsuta Ward, Nagoya · 89 ri"
 author: Utagawa Hiroshige
 weight: 42
 cover: ../assets/aic-25744.jpg
-tags: ["Aichi"]
 station: "Miya"
 ja: 宮
 ri: 88.96

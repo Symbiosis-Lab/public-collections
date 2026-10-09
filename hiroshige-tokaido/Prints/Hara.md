@@ -5,7 +5,6 @@ description: "Station 13 · Hara, Numazu, Shizuoka · 31.8 ri"
 author: Utagawa Hiroshige
 weight: 14
 cover: ../assets/aic-13219.jpg
-tags: ["Shizuoka"]
 station: "Hara"
 ja: 原
 ri: 31.75

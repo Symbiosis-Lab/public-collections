@@ -5,7 +5,6 @@ description: "Station 38 · Okazaki, Aichi · 80.6 ri"
 author: Utagawa Hiroshige
 weight: 39
 cover: ../assets/aic-18268.jpg
-tags: ["Aichi"]
 station: "Okazaki"
 ja: 岡崎
 ri: 80.65

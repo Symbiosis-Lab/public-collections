@@ -5,7 +5,6 @@ description: "Station 40 · Midori Ward, Nagoya · 87.3 ri"
 author: Utagawa Hiroshige
 weight: 41
 cover: ../assets/aic-25741.jpg
-tags: ["Aichi"]
 station: "Narumi"
 ja: 鳴海
 ri: 87.3

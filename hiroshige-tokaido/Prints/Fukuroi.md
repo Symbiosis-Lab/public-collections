@@ -5,7 +5,6 @@ description: "Station 27 · Fukuroi, Shizuoka · 59 ri"
 author: Utagawa Hiroshige
 weight: 28
 cover: ../assets/aic-25668.jpg
-tags: ["Shizuoka"]
 station: "Fukuroi"
 ja: 袋井
 ri: 58.98

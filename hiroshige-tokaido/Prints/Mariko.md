@@ -5,7 +5,6 @@ description: "Station 20 · Suruga Ward, Shizuoka City · 46.1 ri"
 author: Utagawa Hiroshige
 weight: 21
 cover: ../assets/aic-25630.jpg
-tags: ["Shizuoka"]
 station: "Mariko"
 ja: 丸子
 ri: 46.12

@@ -5,7 +5,6 @@ description: "Station 48 · Sakashita, Kameyama, Mie · 107.8 ri"
 author: Utagawa Hiroshige
 weight: 49
 cover: ../assets/aic-25769.jpg
-tags: ["Mie"]
 station: "Sakanoshita"
 ja: 坂下
 ri: 107.8

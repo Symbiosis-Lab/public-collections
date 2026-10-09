@@ -5,7 +5,6 @@ description: "Station 43 · Yokkaichi, Mie · 99.2 ri"
 author: Utagawa Hiroshige
 weight: 44
 cover: ../assets/aic-25755.jpg
-tags: ["Mie"]
 station: "Yokkaichi"
 ja: 四日市
 ri: 99.19

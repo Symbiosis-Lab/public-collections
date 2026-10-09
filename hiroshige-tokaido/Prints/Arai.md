@@ -5,7 +5,6 @@ description: "Station 31 · Arai, Kosai, Shizuoka · 69 ri"
 author: Utagawa Hiroshige
 weight: 32
 cover: ../assets/aic-18264.jpg
-tags: ["Shizuoka"]
 station: "Arai"
 ja: 新居
 ri: 68.95

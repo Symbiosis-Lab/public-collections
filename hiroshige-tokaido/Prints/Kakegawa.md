@@ -5,7 +5,6 @@ description: "Station 26 · Kakegawa, Shizuoka · 56.5 ri"
 author: Utagawa Hiroshige
 weight: 27
 cover: ../assets/aic-25663.jpg
-tags: ["Shizuoka"]
 station: "Kakegawa"
 ja: 掛川
 ri: 56.54

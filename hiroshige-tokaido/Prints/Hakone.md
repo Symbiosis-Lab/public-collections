@@ -5,7 +5,6 @@ description: "Station 10 · Hakone, Kanagawa · 25 ri"
 author: Utagawa Hiroshige
 weight: 11
 cover: ../assets/aic-25585.jpg
-tags: ["Tokyo & Kanagawa"]
 station: "Hakone"
 ja: 箱根
 ri: 24.97

@@ -5,7 +5,6 @@ description: "Station 33 · Futagawa, Toyohashi, Aichi · 72.1 ri"
 author: Utagawa Hiroshige
 weight: 34
 cover: ../assets/aic-25710.jpg
-tags: ["Aichi"]
 station: "Futagawa"
 ja: 二川
 ri: 72.09

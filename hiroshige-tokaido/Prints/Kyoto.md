@@ -5,7 +5,6 @@ description: "The end of the road · Nakagyo/Higashiyama Ward, Kyoto · 126.2 ri
 author: Utagawa Hiroshige
 weight: 55
 cover: ../assets/aic-25789.jpg
-tags: ["Shiga & Kyoto"]
 station: "Kyoto"
 ja: 京都
 ri: 126.16

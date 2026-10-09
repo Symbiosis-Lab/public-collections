@@ -5,7 +5,6 @@ description: "Station 44 · Ishiyakushi, Suzuka, Mie · 101.9 ri"
 author: Utagawa Hiroshige
 weight: 45
 cover: ../assets/aic-25759.jpg
-tags: ["Mie"]
 station: "Ishiyakushi"
 ja: 石薬師
 ri: 101.94

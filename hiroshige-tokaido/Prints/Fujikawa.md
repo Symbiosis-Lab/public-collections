@@ -5,7 +5,6 @@ description: "Station 37 · Fujikawa, Okazaki, Aichi · 79 ri"
 author: Utagawa Hiroshige
 weight: 38
 cover: ../assets/aic-20264.jpg
-tags: ["Aichi"]
 station: "Fujikawa"
 ja: 藤川
 ri: 78.95

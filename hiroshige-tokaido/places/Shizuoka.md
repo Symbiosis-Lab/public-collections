@@ -1,11 +1,11 @@
 ---
 title: "Shizuoka"
-uid: "73878507"
-tag_page: "Shizuoka"
+uid: "b33aee08"
 description: "22 prints · Mishima to Shirasuka · 28.8–70.6 ri"
 cover: ../assets/aic-25625.jpg
 url: shizuoka
 weight: 12
+children: false
 ---
 <!-- generated:chips -->
 ::: {.chips}
@@ -17,3 +17,51 @@ weight: 12
 - [[Shiga & Kyoto|Shiga & Kyoto 6]]
 :::
 <!-- /generated:chips -->
+
+<!-- generated:rows -->
+:::grid 1 {.rows}
+[[Mishima]]
++++
+[[Numazu]]
++++
+[[Hara]]
++++
+[[Yoshiwara]]
++++
+[[Kanbara]]
++++
+[[Yui]]
++++
+[[Okitsu]]
++++
+[[Ejiri]]
++++
+[[Fuchu]]
++++
+[[Mariko]]
++++
+[[Okabe]]
++++
+[[Fujieda]]
++++
+[[Shimada]]
++++
+[[Kanaya]]
++++
+[[Nissaka]]
++++
+[[Kakegawa]]
++++
+[[Fukuroi]]
++++
+[[Mitsuke]]
++++
+[[Hamamatsu]]
++++
+[[Maisaka]]
++++
+[[Arai]]
++++
+[[Shirasuka]]
+:::
+<!-- /generated:rows -->

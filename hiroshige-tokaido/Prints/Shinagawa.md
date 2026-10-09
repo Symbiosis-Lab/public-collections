@@ -5,7 +5,6 @@ description: "Station 1 · Shinagawa, Tokyo · 2 ri"
 author: Utagawa Hiroshige
 weight: 2
 cover: ../assets/aic-25551.jpg
-tags: ["Tokyo & Kanagawa"]
 station: "Shinagawa"
 ja: 品川
 ri: 2.0

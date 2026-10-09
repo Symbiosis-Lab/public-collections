@@ -5,7 +5,6 @@ description: "Station 15 · Kanbara, Shimizu-ku, Shizuoka City · 37.6 ri"
 author: Utagawa Hiroshige
 weight: 16
 cover: ../assets/aic-25613.jpg
-tags: ["Shizuoka"]
 station: "Kanbara"
 ja: 蒲原
 ri: 37.59

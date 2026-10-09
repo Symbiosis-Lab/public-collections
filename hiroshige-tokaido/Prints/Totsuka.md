@@ -5,7 +5,6 @@ description: "Station 5 · Totsuka Ward, Yokohama · 10.5 ri"
 author: Utagawa Hiroshige
 weight: 6
 cover: ../assets/aic-25563.jpg
-tags: ["Tokyo & Kanagawa"]
 station: "Totsuka"
 ja: 戸塚
 ri: 10.5

@@ -5,7 +5,6 @@ description: "Station 6 · Fujisawa, Kanagawa · 12.5 ri"
 author: Utagawa Hiroshige
 weight: 7
 cover: ../assets/aic-25569.jpg
-tags: ["Tokyo & Kanagawa"]
 station: "Fujisawa"
 ja: 藤沢
 ri: 12.5

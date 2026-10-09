@@ -1,11 +1,11 @@
 ---
 title: "Shiga & Kyoto"
-uid: "5c4cf5a1"
-tag_page: "Shiga & Kyoto"
+uid: "47979d0a"
 description: "6 prints · Tsuchiyama to Kyoto · 110.3–126.2 ri"
 cover: ../assets/aic-25789.jpg
 url: shiga-kyoto
 weight: 50
+children: false
 ---
 <!-- generated:chips -->
 ::: {.chips}
@@ -17,3 +17,19 @@ weight: 50
 - **Shiga & Kyoto 6**
 :::
 <!-- /generated:chips -->
+
+<!-- generated:rows -->
+:::grid 1 {.rows}
+[[Tsuchiyama]]
++++
+[[Minakuchi]]
++++
+[[Ishibe]]
++++
+[[Kusatsu]]
++++
+[[Otsu]]
++++
+[[Kyoto]]
+:::
+<!-- /generated:rows -->

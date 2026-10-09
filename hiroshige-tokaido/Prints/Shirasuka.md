@@ -5,7 +5,6 @@ description: "Station 32 · Shirasuka, Kosai, Shizuoka · 70.6 ri"
 author: Utagawa Hiroshige
 weight: 33
 cover: ../assets/aic-25701.jpg
-tags: ["Shizuoka"]
 station: "Shirasuka"
 ja: 白須賀
 ri: 70.62

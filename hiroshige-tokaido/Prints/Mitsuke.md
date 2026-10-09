@@ -5,7 +5,6 @@ description: "Station 28 · Iwata, Shizuoka · 60.5 ri"
 author: Utagawa Hiroshige
 weight: 29
 cover: ../assets/aic-18262.jpg
-tags: ["Shizuoka"]
 station: "Mitsuke"
 ja: 見付
 ri: 60.48

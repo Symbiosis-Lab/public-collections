@@ -5,7 +5,6 @@ description: "Station 22 · Fujieda, Shizuoka · 49.8 ri"
 author: Utagawa Hiroshige
 weight: 23
 cover: ../assets/aic-25649.jpg
-tags: ["Shizuoka"]
 station: "Fujieda"
 ja: 藤枝
 ri: 49.84

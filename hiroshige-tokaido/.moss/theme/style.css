@@ -107,8 +107,9 @@ article > .eyebrow + h2 { margin-top: 4px; border-top: 0; padding-top: 0; } /* t
 /* ---- 3. Footer: one line of credit left, the moss mark in line with it, on the page's column ---- */
 /* Footer, series nav and colophon share the article's 1240 column and 16px gutter, so every rule and edge lines up. */
 footer.container, .moss-series-nav, .moss-colophon { width: calc(100% - 2 * var(--moss-container-padding)); max-inline-size: calc(var(--moss-site-max-width) - 2 * var(--moss-container-padding)); padding-inline: 0; margin-inline: auto; }
-footer.container { margin-top: 88px; border-top: 1px solid var(--moss-border-strong); padding-block: 26px 0; font-size: 13.5px; color: var(--moss-color-text-secondary); display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-start; gap: 8px 24px; min-height: 66px; }
+footer.container { margin-top: 56px; border-top: 1px solid var(--moss-border-strong); padding-block: 26px 0; font-size: 13.5px; color: var(--moss-color-text-secondary); display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-start; gap: 8px 24px; min-height: 66px; }
 footer.container > * { margin: 0; padding-inline: 0; }
+footer.container::before { display: none; } /* moss adds a spacer pseudo-element under the divider; in a flex row it pushed the text 24px off the rule */
 footer.container a { color: var(--moss-color-text-secondary); text-underline-offset: 3px; }
 /* The colophon is a sibling after the footer, centred by moss; pull it up into the footer's row at the right end. */
 .moss-colophon { display: flex; justify-content: flex-end; align-self: stretch; margin-top: -62px; height: 62px; padding-block: 0; pointer-events: none; }
@@ -203,15 +204,19 @@ article:has(> .vertical-title) > figure.moss-image { grid-column: 3; grid-row: 1
 .moss-grid.weather-strip > .moss-grid-card { border: 3px solid var(--madder); padding: 12px; display: grid; align-content: center; text-align: center; font-size: 13px; color: var(--moss-color-text-secondary); aspect-ratio: 3 / 2; }
 .moss-grid.weather-strip > .moss-grid-card p { margin: 0; }
 .moss-grid.weather-strip > .moss-grid-card strong { font: italic 400 20px/1.1 var(--moss-font-heading); color: var(--moss-color-accent); }
-@media (max-width: 54rem) { .moss-grid.weather-strip { grid-template-columns: repeat(3, minmax(0, 1fr)); } .moss-grid.weather { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 54rem) { .moss-grid.weather { grid-template-columns: repeat(2, minmax(0, 1fr)); } .moss-grid.weather.weather-strip { grid-template-columns: repeat(3, minmax(0, 1fr)); } } /* the small strip keeps its six plates in two rows of three */
 
 /* Five stretches: a Prussian rule above each, plate, name, and the ri range. */
 .moss-grid.stretches { gap: 20px; --moss-grid-ratio: repeat(5, minmax(0, 1fr)); } /* five stretches, one row: moss grids stop at four columns */
 .moss-grid.stretches .moss-card { border-top: 3px solid var(--moss-color-accent); padding-top: 12px; }
 .moss-grid.stretches .moss-card-title { font-size: 21px; }
 @media (max-width: 68rem) { .moss-grid.stretches { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-/* moss forces one column under 768px, so the phone layouts set the columns directly. Five cards in three columns leave a lone card; two columns plus a wide last card never orphans one. */
-@media (max-width: 40rem) { .moss-grid.stretches { grid-template-columns: repeat(2, minmax(0, 1fr)); } .moss-grid.stretches > .moss-card:last-child:nth-child(odd) { grid-column: 1 / -1; } }
+/* Five stretches never fit a grid without a lone card (3+2, 2+2+1), so a phone gets rows: plate left, name and range right. */
+@media (max-width: 40rem) {
+  .moss-grid.stretches { grid-template-columns: 1fr; gap: 14px; }
+  .moss-grid.stretches .moss-card { flex-direction: row; align-items: center; gap: 16px; padding-top: 12px; }
+  .moss-grid.stretches .moss-card-cover { flex: 0 0 42%; }
+}
 
 /* ---- 6. Print page ------------------------------------------------------ */
 /* The article is a grid so the numeral, the vertical slip and the title sit side by side under the plate.
@@ -242,11 +247,11 @@ article:has(> .numeral) > blockquote p { margin: 0; }
 .look h3, article:has(> .numeral) > h3, article:has(> .map-hint) > h3 { font: 500 12px/1.4 var(--moss-font-body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--moss-color-text-secondary); margin: 22px 0 4px; }
 .look p { font: 400 17px/1.55 var(--moss-font-body); max-width: 42em; margin: 0; }
 article:has(> .numeral) > h3, article:has(> .map-hint) > h3 { margin-top: 48px; }
-.credit p { margin: 56px 0 0; padding-top: 14px; border-top: 1px solid var(--moss-border-light); font-size: 12.5px; color: var(--moss-color-muted); }
+.credit p { margin: 40px 0 0; padding-top: 14px; border-top: 1px solid var(--moss-border-light); font-size: 12.5px; color: var(--moss-color-muted); }
 .credit a { color: var(--moss-color-muted); text-underline-offset: 3px; }
 
 /* Previous and next: the whole title, wrapping to two lines, never an ellipsis (brief). */
-.moss-series-nav { margin-block: 56px 0; }
+.moss-series-nav { margin-block: 32px 0; }
 .moss-series-nav-links { max-inline-size: none; }
 .moss-series-nav-link { max-inline-size: none; inline-size: 100%; } /* moss halves each link; a full title needs the full cell */
 .moss-series-nav-links { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
@@ -295,7 +300,7 @@ article:has(> .numeral) > h3, article:has(> .map-hint) > h3 { margin-top: 48px; 
 article:has(> .map-hint) { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); grid-template-rows: auto auto 1fr; column-gap: 56px; align-content: start; padding-top: 44px; }
 article:has(> .map-hint) > * { grid-column: 1 / -1; }
 article:has(> .map-hint) > h1 { grid-column: 1; grid-row: 2; font-size: clamp(40px, 5.5vw, 72px); line-height: 1; margin: 0; align-self: end; }
-article:has(> .map-hint) > .eyebrow:first-of-type { grid-column: 1; grid-row: 1; margin-bottom: 12px; }
+article:has(> .map-hint) > .eyebrow:first-of-type { grid-column: 1; grid-row: 1; margin-bottom: 12px; align-self: end; }
 article:has(> .map-hint) > p { grid-column: 2; font: 400 19px/1.55 var(--moss-font-heading); color: var(--moss-color-text-secondary); margin: 0 0 12px; }
 article:has(> .map-hint) > p:nth-of-type(1) { grid-row: 1 / 3; align-self: end; }
 article:has(> .map-hint) > p:nth-of-type(2) { grid-row: 3; }
@@ -351,7 +356,9 @@ figure.road-map-compact svg { min-width: 0; }
 .roll table { width: 100%; border-collapse: collapse; break-inside: avoid; font-size: 15px; }
 .roll thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); } /* headers stay for screen readers; sighted readers see the pattern */
 .roll td { padding: 9px 0; border-bottom: 1px solid var(--moss-border-light); }
-.roll td:first-child { width: 3.2rem; color: var(--moss-color-muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+.roll a { text-decoration: none; color: var(--moss-color-text); }
+.roll a:hover { text-decoration: underline; }
+.roll td:first-child { width: 3.2rem; padding-right: 10px; color: var(--moss-color-muted); font-size: 13px; font-variant-numeric: tabular-nums; }
 .roll td:last-child { text-align: right; font-size: 13px; color: var(--moss-color-text-secondary); font-variant-numeric: tabular-nums; white-space: nowrap; }
 
 /* ---- 8. Prints index and stretch pages ---------------------------------- */
@@ -368,6 +375,13 @@ figure.road-map-compact svg { min-width: 0; }
   .moss-cards[data-layout="grid"] .moss-card-cover { flex: 0 0 min(46%, 260px); }
 }
 article > h1:first-child { font-size: clamp(36px, 5vw, 64px); line-height: 1.04; margin: 44px 0 28px; }
+
+/* A stretch page lists its prints in road order as rows: plate left, title and the grey line right.
+   (A tag listing sorts by title, which scrambles the road, so the page lists its own prints.) */
+.moss-grid.rows { gap: 0; }
+.moss-grid.rows .moss-card { flex-direction: row; align-items: center; gap: 20px; padding-block: 12px; border-bottom: 1px solid var(--moss-border-light); }
+.moss-grid.rows .moss-card-cover { flex: 0 0 min(220px, 38%); }
+.moss-grid.rows .moss-card-title { font-size: 20px; }
 
 /* ---- 9. About ------------------------------------------------------------ */
 /* Prose pages keep a reading measure inside the 1240 column. */

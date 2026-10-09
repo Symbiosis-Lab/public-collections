@@ -133,7 +133,6 @@ def seed():
             "---", f"title: {json.dumps(title, ensure_ascii=False)}", f'uid: "{uid}"',
             f"description: {json.dumps(f'{pos} · {place} · {fmt_ri(ri)} ri', ensure_ascii=False)}",
             "author: Utagawa Hiroshige", f"weight: {n + 1}", f"cover: {img}",
-            f"tags: [{json.dumps(stretch[1], ensure_ascii=False)}]",
             f"station: {json.dumps(s['en'], ensure_ascii=False)}", f"ja: {s['ja']}",
             f"ri: {ri}", f"lat: {s['lat']}", f"lng: {s['lng']}",
             f"place: {json.dumps(place, ensure_ascii=False)}",
@@ -168,10 +167,11 @@ def seed():
     for key, name, a, b, feat in STRETCHES:
         ri_a = 0 if a == 0 else byn[a]["ri"]
         text = "\n".join([
-            "---", f"title: {json.dumps(name, ensure_ascii=False)}", f"tag_page: {json.dumps(name, ensure_ascii=False)}",
+            "---", f"title: {json.dumps(name, ensure_ascii=False)}",
             f"description: {json.dumps(f'{b - a + 1} prints · {byn[a]['en']} to {byn[b]['en']} · {fmt_ri(ri_a)}–{fmt_ri(byn[b]['ri'])} ri', ensure_ascii=False)}",
-            f"cover: ../assets/{byn[feat]['id']}.jpg", f"url: {key}", "weight: " + str(a + 1), "---",
-            "<!-- generated:chips -->", "<!-- /generated:chips -->", ""])
+            f"cover: ../assets/{byn[feat]['id']}.jpg", f"url: {key}", "weight: " + str(a + 1), "children: false", "---",
+            "<!-- generated:chips -->", "<!-- /generated:chips -->", "",
+            "<!-- generated:rows -->", "<!-- /generated:rows -->", ""])
         (SITE / "places" / f"{name}.md").write_text(text)
 
 
@@ -349,6 +349,8 @@ def blocks():
     splice(PRINTS / "Prints.md", "chips", "::: {.chips}\n" + chips("all") + "\n:::")
     for key, name, *_ in STRETCHES:
         splice(SITE / "places" / f"{name}.md", "chips", "::: {.chips}\n" + chips(key) + "\n:::")
+        a, b = next((a, b) for k, n, a, b, _ in STRETCHES if k == key)
+        splice(SITE / "places" / f"{name}.md", "rows", ":::grid 1 {.rows}\n" + "\n+++\n".join(card(s) for s in S[a:b + 1]) + "\n:::")
     # home
     splice(SITE / "index.md", "strip", ":::grid 4 {scroll .strip}\n" + "\n+++\n".join(card(s) for s in S) + "\n:::")
     wx = [s for s in S if s["weather"]]

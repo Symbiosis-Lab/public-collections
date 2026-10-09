@@ -5,7 +5,6 @@ description: "Station 24 · Kanaya, Shimada, Shizuoka · 53.1 ri"
 author: Utagawa Hiroshige
 weight: 25
 cover: ../assets/aic-25657.jpg
-tags: ["Shizuoka"]
 station: "Kanaya"
 ja: 金谷
 ri: 53.07

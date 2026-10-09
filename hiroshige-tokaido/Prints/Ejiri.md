@@ -5,7 +5,6 @@ description: "Station 18 · Shimizu-ku, Shizuoka City · 42 ri"
 author: Utagawa Hiroshige
 weight: 19
 cover: ../assets/aic-25625.jpg
-tags: ["Shizuoka"]
 station: "Ejiri"
 ja: 江尻
 ri: 41.98

@@ -5,7 +5,6 @@ description: "Station 46 · Kameyama, Mie · 104.6 ri"
 author: Utagawa Hiroshige
 weight: 47
 cover: ../assets/aic-25762.jpg
-tags: ["Mie"]
 station: "Kameyama"
 ja: 亀山
 ri: 104.63

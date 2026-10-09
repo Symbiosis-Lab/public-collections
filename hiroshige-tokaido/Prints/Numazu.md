@@ -5,7 +5,6 @@ description: "Station 12 · Numazu, Shizuoka · 30.2 ri"
 author: Utagawa Hiroshige
 weight: 13
 cover: ../assets/aic-25594.jpg
-tags: ["Shizuoka"]
 station: "Numazu"
 ja: 沼津
 ri: 30.25

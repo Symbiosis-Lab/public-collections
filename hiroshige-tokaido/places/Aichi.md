@@ -1,11 +1,11 @@
 ---
 title: "Aichi"
-uid: "319da622"
-tag_page: "Aichi"
+uid: "7e55eea6"
 description: "9 prints · Futagawa to Miya · 72.1–89 ri"
 cover: ../assets/aic-25720.jpg
 url: aichi
 weight: 34
+children: false
 ---
 <!-- generated:chips -->
 ::: {.chips}
@@ -17,3 +17,25 @@ weight: 34
 - [[Shiga & Kyoto|Shiga & Kyoto 6]]
 :::
 <!-- /generated:chips -->
+
+<!-- generated:rows -->
+:::grid 1 {.rows}
+[[Futagawa]]
++++
+[[Yoshida]]
++++
+[[Goyu]]
++++
+[[Akasaka]]
++++
+[[Fujikawa]]
++++
+[[Okazaki]]
++++
+[[Chiryu]]
++++
+[[Narumi]]
++++
+[[Miya]]
+:::
+<!-- /generated:rows -->

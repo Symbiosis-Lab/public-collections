@@ -5,7 +5,6 @@ description: "Station 14 · Fuji, Shizuoka · 34.8 ri"
 author: Utagawa Hiroshige
 weight: 15
 cover: ../assets/aic-10929.jpg
-tags: ["Shizuoka"]
 station: "Yoshiwara"
 ja: 吉原
 ri: 34.76
