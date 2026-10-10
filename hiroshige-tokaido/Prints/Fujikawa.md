@@ -1,31 +1,50 @@
 ---
 title: "Fujikawa: View of Post Outskirts"
 uid: "ba7cd081"
-description: "A small daimyo procession passes a solitary teahouse at the edge of Fujikawa as evening approaches."
+description: "Station 37 · Fujikawa, Okazaki, Aichi · 79 ri"
 author: Utagawa Hiroshige
 weight: 38
 cover: ../assets/aic-20264.jpg
-location: ["Fujikawa"]
+station: "Fujikawa"
+ja: 藤川
+ri: 78.95
+lat: 34.9111
+lng: 137.2222
+place: "Fujikawa, Okazaki, Aichi"
 ---
-:::hero {.plate image=../assets/aic-20264.jpg caption="Fujikawa: View of Post Outskirts. Utagawa Hiroshige, 1833-34. The Art Institute of Chicago. CC0."}
+::: {.trail}
+[[places|The Road]] / [[Aichi]] / Fujikawa
+:::
+
+![Fujikawa, View of Post Outskirts: A small daimyo procession passes a solitary teahouse](../assets/aic-20264.jpg)
+*Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-20264.jpg)*
+
+::: {.eyebrow}
+Station 37 · Fujikawa, Okazaki, Aichi
+:::
+
+::: {.numeral}
+37
+
+of 53
+:::
+
+::: {.slip}
+藤川
+:::
+
+::: {.subtitle}
+*Fujikawa, bohana no zu*
 :::
 
 > A small daimyo procession passes a solitary teahouse at the edge of Fujikawa as evening approaches.
 
-*Curator's note, written for this site from the title and the print's well-documented subject; the museum record carries no description.*
+### Where it falls on the road
 
-| | |
-|---|---|
-| Station | Fujikawa (藤川), station 37 of 53 |
-| Where it is now | Fujikawa, Okazaki, Aichi |
-| Distance | 78.95 ri from Nihonbashi (Edo-period register; 1 ri is about 3.9 km) |
-| Artist | Utagawa Hiroshige (歌川広重) |
-| Date | 1833-34 |
-| Series | *Fifty-three Stations of the Tōkaidō (Tōkaidō gojūsan tsugi no uchi)*, Hōeidō edition |
-| Catalogue title | Fujikawa: View of Post Outskirts (Fujikawa, bohana no zu), from the series "Fifty-three Stations of the Tokaido (Tokaido gojusan tsugi no uchi)," also known as the Hoeido Tokaido |
-| Credit | The Art Institute of Chicago |
-| Licence | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) |
-| Licence evidence | AIC API artworks/20264: is_public_domain=true |
-| Source record | [www.artic.edu/artworks/20264](https://www.artic.edu/artworks/20264) |
+::: {.ruler}
+79 ri, about 310 km from Nihonbashi.
+:::
 
-[[Browse|All 55 prints]] · [[places|The road on a map]]
+::: {.credit}
+Art Institute of Chicago · Public domain (CC0) · [Source record](https://www.artic.edu/artworks/20264)
+:::

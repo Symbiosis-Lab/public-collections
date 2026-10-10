@@ -1,31 +1,54 @@
 ---
 title: "Nihon Bridge: Morning Scene"
 uid: "4a890d01"
-description: "A daimyo procession sets off across Nihonbashi at dawn as fish vendors and porters crowd the bridgehead, marking the start of the T\u014dkaid\u014d in Edo."
+description: "The start of the road · Chūō, Tokyo · 0 ri"
 author: Utagawa Hiroshige
 weight: 1
 cover: ../assets/aic-25544.jpg
-location: ["Nihonbashi"]
+station: "Nihonbashi"
+ja: 日本橋
+ri: 0.0
+lat: 35.6836
+lng: 139.7744
+place: "Chūō, Tokyo"
 ---
-:::hero {.plate image=../assets/aic-25544.jpg caption="Nihon Bridge: Morning Scene. Utagawa Hiroshige, 1833-34. The Art Institute of Chicago. CC0."}
+::: {.trail}
+[[places|The Road]] / [[Tokyo & Kanagawa]] / Nihonbashi
+:::
+
+![Nihon Bridge, Morning Scene: A daimyo procession sets off across Nihonbashi at dawn](../assets/aic-25544.jpg)
+*Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25544.jpg)*
+
+::: {.eyebrow}
+The start of the road · Chūō, Tokyo
+:::
+
+::: {.numeral}
+Start
+:::
+
+::: {.slip}
+日本橋
+:::
+
+::: {.subtitle}
+*Nihonbashi, asa no kei*
 :::
 
 > A daimyo procession sets off across Nihonbashi at dawn as fish vendors and porters crowd the bridgehead, marking the start of the Tōkaidō in Edo.
 
-*Curator's note, written for this site from the title and the print's well-documented subject; the museum record carries no description.*
+::: {.look}
+### What to look for
 
-| | |
-|---|---|
-| Station | Nihonbashi (日本橋), the start of the road, in Edo |
-| Where it is now | Chūō, Tokyo |
-| Distance | 0 ri from Nihonbashi (Edo-period register; 1 ri is about 3.9 km) |
-| Artist | Utagawa Hiroshige (歌川広重) |
-| Date | 1833-34 |
-| Series | *Fifty-three Stations of the Tōkaidō (Tōkaidō gojūsan tsugi no uchi)*, Hōeidō edition |
-| Catalogue title | Nihon Bridge: Morning Scene (Nihonbashi, asa no kei), from the series "Fifty-three Stations of the Tokaido Road (Tokaido gojusan tsugi no uchi)," also known as the Hoeido Tokaido |
-| Credit | The Art Institute of Chicago |
-| Licence | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) |
-| Licence evidence | AIC API artworks/25544: is_public_domain=true |
-| Source record | [www.artic.edu/artworks/25544](https://www.artic.edu/artworks/25544) |
+Fish vendors and porters crowd the bridgehead as the procession sets out, and the city is still in dawn light.
+:::
 
-[[Browse|All 55 prints]] · [[places|The road on a map]]
+### Where it falls on the road
+
+::: {.ruler}
+The start of the road, nothing to walk yet.
+:::
+
+::: {.credit}
+Art Institute of Chicago · Public domain (CC0) · [Source record](https://www.artic.edu/artworks/25544)
+:::

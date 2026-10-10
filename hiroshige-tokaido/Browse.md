@@ -1,10 +1,14 @@
 ---
+title: Browse
 description: All 55 prints in order along the road, with the Japanese station names and where each place is today.
 uid: "7f614da5"
+weight: 3
 ---
+# Browse the catalogue
 
-> Nihonbashi, the fifty-three post stations, and Kyoto, in the order a traveller met them.
+Nihonbashi, the fifty-three post stations, and Kyoto, in the order a traveller met them.
 
+<!-- generated:table -->
 | No. | Station | Print | Where it is now |
 |---|---|---|---|
 | Start | [Nihonbashi](Prints/Nihonbashi.md) 日本橋 | Morning Scene | Chūō, Tokyo |
@@ -62,3 +66,4 @@ uid: "7f614da5"
 | 52 | [Kusatsu](Prints/Kusatsu.md) 草津 | Famous Post House | Kusatsu, Shiga |
 | 53 | [Ōtsu](Prints/Otsu.md) 大津 | Hashirii Teahouse | Ōtsu, Shiga |
 | End | [Kyoto](Prints/Kyoto.md) 京都 | The Great Bridge at Sanjo | Nakagyo/Higashiyama Ward, Kyoto |
+<!-- /generated:table -->

@@ -1,31 +1,76 @@
 ---
 title: "Mishima: Morning Mist"
 uid: "44f230ca"
-description: "Travelers and a packhorse emerge from thick morning fog near the torii gate of Mishima Taisha, Mount Fuji hidden entirely from view."
+description: "Station 11 · Mishima, Shizuoka · 28.8 ri"
 author: Utagawa Hiroshige
 weight: 12
 cover: ../assets/aic-10926.jpg
-location: ["Mishima"]
+station: "Mishima"
+ja: 三島
+ri: 28.75
+lat: 35.1193
+lng: 138.9145
+place: "Mishima, Shizuoka"
+weather: "Mist"
 ---
-:::hero {.plate image=../assets/aic-10926.jpg caption="Mishima: Morning Mist. Utagawa Hiroshige, 1833-34. The Art Institute of Chicago. CC0."}
+::: {.trail}
+[[places|The Road]] / [[Shizuoka]] / Mishima
+:::
+
+![Mishima, Morning Mist: Travelers and a packhorse emerge from thick morning fog](../assets/aic-10926.jpg)
+*Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-10926.jpg)*
+
+::: {.eyebrow}
+Station 11 · Mishima, Shizuoka
+:::
+
+::: {.numeral}
+11
+
+of 53
+:::
+
+::: {.slip}
+三島
+:::
+
+::: {.subtitle}
+*Mishima, asagiri*
 :::
 
 > Travelers and a packhorse emerge from thick morning fog near the torii gate of Mishima Taisha, Mount Fuji hidden entirely from view.
 
-*Curator's note, written for this site from the title and the print's well-documented subject; the museum record carries no description.*
+::: {.look}
+### What to look for
 
-| | |
-|---|---|
-| Station | Mishima (三島), station 11 of 53 |
-| Where it is now | Mishima, Shizuoka |
-| Distance | 28.75 ri from Nihonbashi (Edo-period register; 1 ri is about 3.9 km) |
-| Artist | Utagawa Hiroshige (歌川広重) |
-| Date | 1833-34 |
-| Series | *Fifty-three Stations of the Tōkaidō (Tōkaidō gojūsan tsugi no uchi)*, Hōeidō edition |
-| Catalogue title | Mishima: Morning Mist (Mishima, asagiri), from the series "Fifty-three Stations of the Tokaido Road (Tokaido gojusan tsugi no uchi)," also known as the Hoeido Tokaido |
-| Credit | The Art Institute of Chicago |
-| Licence | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) |
-| Licence evidence | AIC API artworks/10926: is_public_domain=true |
-| Source record | [www.artic.edu/artworks/10926](https://www.artic.edu/artworks/10926) |
+The mist is a smooth fade of colour, and the shrine gate and travellers come out of it; Fuji is somewhere behind.
+:::
 
-[[Browse|All 55 prints]] · [[places|The road on a map]]
+### Where it falls on the road
+
+::: {.ruler}
+28.8 ri, about 113 km from Nihonbashi.
+:::
+
+### Rain, snow and mist
+
+<!-- generated:weather -->
+:::grid 3 {.weather .weather-strip}
+[[Oiso|Rain]]
++++
+**Mist**  
+This print
++++
+[[Kanbara|Snow]]
++++
+[[Shono|Driving rain]]
++++
+[[Kameyama|Snow, clearing]]
++++
+[[Tsuchiyama|Spring shower]]
+:::
+<!-- /generated:weather -->
+
+::: {.credit}
+Art Institute of Chicago · Public domain (CC0) · [Source record](https://www.artic.edu/artworks/10926)
+:::

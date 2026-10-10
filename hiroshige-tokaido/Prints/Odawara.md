@@ -1,31 +1,50 @@
 ---
 title: "Odawara: The Sakawa River"
 uid: "fe7e9e28"
-description: "Porters carry a palanquin and baggage across the shallow Sakawa River on the approach to Odawara Castle, visible on the far bank."
+description: "Station 9 · Odawara, Kanagawa · 20.8 ri"
 author: Utagawa Hiroshige
 weight: 10
 cover: ../assets/aic-18253.jpg
-location: ["Odawara"]
+station: "Odawara"
+ja: 小田原
+ri: 20.75
+lat: 35.2487
+lng: 139.161
+place: "Odawara, Kanagawa"
 ---
-:::hero {.plate image=../assets/aic-18253.jpg caption="Odawara: The Sakawa River. Utagawa Hiroshige, 1833-34. The Art Institute of Chicago. CC0."}
+::: {.trail}
+[[places|The Road]] / [[Tokyo & Kanagawa]] / Odawara
+:::
+
+![Odawara, The Sakawa River: porters carry a palanquin and baggage across the river](../assets/aic-18253.jpg)
+*Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-18253.jpg)*
+
+::: {.eyebrow}
+Station 9 · Odawara, Kanagawa
+:::
+
+::: {.numeral}
+9
+
+of 53
+:::
+
+::: {.slip}
+小田原
+:::
+
+::: {.subtitle}
+*Odawara, Sakawagawa*
 :::
 
 > Porters carry a palanquin and baggage across the shallow Sakawa River on the approach to Odawara Castle, visible on the far bank.
 
-*Curator's note, written for this site from the title and the print's well-documented subject; the museum record carries no description.*
+### Where it falls on the road
 
-| | |
-|---|---|
-| Station | Odawara (小田原), station 9 of 53 |
-| Where it is now | Odawara, Kanagawa |
-| Distance | 20.75 ri from Nihonbashi (Edo-period register; 1 ri is about 3.9 km) |
-| Artist | Utagawa Hiroshige (歌川広重) |
-| Date | 1833-34 |
-| Series | *Fifty-three Stations of the Tōkaidō (Tōkaidō gojūsan tsugi no uchi)*, Hōeidō edition |
-| Catalogue title | Odawara: The Sakawa River (Odawara, Sakawagawa), from the series "Fifty-three Stations of the Tokaido Road (Tokaido gojusan tsugi no uchi)," also known as the Hoeido Tokaido |
-| Credit | The Art Institute of Chicago |
-| Licence | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) |
-| Licence evidence | AIC API artworks/18253: is_public_domain=true |
-| Source record | [www.artic.edu/artworks/18253](https://www.artic.edu/artworks/18253) |
+::: {.ruler}
+20.8 ri, about 81 km from Nihonbashi.
+:::
 
-[[Browse|All 55 prints]] · [[places|The road on a map]]
+::: {.credit}
+Art Institute of Chicago · Public domain (CC0) · [Source record](https://www.artic.edu/artworks/18253)
+:::

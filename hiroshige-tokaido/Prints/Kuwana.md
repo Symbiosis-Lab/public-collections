@@ -1,31 +1,56 @@
 ---
 title: "Kuwana: The Landing of the Shichiri Ferry Crossing"
 uid: "a6a9a547"
-description: "Sailboats approach the pier at Kuwana after the seven-ri sea crossing from Miya, since no direct road linked the two towns."
+description: "Station 42 · Kuwana, Mie · 96 ri"
 author: Utagawa Hiroshige
 weight: 43
 cover: ../assets/aic-25748.jpg
-location: ["Kuwana"]
+station: "Kuwana"
+ja: 桑名
+ri: 95.96
+lat: 35.0687
+lng: 136.6955
+place: "Kuwana, Mie"
 ---
-:::hero {.plate image=../assets/aic-25748.jpg caption="Kuwana: The Landing of the Shichiri Ferry Crossing. Utagawa Hiroshige, 1833-34. The Art Institute of Chicago. CC0."}
+::: {.trail}
+[[places|The Road]] / [[Mie]] / Kuwana
+:::
+
+![Kuwana, The Landing of the Shichiri Ferry Crossing: Sailboats approach the pier at Kuwana](../assets/aic-25748.jpg)
+*Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25748.jpg)*
+
+::: {.eyebrow}
+Station 42 · Kuwana, Mie
+:::
+
+::: {.numeral}
+42
+
+of 53
+:::
+
+::: {.slip}
+桑名
+:::
+
+::: {.subtitle}
+*Kuwana, Shichiri watashiguchi*
 :::
 
 > Sailboats approach the pier at Kuwana after the seven-ri sea crossing from Miya, since no direct road linked the two towns.
 
-*Curator's note, written for this site from the title and the print's well-documented subject; the museum record carries no description.*
+::: {.look}
+### What to look for
 
-| | |
-|---|---|
-| Station | Kuwana (桑名), station 42 of 53 |
-| Where it is now | Kuwana, Mie |
-| Distance | 95.96 ri from Nihonbashi (Edo-period register; 1 ri is about 3.9 km) |
-| Artist | Utagawa Hiroshige (歌川広重) |
-| Date | 1833-34 |
-| Series | *Fifty-three Stations of the Tōkaidō (Tōkaidō gojūsan tsugi no uchi)*, Hōeidō edition |
-| Catalogue title | Kuwana: The Landing of the Shichiri Ferry Crossing (Kuwana, Shichiri watashiguchi), from the series "Fifty-three Stations of the Tokaido (Tokaido gojusan tsugi no uchi)," also known as the Hoeido Tokaido |
-| Credit | The Art Institute of Chicago |
-| Licence | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) |
-| Licence evidence | AIC API artworks/25748: is_public_domain=true |
-| Source record | [www.artic.edu/artworks/25748](https://www.artic.edu/artworks/25748) |
+Sailboats and a pier: the sea crossing from Miya ends here.
+:::
 
-[[Browse|All 55 prints]] · [[places|The road on a map]]
+### Where it falls on the road
+
+::: {.ruler}
+96 ri, about 377 km from Nihonbashi.
+:::
+
+::: {.credit}
+Art Institute of Chicago · Public domain (CC0) · [Source record](https://www.artic.edu/artworks/25748)
+:::

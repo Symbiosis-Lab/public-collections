@@ -1,31 +1,50 @@
 ---
 title: "Arai: View of Ferryboats"
 uid: "187ed059"
-description: "A daimyo's ferry approaches the shore at the Arai checkpoint, one of the T\u014dkaid\u014d's most heavily guarded barrier stations."
+description: "Station 31 · Arai, Kosai, Shizuoka · 69 ri"
 author: Utagawa Hiroshige
 weight: 32
 cover: ../assets/aic-18264.jpg
-location: ["Arai"]
+station: "Arai"
+ja: 新居
+ri: 68.95
+lat: 34.6941
+lng: 137.5608
+place: "Arai, Kosai, Shizuoka"
 ---
-:::hero {.plate image=../assets/aic-18264.jpg caption="Arai: View of Ferryboats. Utagawa Hiroshige, 1833-34. The Art Institute of Chicago. CC0."}
+::: {.trail}
+[[places|The Road]] / [[Shizuoka]] / Arai
+:::
+
+![Arai, View of Ferryboats: A daimyo's ferry approaches the shore at the Arai checkpoint](../assets/aic-18264.jpg)
+*Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-18264.jpg)*
+
+::: {.eyebrow}
+Station 31 · Arai, Kosai, Shizuoka
+:::
+
+::: {.numeral}
+31
+
+of 53
+:::
+
+::: {.slip}
+新居
+:::
+
+::: {.subtitle}
+*Arai, watashibune no zu*
 :::
 
 > A daimyo's ferry approaches the shore at the Arai checkpoint, one of the Tōkaidō's most heavily guarded barrier stations.
 
-*Curator's note, written for this site from the title and the print's well-documented subject; the museum record carries no description.*
+### Where it falls on the road
 
-| | |
-|---|---|
-| Station | Arai (新居), station 31 of 53 |
-| Where it is now | Arai, Kosai, Shizuoka |
-| Distance | 68.95 ri from Nihonbashi (Edo-period register; 1 ri is about 3.9 km) |
-| Artist | Utagawa Hiroshige (歌川広重) |
-| Date | 1833-34 |
-| Series | *Fifty-three Stations of the Tōkaidō (Tōkaidō gojūsan tsugi no uchi)*, Hōeidō edition |
-| Catalogue title | Arai: View of Ferryboats (Arai, watashibune no zu), from the series "Fifty-three Stations of the Tokaido (Tokaido gojusan tsugi no uchi)," also known as the Hoeido Tokaido |
-| Credit | The Art Institute of Chicago |
-| Licence | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) |
-| Licence evidence | AIC API artworks/18264: is_public_domain=true |
-| Source record | [www.artic.edu/artworks/18264](https://www.artic.edu/artworks/18264) |
+::: {.ruler}
+69 ri, about 271 km from Nihonbashi.
+:::
 
-[[Browse|All 55 prints]] · [[places|The road on a map]]
+::: {.credit}
+Art Institute of Chicago · Public domain (CC0) · [Source record](https://www.artic.edu/artworks/18264)
+:::

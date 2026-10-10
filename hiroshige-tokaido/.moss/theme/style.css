@@ -1,4 +1,396 @@
-/* The prints are landscape sheets (about 3:2). moss crops a narrow card's cover to 3:4 by default, which cuts away half of each print; show the cards at the sheets' own shape. */
+@import url("fonts/fonts.css");
+
+/* ==========================================================================
+   Tōkaidō: the road you walk, with the print as the destination at each stop.
+   Order: tokens, header, footer, shared bits, home, print page, The Road,
+   prints index, About. Every rule says why it exists. Rules that only patch
+   a moss default are also listed in tools/tokaido/friction-run2.md.
+   ========================================================================== */
+
+/* ---- 1. Tokens (rung 1) ------------------------------------------------ */
 :root {
+  /* Washi paper, sumi ink, Prussian blue for links and numerals (brief palette). */
+  --moss-color-bg: #f6f1e5;
+  --moss-color-text: #211f1b;
+  --moss-color-text-secondary: #4f4a3d;
+  --moss-color-muted: #665f4f; /* 5.4:1 on paper, 4.7:1 on the mat; the brief's lighter grey failed 4.5:1 */
+  --moss-color-surface: #eee6d2; /* the mat a plate sits on */
+  --moss-color-accent: #1b4a78;
+  --moss-color-accent-quiet: rgba(27, 74, 120, 0.28);
+  --moss-border-light: #d6cbb0;
+  --moss-border-medium: #cfc3a6;
+  --moss-border-strong: #211f1b;
+  /* Madder is reserved for "you are here" (the ruler mark, the selected station). */
+  --madder: #a8402b;
+  /* Map palette: pale sea grading to deeper, cream land, Prussian coast. */
+  --road-sea: #dfe7e6;
+  --road-sea-deep: #c3d2d6;
+  --road-land: #f1e9d6;
+  --road-coast: #1b4a78;
+  --road-ink: #211f1b;
+
+  /* Newsreader for names and numerals, Zen Kaku for interface text, Shippori Mincho for Japanese. */
+  --moss-font-heading: "Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, "Hiragino Mincho ProN", "Yu Mincho", serif;
+  --moss-font-body: "Zen Kaku Gothic New", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mincho: "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
+  --moss-font-heading-weight: 500;
+  --moss-font-weight-body: 400;
+  --moss-reading-size-base: 1rem; /* a catalogue reads at interface size, not essay size */
+
+  /* 1240px column with a 16px gutter (brief). */
+  --moss-site-max-width: 1240px; /* content_width: full resolves to this; the "wide" preset ignores --moss-width-wide */
+  --moss-container-padding: 16px;
+  /* Print cards show the whole sheet: prints are about 3:2, moss crops covers to 4:3 by default. */
   --moss-card-cover-ratio: 3 / 2;
+  --moss-card-min: 220px;
+  --moss-cover-color: transparent; /* moss tints a card with its cover's dominant colour; a plate should sit on paper */
+}
+
+:root[data-theme="dark"] { /* Dark palette: sumi-blue ground, cream text, Prussian lifted so links keep contrast */
+  /* Sumi-blue ground, cream text, Prussian lifted so links keep contrast. */
+  --moss-color-bg: #101318;
+  --moss-color-text: #e9e1cd;
+  --moss-color-text-secondary: #b9b3a1;
+  --moss-color-muted: #9d9784; /* 6.4:1 on the ground */
+  --moss-color-surface: #171b22;
+  --moss-color-accent: #8fb6e2;
+  --moss-color-accent-quiet: rgba(143, 182, 226, 0.35);
+  --moss-border-light: #2b313b;
+  --moss-border-medium: #3a424e;
+  --moss-border-strong: #e9e1cd;
+  --madder: #e0846b;
+  --road-sea: #0f1721;
+  --road-sea-deep: #16263a;
+  --road-land: #1b1f27;
+  --road-coast: #6f98c6;
+  --road-ink: #e9e1cd;
+}
+
+body { /* Kana stay unspaced and the sideways-scrolling map never widens the page */
+  font-feature-settings: "palt" 0; /* proportional kana would crowd the station names */
+  overflow-x: clip; /* the sideways-scrolling map must never widen the page */
+}
+
+/* Headings: serif, tight, no moss permalink glyph (a tab stop with no job on a catalogue). */
+h1, h2, h3, .moss-article-title { font-family: var(--moss-font-heading); font-weight: 500; letter-spacing: -0.01em; }
+.moss-heading-anchor { display: none; } /* No permalink glyph: it is a tab stop with no job on a catalogue */
+
+/* A heavy rule opens every section (brief), with a small caps label above the heading. */
+article > h2 { font-size: clamp(26px, 3vw, 34px); line-height: 1.15; margin: 64px 0 24px; border-top: 1px solid var(--moss-border-strong); padding-top: 14px; }
+.eyebrow, .eyebrow p { /* Small spaced caps for the label over a heading */
+  /* Small spaced caps for the label over a heading. */
+  margin: 0; font: 500 12px/1.4 var(--moss-font-body); letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--moss-color-text-secondary);
+}
+article > .eyebrow:has(+ h2) { border-top: 1px solid var(--moss-border-strong); padding-top: 14px; margin-top: 64px; } /* The heavy section rule sits on the label so it opens the section */
+article > .eyebrow + h2 { margin-top: 4px; border-top: 0; padding-top: 0; } /* the label above already carries the rule */
+
+/* Keyboard focus must be visible everywhere (brief). */
+:focus-visible { outline: 2px solid var(--moss-color-accent); outline-offset: 3px; border-radius: 2px; }
+
+/* ---- 2. Header: site name alone on row 1; links left, tools right on row 2 ---- */
+.nav-content { gap: 0 20px; padding-block-end: 0; }
+/* moss only splits the header in two when the links overflow; the design wants the split always. */
+.nav-content .nav-left { flex: 1 1 100%; padding-block: 22px 8px; }
+.nav-content .nav-right { display: contents; } /* Header: flatten the wrapper so links and tools share row 2 */
+.nav-content .nav-links { order: 1; flex: 1 1 0; justify-content: flex-start; gap: 0 28px; } /* Header row 2: links on the left */
+.nav-content .nav-icons { order: 2; margin-inline-start: auto; } /* Header row 2: search and toggle at the right end */
+.site-name { font: 500 clamp(24px, 3.4vw, 34px) / 1.15 var(--moss-font-heading); letter-spacing: -0.005em; color: var(--moss-color-text); white-space: normal; } /* Row 1: the site name alone, in the display serif */
+/* Row 2 links: quiet sans, ink when current, Prussian underline on the current one. */
+.main-nav .nav-links a { font: 500 15px/1 var(--moss-font-body); padding-block: 15px 12px; border-block-end: 2px solid transparent; }
+.main-nav .nav-links a.active, .main-nav .nav-links a[aria-current="page"] { color: var(--moss-color-text); border-block-end-color: var(--moss-color-accent); padding-block-end: 12px; } /* Current page: ink text with a Prussian underline */
+.main-nav { margin-block-end: 0; } /* The header hairline does the separating, so no extra margin */
+/* Phones: moss folds the links into a menu only below 320px; four short links fit one row if tightened, so row 2 stays links, search, toggle. */
+@media (max-width: 40rem) { .nav-content .nav-links { gap: 0 14px; } .main-nav .nav-links a { font-size: 14px; } .nav-content .nav-icons { gap: 4px; } }
+.nav-content { border-block-end: 1px solid var(--moss-border-light); } /* One hairline under the header, same on every page */
+
+/* ---- 3. Footer: one line of credit left, the moss mark in line with it, on the page's column ---- */
+/* Footer, series nav and colophon share the article's 1240 column and 16px gutter, so every rule and edge lines up. */
+footer.container, .moss-series-nav, .moss-colophon { width: calc(100% - 2 * var(--moss-container-padding)); max-inline-size: calc(var(--moss-site-max-width) - 2 * var(--moss-container-padding)); padding-inline: 0; margin-inline: auto; }
+footer.container { margin-top: 56px; border-top: 1px solid var(--moss-border-strong); padding-block: 26px 0; font-size: 13.5px; color: var(--moss-color-text-secondary); display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-start; gap: 8px 24px; min-height: 66px; } /* Footer: one heavy rule and one quiet line of credit */
+main > article { margin-block-end: 0; } /* moss gives the article 64px of bottom margin, which stacked on the footer margin into a 120px empty band; the footer margin alone is the gap */
+footer.container > * { margin: 0; padding-inline: 0; } /* Footer children carry no inset of their own */
+footer.container::before { display: none; } /* moss adds a spacer pseudo-element under the divider; in a flex row it pushed the text 24px off the rule */
+footer.container a { color: var(--moss-color-text-secondary); text-underline-offset: 3px; }
+/* The colophon is a sibling after the footer, centred by moss; pull it up into the footer's row at the right end. */
+.moss-colophon { display: flex; justify-content: flex-end; align-self: stretch; margin-top: -62px; height: 62px; padding-block: 0; pointer-events: none; }
+.moss-colophon a { pointer-events: auto; padding-block: 0; align-self: center; } /* Keep the mark clickable inside the pulled-up row */
+@media (max-width: 40rem) { .moss-colophon { margin-top: 0; height: auto; justify-content: flex-start; padding-block: 12px 24px; } } /* Phones: the mark sits under the footer line instead of overlapping it */
+
+/* ---- 4. Shared pieces ------------------------------------------------- */
+/* A plate sits on a paper mat with a shadow only under the plate; never cropped. */
+figure.moss-image { margin: 0; }
+article > figure.moss-image img { height: auto; width: 100%; display: block; background: var(--moss-color-surface); box-shadow: 0 1px 0 var(--moss-border-light), 0 18px 40px -22px rgba(33, 31, 27, 0.55); } /* The plate whole, never cropped, with a shadow only under the plate */
+figure.moss-image figcaption { font: 400 13.5px/1.5 var(--moss-font-body); color: var(--moss-color-text-secondary); margin-top: 12px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; } /* Caption line: artist and date left, Full size link right */
+figure.moss-image figcaption a { color: var(--moss-color-accent); text-underline-offset: 3px; white-space: nowrap; } /* Prussian link, kept on one line */
+figure.moss-image figcaption a::after { content: " ↗"; } /* marks the link as opening the full-size file in a new tab */
+
+/* Buttons: square-ish, 3px radius, primary filled in Prussian (brief). */
+.moss-buttons { display: flex; gap: 12px; flex-wrap: wrap; margin: 0 0 8px; }
+.moss-btn[data-role="primary"] { background: var(--moss-color-accent); border-color: var(--moss-color-accent); color: var(--moss-color-bg); } /* the one filled button is Prussian, not sumi */
+.moss-btn[data-role="secondary"] { background: transparent; border: 1px solid var(--moss-color-text); color: var(--moss-color-text); }
+.moss-btn { border-radius: 3px; font: 500 15px/1 var(--moss-font-body); padding: 13px 18px; text-decoration: none; } /* Square-ish buttons with a 3px radius */
+
+/* Link-only list under a section, quiet and right-aligned to the heading's measure. */
+article > p > a { font-weight: 500; font-size: 14.5px; text-underline-offset: 4px; }
+
+/* Cards (prints index, stretch pages, weather, strip): the plate, a serif name, one grey line. */
+.moss-card, .moss-grid > .moss-card { background: none; box-shadow: none; border-radius: 0; padding: 0; border: 0; transform: none; }
+.moss-card .moss-card-content { color: inherit; padding: 10px 0 0; background: none; } /* moss sets white text for the tint it paints behind the title */
+.moss-card .moss-card-cover { border-radius: 0; background: var(--moss-color-surface); }
+.moss-card .moss-card-cover img { border-radius: 0; box-shadow: 0 1px 0 var(--moss-border-light); } /* Plate corners stay square; a hairline lifts the sheet off the paper */
+.moss-card:hover .moss-card-cover img, .moss-card:focus-visible .moss-card-cover img { outline: 2px solid var(--moss-color-accent); outline-offset: 2px; } /* Hover and focus outline a plate in Prussian */
+.moss-card .moss-card-title { font: 500 18px/1.25 var(--moss-font-heading); color: var(--moss-color-text); text-decoration: none; } /* A serif name under each plate */
+.moss-card .moss-card-description { font: 400 12.5px/1.45 var(--moss-font-body); color: var(--moss-color-text-secondary); margin: 2px 0 0; } /* One grey line of place and distance */
+.moss-card .moss-card-meta { display: none; } /* the empty date slot would add a gap above each title */
+
+/* ---- 5. Home ----------------------------------------------------------- */
+/* Hero: text left, the vertical title as a quiet rule, the plate right. moss has no two-column hero
+   with a plate, so the article itself becomes the grid. */
+article:has(> .vertical-title) { display: grid; grid-template-columns: minmax(0, 4.6fr) auto minmax(0, 7.4fr); grid-template-rows: repeat(4, auto) 1fr; column-gap: 32px; align-content: start; padding-top: 44px; }
+article:has(> .vertical-title) > * { grid-column: 1 / -1; } /* Home grid: every block spans the page unless placed below */
+article:has(> .vertical-title) > :is(h1, .eyebrow:first-of-type, p:first-of-type, .moss-buttons, .facts) { grid-column: 1; } /* Home grid: the text blocks sit in the left column */
+article:has(> .vertical-title) > .eyebrow:first-of-type { grid-row: 1; } /* Home grid: the artist and date label tops the left column */
+article:has(> .vertical-title) > h1 { grid-row: 2; font-size: clamp(38px, 5.2vw, 68px); line-height: 1.04; margin: 14px 0 20px; } /* Home: the title set large in three lines */
+article:has(> .vertical-title) > h1 em { font-weight: 400; } /* The italic words of the title are lighter than the roman */
+article:has(> .vertical-title) > p:first-of-type { grid-row: 3; font: 400 19px/1.55 var(--moss-font-heading); color: var(--moss-color-text-secondary); margin: 0 0 26px; max-width: 34em; } /* Home: the one-sentence invitation in the serif */
+article:has(> .vertical-title) > .moss-buttons { grid-row: 4; } /* Home grid: the two buttons under the invitation */
+article:has(> .vertical-title) > .facts { grid-row: 5; align-self: start; } /* Home grid: the three facts close the left column */
+article:has(> .vertical-title) > .vertical-title { grid-column: 2; grid-row: 1 / 6; } /* Home grid: the vertical title is the quiet rule between text and plate */
+article:has(> .vertical-title) > figure.moss-image { grid-column: 3; grid-row: 1 / 6; align-self: start; } /* Home grid: the plate takes the right column */
+.vertical-title p { writing-mode: vertical-rl; margin: 0; font: 500 clamp(22px, 2.2vw, 30px) / 1 var(--mincho); letter-spacing: 0.35em; color: var(--moss-color-text-secondary); border-inline-start: 1px solid var(--moss-border-light); padding-inline-start: 26px; padding-top: 6px; inline-size: max-content; } /* in vertical writing the inline axis is the height: size it to the six characters, not the viewport */
+.facts ul { list-style: none; display: grid; grid-template-columns: repeat(3, auto); justify-content: start; gap: 0 36px; margin: 32px 0 0; padding: 16px 0 0; border-top: 1px solid var(--moss-border-light); }
+.facts li { display: flex; flex-direction: column-reverse; font: 500 11.5px/1.3 var(--moss-font-body); letter-spacing: 0.12em; text-transform: uppercase; color: var(--moss-color-muted); margin: 0; } /* A fact is a big number over a small spaced label */
+.facts li strong { font: 500 30px/1.1 var(--moss-font-heading); letter-spacing: 0; text-transform: none; color: var(--moss-color-text); } /* The number set large in the serif */
+@media (max-width: 68rem) { /* Tablet layout */
+  article:has(> .vertical-title) { grid-template-columns: minmax(0, 1fr) auto; } /* Layout for this width: text over plate */
+  article:has(> .vertical-title) > :is(h1, .eyebrow:first-of-type, p:first-of-type, .moss-buttons, .facts) { grid-column: 1; } /* Home grid: the text blocks sit in the left column */
+  article:has(> .vertical-title) > .vertical-title { grid-column: 2; grid-row: 1 / 6; } /* Home grid: the vertical title is the quiet rule between text and plate */
+  article:has(> .vertical-title) > figure.moss-image { grid-column: 1 / -1; grid-row: 6; margin-top: 32px; } /* Home grid: the plate takes the right column */
+}
+@media (max-width: 40rem) { /* Phone layout */
+  article:has(> .vertical-title) { grid-template-columns: minmax(0, 1fr); padding-top: 28px; } /* Layout for this width: text over plate */
+  article:has(> .vertical-title) > .vertical-title { grid-column: 1; grid-row: 1; } /* Home grid: the vertical title is the quiet rule between text and plate */
+  article:has(> .vertical-title) > .eyebrow:first-of-type { grid-row: 2; } /* Home grid: the artist and date label tops the left column */
+  article:has(> .vertical-title) > h1 { grid-row: 3; } /* Home: the title set large in three lines */
+  article:has(> .vertical-title) > p:first-of-type { grid-row: 4; } /* Home: the one-sentence invitation in the serif */
+  article:has(> .vertical-title) > .moss-buttons { grid-row: 5; } /* Home grid: the two buttons under the invitation */
+  article:has(> .vertical-title) > .facts { grid-row: 6; } /* Home grid: the three facts close the left column */
+  article:has(> .vertical-title) > figure.moss-image { grid-row: 7; } /* Home grid: the plate takes the right column */
+  /* On a phone the title lies down above the heading, as a line, not a column. */
+  .vertical-title p { writing-mode: horizontal-tb; border: 0; padding: 0; font-size: 20px; letter-spacing: 0.2em; inline-size: auto; }
+  .facts ul { gap: 0 20px; } /* Phone: facts sit closer */
+  .facts li strong { font-size: 24px; } /* Phone: smaller numbers */
+}
+
+/* The strip of all 55: one line, scrolled sideways, number from the order, description hidden. */
+.moss-grid.strip { counter-reset: station -1; gap: 14px; }
+.moss-grid.strip[data-scroll] { grid-auto-columns: 190px; } /* moss sizes a scroll track from its 1-4 column count; 55 cards want a fixed card width */
+.moss-grid.strip .moss-card { counter-increment: station; }
+.moss-grid.strip .moss-card-description { display: none; } /* The strip shows plates and names only */
+.moss-grid.strip .moss-card-title { font-size: 15px; } /* Strip names stay small so six fit a row */
+.moss-grid.strip .moss-card-title::before { content: "No. " counter(station); display: block; font: 400 12.5px/1.5 var(--moss-font-body); color: var(--moss-color-muted); } /* the card carries no number of its own; the road order is the number */
+.moss-grid.strip .moss-card:first-child .moss-card-title::before { content: "Start"; }
+.moss-grid.strip .moss-card:last-child .moss-card-title::before { content: "End"; } /* The last card is the end of the road, not a number */
+
+/* Weather: six large plates, the weather as one big italic word in Prussian. */
+.moss-grid.weather { gap: 34px 22px; }
+.moss-grid.weather-strip { --moss-grid-ratio: repeat(6, minmax(0, 1fr)); } /* moss grids stop at four columns; six small plates fit one row */
+.moss-grid.weather .moss-card-title { font: italic 400 clamp(26px, 3vw, 36px) / 1.1 var(--moss-font-heading); color: var(--moss-color-accent); margin-top: 12px; display: block; }
+.moss-grid.weather .moss-card-description { font-size: 14px; } /* Weather cards keep their place line readable */
+/* On a print page the strip is small, and the current print is outlined, not linked. */
+.moss-grid.weather-strip { gap: 10px; margin-top: 12px; }
+.moss-grid.weather-strip .moss-card-title { font-size: 16px; margin-top: 6px; } /* Small strip: a smaller weather word */
+.moss-grid.weather-strip .moss-card-description { display: none; } /* Small strip: the word is enough */
+.moss-grid.weather-strip > .moss-grid-card { border: 3px solid var(--madder); padding: 12px; display: grid; align-content: center; text-align: center; font-size: 13px; color: var(--moss-color-text-secondary); aspect-ratio: 3 / 2; } /* The current print is outlined in madder, "you are here" */
+.moss-grid.weather-strip > .moss-grid-card p { margin: 0; } /* The outlined cell holds two tight lines */
+.moss-grid.weather-strip > .moss-grid-card strong { font: italic 400 20px/1.1 var(--moss-font-heading); color: var(--moss-color-accent); } /* The word keeps its italic Prussian voice */
+@media (max-width: 54rem) { .moss-grid.weather { grid-template-columns: repeat(2, minmax(0, 1fr)); } .moss-grid.weather.weather-strip { grid-template-columns: repeat(3, minmax(0, 1fr)); } } /* the small strip keeps its six plates in two rows of three */
+
+/* Five stretches: a Prussian rule above each, plate, name, and the ri range. */
+.moss-grid.stretches { gap: 20px; --moss-grid-ratio: repeat(5, minmax(0, 1fr)); } /* five stretches, one row: moss grids stop at four columns */
+.moss-grid.stretches .moss-card { border-top: 3px solid var(--moss-color-accent); padding-top: 12px; }
+.moss-grid.stretches .moss-card-title { font-size: 21px; } /* Stretch names are a step larger than print names */
+@media (max-width: 68rem) { .moss-grid.stretches { grid-template-columns: repeat(3, minmax(0, 1fr)); } } /* Tablet: three across, then two */
+/* Five stretches never fit a grid without a lone card (3+2, 2+2+1), so a phone gets rows: plate left, name and range right. */
+@media (max-width: 40rem) {
+  .moss-grid.stretches { grid-template-columns: 1fr; gap: 14px; } /* Phone: one row per stretch */
+  .moss-grid.stretches .moss-card { flex-direction: row; align-items: center; gap: 16px; padding-top: 12px; } /* Phone: plate left, name right */
+  .moss-grid.stretches .moss-card-cover { flex: 0 0 42%; } /* Phone: the plate takes under half the row */
+}
+
+/* ---- 6. Print page ------------------------------------------------------ */
+/* The article is a grid so the numeral, the vertical slip and the title sit side by side under the plate.
+   moss puts its own title first in the DOM; grid rows put it under the plate where the design wants it. */
+article:has(> .numeral) { display: grid; grid-template-columns: 9rem 4.5rem minmax(0, 1fr); grid-template-rows: auto auto auto auto auto auto; column-gap: 24px; align-content: start; padding-top: 24px; }
+article:has(> .numeral) > * { grid-column: 1 / -1; } /* Print grid: every block spans the page unless placed below */
+article:has(> .numeral) > .trail { grid-row: 1; } /* Print grid: the road trail sits above the plate */
+article:has(> .numeral) > figure.moss-image { grid-row: 2; background: var(--moss-color-surface); padding: clamp(16px, 4vw, 48px); } /* Print grid: the plate on its mat */
+article:has(> .numeral) > figure.moss-image img { max-width: 1040px; margin: 0 auto; } /* The plate keeps a 1040px maximum and stays centred on the mat */
+article:has(> .numeral) > figure.moss-image figcaption { max-width: 1040px; margin-inline: auto; } /* The caption lines up with the plate edges */
+article:has(> .numeral) > .eyebrow { grid-row: 3; grid-column: 3; margin-top: 40px; } /* Print grid: station and place label above the title */
+article:has(> .numeral) > .moss-article-title { grid-row: 4; grid-column: 3; font-size: clamp(34px, 4.6vw, 58px); line-height: 1.06; margin: 4px 0 0; } /* Print grid: moss puts the title first in the DOM, the row puts it under the plate */
+article:has(> .numeral) > .numeral { grid-row: 3 / 7; grid-column: 1; margin-top: 40px; } /* Print grid: the numeral takes the first column beside the title block */
+article:has(> .numeral) > .slip { grid-row: 3 / 7; grid-column: 2; margin-top: 40px; } /* Print grid: the vertical slip sits between numeral and title */
+article:has(> .numeral) > .subtitle { grid-row: 5; grid-column: 3; } /* Print grid: the romanised title under the title */
+article:has(> .numeral) > blockquote { grid-row: 6; grid-column: 3; } /* Print grid: the note aligns with the title column */
+article:has(> .numeral) > .look { grid-column: 3; } /* Print grid: the look-for line aligns with the title column */
+.trail p { display: flex; flex-wrap: wrap; gap: 6px 10px; font: 400 13.5px/1.5 var(--moss-font-body); color: var(--moss-color-text-secondary); margin: 0 0 20px; } /* Quiet trail of links above the plate */
+.trail a { color: var(--moss-color-text-secondary); text-underline-offset: 3px; } /* Trail links stay secondary text */
+.numeral p:first-child { margin: 0; font: 400 clamp(64px, 8vw, 112px) / 0.85 var(--moss-font-heading); color: var(--moss-color-accent); font-variant-numeric: lining-nums; letter-spacing: -0.03em; } /* The station number, large, in Prussian */
+/* "of 53" sits small under the big number. */
+.numeral p + p { margin: 12px 0 0; font: 500 12px/1.3 var(--moss-font-body); letter-spacing: 0.1em; text-transform: uppercase; color: var(--moss-color-muted); }
+.slip p { writing-mode: vertical-rl; margin: 0; display: inline-block; font: 500 30px/1 var(--mincho); letter-spacing: 0.2em; border: 1px solid var(--moss-color-text); padding: 14px 9px; min-height: 132px; } /* The Japanese name on a vertical slip, as on the print */
+.subtitle p { font: italic 400 20px/1.4 var(--moss-font-heading); color: var(--moss-color-text-secondary); margin: 10px 0 0; } /* Italic romanised title in the serif */
+article:has(> .numeral) > blockquote { font: 400 21px/1.55 var(--moss-font-heading); margin: 24px 0 0; padding: 0 0 0 20px; border-inline-start: 3px solid var(--moss-color-accent); max-width: 42em; color: var(--moss-color-text); } /* The one-sentence note, set larger with a Prussian rule */
+article:has(> .numeral) > blockquote p { margin: 0; } /* No extra paragraph margin inside the note */
+/* Small caps label over the "look" line and the ruler. */
+.look h3, article:has(> .numeral) > h3, article:has(> .map-hint) > h3 { font: 500 12px/1.4 var(--moss-font-body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--moss-color-text-secondary); margin: 22px 0 4px; }
+.look p { font: 400 17px/1.55 var(--moss-font-body); max-width: 42em; margin: 0; } /* The look-for line reads as body text */
+article:has(> .numeral) > h3, article:has(> .map-hint) > h3 { margin-top: 48px; } /* Space above each small-caps section label */
+.credit p { margin: 40px 0 0; padding-top: 14px; border-top: 1px solid var(--moss-border-light); font-size: 12.5px; color: var(--moss-color-muted); } /* The credit is one quiet line under a hairline */
+.credit a { color: var(--moss-color-muted); text-underline-offset: 3px; } /* The source link matches the quiet line */
+
+/* Previous and next: the whole title, wrapping to two lines, never an ellipsis (brief). */
+.moss-series-nav { margin-block: 32px 0; }
+.moss-series-nav-links { max-inline-size: none; } /* Let the two neighbours use the whole column */
+.moss-series-nav-link { max-inline-size: none; inline-size: 100%; } /* moss halves each link; a full title needs the full cell */
+.moss-series-nav-links { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.moss-series-nav-link { border-top: 1px solid var(--moss-border-strong); padding-top: 14px; text-decoration: none; } /* Each neighbour sits under a ruled line */
+.moss-series-nav-title { font: 500 20px/1.25 var(--moss-font-heading); white-space: normal; overflow: visible; text-overflow: clip; display: block; color: var(--moss-color-text); } /* Show the whole title, wrapping, never an ellipsis */
+.moss-series-nav-label { font: 500 12px/1.4 var(--moss-font-body); letter-spacing: 0.12em; text-transform: uppercase; color: var(--moss-color-muted); } /* Small spaced caps for Previous and Next */
+@media (max-width: 40rem) { .moss-series-nav-links { grid-template-columns: 1fr; } } /* Phone: neighbours stack, each with a full-width title */
+
+/* The ruler of all 55 ticks, this one marked in madder. script.js draws it from /assets/road.json. */
+.ruler { position: relative; }
+.ruler p { margin: 0; font-size: 15px; color: var(--moss-color-text-secondary); } /* The sentence is the ruler caption, or its fallback without script */
+.ruler .axis { position: relative; height: 74px; margin-bottom: 6px; } /* The ruler strip that holds the 55 ticks */
+.ruler .axis::before { content: ""; position: absolute; inset-inline: 0; top: 34px; height: 1px; background: var(--moss-border-strong); } /* The ruler axis line */
+.ruler .axis i { position: absolute; top: 26px; width: 1px; height: 17px; background: var(--moss-color-muted); } /* One tick per station */
+.ruler .axis i.here { background: var(--madder); width: 3px; height: 37px; top: 16px; margin-left: -1px; } /* This print is a tall madder tick, "you are here" */
+.ruler .axis .lab { position: absolute; top: 0; font-size: 12.5px; white-space: nowrap; color: var(--moss-color-text-secondary); transform: translateX(-50%); } /* The name and distance label above this print */
+.ruler .axis .lab.l { transform: none; } /* Near the left end the label starts at the tick */
+.ruler .axis .lab.r { transform: translateX(-100%); } /* Near the right end the label ends at the tick */
+.ruler .axis .lab b { color: var(--moss-color-text); font-weight: 500; } /* The station name in ink */
+.ruler .ends { position: absolute; inset-inline: 0; top: 54px; display: flex; justify-content: space-between; font-size: 12.5px; color: var(--moss-color-muted); } /* End labels: Nihonbashi and Kyoto */
+.ruler .bands { display: flex; height: 6px; margin-top: 2px; } /* The stretch bands under the road ruler */
+.ruler .bands i { display: block; height: 100%; border-inline-end: 2px solid var(--moss-color-bg); background: var(--moss-color-accent); } /* Alternate band shades separate the stretches */
+.ruler .bands i:nth-child(even) { opacity: 0.55; } /* Every second band is lighter */
+.ruler .bandlab { display: flex; font-size: 12px; color: var(--moss-color-text-secondary); margin-top: 6px; } /* Band labels share the band widths */
+.ruler .bandlab span { white-space: nowrap; overflow: hidden; padding-right: 6px; } /* Long stretch names clip rather than overlap */
+/* Once drawn, the plain sentence is the caption under the ruler. */
+.ruler[data-drawn] p { margin-top: 6px; }
+.ruler-bands[data-drawn] > p { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); } /* the sentence stands in for the drawing: keep it for screen readers only */
+
+/* On a phone the road ruler keeps its 126-ri proportions and scrolls sideways, so the stretch names stay readable. */
+@media (max-width: 40rem) { .ruler-bands { overflow-x: auto; } .ruler-bands .axis, .ruler-bands .bands, .ruler-bands .bandlab { min-width: 640px; } }
+
+@media (max-width: 40rem) { /* Phone layout */
+  article:has(> .numeral) { grid-template-columns: auto minmax(0, 1fr); column-gap: 18px; padding-top: 16px; } /* Phone: numeral and slip share one row */
+  article:has(> .numeral) > .numeral { grid-row: 3; grid-column: 1; } /* Phone: numeral first in the row */
+  article:has(> .numeral) > .slip { grid-row: 3; grid-column: 2; justify-self: start; } /* Phone: slip beside the numeral */
+  article:has(> .numeral) > .slip p { font-size: 24px; min-height: 106px; } /* Phone: a smaller slip */
+  article:has(> .numeral) > .eyebrow { grid-row: 4; grid-column: 1 / -1; margin-top: 24px; } /* Phone: the label spans the width under the numeral */
+  article:has(> .numeral) > .moss-article-title { grid-row: 5; grid-column: 1 / -1; } /* Phone: the title spans the width */
+  article:has(> .numeral) > .subtitle { grid-row: 6; grid-column: 1 / -1; } /* Phone: the subtitle spans the width */
+  article:has(> .numeral) > blockquote { grid-row: 7; grid-column: 1 / -1; font-size: 19px; } /* Phone: the note spans the width, slightly smaller */
+  article:has(> .numeral) > .look { grid-column: 1 / -1; } /* Phone: the look-for line spans the width */
+}
+
+/* ---- 7. The Road ------------------------------------------------------- */
+article:has(> .map-hint) { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); grid-template-rows: auto auto 1fr; column-gap: 56px; align-content: start; padding-top: 44px; }
+article:has(> .map-hint) > * { grid-column: 1 / -1; } /* Road grid: every block spans the page unless placed below */
+article:has(> .map-hint) > h1 { grid-column: 1; grid-row: 2; font-size: clamp(40px, 5.5vw, 72px); line-height: 1; margin: 0; align-self: end; } /* Road: the big italic title */
+article:has(> .map-hint) > .eyebrow:first-of-type { grid-column: 1; grid-row: 1; margin-bottom: 12px; align-self: end; } /* Road: the label above the title */
+article:has(> .map-hint) > p { grid-column: 2; font: 400 19px/1.55 var(--moss-font-heading); color: var(--moss-color-text-secondary); margin: 0 0 12px; } /* Road: intro paragraphs in the right column */
+article:has(> .map-hint) > p:nth-of-type(1) { grid-row: 1 / 3; align-self: end; } /* Road: the first paragraph aligns to the title baseline */
+article:has(> .map-hint) > p:nth-of-type(2) { grid-row: 3; } /* Road: the journey story under the first paragraph */
+@media (max-width: 54rem) { article:has(> .map-hint) { grid-template-columns: 1fr; } article:has(> .map-hint) > :is(h1, p, .eyebrow:first-of-type) { grid-column: 1; grid-row: auto; } } /* Tablet and phone: one column */
+.map-hint { display: none; } /* The scroll hint is for phones only */
+.map-hint p { font-size: 12.5px; color: var(--moss-color-muted); margin: 8px 0 0; } /* The hint is quiet small text */
+@media (max-width: 54rem) { .map-hint { display: block; } } /* Phones: show the hint */
+.map-note p { font-size: 12.5px; color: var(--moss-color-muted); margin: 10px 0 0; } /* The one map caption, small and quiet */
+
+/* The map scrolls sideways on a phone rather than shrinking its labels away. */
+figure.road-map { margin: 32px 0 0; border: 1px solid var(--moss-border-strong); background: var(--road-sea); overflow-x: auto; overscroll-behavior-x: contain; }
+figure.road-map svg { display: block; width: 100%; min-width: 900px; height: auto; } /* The map keeps a 900px floor so labels stay legible, and scrolls sideways */
+figure.road-map-compact { margin-top: 0; overflow: hidden; } /* The home map is a small preview, not scrollable */
+figure.road-map-compact svg { min-width: 0; } /* The home map fits its column */
+@media (max-width: 40rem) { figure.road-map-compact .lbl { display: none; } } /* three labels at phone scale are smaller than a readable size */
+.road-map .land { fill: var(--road-land); stroke: var(--road-coast); stroke-width: 1.2; stroke-linejoin: round; }
+.road-map .shore polyline { fill: none; stroke: var(--road-coast); stroke-linejoin: round; } /* Soft shore glow in three strokes */
+.road-map .lake { fill: var(--road-sea); stroke: var(--road-coast); stroke-width: 1; stroke-linejoin: round; } /* Lake Biwa as a pale water shape */
+.road-map .fuji path { fill: none; stroke: var(--road-coast); stroke-width: 1.3; stroke-linejoin: round; } /* Fuji as a line drawing */
+.road-map .route { fill: none; stroke: var(--road-ink); stroke-width: 1.6; stroke-linejoin: round; stroke-linecap: round; } /* The road itself, a thin ink line */
+.road-map .route.sea { stroke-dasharray: 2 6; } /* the Ise Bay crossing is by boat, so the line goes dotted */
+.road-map .tick { stroke: var(--road-ink); stroke-width: 1.6; }
+.road-map .leader { stroke: var(--road-ink); stroke-width: 0.8; } /* Leader lines tie a displaced label to its station */
+.road-map .lbl { font: 600 13px var(--moss-font-heading); fill: var(--road-ink); } /* Station names in the display serif */
+.road-map .lbl-ja { font: 500 12px var(--mincho); fill: var(--moss-color-text-secondary); } /* Japanese names in Mincho, lighter */
+.road-map .lbl-s { font: 500 11.5px var(--moss-font-body); fill: var(--moss-color-text-secondary); letter-spacing: 0.04em; } /* Landmark and distance labels in small sans */
+.road-map .lbl-sea { font: italic 400 14px var(--moss-font-heading); fill: var(--road-coast); opacity: 0.7; letter-spacing: 0.2em; } /* Landmark and distance labels in small sans */
+.road-map .dot-c { fill: var(--moss-color-accent); stroke: var(--road-land); stroke-width: 1.2; } /* Preview stations as plain dots */
+.road-map .st { cursor: pointer; } /* Stations are clickable */
+.road-map .st circle.hit { fill: transparent; } /* An invisible larger circle gives a generous touch target */
+.road-map .st circle.dot { fill: var(--moss-color-accent); stroke: var(--road-land); stroke-width: 1.6; } /* The station dot in Prussian */
+.road-map .st:hover circle.dot, .road-map .st:focus-visible circle.dot { fill: var(--madder); r: 6; } /* Hover or focus turns the dot madder and larger */
+.road-map .st.sel circle.dot { fill: var(--madder); r: 7; stroke: var(--moss-color-bg); stroke-width: 2; } /* The selected station is madder with a paper ring */
+.road-map .st { outline: none; } /* the ring below is the focus indicator, drawn on the circle rather than the box */
+.road-map .st .ring { fill: none; stroke: none; }
+.road-map .st:focus-visible .ring { stroke: var(--moss-color-accent); stroke-width: 2; } /* The visible keyboard focus ring */
+
+/* Selected-station panel under the map, filled by script.js. */
+.road-panel { display: grid; grid-template-columns: 230px minmax(0, 1fr) auto; gap: 20px 28px; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--moss-border-light); margin-top: 24px; }
+.road-panel img { width: 230px; height: auto; aspect-ratio: 3 / 2; object-fit: cover; background: var(--moss-color-surface); } /* The selected print, whole */
+.road-panel .eyebrow { margin-bottom: 4px; } /* Tight label over the station name */
+.road-panel .nm { font: 500 28px/1.15 var(--moss-font-heading); margin: 0; } /* The station name in the display serif */
+.road-panel .nm span { font: 500 20px var(--mincho); color: var(--moss-color-text-secondary); margin-left: 8px; } /* The Japanese name beside it, lighter */
+.road-panel p { margin: 6px 0 0; color: var(--moss-color-text-secondary); font-size: 15px; } /* The note under the name */
+.road-panel a.open { display: inline-block; border: 1px solid var(--moss-color-text); border-radius: 3px; padding: 11px 18px; font-weight: 500; font-size: 15px; text-decoration: none; color: var(--moss-color-text); white-space: nowrap; } /* The one action: open the print */
+.road-panel a.open:hover { background: var(--moss-color-surface); } /* Hover fills the button with the mat colour */
+@media (max-width: 54rem) { .road-panel { grid-template-columns: 120px minmax(0, 1fr); } .road-panel img { width: 120px; } .road-panel a.open { grid-column: 1 / -1; text-align: center; } } /* Phone: a smaller plate and a full-width button */
+
+/* The list of 55: three columns, one per stretch run, as the text alternative to the map. */
+.roll { columns: 3 280px; column-gap: 40px; }
+.roll h3 { font: 500 12px/1.4 var(--moss-font-body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--moss-color-text-secondary); margin: 22px 0 4px; break-after: avoid; } /* Stretch names as small-caps labels */
+.roll h3:first-child { margin-top: 0; } /* No space above the first label */
+.roll table { width: 100%; border-collapse: collapse; break-inside: avoid; font-size: 15px; } /* Each stretch table stays whole inside a column */
+.roll thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); } /* headers stay for screen readers; sighted readers see the pattern */
+.roll td { padding: 9px 0; border-bottom: 1px solid var(--moss-border-light); }
+.roll a { text-decoration: none; color: var(--moss-color-text); } /* Names read as plain text until hovered */
+.roll a:hover { text-decoration: underline; } /* Hover underlines the name */
+.roll td:first-child { width: 3.2rem; padding-right: 10px; color: var(--moss-color-muted); font-size: 13px; font-variant-numeric: tabular-nums; } /* Station number, small and muted */
+.roll td:last-child { text-align: right; font-size: 13px; color: var(--moss-color-text-secondary); font-variant-numeric: tabular-nums; white-space: nowrap; } /* Distance right-aligned in tabular figures */
+
+/* ---- 8. Prints index and stretch pages ---------------------------------- */
+.chips ul { list-style: none; display: flex; gap: 8px; flex-wrap: wrap; margin: 24px 0 0; padding: 0; }
+.chips + .moss-cards-container, .chips + .moss-grid { margin-top: 28px; } /* Air between the chips and the plates */
+.chips li { margin: 0; } /* No default list spacing in the chip row */
+.chips a, .chips strong { display: inline-block; border: 1px solid var(--moss-color-muted); border-radius: 999px; padding: 6px 14px; font: 500 14px/1.4 var(--moss-font-body); color: var(--moss-color-text-secondary); text-decoration: none; } /* Chips are outlined pills */
+.chips strong { background: var(--moss-color-text); border-color: var(--moss-color-text); color: var(--moss-color-bg); } /* The current stretch is a filled pill */
+.chips a:hover { background: var(--moss-color-surface); } /* Hover shades a chip with the mat colour */
+/* 55 prints divide into 5 columns with no lone card; below that, one column of rows (any other count strands one). */
+.moss-cards[data-layout="grid"] { gap: 30px 22px; grid-template-columns: repeat(5, minmax(0, 1fr)); }
+@media (max-width: 56rem) { /* Below this width the 5-column index becomes rows */
+  .moss-cards[data-layout="grid"] { grid-template-columns: 1fr; gap: 20px; } /* Below this width the index is one column of rows */
+  .moss-cards[data-layout="grid"] .moss-card { flex-direction: row; align-items: center; gap: 16px; } /* Rows: plate left, text right */
+  .moss-cards[data-layout="grid"] .moss-card-cover { flex: 0 0 min(46%, 260px); } /* Rows: the plate takes under half the row */
+}
+article > h1:first-child { font-size: clamp(36px, 5vw, 64px); line-height: 1.04; margin: 44px 0 28px; } /* The page title on index and list pages, large */
+
+/* A stretch page lists its prints in road order as rows: plate left, title and the grey line right.
+   (A tag listing sorts by title, which scrambles the road, so the page lists its own prints.) */
+.moss-grid.rows { gap: 0; }
+.moss-grid.rows .moss-card { flex-direction: row; align-items: center; gap: 20px; padding-block: 12px; border-bottom: 1px solid var(--moss-border-light); } /* Each stretch row: plate left, text right, hairline below */
+.moss-grid.rows .moss-card-cover { flex: 0 0 min(220px, 38%); } /* The row plate has a fixed share of the width */
+.moss-grid.rows .moss-card-title { font-size: 20px; } /* Row names are a step larger */
+
+/* ---- 9. About ------------------------------------------------------------ */
+/* Prose pages keep a reading measure inside the 1240 column. */
+article:not(:has(> .numeral, > .vertical-title, > .map-hint)) > p { max-width: 38em; font: 400 18px/1.65 var(--moss-font-heading); color: var(--moss-color-text-secondary); }
+article table { font-size: 15px; width: 100%; } /* Tables read at interface size */
+
+@media (prefers-reduced-motion: no-preference) { /* Motion only for readers who allow it */
+  .moss-btn, .moss-card .moss-card-cover img, .chips a { transition: background-color 0.15s, color 0.15s, outline-color 0.15s; } /* Soft hover changes, only when the reader allows motion */
+  .road-map .st circle.dot { transition: r 0.12s, fill 0.12s; } /* The dot grows smoothly on hover, only when motion is allowed */
 }

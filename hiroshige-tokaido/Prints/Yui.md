@@ -1,31 +1,50 @@
 ---
 title: "Yui: Satta Peak"
 uid: "29a5bc85"
-description: "Travelers pause on the cliffside Satta Pass trail overlooking Suruga Bay, with Mount Fuji visible across the water."
+description: "Station 16 · Yui, Shimizu-ku, Shizuoka City · 38.6 ri"
 author: Utagawa Hiroshige
 weight: 17
 cover: ../assets/aic-18255.jpg
-location: ["Yui"]
+station: "Yui"
+ja: 由比
+ri: 38.59
+lat: 35.1076
+lng: 138.5675
+place: "Yui, Shimizu-ku, Shizuoka City"
 ---
-:::hero {.plate image=../assets/aic-18255.jpg caption="Yui: Satta Peak. Utagawa Hiroshige, 1833-34. The Art Institute of Chicago. CC0."}
+::: {.trail}
+[[places|The Road]] / [[Shizuoka]] / Yui
+:::
+
+![Yui, Satta Peak: Travelers pause on the cliffside Satta Pass trail overlooking Suruga Bay](../assets/aic-18255.jpg)
+*Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-18255.jpg)*
+
+::: {.eyebrow}
+Station 16 · Yui, Shimizu-ku, Shizuoka City
+:::
+
+::: {.numeral}
+16
+
+of 53
+:::
+
+::: {.slip}
+由比
+:::
+
+::: {.subtitle}
+*Yui, Satta mine*
 :::
 
 > Travelers pause on the cliffside Satta Pass trail overlooking Suruga Bay, with Mount Fuji visible across the water.
 
-*Curator's note, written for this site from the title and the print's well-documented subject; the museum record carries no description.*
+### Where it falls on the road
 
-| | |
-|---|---|
-| Station | Yui (由比), station 16 of 53 |
-| Where it is now | Yui, Shimizu-ku, Shizuoka City |
-| Distance | 38.59 ri from Nihonbashi (Edo-period register; 1 ri is about 3.9 km) |
-| Artist | Utagawa Hiroshige (歌川広重) |
-| Date | 1833-34 |
-| Series | *Fifty-three Stations of the Tōkaidō (Tōkaidō gojūsan tsugi no uchi)*, Hōeidō edition |
-| Catalogue title | Yui: Satta Peak (Yui, Satta mine), from the series "Fifty-three Stations of the Tokaido Road (Tokaido gojusan tsugi no uchi)," also known as the Hoeido Tokaido |
-| Credit | The Art Institute of Chicago |
-| Licence | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) |
-| Licence evidence | AIC API artworks/18255: is_public_domain=true |
-| Source record | [www.artic.edu/artworks/18255](https://www.artic.edu/artworks/18255) |
+::: {.ruler}
+38.6 ri, about 152 km from Nihonbashi.
+:::
 
-[[Browse|All 55 prints]] · [[places|The road on a map]]
+::: {.credit}
+Art Institute of Chicago · Public domain (CC0) · [Source record](https://www.artic.edu/artworks/18255)
+:::

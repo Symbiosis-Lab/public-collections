@@ -1,31 +1,50 @@
 ---
 title: "Shirasuka: View of Shiomi Slope"
 uid: "c03a006e"
-description: "Travelers pause on the Shiomizaka hillside above Shirasuka, where the road briefly opens onto a view of the sea."
+description: "Station 32 · Shirasuka, Kosai, Shizuoka · 70.6 ri"
 author: Utagawa Hiroshige
 weight: 33
 cover: ../assets/aic-25701.jpg
-location: ["Shirasuka"]
+station: "Shirasuka"
+ja: 白須賀
+ri: 70.62
+lat: 34.6886
+lng: 137.5008
+place: "Shirasuka, Kosai, Shizuoka"
 ---
-:::hero {.plate image=../assets/aic-25701.jpg caption="Shirasuka: View of Shiomi Slope. Utagawa Hiroshige, 1833-34. The Art Institute of Chicago. CC0."}
+::: {.trail}
+[[places|The Road]] / [[Shizuoka]] / Shirasuka
+:::
+
+![Shirasuka, View of Shiomi Slope: Travelers pause on the Shiomizaka hillside above Shirasuka](../assets/aic-25701.jpg)
+*Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25701.jpg)*
+
+::: {.eyebrow}
+Station 32 · Shirasuka, Kosai, Shizuoka
+:::
+
+::: {.numeral}
+32
+
+of 53
+:::
+
+::: {.slip}
+白須賀
+:::
+
+::: {.subtitle}
+*Shirasuka, Shiomizaka zu*
 :::
 
 > Travelers pause on the Shiomizaka hillside above Shirasuka, where the road briefly opens onto a view of the sea.
 
-*Curator's note, written for this site from the title and the print's well-documented subject; the museum record carries no description.*
+### Where it falls on the road
 
-| | |
-|---|---|
-| Station | Shirasuka (白須賀), station 32 of 53 |
-| Where it is now | Shirasuka, Kosai, Shizuoka |
-| Distance | 70.62 ri from Nihonbashi (Edo-period register; 1 ri is about 3.9 km) |
-| Artist | Utagawa Hiroshige (歌川広重) |
-| Date | 1833-34 |
-| Series | *Fifty-three Stations of the Tōkaidō (Tōkaidō gojūsan tsugi no uchi)*, Hōeidō edition |
-| Catalogue title | Shirasuka: View of Shiomi Slope (Shirasuka, Shiomizaka zu), from the series "Fifty-three Stations of the Tokaido (Tokaido gojusan tsugi no uchi)," also known as the Hoeido Tokaido |
-| Credit | The Art Institute of Chicago |
-| Licence | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) |
-| Licence evidence | AIC API artworks/25701: is_public_domain=true |
-| Source record | [www.artic.edu/artworks/25701](https://www.artic.edu/artworks/25701) |
+::: {.ruler}
+70.6 ri, about 277 km from Nihonbashi.
+:::
 
-[[Browse|All 55 prints]] · [[places|The road on a map]]
+::: {.credit}
+Art Institute of Chicago · Public domain (CC0) · [Source record](https://www.artic.edu/artworks/25701)
+:::

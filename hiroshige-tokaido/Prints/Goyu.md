@@ -1,31 +1,56 @@
 ---
 title: "Goyu: Women Stopping Travelers"
 uid: "ee4cffd4"
-description: "Innkeepers' women physically pull passing travelers by the sleeve into competing lodging houses at Goyu."
+description: "Station 35 · Goyu, Toyokawa, Aichi · 76.3 ri"
 author: Utagawa Hiroshige
 weight: 36
 cover: ../assets/aic-16581.jpg
-location: ["Goyu"]
+station: "Goyu"
+ja: 御油
+ri: 76.26
+lat: 34.8449
+lng: 137.3173
+place: "Goyu, Toyokawa, Aichi"
 ---
-:::hero {.plate image=../assets/aic-16581.jpg caption="Goyu: Women Stopping Travelers. Utagawa Hiroshige, 1833-34. The Art Institute of Chicago. CC0."}
+::: {.trail}
+[[places|The Road]] / [[Aichi]] / Goyu
+:::
+
+![Goyu, Women Stopping Travelers: Innkeepers' women physically pull passing travelers by the sleeve](../assets/aic-16581.jpg)
+*Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-16581.jpg)*
+
+::: {.eyebrow}
+Station 35 · Goyu, Toyokawa, Aichi
+:::
+
+::: {.numeral}
+35
+
+of 53
+:::
+
+::: {.slip}
+御油
+:::
+
+::: {.subtitle}
+*Goyu, tabibito tomeru onna*
 :::
 
 > Innkeepers' women physically pull passing travelers by the sleeve into competing lodging houses at Goyu.
 
-*Curator's note, written for this site from the title and the print's well-documented subject; the museum record carries no description.*
+::: {.look}
+### What to look for
 
-| | |
-|---|---|
-| Station | Goyu (御油), station 35 of 53 |
-| Where it is now | Goyu, Toyokawa, Aichi |
-| Distance | 76.26 ri from Nihonbashi (Edo-period register; 1 ri is about 3.9 km) |
-| Artist | Utagawa Hiroshige (歌川広重) |
-| Date | 1833-34 |
-| Series | *Fifty-three Stations of the Tōkaidō (Tōkaidō gojūsan tsugi no uchi)*, Hōeidō edition |
-| Catalogue title | Goyu: Women Stopping Travelers (Goyu, tabibito tomeru onna), from the series "Fifty-three Stations of the Tokaido (Tokaido gojusan tsugi no uchi)," also known as the Hoeido Tokaido |
-| Credit | The Art Institute of Chicago |
-| Licence | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) |
-| Licence evidence | AIC API artworks/16581: is_public_domain=true |
-| Source record | [www.artic.edu/artworks/16581](https://www.artic.edu/artworks/16581) |
+Watch the hands: the innkeepers' women are pulling travellers in by the sleeve.
+:::
 
-[[Browse|All 55 prints]] · [[places|The road on a map]]
+### Where it falls on the road
+
+::: {.ruler}
+76.3 ri, about 299 km from Nihonbashi.
+:::
+
+::: {.credit}
+Art Institute of Chicago · Public domain (CC0) · [Source record](https://www.artic.edu/artworks/16581)
+:::

@@ -1,31 +1,50 @@
 ---
 title: "Fujieda: Changing Porters and Horses"
 uid: "18d7d015"
-description: "Porters and packhorses are exchanged at the station entrance to Fujieda as a new relay team takes over the baggage."
+description: "Station 22 · Fujieda, Shizuoka · 49.8 ri"
 author: Utagawa Hiroshige
 weight: 23
 cover: ../assets/aic-25649.jpg
-location: ["Fujieda"]
+station: "Fujieda"
+ja: 藤枝
+ri: 49.84
+lat: 34.8698
+lng: 138.2527
+place: "Fujieda, Shizuoka"
 ---
-:::hero {.plate image=../assets/aic-25649.jpg caption="Fujieda: Changing Porters and Horses. Utagawa Hiroshige, 1833-34. The Art Institute of Chicago. CC0."}
+::: {.trail}
+[[places|The Road]] / [[Shizuoka]] / Fujieda
+:::
+
+![Fujieda, Changing Porters and Horses: porters and packhorses exchanged at the station entrance](../assets/aic-25649.jpg)
+*Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25649.jpg)*
+
+::: {.eyebrow}
+Station 22 · Fujieda, Shizuoka
+:::
+
+::: {.numeral}
+22
+
+of 53
+:::
+
+::: {.slip}
+藤枝
+:::
+
+::: {.subtitle}
+*Fujieda, jinba tsugitate*
 :::
 
 > Porters and packhorses are exchanged at the station entrance to Fujieda as a new relay team takes over the baggage.
 
-*Curator's note, written for this site from the title and the print's well-documented subject; the museum record carries no description.*
+### Where it falls on the road
 
-| | |
-|---|---|
-| Station | Fujieda (藤枝), station 22 of 53 |
-| Where it is now | Fujieda, Shizuoka |
-| Distance | 49.84 ri from Nihonbashi (Edo-period register; 1 ri is about 3.9 km) |
-| Artist | Utagawa Hiroshige (歌川広重) |
-| Date | 1833-34 |
-| Series | *Fifty-three Stations of the Tōkaidō (Tōkaidō gojūsan tsugi no uchi)*, Hōeidō edition |
-| Catalogue title | Fujieda: Changing Porters and Horses (Fujieda, jinba tsugitate), from the series "Fifty-three Stations of the Tokaido Road (Tokaido gojusan tsugi no uchi)," also known as the Hoeido Tokaido |
-| Credit | The Art Institute of Chicago |
-| Licence | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) |
-| Licence evidence | AIC API artworks/25649: is_public_domain=true |
-| Source record | [www.artic.edu/artworks/25649](https://www.artic.edu/artworks/25649) |
+::: {.ruler}
+49.8 ri, about 196 km from Nihonbashi.
+:::
 
-[[Browse|All 55 prints]] · [[places|The road on a map]]
+::: {.credit}
+Art Institute of Chicago · Public domain (CC0) · [Source record](https://www.artic.edu/artworks/25649)
+:::

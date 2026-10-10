@@ -3,10 +3,4 @@ environment = "production"
 
 [site]
 lang = "en"
-locator = "align-right"
 search = true
-
-[terms.places]
-type = "place"
-fields = ["location"]
-title = "Places"

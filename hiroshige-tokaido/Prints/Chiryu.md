@@ -1,31 +1,50 @@
 ---
-title: "Chiryu: Early Summer Horse Market"
+title: "Chiryū: Early Summer Horse Market"
 uid: "c663d760"
-description: "Horses are bought and sold in an open field outside Chiry\u016b during the town's famous early-summer horse market."
+description: "Station 39 · Chiryū, Aichi · 84.5 ri"
 author: Utagawa Hiroshige
 weight: 40
 cover: ../assets/aic-25738.jpg
-location: ["Chiryū"]
+station: "Chiryū"
+ja: 池鯉鮒
+ri: 84.46
+lat: 35.0081
+lng: 137.0409
+place: "Chiryū, Aichi"
 ---
-:::hero {.plate image=../assets/aic-25738.jpg caption="Chiryu: Early Summer Horse Market. Utagawa Hiroshige, 1833-34. The Art Institute of Chicago. CC0."}
+::: {.trail}
+[[places|The Road]] / [[Aichi]] / Chiryū
+:::
+
+![Chiryū, Early Summer Horse Market: Horses are bought and sold in an open field](../assets/aic-25738.jpg)
+*Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25738.jpg)*
+
+::: {.eyebrow}
+Station 39 · Chiryū, Aichi
+:::
+
+::: {.numeral}
+39
+
+of 53
+:::
+
+::: {.slip}
+池鯉鮒
+:::
+
+::: {.subtitle}
+*Chiryu, shuka uma ichi*
 :::
 
 > Horses are bought and sold in an open field outside Chiryū during the town's famous early-summer horse market.
 
-*Curator's note, written for this site from the title and the print's well-documented subject; the museum record carries no description.*
+### Where it falls on the road
 
-| | |
-|---|---|
-| Station | Chiryū (池鯉鮒), station 39 of 53 |
-| Where it is now | Chiryū, Aichi |
-| Distance | 84.46 ri from Nihonbashi (Edo-period register; 1 ri is about 3.9 km) |
-| Artist | Utagawa Hiroshige (歌川広重) |
-| Date | 1833-34 |
-| Series | *Fifty-three Stations of the Tōkaidō (Tōkaidō gojūsan tsugi no uchi)*, Hōeidō edition |
-| Catalogue title | Chiryu: Early Summer Horse Market (Chiryu, shuka uma ichi), from the series "Fifty-three Stations of the Tokaido (Tokaido gojusan tsugi no uchi)," also known as the Hoeido Tokaido |
-| Credit | The Art Institute of Chicago |
-| Licence | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) |
-| Licence evidence | AIC API artworks/25738: is_public_domain=true |
-| Source record | [www.artic.edu/artworks/25738](https://www.artic.edu/artworks/25738) |
+::: {.ruler}
+84.5 ri, about 332 km from Nihonbashi.
+:::
 
-[[Browse|All 55 prints]] · [[places|The road on a map]]
+::: {.credit}
+Art Institute of Chicago · Public domain (CC0) · [Source record](https://www.artic.edu/artworks/25738)
+:::

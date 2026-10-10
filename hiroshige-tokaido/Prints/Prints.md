@@ -2,10 +2,21 @@
 title: Prints
 uid: "4b6036f0"
 nav: true
+weight: 1
 sort: weight
 series: true
 children_style: grid
 description: The fifty-five prints in the order of the road.
 ---
+# Fifty-five prints, in road order
 
-> From Nihonbashi (the start) to Kyoto (the end), one page for each print.
+<!-- generated:chips -->
+::: {.chips}
+- **All 55**
+- [[Tokyo & Kanagawa|Tokyo & Kanagawa 11]]
+- [[Shizuoka|Shizuoka 22]]
+- [[Aichi|Aichi 9]]
+- [[Mie|Mie 7]]
+- [[Shiga & Kyoto|Shiga & Kyoto 6]]
+:::
+<!-- /generated:chips -->

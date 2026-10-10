@@ -1,31 +1,50 @@
 ---
 title: "Ishiyakushi: Ishiyakushi Temple"
 uid: "08cd614b"
-description: "A quiet view of Ishiyakushi Temple and its surrounding pines is seen from the road, with little traffic on this small station."
+description: "Station 44 · Ishiyakushi, Suzuka, Mie · 101.9 ri"
 author: Utagawa Hiroshige
 weight: 45
 cover: ../assets/aic-25759.jpg
-location: ["Ishiyakushi"]
+station: "Ishiyakushi"
+ja: 石薬師
+ri: 101.94
+lat: 34.9043
+lng: 136.548
+place: "Ishiyakushi, Suzuka, Mie"
 ---
-:::hero {.plate image=../assets/aic-25759.jpg caption="Ishiyakushi: Ishiyakushi Temple. Utagawa Hiroshige, 1833-34. The Art Institute of Chicago. CC0."}
+::: {.trail}
+[[places|The Road]] / [[Mie]] / Ishiyakushi
+:::
+
+![Ishiyakushi, Ishiyakushi Temple: the temple among its surrounding pines](../assets/aic-25759.jpg)
+*Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25759.jpg)*
+
+::: {.eyebrow}
+Station 44 · Ishiyakushi, Suzuka, Mie
+:::
+
+::: {.numeral}
+44
+
+of 53
+:::
+
+::: {.slip}
+石薬師
+:::
+
+::: {.subtitle}
+*Ishiyakushi, Ishiyakushiji*
 :::
 
 > A quiet view of Ishiyakushi Temple and its surrounding pines is seen from the road, with little traffic on this small station.
 
-*Curator's note, written for this site from the title and the print's well-documented subject; the museum record carries no description.*
+### Where it falls on the road
 
-| | |
-|---|---|
-| Station | Ishiyakushi (石薬師), station 44 of 53 |
-| Where it is now | Ishiyakushi, Suzuka, Mie |
-| Distance | 101.94 ri from Nihonbashi (Edo-period register; 1 ri is about 3.9 km) |
-| Artist | Utagawa Hiroshige (歌川広重) |
-| Date | 1833-34 |
-| Series | *Fifty-three Stations of the Tōkaidō (Tōkaidō gojūsan tsugi no uchi)*, Hōeidō edition |
-| Catalogue title | Ishiyakushi: Ishiyakushi Temple (Ishiyakushi, Ishiyakushiji), from the series "Fifty-three Stations of the Tokaido (Tokaido gojusan tsugi no uchi)," also known as the Hoeido Tokaido |
-| Credit | The Art Institute of Chicago |
-| Licence | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) |
-| Licence evidence | AIC API artworks/25759: is_public_domain=true |
-| Source record | [www.artic.edu/artworks/25759](https://www.artic.edu/artworks/25759) |
+::: {.ruler}
+101.9 ri, about 400 km from Nihonbashi.
+:::
 
-[[Browse|All 55 prints]] · [[places|The road on a map]]
+::: {.credit}
+Art Institute of Chicago · Public domain (CC0) · [Source record](https://www.artic.edu/artworks/25759)
+:::

@@ -1,31 +1,50 @@
 ---
 title: "Akasaka: Waitresses at an Inn"
 uid: "bf33686d"
-description: "Serving women prepare an evening meal and entertain guests in the courtyard of an inn at Akasaka."
+description: "Station 36 · Akasaka, Toyokawa, Aichi · 76.7 ri"
 author: Utagawa Hiroshige
 weight: 37
 cover: ../assets/aic-25720.jpg
-location: ["Akasaka"]
+station: "Akasaka"
+ja: 赤坂
+ri: 76.7
+lat: 34.8557
+lng: 137.3082
+place: "Akasaka, Toyokawa, Aichi"
 ---
-:::hero {.plate image=../assets/aic-25720.jpg caption="Akasaka: Waitresses at an Inn. Utagawa Hiroshige, 1833-34. The Art Institute of Chicago. CC0."}
+::: {.trail}
+[[places|The Road]] / [[Aichi]] / Akasaka
+:::
+
+![Akasaka, Waitresses at an Inn: Serving women prepare an evening meal and entertain guests](../assets/aic-25720.jpg)
+*Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25720.jpg)*
+
+::: {.eyebrow}
+Station 36 · Akasaka, Toyokawa, Aichi
+:::
+
+::: {.numeral}
+36
+
+of 53
+:::
+
+::: {.slip}
+赤坂
+:::
+
+::: {.subtitle}
+*Akasaka, ryosha shofu no zu*
 :::
 
 > Serving women prepare an evening meal and entertain guests in the courtyard of an inn at Akasaka.
 
-*Curator's note, written for this site from the title and the print's well-documented subject; the museum record carries no description.*
+### Where it falls on the road
 
-| | |
-|---|---|
-| Station | Akasaka (赤坂), station 36 of 53 |
-| Where it is now | Akasaka, Toyokawa, Aichi |
-| Distance | 76.7 ri from Nihonbashi (Edo-period register; 1 ri is about 3.9 km) |
-| Artist | Utagawa Hiroshige (歌川広重) |
-| Date | 1833-34 |
-| Series | *Fifty-three Stations of the Tōkaidō (Tōkaidō gojūsan tsugi no uchi)*, Hōeidō edition |
-| Catalogue title | Akasaka: Waitresses at an Inn (Akasaka, ryosha shofu no zu), from the series "Fifty-three Stations of the Tokaido (Tokaido gojusan tsugi no uchi)," also known as the Hoeido Tokaido |
-| Credit | The Art Institute of Chicago |
-| Licence | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) |
-| Licence evidence | AIC API artworks/25720: is_public_domain=true |
-| Source record | [www.artic.edu/artworks/25720](https://www.artic.edu/artworks/25720) |
+::: {.ruler}
+76.7 ri, about 301 km from Nihonbashi.
+:::
 
-[[Browse|All 55 prints]] · [[places|The road on a map]]
+::: {.credit}
+Art Institute of Chicago · Public domain (CC0) · [Source record](https://www.artic.edu/artworks/25720)
+:::
