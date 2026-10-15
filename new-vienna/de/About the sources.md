@@ -13,9 +13,15 @@ uid: "b1c98d30"
 - Wo Quellen einander widersprechen, sagt die Seite das, statt sich für eine zu entscheiden.
 - Projekte, die vor 1919 begannen, stehen auf der Tafel, wenn die Stadt sie in dieser Zeit weiterführte; ihre Seite nennt den Beginn.
 
-## Fotografien
+## Bilder
 
-Fotografien aus der Online-Sammlung des Wien Museums, auf der Objektseite jeweils als CC0 gekennzeichnet, auf den Abzug zugeschnitten: Die Scans des Museums enthalten den Karton und eine Farbtafel.
+Die Bilder auf den Projektseiten und auf den Bereichsseiten, die sie auflisten, stammen von drei Häusern, die ihre Bilder jeweils mit CC0 oder der Public Domain Mark kennzeichnen:
+
+- Online-Sammlung des Wien Museums: 46 Bilder, CC0
+- Wienbibliothek im Rathaus, über Europeana: 7 Bilder, Public Domain Mark
+- Rijksmuseum, Amsterdam, über Wikimedia Commons: 1 Bild, CC0
+
+Jede Bildunterschrift nennt Fotograf oder Autor, die Datierung, wie das Haus sie angibt, die Inventar- oder Datensatznummer und die Kennzeichnung. Die Fotografien des Wien Museums sind auf den Abzug zugeschnitten: Die Scans des Museums enthalten den Karton und eine Farbtafel.
 
 ## Was fehlt
 
