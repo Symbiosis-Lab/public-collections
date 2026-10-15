@@ -20,10 +20,17 @@ Object.keys( COLOURS ).forEach( function ( base ) {
 } );
 
 // Years and status wording.
-assert.strictEqual( T.statusLine( 'Founded', 'Service', T.parseYears( '1925–1934' ) ), 'Founded 1925 · closed 1934' );
-assert.strictEqual( T.statusLine( 'Introduced', 'Programme', T.parseYears( '1923-1934' ) ), 'Introduced 1923 · until 1934' );
-assert.strictEqual( T.statusLine( 'Built', 'Building', T.parseYears( '1927–1933' ) ), 'Built 1927–1933' );
-assert.strictEqual( T.statusLine( 'Introduced', 'Programme', T.parseYears( 'from 1919' ) ), 'Introduced 1919' );
+const EN = T.LANGS.en, DE = T.LANGS.de;
+assert.strictEqual( T.statusLine( EN, 'Service', T.parseYears( '1925–1934' ) ), 'Founded 1925 · closed 1934' );
+assert.strictEqual( T.statusLine( EN, 'Programme', T.parseYears( '1923-1934' ) ), 'Introduced 1923 · until 1934' );
+assert.strictEqual( T.statusLine( EN, 'Building', T.parseYears( '1927–1933' ) ), 'Built 1927–1933' );
+assert.strictEqual( T.statusLine( EN, 'Programme', T.parseYears( 'from 1919' ) ), 'Introduced 1919' );
+assert.strictEqual( T.statusLine( DE, 'Building', T.parseYears( '1927–1930' ) ), 'Erbaut 1927–1930' );
+assert.strictEqual( T.statusLine( DE, 'Building', T.parseYears( 1927 ) ), 'Erbaut 1927' );
+assert.strictEqual( T.statusLine( DE, 'Service', T.parseYears( '1925–1934' ) ), 'Gegründet 1925 · geschlossen 1934' );
+assert.strictEqual( T.statusLine( DE, 'Programme', T.parseYears( '1920–1934' ) ), 'Eingeführt 1920 · bis 1934' );
+assert.strictEqual( T.statusLine( DE, 'Event', T.parseYears( 1931 ) ), 'Abgehalten 1931' );
+assert.strictEqual( T.parseYears( 'ab 1925' ).start, 1925 );
 assert.strictEqual( T.parseYears( 1921 ).start, 1921 );
 assert.strictEqual( T.parseYears( 'soon' ), null );
 
@@ -65,4 +72,35 @@ ctx.folders.push( rec( 'Grey', '', {} ) ); ctx.folders[ 2 ].url = 'grey/';
 ctx.pages.push( rec( 'Lost', 'grey', { kind: 'Event', years: '1930' } ) );
 const w = T.buildPackage( ctx ).warnings.join( '\n' );
 assert.ok( /Odd: kind "Monument"/.test( w ) && /Bad: years "soon"/.test( w ) && /Lost: its area "Grey" has no color/.test( w ), w );
+
+// The same folder on a German page: every pair is keyed de, labels and statuses are German, German `## Quellen` is skipped.
+const deBody = '<p>Erste <em>Worte</em>.</p><h2>Notizen</h2><ul><li>Eins</li></ul><h2>Quellen</h2><ul><li>q</li></ul>';
+const dctx = Object.assign( {}, ctx, { page: Object.assign( {}, ctx.page, { lang: 'de' } ), pages: [
+	rec( 'Spätes Haus', 'big', { kind: 'Building', years: '1930–1933', partners: [ 'Ada' ] }, deBody ),
+	rec( 'Klinik', 'small', { kind: 'Service', years: 'ab 1927' }, deBody ),
+	rec( 'Fest', 'small', { kind: 'Event', years: 1931 }, deBody )
+] } );
+const dout = T.buildPackage( dctx ), dp = dout.pkg;
+assert.deepStrictEqual( dout.warnings, [] );
+assert.deepStrictEqual( dp.sprachen, [ 'de' ] );
+assert.strictEqual( dp.texte.kopf.titel.de, 'Alle 3 Projekte' );
+assert.deepStrictEqual( [ dp.texte.filter.bereich_label.de, dp.texte.filter.einordnung_label.de, dp.texte.ansicht.karten.de, dp.texte.ansicht.zeitleiste.de ], [ 'Bereich', 'Art', 'Karten', 'Zeitleiste' ] );
+assert.strictEqual( dp.texte.leerzustand.meldung.de, 'Kein Projekt entspricht dieser Auswahl.' );
+assert.strictEqual( dp.texte.leerzustand.zuruecksetzen.de, 'Filter zurücksetzen' );
+assert.deepStrictEqual( dp.einordnungen.map( e => e.label.de ), [ 'Bauwerk', 'Einrichtung', 'Veranstaltung' ] );
+assert.deepStrictEqual( dp.einordnungen.map( e => e.schluessel ), [ 'building', 'service', 'event' ] );
+assert.deepStrictEqual( dp.projekte.map( p => p.status.de ), [ 'Gegründet 1927', 'Erbaut 1930–1933', 'Abgehalten 1931' ] );
+assert.strictEqual( dp.projekte[ 1 ].links[ 0 ].text.de, 'Projektseite und Quellen' );
+assert.deepStrictEqual( dp.projekte[ 1 ].abschnitte.map( s => s.label.de ), [ 'Notizen', 'Partner' ] );
+assert.deepStrictEqual( dp.projekte[ 0 ].abschnitte.map( s => s.label.de ), [ 'Notizen' ] );
+JSON.stringify( dp, ( k, v ) => { if ( v && typeof v === 'object' && ! Array.isArray( v ) && 'en' in v ) { assert.fail( 'an en key in the German package at ' + k ); } return v; } );
+
+// A language without a vocabulary falls back to English with one warning.
+const fr = T.buildPackage( Object.assign( {}, ctx, { page: Object.assign( {}, ctx.page, { lang: 'fr' } ) } ) );
+assert.strictEqual( fr.warnings.filter( x => /no vocabulary/.test( x ) ).length, 1 );
+assert.deepStrictEqual( fr.pkg.sprachen, [ 'en' ] );
+
+// render() output: rules and markup are split at the first </style>.
+assert.deepStrictEqual( T.splitRender( '<style>a{}b{}</style><div>x</div>' ), { css: 'a{}b{}', html: '<div>x</div>' } );
+assert.throws( () => T.splitRender( '<div>x</div>' ) );
 console.log( 'projektschau plugin: all checks passed' );
