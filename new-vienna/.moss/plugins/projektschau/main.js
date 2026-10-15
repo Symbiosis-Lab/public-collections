@@ -3,8 +3,10 @@
  *
  * A folder whose home page says `children_style: projektschau` is drawn as the Projektschau project board
  * (https://projektschau.de, README section 2): this plugin builds the v1 data package from the `listing` context,
- * returns it as projekte.json together with Projektschau's renderer, and leaves a plain list of links as the
- * page's no-script fallback. Plain JavaScript for moss's QuickJS plugin engine.
+ * returns it as projekte.json together with Projektschau's renderer, and draws the board itself at build time by running
+ * the unchanged renderer inside the hook (engine-shim.js stands in for the browser's document and DOMParser). The page
+ * arrives with the board in its HTML; the browser renderer then takes over the same mount. Words follow the page's
+ * language (the LANGS table). Plain JavaScript for moss's QuickJS plugin engine.
  *
  * Area icons are from Lucide (https://lucide.dev), ISC licence.
  * Colour method: Projektschau skripte/farben.py (KERN colour ramps in OKLCH), ported line for line.
@@ -117,28 +119,53 @@
 	};
 	var ALL_ICON = '<path d="M12 3v18"/><path d="M3 12h18"/><rect x="3" y="3" width="18" height="18" rx="2"/>';
 
-	// ---- kinds: this plugin's vocabulary for the project `kind` field -------------------------------------------
-	var KINDS = [
-		{ name: 'Building', verb: 'Built' },
-		{ name: 'Service', verb: 'Founded' },
-		{ name: 'Programme', verb: 'Introduced' },
-		{ name: 'Event', verb: 'Held' }
-	];
+	// ---- words: one table per page language; `to` is what joins the start year to the end year -----------------------
+	var LANGS = {
+		en: {
+			alle: 'All', titel: function ( n ) { return 'All ' + n + ' projects'; }, bereich: 'Area', einordnung: 'Kind',
+			ariaBereich: 'Filter by area', ariaEinordnung: 'Filter by kind', karten: 'Cards', zeitleiste: 'Timeline', ariaAnsicht: 'Choose view',
+			ariaSprache: 'Choose language', leer: 'No project matches this selection.', zuruecksetzen: 'Reset filters', ariaZeitleiste: 'Project timeline',
+			link: 'Project page and sources', partner: 'Partners', quellen: 'Sources',
+			kinds: {
+				Building: { label: 'Building', verb: 'Built', to: '–' },
+				Service: { label: 'Service', verb: 'Founded', to: ' · closed ' },
+				Programme: { label: 'Programme', verb: 'Introduced', to: ' · until ' },
+				Event: { label: 'Event', verb: 'Held', to: '–' }
+			}
+		},
+		de: {
+			alle: 'Alle', titel: function ( n ) { return 'Alle ' + n + ' Projekte'; }, bereich: 'Bereich', einordnung: 'Art',
+			ariaBereich: 'Nach Bereich filtern', ariaEinordnung: 'Nach Art filtern', karten: 'Karten', zeitleiste: 'Zeitleiste', ariaAnsicht: 'Ansicht wählen',
+			ariaSprache: 'Sprache wählen', leer: 'Kein Projekt entspricht dieser Auswahl.', zuruecksetzen: 'Filter zurücksetzen', ariaZeitleiste: 'Projekt-Zeitleiste',
+			link: 'Projektseite und Quellen', partner: 'Partner', quellen: 'Quellen',
+			kinds: {
+				Building: { label: 'Bauwerk', verb: 'Erbaut', to: '–' },
+				Service: { label: 'Einrichtung', verb: 'Gegründet', to: ' · geschlossen ' },
+				Programme: { label: 'Programm', verb: 'Eingeführt', to: ' · bis ' },
+				Event: { label: 'Veranstaltung', verb: 'Abgehalten', to: '–' }
+			}
+		}
+	};
+	var KIND_ORDER = [ 'Building', 'Service', 'Programme', 'Event' ];
+	// The page's language -> { code, words, warning }. A language the table lacks falls back to English.
+	function pageLang( ctx ) {
+		var code = String( ( ctx.page && ctx.page.lang ) || 'en' ).toLowerCase().split( /[-_]/ )[ 0 ];
+		if ( LANGS[ code ] ) { return { code: code, words: LANGS[ code ] }; }
+		return { code: 'en', words: LANGS.en, warning: 'page language "' + code + '" has no vocabulary in the projektschau plugin, so the board is drawn in English' };
+	}
 
 	// ---- years / status ------------------------------------------------------------------------------------------
 	function parseYears( s ) {
 		s = String( s || '' ).trim();
 		var m;
-		if ( ( m = /^from (\d{4})$/.exec( s ) ) ) { return { start: +m[ 1 ], end: null, open: true, text: 'from ' + m[ 1 ] }; }
+		if ( ( m = /^(from|ab) (\d{4})$/.exec( s ) ) ) { return { start: +m[ 2 ], end: null, open: true, text: m[ 1 ] + ' ' + m[ 2 ] }; }
 		if ( ( m = /^(\d{4})\s*[–-]\s*(\d{4})$/.exec( s ) ) ) { return { start: +m[ 1 ], end: +m[ 2 ], open: false, text: m[ 1 ] + '–' + m[ 2 ] }; }
 		if ( ( m = /^(\d{4})$/.exec( s ) ) ) { return { start: +m[ 1 ], end: +m[ 1 ], open: false, text: m[ 1 ] }; }
 		return null;
 	}
-	function statusLine( verb, kind, y ) {
-		if ( y.open || y.end === y.start ) { return verb + ' ' + y.start; }
-		if ( kind === 'Service' ) { return verb + ' ' + y.start + ' · closed ' + y.end; }
-		if ( kind === 'Programme' ) { return verb + ' ' + y.start + ' · until ' + y.end; }
-		return verb + ' ' + y.start + '–' + y.end;
+	function statusLine( words, kind, y ) {
+		var k = words.kinds[ kind ] || { verb: kind, to: '–' };
+		return k.verb + ' ' + y.start + ( y.open || y.end === y.start ? '' : k.to + y.end );
 	}
 
 
@@ -165,11 +192,11 @@
 	}
 
 	// ---- the package ---------------------------------------------------------------------------------------------
-	function pair( en ) { return { en: en }; }
-	function dirOf( p ) { return p.replace( /\/?index\.html$/, '' ); }
+		function dirOf( p ) { return p.replace( /\/?index\.html$/, '' ); }
 	function first( v ) { return v === undefined || v === null ? '' : String( v ); }
 	function buildPackage( ctx ) {
-		var warnings = [];
+		var lang = pageLang( ctx ), L = lang.words, warnings = lang.warning ? [ lang.warning ] : [];
+		function pair( v ) { var o = {}; o[ lang.code ] = v; return o; }
 
 		// areas: the listed folder's subfolders; a project's `folder` is its subfolder's address segment
 		var areaByDir = {};
@@ -178,8 +205,7 @@
 			areaByDir[ dir ] = { dir: dir, key: dir, title: f.title, color: fm.color, icon: fm.icon, weight: fm.weight === undefined || ! fm.color ? 0 : +fm.weight };
 		} );
 
-		var kindNames = KINDS.map( function ( k ) { return k.name; } ), verbs = {};
-		KINDS.forEach( function ( k ) { verbs[ k.name ] = k.verb; } );
+		var kindNames = KIND_ORDER;
 
 		var kindsSeen = [], projects = [];
 		ctx.pages.forEach( function ( pg ) {
@@ -188,7 +214,7 @@
 			if ( ! area ) { warnings.push( pg.title + ': sits in "' + pg.folder + '", which is not a folder with a home page, so it is left off the board' ); return; }
 			if ( ! area.color ) { warnings.push( pg.title + ': its area "' + area.title + '" has no color, so it is left off the board' ); return; }
 			var years = parseYears( fm.years );
-			if ( ! years ) { warnings.push( pg.title + ': years "' + first( fm.years ) + '" cannot be read (use 1925, 1925–1934 or from 1925), so it is left off the board' ); return; }
+			if ( ! years ) { warnings.push( pg.title + ': years "' + first( fm.years ) + '" cannot be read (use 1925, 1925–1934, from 1925 or ab 1925), so it is left off the board' ); return; }
 			if ( kindNames.indexOf( fm.kind ) < 0 ) { warnings.push( pg.title + ': kind "' + fm.kind + '" is not one of ' + kindNames.join( ', ' ) ); }
 			projects.push( { pg: pg, area: area, fm: fm, years: years } );
 			if ( kindsSeen.indexOf( fm.kind ) < 0 ) { kindsSeen.push( fm.kind ); }
@@ -209,16 +235,16 @@
 		var pkg = {
 			_generated: 'by the projektschau plugin; do not edit',
 			version: 1,
-			sprachen: [ 'en' ],
+			sprachen: [ lang.code ],
 			texte: {
-				kopf: { titel: pair( 'All ' + projects.length + ' projects' ) },
-				filter: { bereich_label: pair( 'Area' ), einordnung_label: pair( 'Kind' ), aria_bereich: pair( 'Filter by area' ), aria_einordnung: pair( 'Filter by kind' ) },
-				ansicht: { karten: pair( 'Cards' ), zeitleiste: pair( 'Timeline' ), aria: pair( 'Choose view' ) },
-				sprache: { aria: pair( 'Choose language' ) },
-				leerzustand: { meldung: pair( 'No project matches this selection.' ), zuruecksetzen: pair( 'Reset filters' ) },
-				zeitleiste: { aria: pair( 'Project timeline' ) }
+				kopf: { titel: pair( L.titel( projects.length ) ) },
+				filter: { bereich_label: pair( L.bereich ), einordnung_label: pair( L.einordnung ), aria_bereich: pair( L.ariaBereich ), aria_einordnung: pair( L.ariaEinordnung ) },
+				ansicht: { karten: pair( L.karten ), zeitleiste: pair( L.zeitleiste ), aria: pair( L.ariaAnsicht ) },
+				sprache: { aria: pair( L.ariaSprache ) },
+				leerzustand: { meldung: pair( L.leer ), zuruecksetzen: pair( L.zuruecksetzen ) },
+				zeitleiste: { aria: pair( L.ariaZeitleiste ) }
 			},
-			filter_alle: { bereich: { label: pair( 'All' ), icon_svg: ALL_ICON } },
+			filter_alle: { bereich: { label: pair( L.alle ), icon_svg: ALL_ICON } },
 			bereiche: areas.map( function ( a ) {
 				var b = { schluessel: a.key, label: pair( a.title ) };
 				if ( ICONS[ a.icon ] ) { b.icon_svg = ICONS[ a.icon ]; }
@@ -226,7 +252,8 @@
 				return b;
 			} ),
 			einordnungen: kindsSeen.map( function ( k ) {
-				return { schluessel: k.toLowerCase(), label: pair( k ), label_zeitleiste: pair( k ), als_filter_chip: true };
+				var label = L.kinds[ k ] ? L.kinds[ k ].label : k;
+				return { schluessel: k.toLowerCase(), label: pair( label ), label_zeitleiste: pair( label ), als_filter_chip: true };
 			} ),
 			projekte: []
 		};
@@ -235,7 +262,7 @@
 			var fm = pr.fm, y = pr.years, pg = pr.pg;
 			var abschnitte = [];
 			listSections( pg.html ).forEach( function ( s ) {
-				if ( s.heading === 'Sources' ) { return; }
+				if ( s.heading === L.quellen ) { return; }
 				abschnitte.push( { typ: 'liste', label: pair( s.heading ), punkte: s.items.map( pair ) } );
 			} );
 			var partners = Array.isArray( fm.partners ) ? fm.partners : [];
@@ -243,46 +270,69 @@
 			partners.forEach( function ( n ) { if ( linked.indexOf( n ) < 0 ) { warnings.push( pg.title + ': partner "' + n + '" has no page' ); } } );
 			if ( linked.length ) {
 				abschnitte.push( {
-					typ: 'liste', label: pair( 'Partners' ),
+					typ: 'liste', label: pair( L.partner ),
 					punkte: linked.map( function ( n ) { return pair( '<a href="' + escapeHtml( ctx.terms.partners[ n ] ) + '">' + escapeHtml( n ) + '</a>' ); } )
 				} );
 			}
 			var rec = { nr: i + 1, bereich: pr.area.key, einordnung: fm.kind.toLowerCase() };
 			if ( ICONS[ pr.area.icon ] ) { rec.icon_svg = ICONS[ pr.area.icon ]; }
 			rec.titel = pair( pg.title );
-			rec.status = pair( fm.status ? String( fm.status ) : statusLine( verbs[ fm.kind ] || fm.kind, fm.kind, y ) );
+			rec.status = pair( fm.status ? String( fm.status ) : statusLine( L, fm.kind, y ) );
 			var desc = firstParagraph( pg.html );
 			if ( desc ) { rec.beschreibung = pair( '<p>' + desc + '</p>' ); }
 			rec.abschnitte = abschnitte;
 			if ( fm.figure ) { rec.kennzahl = pair( escapeHtml( String( fm.figure ) ) ); }
-			rec.links = [ { url: pg.url, text: pair( 'Project page and sources' ) } ];
+			rec.links = [ { url: pg.url, text: pair( L.link ) } ];
 			rec.zeitleiste = { sortierung: y.start * 100 + 1, zeitraum: pair( y.text ) };
 			pkg.projekte.push( rec );
 		} );
-		return { pkg: pkg, warnings: warnings, projects: projects };
+		return { pkg: pkg, warnings: warnings, projects: projects, lang: lang.code };
 	}
 
 	// ---- hook ----------------------------------------------------------------------------------------------------
 	function readOwn( path ) { return window.__TAURI__.core.invoke( 'read_plugin_file', { relativePath: path } ); }
 	var ASSETS = [ 'projektschau.js', 'projektschau.css', 'LICENSE.txt' ];
+	// What the mount's data-* attributes tell the browser renderer (its init()); the build-time render must use the same.
+	var OPT = { ansicht: 'karten', bereich: 'all', ebene: 2, sprache: '', zeitleiste: true, einordnungsfilter: true, sprachumschalter: false, symbole: null, symbolschalter: false };
+
+	// Without JavaScript the filter and view buttons do nothing, so the control bar is hidden there. Kept out of board.css so that
+	// file stays exactly the renderer's own rules.
+	var NO_SCRIPT_CSS = '@media (scripting: none) { .ps-controls { display: none; } }\n';
+
+	// render() returns '<style>rules</style>' + markup; the rules go to a file (strict content-security policies refuse inline <style>).
+	function splitRender( out ) {
+		var end = out.indexOf( '</style>' );
+		if ( out.slice( 0, 7 ) !== '<style>' || end < 0 ) { throw new Error( 'projektschau: render() did not start with a <style> block' ); }
+		return { css: out.slice( 7, end ), html: out.slice( end + 8 ) };
+	}
+	// Runs the unchanged renderer under the engine shim, then puts the engine's globals back as they were.
+	function drawBoard( pkg, rendererSource, shimSource ) {
+		var g = globalThis, names = [ 'document', 'DOMParser', 'URL', 'Projektschau' ], had = names.map( function ( n ) { return n in g; } ), old = names.map( function ( n ) { return g[ n ]; } );
+		try {
+			( 0, eval )( shimSource );
+			( 0, eval )( rendererSource );
+			return splitRender( ( typeof window !== 'undefined' ? window : g ).Projektschau.render( pkg, OPT ) );
+		} finally {
+			names.forEach( function ( n, i ) { if ( had[ i ] ) { g[ n ] = old[ i ]; } else { delete g[ n ]; } } );
+			if ( typeof window !== 'undefined' && window !== g ) { delete window.Projektschau; }
+		}
+	}
 
 	async function listing( ctx ) {
-		var built = buildPackage( ctx ), files = [ { path: 'projekte.json', text: JSON.stringify( built.pkg, null, 2 ) + '\n' } ];
-		for ( var i = 0; i < ASSETS.length; i++ ) { files.push( { path: 'projektschau/' + ASSETS[ i ], text: await readOwn( ASSETS[ i ] ) } ); }
-		var list = built.projects.map( function ( pr, i ) {
-			var rec = built.pkg.projekte[ i ];
-			return '<li><a href="' + escapeHtml( pr.pg.url ) + '">' + escapeHtml( pr.pg.title ) + '</a> ' + escapeHtml( rec.status.en ) + '</li>';
-		} ).join( '' );
+		var built = buildPackage( ctx ), files = [ { path: 'projekte.json', text: JSON.stringify( built.pkg, null, 2 ) + '\n' } ], src = {};
+		for ( var i = 0; i < ASSETS.length; i++ ) { src[ ASSETS[ i ] ] = await readOwn( ASSETS[ i ] ); files.push( { path: 'projektschau/' + ASSETS[ i ], text: src[ ASSETS[ i ] ] } ); }
+		var board = drawBoard( built.pkg, src[ 'projektschau.js' ], await readOwn( 'engine-shim.js' ) );
+		files.push( { path: 'projektschau/board.css', text: board.css }, { path: 'projektschau/noscript.css', text: NO_SCRIPT_CSS } );
 		return {
-			html: '<div data-projektschau data-src="projekte.json" data-ebene="2" data-sprache-vorgabe="en"><ul>' + list + '</ul></div>',
+			html: '<div data-projektschau data-src="projekte.json" data-ebene="2" data-sprachumschalter="nein" data-sprache-vorgabe="' + built.lang + '">' + board.html + '</div>',
 			// moss defers head scripts, so the renderer runs once the mount exists.
-			head: [ { stylesheet: 'projektschau/projektschau.css' }, { script: 'projektschau/projektschau.js' } ],
+			head: [ { stylesheet: 'projektschau/projektschau.css' }, { stylesheet: 'projektschau/board.css' }, { stylesheet: 'projektschau/noscript.css' }, { script: 'projektschau/projektschau.js' } ],
 			files: files,
 			warnings: built.warnings
 		};
 	}
 
-	var api = { listing: listing, _t: { deriveColours: deriveColours, parseYears: parseYears, statusLine: statusLine, buildPackage: buildPackage } };
+	var api = { listing: listing, _t: { deriveColours: deriveColours, parseYears: parseYears, statusLine: statusLine, buildPackage: buildPackage, LANGS: LANGS, splitRender: splitRender } };
 	( typeof window !== 'undefined' ? window : globalThis ).ProjektschauPlugin = api;
 	if ( typeof module !== 'undefined' && module.exports ) { module.exports = api; }
 }() );
