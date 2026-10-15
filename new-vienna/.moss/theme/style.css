@@ -52,12 +52,6 @@
   --moss-header-rule: oklch(42.13% .0539 275.67);
 }
 
-/* ---- Area colour: moss puts the folder's `color:` on every page under it as --moss-section-color; the title/card text colour is that
-   colour pulled toward black (light) or white (dark) until it clears 4.5:1 on the page. ---- */
-:root { --fg-keep: 80%; --fg-toward: #000; /* light: 80% of the area colour, 20% black */ }
-:root[data-theme="dark"] { --fg-keep: 45%; --fg-toward: #fff; /* dark: 45% of the area colour, 55% white */ }
-body[data-section], .moss-card { --a-fg: color-mix(in srgb, var(--moss-section-color) var(--fg-keep), var(--fg-toward)); /* derived text colour */ }
-
 /* ---- Page basics ---- */
 body {
   font-variant-numeric: tabular-nums slashed-zero; /* KERN sets figures tabular everywhere (design rule T1) */
@@ -97,7 +91,7 @@ article ul, article ol { padding-inline-start: 1.5em; /* KERN list indent */ }
 
 /* ---- Project title and badge: the area names itself in colour. ---- */
 .moss-article-title { font-weight: 600; line-height: 1.15; letter-spacing: 0; /* KERN x-large heading */ }
-body[data-section] .moss-article-title { color: var(--a-fg); /* derived text colour, above 4.5:1 on the page in both modes */ }
+body[data-section] .moss-article-title { color: var(--moss-section-text); /* the area colour as moss makes it readable: 4.5:1 or more on the page in both modes */ }
 /* The parent-section link above the title (`breadcrumb: label` on the home page): a small breadcrumb by default (a partner belongs to no area), a badge filled in the area colour inside a section. */
 article a.moss-parent-label { color: var(--moss-color-accent); font-size: .875rem; letter-spacing: 0; text-transform: none; text-decoration: underline; text-underline-offset: 3px; /* KERN small link */ }
 body[data-section] article a.moss-parent-label {
@@ -122,7 +116,7 @@ article h2#sources + ul li + li { margin-block-start: var(--moss-space-sm); }
 /* ---- Partner page: projects as small tinted cards, the tint from each card's section colour. ---- */
 .moss-cards[data-layout="list"] { display: grid; grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); gap: var(--moss-space-md); }
 .moss-cards[data-layout="list"] .moss-card { border-radius: var(--a-radius-lg); border: 1px solid color-mix(in srgb, var(--moss-section-color) 35%, transparent); background: color-mix(in srgb, var(--moss-section-color) 8%, var(--moss-color-bg)); padding: var(--moss-space-md); text-decoration: none; /* tinted like Projektschau's cards */ }
-.moss-cards[data-layout="list"] .moss-card-title { color: var(--a-fg); font-size: 1.125rem; font-weight: 600; margin: 0; /* title in the area's text colour */ }
+.moss-cards[data-layout="list"] .moss-card-title { color: var(--moss-section-text); font-size: 1.125rem; font-weight: 600; margin: 0; /* title in the area's text colour */ }
 .moss-cards[data-layout="list"] .moss-card-description { color: var(--moss-color-text-secondary); font-size: .9375rem; margin: 4px 0 0; }
 
 /* ---- Phone header: name and switch share line one, the pages take line two (the prototype's order). ---- */
