@@ -2,7 +2,7 @@
 title: Housing construction tax
 uid: "29a9eb70"
 kind: Programme
-years: from 1923
+years: "1923/.."
 figure: "about 65 million schillings from all of the city's new taxes, 1927"
 partners: [Hugo Breitner]
 cover: Municipal housing programme.jpg

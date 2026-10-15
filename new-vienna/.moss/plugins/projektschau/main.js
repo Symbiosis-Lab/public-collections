@@ -122,7 +122,7 @@
 	// ---- words: one table per page language; `to` is what joins the start year to the end year -----------------------
 	var LANGS = {
 		en: {
-			alle: 'All', titel: function ( n ) { return 'All ' + n + ' projects'; }, bereich: 'Area', einordnung: 'Kind',
+			from: 'from', alle: 'All', titel: function ( n ) { return 'All ' + n + ' projects'; }, bereich: 'Area', einordnung: 'Kind',
 			ariaBereich: 'Filter by area', ariaEinordnung: 'Filter by kind', karten: 'Cards', zeitleiste: 'Timeline', ariaAnsicht: 'Choose view',
 			ariaSprache: 'Choose language', leer: 'No project matches this selection.', zuruecksetzen: 'Reset filters', ariaZeitleiste: 'Project timeline',
 			link: 'Project page and sources', partner: 'Partners', quellen: 'Sources',
@@ -134,7 +134,7 @@
 			}
 		},
 		de: {
-			alle: 'Alle', titel: function ( n ) { return 'Alle ' + n + ' Projekte'; }, bereich: 'Bereich', einordnung: 'Art',
+			from: 'ab', alle: 'Alle', titel: function ( n ) { return 'Alle ' + n + ' Projekte'; }, bereich: 'Bereich', einordnung: 'Art',
 			ariaBereich: 'Nach Bereich filtern', ariaEinordnung: 'Nach Art filtern', karten: 'Karten', zeitleiste: 'Zeitleiste', ariaAnsicht: 'Ansicht wählen',
 			ariaSprache: 'Sprache wählen', leer: 'Kein Projekt entspricht dieser Auswahl.', zuruecksetzen: 'Filter zurücksetzen', ariaZeitleiste: 'Projekt-Zeitleiste',
 			link: 'Projektseite und Quellen', partner: 'Partner', quellen: 'Quellen',
@@ -155,13 +155,10 @@
 	}
 
 	// ---- years / status ------------------------------------------------------------------------------------------
-	function parseYears( s ) {
-		s = String( s || '' ).trim();
-		var m;
-		if ( ( m = /^(from|ab) (\d{4})$/.exec( s ) ) ) { return { start: +m[ 2 ], end: null, open: true, text: m[ 1 ] + ' ' + m[ 2 ] }; }
-		if ( ( m = /^(\d{4})\s*[–-]\s*(\d{4})$/.exec( s ) ) ) { return { start: +m[ 1 ], end: +m[ 2 ], open: false, text: m[ 1 ] + '–' + m[ 2 ] }; }
-		if ( ( m = /^(\d{4})$/.exec( s ) ) ) { return { start: +m[ 1 ], end: +m[ 1 ], open: false, text: m[ 1 ] }; }
-		return null;
+	// moss's typed `period` -> { start, end, open, text }. A single date and an open end both arrive with end null; only f.text ("1923/..") tells them apart.
+	function periodOf( words, f ) {
+		var start = +f.start.value, open = ! f.end && /\.\.$/.test( f.text ), end = f.end ? +f.end.value : open ? null : start;
+		return { start: start, end: end, open: open, text: open ? words.from + ' ' + start : end === start ? String( start ) : start + '\u2013' + end };
 	}
 	function statusLine( words, kind, y ) {
 		var k = words.kinds[ kind ] || { verb: kind, to: '–' };
@@ -192,8 +189,7 @@
 	}
 
 	// ---- the package ---------------------------------------------------------------------------------------------
-		function dirOf( p ) { return p.replace( /\/?index\.html$/, '' ); }
-	function first( v ) { return v === undefined || v === null ? '' : String( v ); }
+	function dirOf( p ) { return p.replace( /\/?index\.html$/, '' ); }
 	function buildPackage( ctx ) {
 		var lang = pageLang( ctx ), L = lang.words, warnings = lang.warning ? [ lang.warning ] : [];
 		function pair( v ) { var o = {}; o[ lang.code ] = v; return o; }
@@ -205,19 +201,16 @@
 			areaByDir[ dir ] = { dir: dir, key: dir, title: f.title, color: fm.color, icon: fm.icon, weight: fm.weight === undefined || ! fm.color ? 0 : +fm.weight };
 		} );
 
-		var kindNames = KIND_ORDER;
-
 		var kindsSeen = [], projects = [];
 		ctx.pages.forEach( function ( pg ) {
-			var fm = pg.frontmatter, area = areaByDir[ pg.folder ];
-			if ( ! fm.kind ) { return; }
+			var fm = pg.frontmatter, f = pg.fields || {}, area = areaByDir[ pg.folder ];
+			if ( ! f.kind ) { return; }
 			if ( ! area ) { warnings.push( pg.title + ': sits in "' + pg.folder + '", which is not a folder with a home page, so it is left off the board' ); return; }
 			if ( ! area.color ) { warnings.push( pg.title + ': its area "' + area.title + '" has no color, so it is left off the board' ); return; }
-			var years = parseYears( fm.years );
-			if ( ! years ) { warnings.push( pg.title + ': years "' + first( fm.years ) + '" cannot be read (use 1925, 1925–1934, from 1925 or ab 1925), so it is left off the board' ); return; }
-			if ( kindNames.indexOf( fm.kind ) < 0 ) { warnings.push( pg.title + ': kind "' + fm.kind + '" is not one of ' + kindNames.join( ', ' ) ); }
-			projects.push( { pg: pg, area: area, fm: fm, years: years } );
-			if ( kindsSeen.indexOf( fm.kind ) < 0 ) { kindsSeen.push( fm.kind ); }
+			if ( ! f.years ) { warnings.push( pg.title + ': has a kind but no years, so it is left off the board' ); return; }
+			var kind = f.kind.value;
+			projects.push( { pg: pg, area: area, fm: fm, f: f, kind: kind, years: periodOf( L, f.years ) } );
+			if ( kindsSeen.indexOf( kind ) < 0 ) { kindsSeen.push( kind ); }
 		} );
 		projects.sort( function ( a, b ) { return a.years.start - b.years.start || ( a.pg.title < b.pg.title ? -1 : a.pg.title > b.pg.title ? 1 : 0 ); } );
 
@@ -228,7 +221,7 @@
 		areas.sort( function ( a, b ) { return a.weight - b.weight || count[ b.dir ] - count[ a.dir ] || ( a.title < b.title ? -1 : a.title > b.title ? 1 : 0 ); } );
 
 		kindsSeen.sort( function ( a, b ) {
-			var ia = kindNames.indexOf( a ), ib = kindNames.indexOf( b );
+			var ia = KIND_ORDER.indexOf( a ), ib = KIND_ORDER.indexOf( b );
 			return ( ia < 0 ? 99 : ia ) - ( ib < 0 ? 99 : ib );
 		} );
 
@@ -259,7 +252,7 @@
 		};
 
 		projects.forEach( function ( pr, i ) {
-			var fm = pr.fm, y = pr.years, pg = pr.pg;
+			var fm = pr.fm, y = pr.years, pg = pr.pg, kind = pr.kind;
 			var abschnitte = [];
 			listSections( pg.html ).forEach( function ( s ) {
 				if ( s.heading === L.quellen ) { return; }
@@ -274,14 +267,14 @@
 					punkte: linked.map( function ( n ) { return pair( '<a href="' + escapeHtml( ctx.terms.partners[ n ] ) + '">' + escapeHtml( n ) + '</a>' ); } )
 				} );
 			}
-			var rec = { nr: i + 1, bereich: pr.area.key, einordnung: fm.kind.toLowerCase() };
+			var rec = { nr: i + 1, bereich: pr.area.key, einordnung: kind.toLowerCase() };
 			if ( ICONS[ pr.area.icon ] ) { rec.icon_svg = ICONS[ pr.area.icon ]; }
 			rec.titel = pair( pg.title );
-			rec.status = pair( fm.status ? String( fm.status ) : statusLine( L, fm.kind, y ) );
+			rec.status = pair( fm.status ? String( fm.status ) : statusLine( L, kind, y ) );
 			var desc = firstParagraph( pg.html );
 			if ( desc ) { rec.beschreibung = pair( '<p>' + desc + '</p>' ); }
 			rec.abschnitte = abschnitte;
-			if ( fm.figure ) { rec.kennzahl = pair( escapeHtml( String( fm.figure ) ) ); }
+			if ( pr.f.figure ) { rec.kennzahl = pair( escapeHtml( pr.f.figure.text ) ); }
 			rec.links = [ { url: pg.url, text: pair( L.link ) } ];
 			rec.zeitleiste = { sortierung: y.start * 100 + 1, zeitraum: pair( y.text ) };
 			pkg.projekte.push( rec );
@@ -332,7 +325,7 @@
 		};
 	}
 
-	var api = { listing: listing, _t: { deriveColours: deriveColours, parseYears: parseYears, statusLine: statusLine, buildPackage: buildPackage, LANGS: LANGS, splitRender: splitRender } };
+	var api = { listing: listing, _t: { deriveColours: deriveColours, periodOf: periodOf, statusLine: statusLine, buildPackage: buildPackage, LANGS: LANGS, splitRender: splitRender } };
 	( typeof window !== 'undefined' ? window : globalThis ).ProjektschauPlugin = api;
 	if ( typeof module !== 'undefined' && module.exports ) { module.exports = api; }
 }() );

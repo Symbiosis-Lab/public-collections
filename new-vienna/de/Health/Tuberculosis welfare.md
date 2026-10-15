@@ -2,7 +2,7 @@
 title: Tuberkulosefürsorge
 uid: "988fa869"
 kind: Programme
-years: from 1918
+years: "1918/.."
 figure: 12 städtische Fürsorgestellen bis 1931
 partners: [Alfred Götzl]
 cover: ../../Health/Tuberculosis welfare.jpg

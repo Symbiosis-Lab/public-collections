@@ -2,7 +2,7 @@
 title: "Children's open-air pools"
 uid: "81acb300"
 kind: Building
-years: from 1919
+years: "1919/.."
 figure: 16 more pools opened 1927–1931
 partners: [Julius Tandler]
 cover: Children's open-air pools.jpg
