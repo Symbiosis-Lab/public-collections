@@ -88,7 +88,6 @@ body > header {
 .main-nav a { color: var(--moss-color-accent); /* KERN: every link is the action blue */ }
 .main-nav .site-name { color: var(--moss-color-text); /* except the name, which is text colour as in the prototype */ }
 .main-nav a.active { color: var(--moss-color-text); border-block-end: none; font-weight: 600; /* current page: text colour, semi-bold, no underline */ }
-.nav-links > a:nth-child(2) { order: 1; /* moss lists a term kind's entry after every page entry; the header reads Projects, Partners, About the sources, so the second page entry moves last (visual order only) */ }
 
 /* ---- Running text: KERN body size and line height, 68ch measure from the content-width token. ---- */
 article { font-size: 1.125rem; line-height: 1.6; /* KERN medium body, 18px, comfortable leading */ }
