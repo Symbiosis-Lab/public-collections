@@ -13,10 +13,11 @@ A week of competitions in 117 disciplines held in Vienna; the Prater Stadium was
 
 Held 19–26 July 1931.
 
-:::grid 2 {.pictures-set}
-![Front page of a special print from the Arbeiter-Zeitung greeting the guests of the Workers' Olympiad, 1931, with welcome texts by Karl Seitz and Karl Renner and a bust of Victor Adler. Verlag der Arbeiter-Zeitung, 1931. Wienbibliothek im Rathaus, record 2597163, PDM.](Second%20Workers'%20Olympiad%202.jpg)
-+++
-![City map issued by the municipal insurance company for the Second Workers' Olympiad, Vienna. Städtische Versicherungsanstalt, Gemeinde Wien, 1931. Wienbibliothek im Rathaus, record 2597154, PDM.](Second%20Workers'%20Olympiad%203.jpg)
+:::gallery rows
+![](Second%20Workers'%20Olympiad%202.jpg)
+*Front page of a special print from the Arbeiter-Zeitung greeting the guests of the Workers' Olympiad, 1931, with welcome texts by Karl Seitz and Karl Renner and a bust of Victor Adler. Verlag der Arbeiter-Zeitung, 1931. Wienbibliothek im Rathaus, record 2597163, PDM.*
+![](Second%20Workers'%20Olympiad%203.jpg)
+*City map issued by the municipal insurance company for the Second Workers' Olympiad, Vienna. Städtische Versicherungsanstalt, Gemeinde Wien, 1931. Wienbibliothek im Rathaus, record 2597154, PDM.*
 :::
 
 ## Sources

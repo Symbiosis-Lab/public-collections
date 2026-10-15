@@ -11,12 +11,13 @@ Freibäder für Kinder, errichtet zur vorbeugenden Gesundheitspflege. Das erste 
 
 ![Kinder im städtischen Kinderfreibad im Schweizergarten, Landstraße. Martin Gerlach jun., um 1923. Wien Museum, Inv. 59241/398, CC0.](../../Health/Children's%20open-air%20pools.jpg)
 
-:::grid 3 {.pictures-set}
-![Eine zweite Ansicht des Kinderfreibads im Schweizergarten. Martin Gerlach jun., um 1923. Wien Museum, Inv. 59241/401, CC0.](../../Health/Children's%20open-air%20pools%202.jpg)
-+++
-![Kinder auf der Wiese beim Hietzinger Kinderfreibad im Auer-Welsbach-Park, Rudolfsheim-Fünfhaus. Fotograf unbekannt, um 1926. Wien Museum, Inv. 98681, CC0.](../../Health/Children's%20open-air%20pools%203.jpg)
-+++
-![Umschlag einer städtischen Broschüre von etwa 1926 über die Kinderfreibäder im Arenbergpark und im Türkenschanzpark, mit der Zeichnung eines Kindes vor aufgehender Sonne (Zeichner nicht genannt). Thalia, 1926. Wienbibliothek im Rathaus, Nr. 1956252, PDM.](../../Health/Children's%20open-air%20pools%204.jpg)
+:::gallery rows
+![](../../Health/Children's%20open-air%20pools%202.jpg)
+*Eine zweite Ansicht des Kinderfreibads im Schweizergarten. Martin Gerlach jun., um 1923. Wien Museum, Inv. 59241/401, CC0.*
+![](../../Health/Children's%20open-air%20pools%203.jpg)
+*Kinder auf der Wiese beim Hietzinger Kinderfreibad im Auer-Welsbach-Park, Rudolfsheim-Fünfhaus. Fotograf unbekannt, um 1926. Wien Museum, Inv. 98681, CC0.*
+![](../../Health/Children's%20open-air%20pools%204.jpg)
+*Umschlag einer städtischen Broschüre von etwa 1926 über die Kinderfreibäder im Arenbergpark und im Türkenschanzpark, mit der Zeichnung eines Kindes vor aufgehender Sonne (Zeichner nicht genannt). Thalia, 1926. Wienbibliothek im Rathaus, Nr. 1956252, PDM.*
 :::
 
 ## Quellen

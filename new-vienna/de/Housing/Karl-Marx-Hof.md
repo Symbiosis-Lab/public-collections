@@ -19,10 +19,11 @@ Die Quellen widersprechen einander: Derselbe Artikel nennt 1.382 Wohnungen für 
 
 Der Hof steht im 19. Bezirk, Döbling, in der Heiligenstädter Straße 82–92.
 
-:::grid 2 {.pictures-set}
-![Karl-Marx-Hof in Döbling, Heiligenstädter Straße 82–92: Blick in eine Durchfahrtsstraße des Blocks. Martin Gerlach jun., um 1930. Wien Museum, Inv. 59241/1125, CC0.](../../Housing/Karl-Marx-Hof%204.jpg)
-+++
-![Der Karl-Marx-Hof an der Ecke Heiligenstädter Straße, Boschstraße und Halteraugasse. Fotograf unbekannt, um 1930. Wien Museum, Inv. 57962/424, CC0.](../../Housing/Karl-Marx-Hof%203.jpg)
+:::gallery rows
+![](../../Housing/Karl-Marx-Hof%204.jpg)
+*Karl-Marx-Hof in Döbling, Heiligenstädter Straße 82–92: Blick in eine Durchfahrtsstraße des Blocks. Martin Gerlach jun., um 1930. Wien Museum, Inv. 59241/1125, CC0.*
+![](../../Housing/Karl-Marx-Hof%203.jpg)
+*Der Karl-Marx-Hof an der Ecke Heiligenstädter Straße, Boschstraße und Halteraugasse. Fotograf unbekannt, um 1930. Wien Museum, Inv. 57962/424, CC0.*
 :::
 
 ## Im Inneren des Blocks
@@ -32,10 +33,11 @@ Der Hof steht im 19. Bezirk, Döbling, in der Heiligenstädter Straße 82–92.
 - Eine Ambulanz, eine Zahnklinik und eine Apotheke
 - Ein Postamt, Geschäfte und eine zentrale Waschküche
 
-:::grid 2 {.pictures-set}
-![Karl-Marx-Hof: Blick auf den Kindergarten im Innenhof. Martin Gerlach jun., um 1930. Wien Museum, Inv. 59161/1790, CC0.](../../Housing/Karl-Marx-Hof%202.jpg)
-+++
-![Der Kindergarten des Karl-Marx-Hofs, Heiligenstädter Straße 82–92. Martin Gerlach jun., um 1930. Wien Museum, Inv. 93083/111, CC0.](../../Housing/Karl-Marx-Hof%205.jpg)
+:::gallery rows
+![](../../Housing/Karl-Marx-Hof%202.jpg)
+*Karl-Marx-Hof: Blick auf den Kindergarten im Innenhof. Martin Gerlach jun., um 1930. Wien Museum, Inv. 59161/1790, CC0.*
+![](../../Housing/Karl-Marx-Hof%205.jpg)
+*Der Kindergarten des Karl-Marx-Hofs, Heiligenstädter Straße 82–92. Martin Gerlach jun., um 1930. Wien Museum, Inv. 93083/111, CC0.*
 :::
 
 ## Danach

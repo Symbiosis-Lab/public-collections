@@ -13,10 +13,11 @@ Eine Woche voller Wettkämpfe in 117 Disziplinen in Wien; das Praterstadion wurd
 
 Ausgetragen vom 19. bis 26. Juli 1931.
 
-:::grid 2 {.pictures-set}
-![Titelseite eines Sonderdrucks der Arbeiter-Zeitung zum Gruß an die Gäste der Arbeiter-Olympiade, 1931, mit Begrüßungstexten von Karl Seitz und Karl Renner und einer Büste Victor Adlers. Verlag der Arbeiter-Zeitung, 1931. Wienbibliothek im Rathaus, Nr. 2597163, PDM.](../../Sport/Second%20Workers'%20Olympiad%202.jpg)
-+++
-![Stadtplan der Städtischen Versicherungsanstalt zur 2. Arbeiter-Olympiade, Wien. Städtische Versicherungsanstalt, Gemeinde Wien, 1931. Wienbibliothek im Rathaus, Nr. 2597154, PDM.](../../Sport/Second%20Workers'%20Olympiad%203.jpg)
+:::gallery rows
+![](../../Sport/Second%20Workers'%20Olympiad%202.jpg)
+*Titelseite eines Sonderdrucks der Arbeiter-Zeitung zum Gruß an die Gäste der Arbeiter-Olympiade, 1931, mit Begrüßungstexten von Karl Seitz und Karl Renner und einer Büste Victor Adlers. Verlag der Arbeiter-Zeitung, 1931. Wienbibliothek im Rathaus, Nr. 2597163, PDM.*
+![](../../Sport/Second%20Workers'%20Olympiad%203.jpg)
+*Stadtplan der Städtischen Versicherungsanstalt zur 2. Arbeiter-Olympiade, Wien. Städtische Versicherungsanstalt, Gemeinde Wien, 1931. Wienbibliothek im Rathaus, Nr. 2597154, PDM.*
 :::
 
 ## Quellen
