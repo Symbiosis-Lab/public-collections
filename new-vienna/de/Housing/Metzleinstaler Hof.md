@@ -4,7 +4,6 @@ uid: "92361454"
 kind: Building
 years: 1919–1924
 figure: 244 Wohnungen
-cover: ../../Housing/Metzleinstaler Hof.jpg
 ---
 
 Einer der ersten Gemeindebauten der Zeit, in Margareten, begonnen 1919 und fertiggestellt 1924.

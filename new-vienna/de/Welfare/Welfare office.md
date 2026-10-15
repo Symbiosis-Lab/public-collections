@@ -4,7 +4,6 @@ uid: "48dc2232"
 kind: Service
 years: 1921
 partners: [Julius Tandler]
-cover: ../../Welfare/Welfare office.jpg
 ---
 
 Das Wohlfahrtsamt der Stadt, gegründet 1921 unter Julius Tandler.

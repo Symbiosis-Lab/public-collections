@@ -5,7 +5,6 @@ kind: Programme
 years: 1920
 partners: [Otto Neurath]
 by: false
-cover: Settlement and allotment association.jpg
 ---
 
 An umbrella for the settler movement: direct help for settlers building their own houses, a school and exhibitions. Otto Neurath founded it and was its general secretary.

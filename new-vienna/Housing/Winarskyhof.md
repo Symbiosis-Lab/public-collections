@@ -4,7 +4,6 @@ uid: "a2ff6856"
 kind: Building
 years: 1924–1925
 figure: 534 flats
-cover: Winarskyhof.jpg
 ---
 
 A block in Brigittenau, built 1924–1925.

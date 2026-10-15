@@ -5,7 +5,6 @@ kind: Programme
 years: "1923/.."
 figure: "rund 65 Millionen Schilling aus allen neuen Steuern der Stadt, 1927"
 partners: [Hugo Breitner]
-cover: ../../Housing/Municipal housing programme.jpg
 ---
 
 Eine zweckgebundene Steuer für den Wohnungsbau, die wichtigste Geldquelle des Wohnbauprogramms. 1927 brachten alle neuen Steuern der Stadt zusammen rund 65 Millionen Schilling ein.

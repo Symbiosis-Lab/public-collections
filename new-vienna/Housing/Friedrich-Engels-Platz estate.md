@@ -4,7 +4,6 @@ uid: "c41c3ba9"
 kind: Building
 years: 1930–1933
 figure: 1,467 flats
-cover: Friedrich-Engels-Platz estate.jpg
 ---
 
 The last large estate of the period, in Brigittenau. 2,300 flats were planned; 1,467 were built before 1934.

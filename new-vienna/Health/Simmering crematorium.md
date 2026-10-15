@@ -3,7 +3,6 @@ title: Simmering crematorium
 uid: "ad6a9402"
 kind: Building
 years: 1922
-cover: Simmering crematorium.jpg
 ---
 
 Austria's first crematorium.

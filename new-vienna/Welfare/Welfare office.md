@@ -4,7 +4,6 @@ uid: "cc18d2f2"
 kind: Service
 years: 1921
 partners: [Julius Tandler]
-cover: Welfare office.jpg
 ---
 
 The city's welfare office, founded in 1921 under Julius Tandler.

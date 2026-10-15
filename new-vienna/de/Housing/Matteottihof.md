@@ -4,7 +4,6 @@ uid: "b6868703"
 kind: Building
 years: 1926–1927
 figure: 452 Wohnungen
-cover: ../../Housing/Matteottihof.jpg
 ---
 
 Ein Baublock in Margareten, errichtet 1926–1927.

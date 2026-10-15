@@ -5,7 +5,6 @@ kind: Service
 years: 1923
 figure: 300 Plätze im großen Hörsaal
 partners: [Otto Glöckel, Karl Bühler, Alfred Adler]
-cover: ../../Education & culture/Pedagogical Institute of the City of Vienna.jpg
 ---
 
 Eröffnet von Otto Glöckel, mit einem psychologisch-pädagogischen Laboratorium unter der Leitung von Karl Bühler; Alfred Adler hielt dort Vorlesungen.

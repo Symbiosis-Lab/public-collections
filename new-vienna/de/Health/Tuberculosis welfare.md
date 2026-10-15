@@ -5,7 +5,6 @@ kind: Programme
 years: "1918/.."
 figure: 12 städtische Fürsorgestellen bis 1931
 partners: [Alfred Götzl]
-cover: ../../Health/Tuberculosis welfare.jpg
 ---
 
 Ab Ende 1918 nahm die Stadt mit eigenen Fürsorgestellen den Kampf gegen die Tuberkulose auf.

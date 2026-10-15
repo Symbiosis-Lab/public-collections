@@ -5,7 +5,6 @@ kind: Programme
 years: 1920
 partners: [Otto Neurath]
 by: false
-cover: ../../Housing/Settlement and allotment association.jpg
 ---
 
 Ein Dach für die Siedlerbewegung: unmittelbare Hilfe für Siedler, die ihre Häuser selbst bauten, eine Schule und Ausstellungen. Otto Neurath gründete ihn und war sein Generalsekretär.

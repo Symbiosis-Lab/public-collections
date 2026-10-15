@@ -5,7 +5,6 @@ kind: Programme
 years: "1923/.."
 figure: "about 65 million schillings from all of the city's new taxes, 1927"
 partners: [Hugo Breitner]
-cover: Municipal housing programme.jpg
 ---
 
 A tax earmarked for building flats, the main source of money for the housing programme. In 1927 all of the city's new taxes together raised about 65 million schillings.

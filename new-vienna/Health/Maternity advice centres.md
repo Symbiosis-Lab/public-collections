@@ -4,7 +4,6 @@ uid: "ad776ec7"
 kind: Service
 years: "1917/.."
 figure: 35 centres in 1928
-cover: Maternity advice centres.jpg
 ---
 
 Advice centres for mothers, part of the district youth offices; from 1923 also placed inside the new municipal blocks.

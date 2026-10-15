@@ -5,7 +5,6 @@ kind: Service
 years: 1923
 figure: 300 seats in the large lecture hall
 partners: [Otto Glöckel, Karl Bühler, Alfred Adler]
-cover: Pedagogical Institute of the City of Vienna.jpg
 ---
 
 Opened by Otto Glöckel, with a psychological-pedagogical laboratory led by Karl Bühler; Alfred Adler lectured there.
