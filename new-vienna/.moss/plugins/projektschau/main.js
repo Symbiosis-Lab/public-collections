@@ -1,32 +1,16 @@
 /*
- * projektschau: a site-local moss `process` plugin.
+ * projektschau: a site-local moss listing style.
  *
- * Reads the board's project files (frontmatter + body), builds the Projektschau v1 data package
- * (https://projektschau.de, README section 2) and writes it as projekte.json at the site root.
- * Plain JavaScript for moss's QuickJS plugin engine: no npm, no DOMParser, no URLSearchParams.
+ * A folder whose home page says `children_style: projektschau` is drawn as the Projektschau project board
+ * (https://projektschau.de, README section 2): this plugin builds the v1 data package from the `listing` context,
+ * returns it as projekte.json together with Projektschau's renderer, and leaves a plain list of links as the
+ * page's no-script fallback. Plain JavaScript for moss's QuickJS plugin engine.
  *
  * Area icons are from Lucide (https://lucide.dev), ISC licence.
  * Colour method: Projektschau skripte/farben.py (KERN colour ramps in OKLCH), ported line for line.
  */
 ( function () {
 	'use strict';
-
-	// ---- slugs: moss-core/src/slug.rs generate_slug, ported line for line ----------------------------------------
-	function slug( text ) {
-		var s = String( text );
-		if ( s.normalize ) { s = s.normalize( 'NFC' ); }
-		s = s.toLowerCase().replace( /[ _]/g, '-' ).replace( /&/g, 'and' ).replace( /@/g, 'at' ).replace( /\+/g, 'plus' )
-			.replace( /#/g, 'hash' ).replace( /%/g, 'percent' );
-		var out = '';
-		var chars = Array.from( s );
-		for ( var i = 0; i < chars.length; i++ ) {
-			var c = chars[ i ];
-			out += ( /[\p{L}\p{N}]/u.test( c ) || c === '-' || c === '.' ) ? c : '-';
-		}
-		out = out.split( '-' ).filter( function ( p ) { return p.length > 0; } ).join( '-' );
-		out = Array.from( out ).slice( 0, 100 ).join( '' ).replace( /-+$/, '' );
-		return out || 'untitled';
-	}
 
 	// ---- colours: skripte/farben.py ------------------------------------------------------------------------------
 	var STUFEN = [ 25, 50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900, 950 ];
@@ -141,92 +125,6 @@
 		{ name: 'Event', verb: 'Held' }
 	];
 
-	// ---- frontmatter: the subset the board uses ------------------------------------------------------------------
-	function unquote( v ) {
-		v = v.trim();
-		var q = v.charAt( 0 );
-		if ( ( q === '"' || q === "'" ) && v.length >= 2 && v.charAt( v.length - 1 ) === q ) {
-			v = v.slice( 1, -1 );
-			if ( q === '"' ) { v = v.replace( /\\(["\\])/g, '$1' ); } else { v = v.replace( /''/g, "'" ); }
-		}
-		return v;
-	}
-	function splitList( inner ) {
-		var items = [], cur = '', quote = '';
-		for ( var i = 0; i < inner.length; i++ ) {
-			var c = inner.charAt( i );
-			if ( quote ) { cur += c; if ( c === quote ) { quote = ''; } }
-			else if ( c === '"' || c === "'" ) { quote = c; cur += c; }
-			else if ( c === ',' ) { items.push( cur ); cur = ''; }
-			else { cur += c; }
-		}
-		if ( cur.trim() !== '' ) { items.push( cur ); }
-		return items.map( unquote );
-	}
-	function parseValue( raw ) {
-		var v = raw.trim();
-		if ( v.charAt( 0 ) === '[' && v.charAt( v.length - 1 ) === ']' ) { return splitList( v.slice( 1, -1 ) ); }
-		if ( v === 'false' ) { return false; }
-		if ( v === 'true' ) { return true; }
-		return unquote( v );
-	}
-	function parseDocument( text ) {
-		text = text.replace( /^\uFEFF/, '' ).replace( /\r\n?/g, '\n' );
-		var fm = {}, body = text;
-		if ( /^---[ \t]*\n/.test( text ) ) {
-			var end = text.indexOf( '\n---', 3 );
-			if ( end >= 0 ) {
-				text.slice( text.indexOf( '\n' ) + 1, end + 1 ).split( '\n' ).forEach( function ( line ) {
-					var m = /^([A-Za-z_][\w-]*):(.*)$/.exec( line );
-					if ( m ) { fm[ m[ 1 ] ] = parseValue( m[ 2 ] ); }
-				} );
-				var after = text.indexOf( '\n', end + 1 );
-				body = after < 0 ? '' : text.slice( after + 1 );
-			}
-		}
-		return { fm: fm, body: body };
-	}
-
-	// ---- body: first paragraph and `## ` sections ----------------------------------------------------------------
-	function escapeHtml( s ) { return s.replace( /&/g, '&amp;' ).replace( /</g, '&lt;' ).replace( />/g, '&gt;' ); }
-	// Inline markdown to the HTML the renderer allows: links, strong, em. Everything else is text.
-	function inline( s ) {
-		var links = [];
-		s = s.replace( /\[([^\]]+)\]\(([^)\s]+)\)/g, function ( _, t, u ) { links.push( [ t, u ] ); return '\u0001' + ( links.length - 1 ) + '\u0002'; } );
-		s = escapeHtml( s )
-			.replace( /\*\*([^*]+)\*\*/g, '<strong>$1</strong>' )
-			.replace( /(^|[^*\w])\*([^*]+)\*(?!\*)/g, '$1<em>$2</em>' )
-			.replace( /(^|[^\w])_([^_]+)_(?!\w)/g, '$1<em>$2</em>' );
-		return s.replace( /\u0001(\d+)\u0002/g, function ( _, i ) {
-			return '<a href="' + escapeHtml( links[ i ][ 1 ] ).replace( /"/g, '&quot;' ) + '">' + escapeHtml( links[ i ][ 0 ] ) + '</a>';
-		} );
-	}
-	function blocks( body ) {
-		return body.split( /\n[ \t]*\n/ ).map( function ( b ) { return b.replace( /^\n+|\n+$/g, '' ); } ).filter( function ( b ) { return b.trim() !== ''; } );
-	}
-	function isProse( b ) { return ! /^(#|!\[|[-*+] |\d+\. |>|\||<)/.test( b ); }
-	function firstParagraph( body ) {
-		var bs = blocks( body );
-		for ( var i = 0; i < bs.length; i++ ) {
-			if ( /^## /.test( bs[ i ] ) ) { return ''; }
-			if ( isProse( bs[ i ] ) ) { return bs[ i ].replace( /\n/g, ' ' ); }
-		}
-		return '';
-	}
-	// [{ heading, items: [md…], paragraphs: [md…] }] for every `## ` section
-	function sections( body ) {
-		var out = [], cur = null;
-		body.split( '\n' ).forEach( function ( line ) {
-			var h = /^## (.+?)\s*$/.exec( line );
-			if ( h ) { cur = { heading: h[ 1 ], items: [], text: [] }; out.push( cur ); return; }
-			if ( ! cur ) { return; }
-			var li = /^[-*+] (.*)$/.exec( line );
-			if ( li ) { cur.items.push( li[ 1 ].trim() ); }
-			else if ( line.trim() !== '' && ! /^!\[/.test( line ) ) { cur.text.push( line.trim() ); }
-		} );
-		return out;
-	}
-
 	// ---- years / status ------------------------------------------------------------------------------------------
 	function parseYears( s ) {
 		s = String( s || '' ).trim();
@@ -243,63 +141,77 @@
 		return verb + ' ' + y.start + '–' + y.end;
 	}
 
-	// ---- the package ---------------------------------------------------------------------------------------------
-	function pair( en ) { return { en: en }; }
-	function dirOf( p ) { var i = p.lastIndexOf( '/' ); return i < 0 ? '' : p.slice( 0, i ); }
-	function baseOf( p ) { var i = p.lastIndexOf( '/' ); return i < 0 ? p : p.slice( i + 1 ); }
-	function stemOf( p ) { return baseOf( p ).replace( /\.md$/, '' ); }
-	function urlFor( dir, file ) {
-		var parts = dir ? dir.split( '/' ).map( slug ) : [];
-		if ( file ) { parts.push( slug( file ) ); }
-		return '/' + ( parts.length ? parts.join( '/' ) + '/' : '' );
+
+	// ---- html: the pieces of a rendered record the board uses ----------------------------------------------------
+	function escapeHtml( s ) { return String( s ).replace( /&/g, '&amp;' ).replace( /</g, '&lt;' ).replace( />/g, '&gt;' ).replace( /"/g, '&quot;' ); }
+	// The renderer takes links, strong and em: drop the attributes moss adds (target, rel, data-source-line).
+	function clean( h ) {
+		return h.replace( /<a\b[^>]*?\bhref="([^"]*)"[^>]*>/g, '<a href="$1">' ).replace( /<(\/?)(strong|em)\b[^>]*>/g, '<$1$2>' )
+			.replace( /<(?!\/?(?:a|strong|em)\b)[^>]*>/g, '' ).trim();
+	}
+	function firstParagraph( html ) {
+		var m = /<p\b[^>]*>([\s\S]*?)<\/p>/.exec( html );
+		return m ? clean( m[ 1 ] ) : '';
+	}
+	// [{ heading, items: [html…] }] for every <h2> directly followed by a <ul>
+	function listSections( html ) {
+		var out = [], re = /<h2\b[^>]*>([\s\S]*?)<\/h2>\s*<ul\b[^>]*>([\s\S]*?)<\/ul>/g, m;
+		while ( ( m = re.exec( html ) ) ) {
+			var items = [], li = /<li\b[^>]*>([\s\S]*?)<\/li>/g, l;
+			while ( ( l = li.exec( m[ 2 ] ) ) ) { items.push( clean( l[ 1 ] ) ); }
+			out.push( { heading: m[ 1 ].replace( /<a\b[^>]*moss-heading-anchor[^>]*>[\s\S]*?<\/a>/g, '' ).replace( /<[^>]*>/g, '' ).trim(), items: items } );
+		}
+		return out;
 	}
 
-	// docs: [{ path, text }] every .md of the site; homes: set of paths that are a folder's home page.
-	function buildPackage( docs, homes ) {
-		var parsed = {}, boardHome = null;
-		docs.forEach( function ( d ) {
-			parsed[ d.path ] = parseDocument( d.text );
-			if ( homes[ d.path ] && parsed[ d.path ].fm.children_style === 'projektschau' && boardHome === null ) { boardHome = d.path; }
-		} );
-		if ( boardHome === null ) { return null; }
-		var root = dirOf( boardHome ), prefix = root ? root + '/' : '';
+	// ---- the package ---------------------------------------------------------------------------------------------
+	function pair( en ) { return { en: en }; }
+	function dirOf( p ) { return p.replace( /\/?index\.html$/, '' ); }
+	function first( v ) { return v === undefined || v === null ? '' : String( v ); }
+	// Path from the listing page back to the site root, for addresses moss gives relative to the root.
+	function rootPrefix( page ) {
+		var depth = page.url_path.split( '/' ).length - 1, s = '';
+		for ( var i = 0; i < depth; i++ ) { s += '../'; }
+		return s;
+	}
 
-		// areas: the board's subfolders whose home page carries `color`
-		var areas = [];
-		Object.keys( parsed ).forEach( function ( p ) {
-			if ( ! homes[ p ] || p.indexOf( prefix ) !== 0 ) { return; }
-			var rel = p.slice( prefix.length ), parts = rel.split( '/' );
-			if ( parts.length !== 2 || ! parsed[ p ].fm.color ) { return; }
-			var fm = parsed[ p ].fm;
-			areas.push( { dir: parts[ 0 ], key: slug( parts[ 0 ] ), title: fm.title || parts[ 0 ], color: fm.color, icon: fm.icon, weight: fm.weight === undefined ? 0 : +fm.weight } );
-		} );
+	function buildPackage( ctx ) {
+		var warnings = [], toRoot = rootPrefix( ctx.page );
+
+		// areas: the listed folder's subfolders; a project's `folder` is its subfolder's address segment
 		var areaByDir = {};
-		areas.forEach( function ( a ) { areaByDir[ a.dir ] = a; } );
+		ctx.folders.forEach( function ( f ) {
+			var fm = f.frontmatter, dir = dirOf( f.url ).replace( /\/$/, '' );
+			areaByDir[ dir ] = { dir: dir, key: dir, title: f.title, color: fm.color, icon: fm.icon, weight: fm.weight === undefined || ! fm.color ? 0 : +fm.weight };
+		} );
 
-		// projects: files with a `kind` in an area folder
+		var kindNames = KINDS.map( function ( k ) { return k.name; } ), verbs = {};
+		KINDS.forEach( function ( k ) { verbs[ k.name ] = k.verb; } );
+
 		var kindsSeen = [], projects = [];
-		Object.keys( parsed ).forEach( function ( p ) {
-			if ( homes[ p ] || p.indexOf( prefix ) !== 0 ) { return; }
-			var parts = p.slice( prefix.length ).split( '/' ), fm = parsed[ p ].fm;
-			if ( parts.length !== 2 || ! areaByDir[ parts[ 0 ] ] || ! fm.kind ) { return; }
+		ctx.pages.forEach( function ( pg ) {
+			var fm = pg.frontmatter, area = areaByDir[ pg.folder ];
+			if ( ! fm.kind ) { return; }
+			if ( ! area ) { warnings.push( pg.title + ': sits in "' + pg.folder + '", which is not a folder with a home page, so it is left off the board' ); return; }
+			if ( ! area.color ) { warnings.push( pg.title + ': its area "' + area.title + '" has no color, so it is left off the board' ); return; }
 			var years = parseYears( fm.years );
-			if ( ! years ) { return; }
-			projects.push( { path: p, area: areaByDir[ parts[ 0 ] ], fm: fm, body: parsed[ p ].body, years: years, title: fm.title || stemOf( p ) } );
+			if ( ! years ) { warnings.push( pg.title + ': years "' + first( fm.years ) + '" cannot be read (use 1925, 1925–1934 or from 1925), so it is left off the board' ); return; }
+			if ( kindNames.indexOf( fm.kind ) < 0 ) { warnings.push( pg.title + ': kind "' + fm.kind + '" is not one of ' + kindNames.join( ', ' ) ); }
+			projects.push( { pg: pg, area: area, fm: fm, years: years } );
 			if ( kindsSeen.indexOf( fm.kind ) < 0 ) { kindsSeen.push( fm.kind ); }
 		} );
-		projects.sort( function ( a, b ) { return a.years.start - b.years.start || ( a.title < b.title ? -1 : a.title > b.title ? 1 : 0 ); } );
-		// Areas in filter order: an explicit `weight` first, else the area with the most projects, so no field is needed for a sensible order.
+		projects.sort( function ( a, b ) { return a.years.start - b.years.start || ( a.pg.title < b.pg.title ? -1 : a.pg.title > b.pg.title ? 1 : 0 ); } );
+
+		// Areas in filter order: an explicit `weight` first, else the area with the most projects.
 		var count = {};
 		projects.forEach( function ( pr ) { count[ pr.area.dir ] = ( count[ pr.area.dir ] || 0 ) + 1; } );
-		areas.sort( function ( a, b ) { return a.weight - b.weight || ( count[ b.dir ] || 0 ) - ( count[ a.dir ] || 0 ) || ( a.title < b.title ? -1 : a.title > b.title ? 1 : 0 ); } );
+		var areas = Object.keys( areaByDir ).map( function ( d ) { return areaByDir[ d ]; } ).filter( function ( a ) { return count[ a.dir ]; } );
+		areas.sort( function ( a, b ) { return a.weight - b.weight || count[ b.dir ] - count[ a.dir ] || ( a.title < b.title ? -1 : a.title > b.title ? 1 : 0 ); } );
 
-		var kindNames = KINDS.map( function ( k ) { return k.name; } );
 		kindsSeen.sort( function ( a, b ) {
 			var ia = kindNames.indexOf( a ), ib = kindNames.indexOf( b );
 			return ( ia < 0 ? 99 : ia ) - ( ib < 0 ? 99 : ib );
 		} );
-		var verbs = {};
-		KINDS.forEach( function ( k ) { verbs[ k.name ] = k.verb; } );
 
 		var pkg = {
 			_generated: 'by the projektschau plugin; do not edit',
@@ -321,70 +233,62 @@
 				return b;
 			} ),
 			einordnungen: kindsSeen.map( function ( k ) {
-				return { schluessel: slug( k ), label: pair( k ), label_zeitleiste: pair( k ), als_filter_chip: true };
+				return { schluessel: k.toLowerCase(), label: pair( k ), label_zeitleiste: pair( k ), als_filter_chip: true };
 			} ),
 			projekte: []
 		};
 
 		projects.forEach( function ( pr, i ) {
-			var fm = pr.fm, y = pr.years;
+			var fm = pr.fm, y = pr.years, pg = pr.pg;
 			var abschnitte = [];
-			sections( pr.body ).forEach( function ( s ) {
+			listSections( pg.html ).forEach( function ( s ) {
 				if ( s.heading === 'Sources' ) { return; }
-				if ( s.items.length ) { abschnitte.push( { typ: 'liste', label: pair( s.heading ), punkte: s.items.map( function ( t ) { return pair( inline( t ) ); } ) } ); }
-				else if ( s.text.length ) { abschnitte.push( { typ: 'text', label: pair( s.heading ), text: pair( '<p>' + inline( s.text.join( ' ' ) ) + '</p>' ) } ); }
+				abschnitte.push( { typ: 'liste', label: pair( s.heading ), punkte: s.items.map( pair ) } );
 			} );
 			var partners = Array.isArray( fm.partners ) ? fm.partners : [];
-			if ( partners.length ) {
+			var linked = partners.filter( function ( n ) { return ctx.terms.partners && ctx.terms.partners[ n ]; } );
+			partners.forEach( function ( n ) { if ( linked.indexOf( n ) < 0 ) { warnings.push( pg.title + ': partner "' + n + '" has no page' ); } } );
+			if ( linked.length ) {
 				abschnitte.push( {
 					typ: 'liste', label: pair( 'Partners' ),
-					punkte: partners.map( function ( n ) { return pair( '<a href="' + urlFor( 'Partners', n ).replace( /"/g, '&quot;' ) + '">' + escapeHtml( n ) + '</a>' ); } )
+					punkte: linked.map( function ( n ) { return pair( '<a href="' + escapeHtml( toRoot + dirOf( ctx.terms.partners[ n ] ) ) + '/">' + escapeHtml( n ) + '</a>' ); } )
 				} );
 			}
-			var rec = {
-				nr: i + 1,
-				bereich: pr.area.key,
-				einordnung: slug( fm.kind )
-			};
+			var rec = { nr: i + 1, bereich: pr.area.key, einordnung: fm.kind.toLowerCase() };
 			if ( ICONS[ pr.area.icon ] ) { rec.icon_svg = ICONS[ pr.area.icon ]; }
-			rec.titel = pair( pr.title );
+			rec.titel = pair( pg.title );
 			rec.status = pair( fm.status ? String( fm.status ) : statusLine( verbs[ fm.kind ] || fm.kind, fm.kind, y ) );
-			var desc = firstParagraph( pr.body );
-			if ( desc ) { rec.beschreibung = pair( '<p>' + inline( desc ) + '</p>' ); }
+			var desc = firstParagraph( pg.html );
+			if ( desc ) { rec.beschreibung = pair( '<p>' + desc + '</p>' ); }
 			rec.abschnitte = abschnitte;
 			if ( fm.figure ) { rec.kennzahl = pair( escapeHtml( String( fm.figure ) ) ); }
-			rec.links = [ { url: urlFor( dirOf( pr.path ).slice( prefix.length ), stemOf( pr.path ) ), text: pair( 'Project page and sources' ) } ];
+			rec.links = [ { url: pg.url, text: pair( 'Project page and sources' ) } ];
 			rec.zeitleiste = { sortierung: y.start * 100 + 1, zeitraum: pair( y.text ) };
 			pkg.projekte.push( rec );
 		} );
-		return pkg;
+		return { pkg: pkg, warnings: warnings, projects: projects };
 	}
 
 	// ---- hook ----------------------------------------------------------------------------------------------------
-	function invoke( cmd, args ) { return window.__TAURI__.core.invoke( cmd, args || {} ); }
+	function readOwn( path ) { return window.__TAURI__.core.invoke( 'read_plugin_file', { relativePath: path } ); }
+	var ASSETS = [ 'projektschau.js', 'projektschau.css', 'LICENSE.txt' ];
 
-	async function process( ctx ) {
-		try {
-			var tree = await invoke( 'list_project_tree' ), docs = [], homes = {};
-			for ( var i = 0; i < tree.length; i++ ) {
-				var f = tree[ i ];
-				if ( ! /\.md$/.test( f.path ) ) { continue; }
-				docs.push( { path: f.path, text: await invoke( 'read_project_file', { relativePath: f.path } ) } );
-				if ( f.is_home ) { homes[ f.path ] = true; }
-			}
-			var pkg = buildPackage( docs, homes );
-			if ( pkg === null ) { return { success: true, message: 'projektschau: no page with children_style: projektschau, nothing to do' }; }
-			var json = JSON.stringify( pkg, null, 2 ) + '\n', old = null;
-			try { old = await invoke( 'read_project_file', { relativePath: 'projekte.json' } ); } catch ( e ) { old = null; }
-			// An unchanged file is not rewritten: the folder is synced and a preview watches it.
-			if ( old !== json ) { await invoke( 'write_project_file', { relativePath: 'projekte.json', data: json } ); }
-			return { success: true, message: 'projektschau: ' + pkg.projekte.length + ' projects, ' + pkg.bereiche.length + ' areas' + ( old === json ? ' (unchanged)' : '' ) };
-		} catch ( e ) {
-			return { success: false, message: 'projektschau: ' + ( e && e.message ? e.message : String( e ) ) };
-		}
+	async function listing( ctx ) {
+		var built = buildPackage( ctx ), files = [ { path: 'projekte.json', text: JSON.stringify( built.pkg, null, 2 ) + '\n' } ];
+		for ( var i = 0; i < ASSETS.length; i++ ) { files.push( { path: 'projektschau/' + ASSETS[ i ], text: await readOwn( ASSETS[ i ] ) } ); }
+		var list = built.projects.map( function ( pr, i ) {
+			var rec = built.pkg.projekte[ i ];
+			return '<li><a href="' + escapeHtml( pr.pg.url ) + '">' + escapeHtml( pr.pg.title ) + '</a> ' + escapeHtml( rec.status.en ) + '</li>';
+		} ).join( '' );
+		return {
+			html: '<div data-projektschau data-src="projekte.json" data-ebene="2" data-sprache-vorgabe="en"><ul>' + list + '</ul></div>',
+			head: [ { stylesheet: 'projektschau/projektschau.css' }, { script: 'projektschau/projektschau.js' } ],
+			files: files,
+			warnings: built.warnings
+		};
 	}
 
-	var api = { process: process, _t: { slug: slug, deriveColours: deriveColours, parseDocument: parseDocument, parseYears: parseYears, statusLine: statusLine, buildPackage: buildPackage, inline: inline } };
+	var api = { listing: listing, _t: { deriveColours: deriveColours, parseYears: parseYears, statusLine: statusLine, buildPackage: buildPackage } };
 	( typeof window !== 'undefined' ? window : globalThis ).ProjektschauPlugin = api;
 	if ( typeof module !== 'undefined' && module.exports ) { module.exports = api; }
 }() );

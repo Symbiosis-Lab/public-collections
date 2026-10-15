@@ -1,9 +1,17 @@
 {
   "name": "projektschau",
-  "version": "0.1.0",
-  "description": "Builds the Projektschau project board data (projekte.json) from the site's project files",
+  "version": "0.2.0",
+  "description": "Draws a folder as the Projektschau project board",
   "author": "The New Vienna",
   "entry": "main.js",
-  "capabilities": ["process"],
-  "global_name": "ProjektschauPlugin"
+  "global_name": "ProjektschauPlugin",
+  "contributes": {
+    "listing_styles": {
+      "projektschau": {
+        "label": "Project board",
+        "description": "Filterable cards and a timeline, one per page, by area and kind",
+        "content_width": "full"
+      }
+    }
+  }
 }

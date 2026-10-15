@@ -4,7 +4,6 @@ uid: "64390dbd"
 children_style: projektschau
 breadcrumb: label
 nav: true
-content_width: full
 nav_label: Projects
 weight: 1
 by: the City of Vienna

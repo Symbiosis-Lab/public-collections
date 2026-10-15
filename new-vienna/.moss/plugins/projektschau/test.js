@@ -19,43 +19,50 @@ Object.keys( COLOURS ).forEach( function ( base ) {
 	assert.strictEqual( c.dunkel.area, c.hell.area );
 } );
 
-// Slugs: source name (file stem or folder) to the address segment moss-cli list shows.
-const SLUGS = [
-	[ 'Education & culture', 'education-and-culture' ],
-	[ "Children's open-air pools", 'children-s-open-air-pools' ],
-	[ "Workers' Academy", 'workers-academy' ],
-	[ 'Schönbrunn school for educators', 'schönbrunn-school-for-educators' ],
-	[ 'Friedrich-Engels-Platz estate', 'friedrich-engels-platz-estate' ],
-	[ 'George-Washington-Hof', 'george-washington-hof' ],
-	[ 'Pedagogical Institute of the City of Vienna', 'pedagogical-institute-of-the-city-of-vienna' ],
-	[ "Second Workers' Olympiad", 'second-workers-olympiad' ],
-	[ 'Otto Glöckel', 'otto-glöckel' ],
-	[ 'Karl-Marx-Hof', 'karl-marx-hof' ]
-];
-SLUGS.forEach( function ( p ) { assert.strictEqual( T.slug( p[ 0 ] ), p[ 1 ], p[ 0 ] ); } );
-// not seen in this site's names; from moss-core's slug.rs, which keeps dots and underscores become hyphens
-assert.strictEqual( T.slug( 'v1.2 Notes_x' ), 'v1.2-notes-x' );
-// a decomposed (macOS) spelling gives the same address as the composed one
-assert.strictEqual( T.slug( 'Schönbrunn' ), T.slug( 'Schönbrunn' ) );
-
-if ( process.argv[ 2 ] ) {
-	const rows = JSON.parse( require( 'fs' ).readFileSync( process.argv[ 2 ], 'utf8' ) );
-	let n = 0;
-	rows.forEach( function ( r ) {
-		if ( ! r.source_path || r.kind === 'folder' && /index\.md$/.test( r.source_path ) && r.url_path === 'index.html' ) { return; }
-		const parts = r.source_path.replace( /\/index\.md$/, '' ).replace( /\.md$/, '' ).split( '/' );
-		assert.strictEqual( parts.map( T.slug ).join( '/' ) + '/index.html', r.url_path.normalize( 'NFC' ), r.source_path );
-		n++;
-	} );
-	console.log( 'addresses checked against moss-cli list: ' + n );
-}
-
-// Frontmatter subset, years, status wording.
-const d = T.parseDocument( '---\ntitle: "Second Workers\' Olympiad"\nkind: Event\nby: false\npartners: [Karl Ehn, "A, B"]\nfigure: 1,382 flats\n---\n\nBody *text*.\n' );
-assert.deepStrictEqual( d.fm, { title: "Second Workers' Olympiad", kind: 'Event', by: false, partners: [ 'Karl Ehn', 'A, B' ], figure: '1,382 flats' } );
+// Years and status wording.
 assert.strictEqual( T.statusLine( 'Founded', 'Service', T.parseYears( '1925–1934' ) ), 'Founded 1925 · closed 1934' );
 assert.strictEqual( T.statusLine( 'Introduced', 'Programme', T.parseYears( '1923-1934' ) ), 'Introduced 1923 · until 1934' );
 assert.strictEqual( T.statusLine( 'Built', 'Building', T.parseYears( '1927–1933' ) ), 'Built 1927–1933' );
 assert.strictEqual( T.statusLine( 'Introduced', 'Programme', T.parseYears( 'from 1919' ) ), 'Introduced 1919' );
-assert.strictEqual( T.inline( 'a *b* [c & d](https://x.y/?q=1) e' ), 'a <em>b</em> <a href="https://x.y/?q=1">c &amp; d</a> e' );
+assert.strictEqual( T.parseYears( 1921 ).start, 1921 );
+assert.strictEqual( T.parseYears( 'soon' ), null );
+
+// listing() on a small hand-made context: two areas, three projects, one partner.
+function rec( title, folder, fm, html ) {
+	const slug = title.toLowerCase().replace( / /g, '-' );
+	return { title, url_path: folder + '/' + slug + '/index.html', url: folder + '/' + slug + '/', lang: 'en', translations: [], frontmatter: fm, html: html || '', folder };
+}
+const body = '<p>First <em>words</em>.</p><h2 id="x">Notes<a class="moss-heading-anchor" href="#x"></a></h2><ul><li>One <a target="_blank" href="u">link</a></li></ul><h2>Sources</h2><ul><li>s</li></ul>';
+const ctx = {
+	model: 1, style: 'projektschau',
+	page: rec( 'Home', '', {}, '' ),
+	folders: [
+		rec( 'Small', '', { color: '#2f7d6d', icon: 'heart-pulse' } ),
+		rec( 'Big', '', { color: '#a3312a', icon: 'house' } )
+	],
+	pages: [
+		rec( 'Late hall', 'big', { kind: 'Building', years: '1930–1933', partners: [ 'Ada' ], figure: '9 flats' }, body ),
+		rec( 'Early hall', 'big', { kind: 'Building', years: 1925 }, body ),
+		rec( 'Clinic', 'small', { kind: 'Service', years: 'from 1927' }, body )
+	],
+	terms: { partners: { Ada: 'partners/ada/index.html' } }
+};
+ctx.page.url_path = 'index.html'; ctx.page.url = './';
+ctx.folders[ 0 ].url = 'small/'; ctx.folders[ 1 ].url = 'big/';
+const out = T.buildPackage( ctx ), pkg = out.pkg;
+assert.deepStrictEqual( out.warnings, [] );
+assert.deepStrictEqual( pkg.bereiche.map( a => a.schluessel ), [ 'big', 'small' ] );
+assert.deepStrictEqual( pkg.projekte.map( p => [ p.nr, p.titel.en ] ), [ [ 1, 'Early hall' ], [ 2, 'Clinic' ], [ 3, 'Late hall' ] ] );
+assert.strictEqual( pkg.projekte[ 2 ].links[ 0 ].url, 'big/late-hall/' );
+assert.strictEqual( pkg.projekte[ 2 ].abschnitte.find( s => s.label.en === 'Partners' ).punkte[ 0 ].en, '<a href="partners/ada/">Ada</a>' );
+assert.deepStrictEqual( pkg.projekte[ 2 ].abschnitte.map( s => s.label.en ), [ 'Notes', 'Partners' ] );
+assert.strictEqual( pkg.projekte[ 2 ].abschnitte[ 0 ].punkte[ 0 ].en, 'One <a href="u">link</a>' );
+assert.strictEqual( pkg.projekte[ 2 ].beschreibung.en, '<p>First <em>words</em>.</p>' );
+
+// Warnings: unknown kind, unreadable years, area without a colour.
+ctx.pages.push( rec( 'Odd', 'big', { kind: 'Monument', years: '1930' } ), rec( 'Bad', 'big', { kind: 'Event', years: 'soon' } ) );
+ctx.folders.push( rec( 'Grey', '', {} ) ); ctx.folders[ 2 ].url = 'grey/';
+ctx.pages.push( rec( 'Lost', 'grey', { kind: 'Event', years: '1930' } ) );
+const w = T.buildPackage( ctx ).warnings.join( '\n' );
+assert.ok( /Odd: kind "Monument"/.test( w ) && /Bad: years "soon"/.test( w ) && /Lost: its area "Grey" has no color/.test( w ), w );
 console.log( 'projektschau plugin: all checks passed' );
