@@ -2,6 +2,7 @@
 title: Das Neue Wien, 1919–1934
 uid: "ffce263c"
 children_style: projektschau
+children_depth: all
 breadcrumb: label
 nav: true
 nav_label: Projekte
