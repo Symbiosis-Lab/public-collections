@@ -1,0 +1,162 @@
+/* The New Vienna theme, round 1. Look: KERN (German public-sector design standard), Fira Sans.
+   KERN is brought in as values, not as the kit: moss's own stylesheet already resets and lays out the page, and loading
+   kern.min.css (340 KB) into the themes layer would fight it. The colours below are KERN 2.8.2's resolved tokens
+   (EUPL-1.2); the fonts are the kit's Fira Sans (SIL OFL 1.1), licence file beside them. */
+
+/* ---- Fira Sans: KERN's one typeface. Four weights: body, italic, headings/labels, bold. ---- */
+@font-face { font-family: "Fira Sans"; src: url("fonts/FiraSans-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Fira Sans"; src: url("fonts/FiraSans-Italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "Fira Sans"; src: url("fonts/FiraSans-Medium.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Fira Sans"; src: url("fonts/FiraSans-SemiBold.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Fira Sans"; src: url("fonts/FiraSans-Bold.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+
+/* ---- Tokens, light: a white page, one dark blue for every link and button. ---- */
+:root {
+  --moss-font-body: "Fira Sans", sans-serif; /* KERN sets everything in Fira Sans */
+  --moss-font-heading: "Fira Sans", sans-serif; /* one family, so headings differ by weight only */
+  --moss-font-heading-weight: 600; /* KERN's heading weight */
+  --moss-content-width: 68ch; /* the brief's measure for running text */
+  --moss-color-bg: oklch(100% 0 0); /* KERN layout background */
+  --moss-color-surface: oklch(96.72% .0041 271.37); /* KERN neutral-025, the pale grey band and tinted surfaces */
+  --moss-color-text: oklch(20.23% .0321 277.67); /* KERN neutral-950 */
+  --moss-color-text-secondary: oklch(46.61% .0574 276.44); /* KERN neutral-650, "muted", 7:1 on white */
+  --moss-color-muted: oklch(46.61% .0574 276.44); /* same muted grey for captions */
+  --moss-color-accent: oklch(42.84% .1689 265.02); /* KERN darkblue-700: the single action colour */
+  --moss-color-ui-accent: oklch(42.84% .1689 265.02); /* chrome uses the same blue, never an area colour */
+  --moss-color-accent-hover: oklch(34.91% .1828 264.89); /* KERN darkblue-800, one step darker on hover */
+  --moss-border-light: oklch(82.04% .0253 278.29); /* KERN decorative border, neutral-200 */
+  --moss-border-medium: oklch(75.46% .0348 276.22); /* neutral-300 */
+  --moss-border-strong: oklch(56.94% .0532 275.53); /* KERN layout border, neutral-500, 3:1 for controls */
+  --moss-header-rule: oklch(82.04% .0253 278.29); /* hairline under the header, as the prototype (moss draws it full width) */
+  --a-radius: 4px; /* KERN radius default */
+  --a-radius-lg: 8px; /* KERN radius large, for surfaces */
+}
+
+/* ---- Tokens, dark: KERN's own dark theme (black page, light-blue actions). ---- */
+:root[data-theme="dark"] {
+  --moss-color-bg: oklch(0% 0 0); /* KERN dark background is true black */
+  --moss-color-surface: oklch(20.23% .0321 277.67); /* neutral-950 */
+  --moss-color-text: oklch(96.72% .0041 271.37); /* neutral-025 */
+  --moss-color-text-secondary: oklch(78.01% .0315 277.47); /* neutral-250 */
+  --moss-color-muted: oklch(78.01% .0315 277.47);
+  --moss-color-accent: oklch(75.39% .0772 264.66); /* KERN darkblue-300 */
+  --moss-color-ui-accent: oklch(75.39% .0772 264.66);
+  --moss-color-accent-hover: oklch(86.51% .0418 264.33); /* darkblue-150, lighter on hover in dark */
+  --moss-border-light: oklch(42.13% .0539 275.67); /* neutral-700 */
+  --moss-border-medium: oklch(50.2% .0579 276.79); /* neutral-600 */
+  --moss-border-strong: oklch(56.94% .0532 275.53);
+  --moss-header-rule: oklch(42.13% .0539 275.67);
+}
+
+/* ---- Area colours: one per section folder, from the brief; scoped by address because nothing else carries the area. ---- */
+body[data-path^="/housing/"]               { --a: #a3312a; --a-fg: #8e1e1a; --a-name: "Housing"; }
+body[data-path^="/health/"]                { --a: #2f7d6d; --a-fg: #045c4d; --a-name: "Health"; }
+body[data-path^="/welfare/"]               { --a: #b8611a; --a-fg: #793a00; --a-name: "Welfare"; }
+body[data-path^="/education-and-culture/"] { --a: #2f6aa3; --a-fg: #115087; --a-name: "Education & culture"; }
+body[data-path^="/sport/"]                 { --a: #4f7a2a; --a-fg: #325b01; --a-name: "Sport"; }
+/* Dark: the lighter derived values for text on black; the badge fill stays the base colour. */
+:root[data-theme="dark"] body[data-path^="/housing/"]               { --a-fg: #de9c93; }
+:root[data-theme="dark"] body[data-path^="/health/"]                { --a-fg: #91b9af; }
+:root[data-theme="dark"] body[data-path^="/welfare/"]               { --a-fg: #daa17c; }
+:root[data-theme="dark"] body[data-path^="/education-and-culture/"] { --a-fg: #93b3d4; }
+:root[data-theme="dark"] body[data-path^="/sport/"]                 { --a-fg: #9fb98d; }
+
+/* ---- Page basics ---- */
+body {
+  font-variant-numeric: tabular-nums slashed-zero; /* KERN sets figures tabular everywhere (design rule T1) */
+}
+
+/* KERN's focus ring: a thick dark outline offset from the control, never removed. */
+:focus-visible:not(input, textarea, select) {
+  outline: 4px solid var(--moss-color-text-secondary); /* visible on both white and black */
+  outline-offset: 2px; /* KERN offset keeps the ring off the glyphs */
+  text-decoration: none; /* KERN swaps the underline for the ring on focus */
+}
+
+/* Prose links: the action blue, underlined, as KERN's link. */
+article a:not(.moss-card):not(.moss-heading-anchor) {
+  color: var(--moss-color-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px; /* KERN link offset */
+  text-decoration-thickness: 1px;
+}
+article a:not(.moss-card):not(.moss-heading-anchor):hover { color: var(--moss-color-accent-hover); text-decoration-thickness: 2px; /* KERN thickens on hover */ }
+
+/* ---- Header: name left, pages and the switch right, a hairline below. ---- */
+body > header {
+  margin-block-end: var(--moss-space-lg); /* room between header and the page's first line */
+}
+.main-nav { max-inline-size: var(--moss-site-max-width, 96rem); /* header spans the page width, not the 68ch text column */ padding-block: var(--moss-space-sm); }
+.site-name { font-weight: 600; font-size: 1.125rem; /* the name is the one semi-bold thing in the header */ }
+.main-nav a { color: var(--moss-color-accent); /* KERN: every link is the action blue */ }
+.main-nav .site-name { color: var(--moss-color-text); /* except the name, which is text colour as in the prototype */ }
+.main-nav a.active { color: var(--moss-color-text); border-block-end: none; font-weight: 600; /* current page: text colour, semi-bold, no underline */ }
+
+/* ---- Running text: KERN body size and line height, 68ch measure from the content-width token. ---- */
+article { font-size: 1.125rem; line-height: 1.6; /* KERN medium body, 18px, comfortable leading */ }
+article h2 { font-size: 1.5rem; font-weight: 600; line-height: 1.3; /* KERN small heading, a step above body */ }
+article h3 { font-size: 1.25rem; font-weight: 600; }
+article ul, article ol { padding-inline-start: 1.5em; /* KERN list indent */ }
+
+/* ---- Project title and badge: the area names itself in colour. ---- */
+.moss-article-title { font-weight: 600; line-height: 1.15; letter-spacing: 0; /* KERN x-large heading */ }
+body[data-path^="/housing/"] .moss-article-title,
+body[data-path^="/health/"] .moss-article-title,
+body[data-path^="/welfare/"] .moss-article-title,
+body[data-path^="/education-and-culture/"] .moss-article-title,
+body[data-path^="/sport/"] .moss-article-title { color: var(--a-fg); /* derived text colour, 7:1 on the page in both modes */ }
+/* The small badge above the title, drawn from the area name since no markup carries it (friction F3); the kind beside it is not available. */
+body[data-path^="/housing/"] article:not(:has(.moss-folder-title))::before,
+body[data-path^="/health/"] article:not(:has(.moss-folder-title))::before,
+body[data-path^="/welfare/"] article:not(:has(.moss-folder-title))::before,
+body[data-path^="/education-and-culture/"] article:not(:has(.moss-folder-title))::before,
+body[data-path^="/sport/"] article:not(:has(.moss-folder-title))::before {
+  content: var(--a-name);
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: var(--a-radius); /* KERN badge radius */
+  background: var(--a); /* the base colour as fill */
+  color: #fff; /* white on every base colour passes 4.5:1 */
+  font-size: 1rem; font-weight: 600; line-height: 1.5;
+  margin-block-end: var(--moss-space-sm); /* sits just above the title */
+}
+/* Same badge fill is darker-on-black in dark mode only through the base colour; keep it, since white text still passes. */
+
+/* ---- Photograph: text width, rounded, caption small grey under it, left-aligned like a museum label. ---- */
+.moss-image { margin-inline: 0; }
+.moss-image img { border-radius: var(--a-radius); width: 100%; height: auto; /* never tinted or inverted in dark (rule M1) */ }
+.moss-image figcaption { text-align: start; color: var(--moss-color-text-secondary); font-size: .875rem; font-style: normal; line-height: 1.45; margin-block-start: var(--moss-space-sm); /* KERN small static text, muted */ }
+
+/* ---- Sources: set apart by a rule above, then quieter small text, as in the prototype. ---- */
+article h2#sources { margin-block-start: var(--moss-space-2xl); padding-block-start: var(--moss-space-lg); border-block-start: 1px solid var(--moss-border-medium); font-size: 1.125rem; /* the rule separates the evidence from the story */ }
+article h2#sources + ul { font-size: 1rem; /* sources are reference, one step smaller */ }
+article h2#sources + ul li + li { margin-block-start: var(--moss-space-sm); }
+
+/* ---- Partner page: projects as small tinted cards, the tint taken from the area in each card's address. ---- */
+.moss-cards[data-layout="list"] { display: grid; grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); gap: var(--moss-space-md); }
+.moss-cards[data-layout="list"] .moss-card { border-radius: var(--a-radius-lg); border: 1px solid color-mix(in srgb, var(--c) 35%, transparent); background: color-mix(in srgb, var(--c) 8%, var(--moss-color-bg)); padding: var(--moss-space-md); text-decoration: none; /* tinted like Projektschau's cards */ }
+.moss-cards[data-layout="list"] .moss-card-title { color: var(--cf); font-size: 1.125rem; font-weight: 600; margin: 0; /* title in the area's text colour */ }
+.moss-cards[data-layout="list"] .moss-card-description { color: var(--moss-color-text-secondary); font-size: .9375rem; margin: 4px 0 0; }
+.moss-card[href^="/housing/"]               { --c: #a3312a; --cf: #8e1e1a; }
+.moss-card[href^="/health/"]                { --c: #2f7d6d; --cf: #045c4d; }
+.moss-card[href^="/welfare/"]               { --c: #b8611a; --cf: #793a00; }
+.moss-card[href^="/education-and-culture/"] { --c: #2f6aa3; --cf: #115087; }
+.moss-card[href^="/sport/"]                 { --c: #4f7a2a; --cf: #325b01; }
+:root[data-theme="dark"] .moss-card[href^="/housing/"]               { --cf: #de9c93; }
+:root[data-theme="dark"] .moss-card[href^="/health/"]                { --cf: #91b9af; }
+:root[data-theme="dark"] .moss-card[href^="/welfare/"]               { --cf: #daa17c; }
+:root[data-theme="dark"] .moss-card[href^="/education-and-culture/"] { --cf: #93b3d4; }
+:root[data-theme="dark"] .moss-card[href^="/sport/"]                 { --cf: #9fb98d; }
+
+/* ---- Phone header: name and switch share line one, the pages take line two (the prototype's order). ---- */
+@media (max-width: 48rem) {
+  .nav-content .nav-right { display: contents; /* lets the three header parts be ordered as siblings */ }
+  .nav-content .nav-left { flex: 1 1 0; min-inline-size: 0; }
+  .nav-content .site-name { white-space: normal; /* a long site name wraps rather than push the switch off-screen */ }
+  .nav-content .nav-icons { order: 2; margin-inline-start: 0; }
+  .nav-content .nav-links { order: 3; flex: 1 1 100%; justify-content: flex-start; }
+}
+
+/* ---- Cards hold their whole text: moss clips a description at two lines, but a partner card's description is the role line. ---- */
+.moss-cards[data-layout="list"] .moss-card-description,
+.moss-cards[data-layout="list"] .moss-card-title { display: block; max-block-size: none; overflow: visible; -webkit-line-clamp: unset; line-clamp: unset; text-overflow: clip; white-space: normal; }
