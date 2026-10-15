@@ -10,7 +10,7 @@ cover: ../../Sport/Kongressbad.jpg
 
 Ein Sommerbad für Schwimmen, Luft und Sonne in Ottakring mit einem 100-Meter-Becken, entworfen von Erich Leischner vom städtischen Bauamt.
 
-![Das Kongressbad am Kongreßplatz in Ottakring, um 1928. Martin Gerlach jun., um 1928. Wien Museum, Inv. 59241/944, CC0.](../../Sport/Kongressbad.jpg)
+![Das Kongressbad am Kongreßplatz in Ottakring. Martin Gerlach jun., um 1928. Wien Museum, Inv. 59241/944, CC0.](../../Sport/Kongressbad.jpg)
 
 Eröffnet am 20. Mai 1928.
 

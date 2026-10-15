@@ -10,7 +10,7 @@ cover: ../../Education & culture/Pedagogical Institute of the City of Vienna.jpg
 
 Eröffnet von Otto Glöckel, mit einem psychologisch-pädagogischen Laboratorium unter der Leitung von Karl Bühler; Alfred Adler hielt dort Vorlesungen.
 
-![Umschlag des Vorlesungsverzeichnisses für die Lehrerfortbildungskurse des Pädagogischen Instituts der Stadt Wien, Burggasse 14-16, Wintersemester 1930/31 (die Bibliothek verzeichnet 1930-1949). Pädagogisches Institut, 1930–1949. Wienbibliothek im Rathaus, Nr. 2798485, PDM.](../../Education%20&%20culture/Pedagogical%20Institute%20of%20the%20City%20of%20Vienna.jpg)
+![Umschlag des Vorlesungsverzeichnisses für die Lehrerfortbildungskurse des Pädagogischen Instituts der Stadt Wien, Burggasse 14–16, Wintersemester 1930/31. Pädagogisches Institut. Wienbibliothek im Rathaus, Nr. 2798485, PDM.](../../Education%20&%20culture/Pedagogical%20Institute%20of%20the%20City%20of%20Vienna.jpg)
 
 Eröffnet am 13. Jänner 1923.
 

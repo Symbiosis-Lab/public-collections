@@ -9,7 +9,7 @@ cover: ../../Welfare/Welfare office.jpg
 
 Das Wohlfahrtsamt der Stadt, gegründet 1921 unter Julius Tandler.
 
-![Innenansicht des Zentralkatasters des Fürsorgeamts der Stadt Wien, um 1926; die Seite nennt kein Gründungsjahr des Amtes. Fotograf unbekannt, um 1926. Wien Museum, Inv. 98687, CC0.](../../Welfare/Welfare%20office.jpg)
+![Innenansicht des Zentralkatasters des Fürsorgeamts der Stadt Wien. Fotograf unbekannt, um 1926. Wien Museum, Inv. 98687, CC0.](../../Welfare/Welfare%20office.jpg)
 
 ## Quellen
 

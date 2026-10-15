@@ -10,7 +10,7 @@ cover: ../../Welfare/Children's reception centre.jpg
 
 Eine Stelle, in der Kinder empfangen wurden, die in die Obhut der Stadt kamen; errichtet auf Anregung Julius Tandlers nach Plänen von Adolf Stöckl.
 
-![Die Kinderübernahmestelle in der Lustkandlgasse 50 / Ayrenhoffgasse 9 in Alsergrund, um 1926. Carl (Karl) Zapletal, um 1926. Wien Museum, Inv. 57962/77, CC0.](../../Welfare/Children's%20reception%20centre.jpg)
+![Die Kinderübernahmestelle in der Lustkandlgasse 50 / Ayrenhoffgasse 9 in Alsergrund. Carl (Karl) Zapletal, um 1926. Wien Museum, Inv. 57962/77, CC0.](../../Welfare/Children's%20reception%20centre.jpg)
 
 Beschlossen am 9. März 1923; geöffnet ab dem 18. Juni 1925.
 

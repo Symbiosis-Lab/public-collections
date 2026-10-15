@@ -9,7 +9,7 @@ cover: Winarskyhof.jpg
 
 A block in Brigittenau, built 1924–1925.
 
-![The Winarskyhof, Winarskystraße 15-21 in Brigittenau. Martin Gerlach jun., around 1926. Wien Museum, inv. 58129/59, CC0.](Winarskyhof.jpg)
+![The Winarskyhof, Winarskystraße 15–21 in Brigittenau. Martin Gerlach jun., around 1926. Wien Museum, inv. 58129/59, CC0.](Winarskyhof.jpg)
 
 ## Sources
 

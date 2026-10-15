@@ -10,7 +10,7 @@ cover: Pedagogical Institute of the City of Vienna.jpg
 
 Opened by Otto Glöckel, with a psychological-pedagogical laboratory led by Karl Bühler; Alfred Adler lectured there.
 
-![Cover of the lecture catalogue for the teachers' in-service courses of the Pedagogical Institute of the City of Vienna, Burggasse 14-16, winter semester 1930/31 (the library records it as 1930-1949). Pädagogisches Institut, 1930–1949. Wienbibliothek im Rathaus, record 2798485, PDM.](Pedagogical%20Institute%20of%20the%20City%20of%20Vienna.jpg)
+![Cover of the lecture catalogue for the teachers' in-service courses of the Pedagogical Institute of the City of Vienna, Burggasse 14–16, winter semester 1930/31. Pädagogisches Institut. Wienbibliothek im Rathaus, record 2798485, PDM.](Pedagogical%20Institute%20of%20the%20City%20of%20Vienna.jpg)
 
 Opened 13 January 1923.
 

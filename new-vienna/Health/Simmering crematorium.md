@@ -8,7 +8,7 @@ cover: Simmering crematorium.jpg
 
 Austria's first crematorium.
 
-![The crematorium at Simmeringer Hauptstraße 337 in Simmering, around 1926. Martin Gerlach jun., around 1926. Wien Museum, inv. 58129/26, CC0.](Simmering%20crematorium.jpg)
+![The crematorium at Simmeringer Hauptstraße 337 in Simmering. Martin Gerlach jun., around 1926. Wien Museum, inv. 58129/26, CC0.](Simmering%20crematorium.jpg)
 
 Opened 17 December 1922.
 

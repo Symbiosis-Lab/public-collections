@@ -10,7 +10,7 @@ cover: Tuberculosis welfare.jpg
 
 From the end of 1918 the city took up the fight against tuberculosis with clinics of its own.
 
-![The Zürcher Hof municipal housing block in Favoriten, which housed a tuberculosis welfare centre, around 1930. Martin Gerlach jun., around 1930. Wien Museum, inv. 59161/606, CC0.](Tuberculosis%20welfare.jpg)
+![The Zürcher Hof municipal housing block in Favoriten, which housed a tuberculosis welfare centre. Martin Gerlach jun., around 1930. Wien Museum, inv. 59161/606, CC0.](Tuberculosis%20welfare.jpg)
 
 ## Sources
 

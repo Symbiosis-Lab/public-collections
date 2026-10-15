@@ -11,7 +11,7 @@ cover: School dental clinics.jpg
 
 Dental clinics for schoolchildren, founded by a private society in 1911 and taken over by the city in 1922. By 1928 there were twelve.
 
-![Interior of the school dental clinic (Schulzahnklinik) housed in the Kinderübernahmestelle, Ayrenhoffgasse, Alsergrund, around 1925. Martin Gerlach jun., around 1925. Wien Museum, inv. 186909, CC0.](School%20dental%20clinics.jpg)
+![Interior of the school dental clinic (Schulzahnklinik) housed in the Kinderübernahmestelle, Ayrenhoffgasse, Alsergrund. Martin Gerlach jun., around 1925. Wien Museum, inv. 186909, CC0.](School%20dental%20clinics.jpg)
 
 ## Sources
 
