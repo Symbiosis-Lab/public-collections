@@ -1,2 +1,4 @@
 [terms.partners]
 fields = ["partners"]
+nav = true
+title = "Partners"

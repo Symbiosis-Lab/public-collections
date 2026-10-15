@@ -52,18 +52,11 @@
   --moss-header-rule: oklch(42.13% .0539 275.67);
 }
 
-/* ---- Area colours: one per section folder, from the brief; scoped by address because nothing else carries the area. ---- */
-body[data-path^="/housing/"]               { --a: #a3312a; --a-fg: #8e1e1a; --a-name: "Housing"; }
-body[data-path^="/health/"]                { --a: #2f7d6d; --a-fg: #045c4d; --a-name: "Health"; }
-body[data-path^="/welfare/"]               { --a: #b8611a; --a-fg: #793a00; --a-name: "Welfare"; }
-body[data-path^="/education-and-culture/"] { --a: #2f6aa3; --a-fg: #115087; --a-name: "Education & culture"; }
-body[data-path^="/sport/"]                 { --a: #4f7a2a; --a-fg: #325b01; --a-name: "Sport"; }
-/* Dark: the lighter derived values for text on black; the badge fill stays the base colour. */
-:root[data-theme="dark"] body[data-path^="/housing/"]               { --a-fg: #de9c93; }
-:root[data-theme="dark"] body[data-path^="/health/"]                { --a-fg: #91b9af; }
-:root[data-theme="dark"] body[data-path^="/welfare/"]               { --a-fg: #daa17c; }
-:root[data-theme="dark"] body[data-path^="/education-and-culture/"] { --a-fg: #93b3d4; }
-:root[data-theme="dark"] body[data-path^="/sport/"]                 { --a-fg: #9fb98d; }
+/* ---- Area colour: moss puts the folder's `color:` on every page under it as --moss-section-color; the title/card text colour is that
+   colour pulled toward black (light) or white (dark) until it clears 4.5:1 on the page. ---- */
+:root { --fg-keep: 80%; --fg-toward: #000; /* light: 80% of the area colour, 20% black */ }
+:root[data-theme="dark"] { --fg-keep: 45%; --fg-toward: #fff; /* dark: 45% of the area colour, 55% white */ }
+body[data-section], .moss-card { --a-fg: color-mix(in srgb, var(--moss-section-color) var(--fg-keep), var(--fg-toward)); /* derived text colour */ }
 
 /* ---- Page basics ---- */
 body {
@@ -95,6 +88,7 @@ body > header {
 .main-nav a { color: var(--moss-color-accent); /* KERN: every link is the action blue */ }
 .main-nav .site-name { color: var(--moss-color-text); /* except the name, which is text colour as in the prototype */ }
 .main-nav a.active { color: var(--moss-color-text); border-block-end: none; font-weight: 600; /* current page: text colour, semi-bold, no underline */ }
+.nav-links > a:nth-child(2) { order: 1; /* moss lists a term kind's entry after every page entry; the header reads Projects, Partners, About the sources, so the second page entry moves last (visual order only) */ }
 
 /* ---- Running text: KERN body size and line height, 68ch measure from the content-width token. ---- */
 article { font-size: 1.125rem; line-height: 1.6; /* KERN medium body, 18px, comfortable leading */ }
@@ -104,26 +98,17 @@ article ul, article ol { padding-inline-start: 1.5em; /* KERN list indent */ }
 
 /* ---- Project title and badge: the area names itself in colour. ---- */
 .moss-article-title { font-weight: 600; line-height: 1.15; letter-spacing: 0; /* KERN x-large heading */ }
-body[data-path^="/housing/"] .moss-article-title,
-body[data-path^="/health/"] .moss-article-title,
-body[data-path^="/welfare/"] .moss-article-title,
-body[data-path^="/education-and-culture/"] .moss-article-title,
-body[data-path^="/sport/"] .moss-article-title { color: var(--a-fg); /* derived text colour, 7:1 on the page in both modes */ }
-/* The area badge above the title is moss's own parent-section link (`breadcrumb: label` on the home page), filled in the area colour. */
-body[data-path^="/housing/"] article a.moss-parent-label,
-body[data-path^="/health/"] article a.moss-parent-label,
-body[data-path^="/welfare/"] article a.moss-parent-label,
-body[data-path^="/education-and-culture/"] article a.moss-parent-label,
-body[data-path^="/sport/"] article a.moss-parent-label {
+body[data-section] .moss-article-title { color: var(--a-fg); /* derived text colour, above 4.5:1 on the page in both modes */ }
+/* The parent-section link above the title (`breadcrumb: label` on the home page): a small breadcrumb by default (a partner belongs to no area), a badge filled in the area colour inside a section. */
+article a.moss-parent-label { color: var(--moss-color-accent); font-size: .875rem; letter-spacing: 0; text-transform: none; text-decoration: underline; text-underline-offset: 3px; /* KERN small link */ }
+body[data-section] article a.moss-parent-label {
   text-decoration: none; /* a badge, not a prose link: the prose-link rule above must not underline or recolour it */
   padding: 2px 10px;
   border-radius: var(--a-radius); /* KERN badge radius */
-  background: var(--a); /* the base colour as fill, as the prototype's badge */
+  background: var(--moss-section-color); /* the base colour as fill, as the prototype's badge */
   color: #fff; /* white on every base colour passes 4.5:1 */
-  font-size: 1rem; font-weight: 600; line-height: 1.5; letter-spacing: 0; text-transform: none; /* a name, not a spaced-capital label */
+  font-size: 1rem; font-weight: 600; line-height: 1.5; /* a name, not a spaced-capital label */
 }
-/* On a partner page the same link is a plain breadcrumb: a partner belongs to no area. */
-body[data-path^="/partners/"] article a.moss-parent-label { color: var(--moss-color-accent); font-size: .875rem; letter-spacing: 0; text-transform: none; text-decoration: underline; text-underline-offset: 3px; /* KERN small link */ }
 
 /* ---- Photograph: text width, rounded, caption small grey under it, left-aligned like a museum label. ---- */
 .moss-image { margin-inline: 0; }
@@ -135,21 +120,11 @@ article h2#sources { margin-block-start: var(--moss-space-2xl); padding-block-st
 article h2#sources + ul { font-size: 1rem; /* sources are reference, one step smaller */ }
 article h2#sources + ul li + li { margin-block-start: var(--moss-space-sm); }
 
-/* ---- Partner page: projects as small tinted cards, the tint taken from the area in each card's address. ---- */
+/* ---- Partner page: projects as small tinted cards, the tint from each card's section colour. ---- */
 .moss-cards[data-layout="list"] { display: grid; grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); gap: var(--moss-space-md); }
-.moss-cards[data-layout="list"] .moss-card { border-radius: var(--a-radius-lg); border: 1px solid color-mix(in srgb, var(--c) 35%, transparent); background: color-mix(in srgb, var(--c) 8%, var(--moss-color-bg)); padding: var(--moss-space-md); text-decoration: none; /* tinted like Projektschau's cards */ }
-.moss-cards[data-layout="list"] .moss-card-title { color: var(--cf); font-size: 1.125rem; font-weight: 600; margin: 0; /* title in the area's text colour */ }
+.moss-cards[data-layout="list"] .moss-card { border-radius: var(--a-radius-lg); border: 1px solid color-mix(in srgb, var(--moss-section-color) 35%, transparent); background: color-mix(in srgb, var(--moss-section-color) 8%, var(--moss-color-bg)); padding: var(--moss-space-md); text-decoration: none; /* tinted like Projektschau's cards */ }
+.moss-cards[data-layout="list"] .moss-card-title { color: var(--a-fg); font-size: 1.125rem; font-weight: 600; margin: 0; /* title in the area's text colour */ }
 .moss-cards[data-layout="list"] .moss-card-description { color: var(--moss-color-text-secondary); font-size: .9375rem; margin: 4px 0 0; }
-.moss-card[href^="/housing/"]               { --c: #a3312a; --cf: #8e1e1a; }
-.moss-card[href^="/health/"]                { --c: #2f7d6d; --cf: #045c4d; }
-.moss-card[href^="/welfare/"]               { --c: #b8611a; --cf: #793a00; }
-.moss-card[href^="/education-and-culture/"] { --c: #2f6aa3; --cf: #115087; }
-.moss-card[href^="/sport/"]                 { --c: #4f7a2a; --cf: #325b01; }
-:root[data-theme="dark"] .moss-card[href^="/housing/"]               { --cf: #de9c93; }
-:root[data-theme="dark"] .moss-card[href^="/health/"]                { --cf: #91b9af; }
-:root[data-theme="dark"] .moss-card[href^="/welfare/"]               { --cf: #daa17c; }
-:root[data-theme="dark"] .moss-card[href^="/education-and-culture/"] { --cf: #93b3d4; }
-:root[data-theme="dark"] .moss-card[href^="/sport/"]                 { --cf: #9fb98d; }
 
 /* ---- Phone header: name and switch share line one, the pages take line two (the prototype's order). ---- */
 @media (max-width: 48rem) {
@@ -177,12 +152,9 @@ article h2#sources + ul li + li { margin-block-start: var(--moss-space-sm); }
     linear-gradient(#467aaf, #467aaf) 100% 100% / 9px 9px no-repeat; /* housing, health, welfare, education, in that order */
 }
 
-/* ---- Partner page: role line under the name; projects before the sources, as the prototype. ---- */
+/* ---- Partner page: role line under the name. ---- */
 .moss-byline { font-size: 1.125rem; color: var(--moss-color-text-secondary); /* the role line reads as part of the name, one size down */ }
-body[data-path^="/partners/"] article:has(> h2#sources) { display: flex; flex-direction: column; /* so the card list can sit above the sources it follows in the source order */ }
-body[data-path^="/partners/"] article > .moss-cards-container { order: 1; margin-block: var(--moss-space-lg) 0; /* projects come before the evidence */ }
-body[data-path^="/partners/"] article > h2#sources, body[data-path^="/partners/"] article > h2#sources ~ :not(.moss-cards-container) { order: 2; }
-body[data-path^="/partners/"] article > h2#sources { align-self: stretch; }
+.moss-byline ~ .moss-cards-container { margin-block: 3.5rem 4rem; /* a partner's projects stand apart from the text above and the sources below; scoped to pages with a role line so area pages keep moss's spacing */ }
 
 /* ---- Footer: the credit line, small and muted under a rule, as the prototype. ---- */
 body > footer { margin-block-start: var(--moss-space-2xl); }
