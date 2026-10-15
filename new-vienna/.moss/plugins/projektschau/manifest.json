@@ -1,0 +1,9 @@
+{
+  "name": "projektschau",
+  "version": "0.1.0",
+  "description": "Builds the Projektschau project board data (projekte.json) from the site's project files",
+  "author": "The New Vienna",
+  "entry": "main.js",
+  "capabilities": ["process"],
+  "global_name": "ProjektschauPlugin"
+}
