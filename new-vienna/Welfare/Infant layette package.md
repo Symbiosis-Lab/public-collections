@@ -2,7 +2,7 @@
 title: Infant layette package
 uid: "37c636c3"
 kind: Programme
-years: from 1927
+years: "1927/.."
 figure: 9,781 packages handed out in 1927
 partners: [Julius Tandler]
 ---

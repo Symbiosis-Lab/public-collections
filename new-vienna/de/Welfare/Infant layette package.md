@@ -2,7 +2,7 @@
 title: Säuglingswäschepaket
 uid: "fcccf4ec"
 kind: Programme
-years: from 1927
+years: "1927/.."
 figure: 9.781 Pakete ausgegeben im Jahr 1927
 partners: [Julius Tandler]
 ---

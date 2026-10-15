@@ -2,7 +2,7 @@
 title: Wohnbausteuer
 uid: "79a7aeec"
 kind: Programme
-years: from 1923
+years: "1923/.."
 figure: "rund 65 Millionen Schilling aus allen neuen Steuern der Stadt, 1927"
 partners: [Hugo Breitner]
 cover: ../../Housing/Municipal housing programme.jpg

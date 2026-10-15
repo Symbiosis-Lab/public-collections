@@ -2,7 +2,7 @@
 title: Mutterberatungsstellen
 uid: "845dfb81"
 kind: Service
-years: from 1917
+years: "1917/.."
 figure: 35 Stellen im Jahr 1928
 cover: ../../Health/Maternity advice centres.jpg
 ---
