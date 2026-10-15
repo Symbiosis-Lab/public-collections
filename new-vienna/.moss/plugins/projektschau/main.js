@@ -281,8 +281,10 @@
 			return '<li><a href="' + escapeHtml( pr.pg.url ) + '">' + escapeHtml( pr.pg.title ) + '</a> ' + escapeHtml( rec.status.en ) + '</li>';
 		} ).join( '' );
 		return {
-			html: '<div data-projektschau data-src="projekte.json" data-ebene="2" data-sprache-vorgabe="en"><ul>' + list + '</ul></div>',
-			head: [ { stylesheet: 'projektschau/projektschau.css' }, { script: 'projektschau/projektschau.js' } ],
+			html: '<div data-projektschau data-src="projekte.json" data-ebene="2" data-sprache-vorgabe="en"><ul>' + list + '</ul></div>'
+				// A head script runs before this markup exists and the renderer starts once, on load, so it is loaded after the mount.
+				+ '<script src="projektschau/projektschau.js"></script>',
+			head: [ { stylesheet: 'projektschau/projektschau.css' } ],
 			files: files,
 			warnings: built.warnings
 		};
