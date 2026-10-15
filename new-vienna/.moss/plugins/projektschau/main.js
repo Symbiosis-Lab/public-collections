@@ -168,15 +168,8 @@
 	function pair( en ) { return { en: en }; }
 	function dirOf( p ) { return p.replace( /\/?index\.html$/, '' ); }
 	function first( v ) { return v === undefined || v === null ? '' : String( v ); }
-	// Path from the listing page back to the site root, for addresses moss gives relative to the root.
-	function rootPrefix( page ) {
-		var depth = page.url_path.split( '/' ).length - 1, s = '';
-		for ( var i = 0; i < depth; i++ ) { s += '../'; }
-		return s;
-	}
-
 	function buildPackage( ctx ) {
-		var warnings = [], toRoot = rootPrefix( ctx.page );
+		var warnings = [];
 
 		// areas: the listed folder's subfolders; a project's `folder` is its subfolder's address segment
 		var areaByDir = {};
@@ -251,7 +244,7 @@
 			if ( linked.length ) {
 				abschnitte.push( {
 					typ: 'liste', label: pair( 'Partners' ),
-					punkte: linked.map( function ( n ) { return pair( '<a href="' + escapeHtml( toRoot + dirOf( ctx.terms.partners[ n ] ) ) + '/">' + escapeHtml( n ) + '</a>' ); } )
+					punkte: linked.map( function ( n ) { return pair( '<a href="' + escapeHtml( ctx.terms.partners[ n ] ) + '">' + escapeHtml( n ) + '</a>' ); } )
 				} );
 			}
 			var rec = { nr: i + 1, bereich: pr.area.key, einordnung: fm.kind.toLowerCase() };
@@ -281,10 +274,9 @@
 			return '<li><a href="' + escapeHtml( pr.pg.url ) + '">' + escapeHtml( pr.pg.title ) + '</a> ' + escapeHtml( rec.status.en ) + '</li>';
 		} ).join( '' );
 		return {
-			html: '<div data-projektschau data-src="projekte.json" data-ebene="2" data-sprache-vorgabe="en"><ul>' + list + '</ul></div>'
-				// A head script runs before this markup exists and the renderer starts once, on load, so it is loaded after the mount.
-				+ '<script src="projektschau/projektschau.js"></script>',
-			head: [ { stylesheet: 'projektschau/projektschau.css' } ],
+			html: '<div data-projektschau data-src="projekte.json" data-ebene="2" data-sprache-vorgabe="en"><ul>' + list + '</ul></div>',
+			// moss defers head scripts, so the renderer runs once the mount exists.
+			head: [ { stylesheet: 'projektschau/projektschau.css' }, { script: 'projektschau/projektschau.js' } ],
 			files: files,
 			warnings: built.warnings
 		};

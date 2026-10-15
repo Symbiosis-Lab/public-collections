@@ -45,7 +45,7 @@ const ctx = {
 		rec( 'Early hall', 'big', { kind: 'Building', years: 1925 }, body ),
 		rec( 'Clinic', 'small', { kind: 'Service', years: 'from 1927' }, body )
 	],
-	terms: { partners: { Ada: 'partners/ada/index.html' } }
+	terms: { partners: { Ada: 'partners/ada/' } }
 };
 ctx.page.url_path = 'index.html'; ctx.page.url = './';
 ctx.folders[ 0 ].url = 'small/'; ctx.folders[ 1 ].url = 'big/';
