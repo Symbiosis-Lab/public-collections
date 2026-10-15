@@ -5,13 +5,14 @@ kind: Building
 years: 1927–1933
 figure: 1.382 Wohnungen
 partners: [Karl Ehn]
+cover: ../../Housing/Karl-Marx-Hof.jpg
 ---
 
 Ein einzelner, rund einen Kilometer langer Baublock in Döbling, von der Stadt errichtet nach Plänen von Karl Ehn, einem Schüler Otto Wagners. Nur 23 Prozent des 150.000 Quadratmeter großen Areals sind bebaut; der Rest sind Höfe und Gärten.
 
 Eröffnet am 12. Oktober 1930.
 
-![Karl-Marx-Hof, Fassade zum Bahnhof Heiligenstadt. Foto: Martin Gerlach jun., um 1930. Wien Museum, Inv. 59241/1126, CC0. Auf den Abzug zugeschnitten.](../../Housing/Karl-Marx-Hof.jpg)
+![Karl-Marx-Hof, Heiligenstädter Straße 82–92: die Fassade zum Bahnhof Heiligenstadt. Martin Gerlach jun., um 1930. Wien Museum, Inv. 59241/1126, CC0.](../../Housing/Karl-Marx-Hof.jpg)
 
 Die Tafel an der Fassade, auf dem Foto zu sehen, lautet „Wohnhausanlage errichtet von der Gemeinde Wien in den Jahren 19__–1930“ (die erste Jahreszahl ist auf diesem Abzug nicht lesbar). Sie nennt 1930, das Jahr der Eröffnung des Baus; die letzten Abschnitte wurden 1933 fertig.
 
@@ -19,12 +20,24 @@ Die Quellen widersprechen einander: Derselbe Artikel nennt 1.382 Wohnungen für 
 
 Der Hof steht im 19. Bezirk, Döbling, in der Heiligenstädter Straße 82–92.
 
+:::grid 2 {.pictures-set}
+![Karl-Marx-Hof in Döbling, Heiligenstädter Straße 82-92: Blick in eine Durchfahrtsstraße des Blocks. Martin Gerlach jun., um 1930. Wien Museum, Inv. 59241/1125, CC0.](../../Housing/Karl-Marx-Hof%204.jpg)
++++
+![Der Karl-Marx-Hof an der Ecke Heiligenstädter Straße, Boschstraße und Halteraugasse. Fotograf unbekannt, um 1930. Wien Museum, Inv. 57962/424, CC0.](../../Housing/Karl-Marx-Hof%203.jpg)
+:::
+
 ## Im Inneren des Blocks
 
 - Zwei Kindergärten und eine Mutterberatungsstelle
 - Ein Jugendheim und eine Bücherei
 - Eine Ambulanz, eine Zahnklinik und eine Apotheke
 - Ein Postamt, Geschäfte und eine zentrale Waschküche
+
+:::grid 2 {.pictures-set}
+![Karl-Marx-Hof: Blick auf den Kindergarten im Innenhof. Martin Gerlach jun., um 1930. Wien Museum, Inv. 59161/1790, CC0.](../../Housing/Karl-Marx-Hof%202.jpg)
++++
+![Der Kindergarten des Karl-Marx-Hofs, Heiligenstädter Straße 82-92. Martin Gerlach jun., um 1930. Wien Museum, Inv. 93083/111, CC0.](../../Housing/Karl-Marx-Hof%205.jpg)
+:::
 
 ## Danach
 

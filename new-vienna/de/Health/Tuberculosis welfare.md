@@ -5,9 +5,12 @@ kind: Programme
 years: from 1918
 figure: 12 städtische Fürsorgestellen bis 1931
 partners: [Alfred Götzl]
+cover: ../../Health/Tuberculosis welfare.jpg
 ---
 
 Ab Ende 1918 nahm die Stadt mit eigenen Fürsorgestellen den Kampf gegen die Tuberkulose auf.
+
+![Der Zürcher Hof, ein Gemeindebau in Favoriten mit einer Tuberkulosefürsorgestelle, um 1930. Martin Gerlach jun., um 1930. Wien Museum, Inv. 59161/606, CC0.](../../Health/Tuberculosis%20welfare.jpg)
 
 ## Quellen
 

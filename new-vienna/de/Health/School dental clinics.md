@@ -6,9 +6,12 @@ years: 1922
 figure: 123.524 Besuche im Jahr 1928
 partners: [Julius Tandler]
 by: false
+cover: ../../Health/School dental clinics.jpg
 ---
 
 Zahnkliniken für Schulkinder, 1911 von einem privaten Verein gegründet und 1922 von der Stadt übernommen. 1928 gab es zwölf.
+
+![Innenansicht der Schulzahnklinik in der Kinderübernahmestelle, Ayrenhoffgasse, Alsergrund, um 1925. Martin Gerlach jun., um 1925. Wien Museum, Inv. 186909, CC0.](../../Health/School%20dental%20clinics.jpg)
 
 ## Quellen
 

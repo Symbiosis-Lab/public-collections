@@ -4,9 +4,12 @@ uid: "845dfb81"
 kind: Service
 years: from 1917
 figure: 35 Stellen im Jahr 1928
+cover: ../../Health/Maternity advice centres.jpg
 ---
 
 Beratungsstellen für Mütter, Teil der Bezirksjugendämter; ab 1923 auch in den neuen Gemeindebauten eingerichtet.
+
+![Innenansicht der Mütterberatung im Bezirksjugendamt Laxenburger Straße 47 in Favoriten, um 1926. Theo Bauer, um 1926. Wien Museum, Inv. 57962/109, CC0.](../../Health/Maternity%20advice%20centres.jpg)
 
 ## Quellen
 

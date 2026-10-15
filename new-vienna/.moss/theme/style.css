@@ -168,3 +168,12 @@ body[data-page="home"] article > .moss-folder-title + p {
   box-shadow: 0 0 0 100vmax var(--moss-color-surface); clip-path: inset(0 -100vmax); /* runs to the viewport edges without a wrapper element */
 }
 body[data-page="home"] article > [data-projektschau] { margin-block-start: var(--moss-space-xl, 2rem); }
+
+/* ---- A project's further pictures: two to a row, each whole, caption small and grey as under the lead picture. ---- */
+.pictures-set { --moss-grid-image-ratio: auto; --moss-grid-image-radius: var(--a-radius); /* moss crops a picture in a grid cell to a square; these are shown whole */ }
+
+/* ---- Partner portrait: small beside the first paragraph; the project cards start below it, and on a phone it stays a small float instead of filling the width. ---- */
+.moss-byline ~ .moss-cards-container { clear: both; /* the portrait floats into the margin, so the cards must not wrap around its caption */ }
+@layer shortcodes { @media (max-width: 48rem) {
+  article figure.moss-image.moss-align-right:not([data-width]) { float: right; width: 38% !important; margin-inline-start: var(--moss-space-sm); /* moss's own phone rule is !important inside its layer, so only a rule in that layer, later, can keep the portrait small */ }
+} }

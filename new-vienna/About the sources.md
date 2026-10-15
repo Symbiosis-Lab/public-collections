@@ -12,9 +12,15 @@ In 1926 the City of Vienna published its own overview of the municipal programme
 - Where sources disagree, the page says so instead of choosing.
 - Projects that began before 1919 are on the board when the city carried them on in this period, and their page says when they began.
 
-## Photographs
+## Pictures
 
-Photographs from the Wien Museum's online collection, each marked CC0 on its object page, cropped to the print: the museum's scans include the mount and a colour target.
+The pictures on the project pages and on the area pages that list them come from three holders, each marking its pictures CC0 or Public Domain Mark:
+
+- Wien Museum online collection: 46 pictures, CC0
+- Wienbibliothek im Rathaus, through Europeana: 7 pictures, Public Domain Mark
+- Rijksmuseum, Amsterdam, through Wikimedia Commons: 1 picture, CC0
+
+Each caption gives the photographer or author, the date as the holder gives it, the inventory or record number and the mark. Wien Museum photographs are cropped to the print: the museum's scans include the mount and a colour target.
 
 ## What is missing
 
