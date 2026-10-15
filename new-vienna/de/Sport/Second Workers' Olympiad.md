@@ -10,7 +10,7 @@ cover: ../../Sport/Second Workers' Olympiad.jpg
 
 Eine Woche voller Wettkämpfe in 117 Disziplinen in Wien; das Praterstadion wurde dafür gebaut.
 
-![Umschlag des Bildberichts zur 2. Arbeiter-Olympiade, Wien, 19.-26. Juli 1931, eine Fotomontage mit der Signatur „Fröschl“ (48 Seiten, überwiegend Abbildungen). Presse- und Propagandaausschuß der 2. Arbeiter-Olympiade, 1931. Wienbibliothek im Rathaus, Nr. 2597056, PDM.](../../Sport/Second%20Workers'%20Olympiad.jpg)
+![Umschlag des Bildberichts zur 2. Arbeiter-Olympiade, Wien, 19.–26. Juli 1931, eine Fotomontage mit der Signatur „Fröschl“ (48 Seiten, überwiegend Abbildungen). Presse- und Propagandaausschuß der 2. Arbeiter-Olympiade, 1931. Wienbibliothek im Rathaus, Nr. 2597056, PDM.](../../Sport/Second%20Workers'%20Olympiad.jpg)
 
 Ausgetragen vom 19. bis 26. Juli 1931.
 
