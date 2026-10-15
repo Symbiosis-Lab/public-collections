@@ -11,6 +11,9 @@ ri: 68.95
 lat: 34.6941
 lng: 137.5608
 place: "Arai, Kosai, Shizuoka"
+stage: "Station 31"
+romaji: "Arai, watashibune no zu"
+station_no: "31 of 53"
 ---
 ::: {.trail}
 [[places|The Road]] / [[Shizuoka]] / Arai
@@ -18,24 +21,6 @@ place: "Arai, Kosai, Shizuoka"
 
 ![Arai, View of Ferryboats: A daimyo's ferry approaches the shore at the Arai checkpoint](../assets/aic-18264.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-18264.jpg)*
-
-::: {.eyebrow}
-Station 31 · Arai, Kosai, Shizuoka
-:::
-
-::: {.numeral}
-31
-
-of 53
-:::
-
-::: {.slip}
-新居
-:::
-
-::: {.subtitle}
-*Arai, watashibune no zu*
-:::
 
 > A daimyo's ferry approaches the shore at the Arai checkpoint, one of the Tōkaidō's most heavily guarded barrier stations.
 

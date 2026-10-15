@@ -11,6 +11,9 @@ ri: 70.62
 lat: 34.6886
 lng: 137.5008
 place: "Shirasuka, Kosai, Shizuoka"
+stage: "Station 32"
+romaji: "Shirasuka, Shiomizaka zu"
+station_no: "32 of 53"
 ---
 ::: {.trail}
 [[places|The Road]] / [[Shizuoka]] / Shirasuka
@@ -18,24 +21,6 @@ place: "Shirasuka, Kosai, Shizuoka"
 
 ![Shirasuka, View of Shiomi Slope: Travelers pause on the Shiomizaka hillside above Shirasuka](../assets/aic-25701.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25701.jpg)*
-
-::: {.eyebrow}
-Station 32 · Shirasuka, Kosai, Shizuoka
-:::
-
-::: {.numeral}
-32
-
-of 53
-:::
-
-::: {.slip}
-白須賀
-:::
-
-::: {.subtitle}
-*Shirasuka, Shiomizaka zu*
-:::
 
 > Travelers pause on the Shiomizaka hillside above Shirasuka, where the road briefly opens onto a view of the sea.
 

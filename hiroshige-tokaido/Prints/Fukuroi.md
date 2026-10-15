@@ -11,6 +11,9 @@ ri: 58.98
 lat: 34.7475
 lng: 137.9232
 place: "Fukuroi, Shizuoka"
+stage: "Station 27"
+romaji: "Fukuroi, dejaya no zu"
+station_no: "27 of 53"
 ---
 ::: {.trail}
 [[places|The Road]] / [[Shizuoka]] / Fukuroi
@@ -18,24 +21,6 @@ place: "Fukuroi, Shizuoka"
 
 ![Fukuroi, Tea Stall: Travelers rest at an open-air tea stall on the plain](../assets/aic-25668.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25668.jpg)*
-
-::: {.eyebrow}
-Station 27 · Fukuroi, Shizuoka
-:::
-
-::: {.numeral}
-27
-
-of 53
-:::
-
-::: {.slip}
-袋井
-:::
-
-::: {.subtitle}
-*Fukuroi, dejaya no zu*
-:::
 
 > Travelers rest at an open-air tea stall on the plain outside Fukuroi, one of the smaller stations on the route.
 

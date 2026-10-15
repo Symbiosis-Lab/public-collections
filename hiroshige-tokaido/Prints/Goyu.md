@@ -11,6 +11,9 @@ ri: 76.26
 lat: 34.8449
 lng: 137.3173
 place: "Goyu, Toyokawa, Aichi"
+stage: "Station 35"
+romaji: "Goyu, tabibito tomeru onna"
+station_no: "35 of 53"
 ---
 ::: {.trail}
 [[places|The Road]] / [[Aichi]] / Goyu
@@ -18,24 +21,6 @@ place: "Goyu, Toyokawa, Aichi"
 
 ![Goyu, Women Stopping Travelers: Innkeepers' women physically pull passing travelers by the sleeve](../assets/aic-16581.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-16581.jpg)*
-
-::: {.eyebrow}
-Station 35 · Goyu, Toyokawa, Aichi
-:::
-
-::: {.numeral}
-35
-
-of 53
-:::
-
-::: {.slip}
-御油
-:::
-
-::: {.subtitle}
-*Goyu, tabibito tomeru onna*
-:::
 
 > Innkeepers' women physically pull passing travelers by the sleeve into competing lodging houses at Goyu.
 

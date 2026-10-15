@@ -132,3 +132,23 @@ search = true
 "/qr/places/yoshiwara.svg" = "/qr/prints/yoshiwara.svg"
 "/qr/places/yui.svg" = "/qr/prints/yui.svg"
 "/qr/places/ōtsu.svg" = "/qr/prints/otsu.svg"
+
+[fields.stage]
+type  = "text"
+place = "eyebrow"
+
+[fields.place]
+type  = "text"
+place = "eyebrow"
+
+[fields.romaji]
+type  = "text"
+place = "subtitle"
+
+[fields.station_no]
+type  = "count"
+place = "key-figure"
+
+[fields.ja]
+type  = "text"
+place = "key-figure"

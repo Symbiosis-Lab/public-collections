@@ -11,6 +11,9 @@ ri: 53.07
 lat: 34.8229
 lng: 138.1293
 place: "Kanaya, Shimada, Shizuoka"
+stage: "Station 24"
+romaji: "Kanaya, Oigawa engan"
+station_no: "24 of 53"
 ---
 ::: {.trail}
 [[places|The Road]] / [[Shizuoka]] / Kanaya
@@ -18,24 +21,6 @@ place: "Kanaya, Shimada, Shizuoka"
 
 ![Kanaya, The Far Bank of the Oi River: Palanquin bearers wade the Ōi River](../assets/aic-25657.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25657.jpg)*
-
-::: {.eyebrow}
-Station 24 · Kanaya, Shimada, Shizuoka
-:::
-
-::: {.numeral}
-24
-
-of 53
-:::
-
-::: {.slip}
-金谷
-:::
-
-::: {.subtitle}
-*Kanaya, Oigawa engan*
-:::
 
 > Palanquin bearers wade the Ōi River toward Kanaya on the river's far bank, mountains rising beyond.
 

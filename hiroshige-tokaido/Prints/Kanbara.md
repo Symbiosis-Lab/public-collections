@@ -11,6 +11,9 @@ ri: 37.59
 lat: 35.12
 lng: 138.6055
 place: "Kanbara, Shimizu-ku, Shizuoka City"
+stage: "Station 15"
+romaji: "Kanbara, yoru no yuki"
+station_no: "15 of 53"
 weather: "Snow"
 ---
 ::: {.trail}
@@ -19,24 +22,6 @@ weather: "Snow"
 
 ![Kanbara, Evening Snow: three muffled figures trudge through heavy snowfall](../assets/aic-25613.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25613.jpg)*
-
-::: {.eyebrow}
-Station 15 · Kanbara, Shimizu-ku, Shizuoka City
-:::
-
-::: {.numeral}
-15
-
-of 53
-:::
-
-::: {.slip}
-蒲原
-:::
-
-::: {.subtitle}
-*Kanbara, yoru no yuki*
-:::
 
 > Three muffled figures trudge through a silent, heavy snowfall in Kanbara, a scene of snow the town rarely saw.
 

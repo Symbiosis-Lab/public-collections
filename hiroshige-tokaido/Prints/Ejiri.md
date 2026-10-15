@@ -11,6 +11,9 @@ ri: 41.98
 lat: 35.0199
 lng: 138.4809
 place: "Shimizu-ku, Shizuoka City"
+stage: "Station 18"
+romaji: "Ejiri, Miho enbo"
+station_no: "18 of 53"
 ---
 ::: {.trail}
 [[places|The Road]] / [[Shizuoka]] / Ejiri
@@ -18,24 +21,6 @@ place: "Shimizu-ku, Shizuoka City"
 
 ![Ejiri, Distant View of Miho: boats sail Suruga Bay off Ejiri](../assets/aic-25625.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25625.jpg)*
-
-::: {.eyebrow}
-Station 18 · Shimizu-ku, Shizuoka City
-:::
-
-::: {.numeral}
-18
-
-of 53
-:::
-
-::: {.slip}
-江尻
-:::
-
-::: {.subtitle}
-*Ejiri, Miho enbo*
-:::
 
 > Boats sail Suruga Bay off Ejiri as the pine-covered spit of Miho stretches into the distance beneath Mount Fuji.
 

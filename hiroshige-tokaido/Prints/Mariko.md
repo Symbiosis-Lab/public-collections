@@ -11,6 +11,9 @@ ri: 46.12
 lat: 34.9494
 lng: 138.3424
 place: "Suruga Ward, Shizuoka City"
+stage: "Station 20"
+romaji: "Mariko, meibutsu chamise"
+station_no: "20 of 53"
 ---
 ::: {.trail}
 [[places|The Road]] / [[Shizuoka]] / Mariko
@@ -18,24 +21,6 @@ place: "Suruga Ward, Shizuoka City"
 
 ![Mariko, Famous Tea Shop: travelers stop at a thatched roadside teahouse](../assets/aic-25630.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25630.jpg)*
-
-::: {.eyebrow}
-Station 20 · Suruga Ward, Shizuoka City
-:::
-
-::: {.numeral}
-20
-
-of 53
-:::
-
-::: {.slip}
-丸子
-:::
-
-::: {.subtitle}
-*Mariko, meibutsu chamise*
-:::
 
 > Travelers stop at a thatched roadside teahouse in Mariko famous for its grated-yam (tororo) soup, served by a woman with a child.
 

@@ -11,6 +11,9 @@ ri: 4.5
 lat: 35.5356
 lng: 139.7078
 place: "Kawasaki Ward, Kawasaki, Kanagawa"
+stage: "Station 2"
+romaji: "Kawasaki, Rokugo watashibune"
+station_no: "2 of 53"
 ---
 ::: {.trail}
 [[places|The Road]] / [[Tokyo & Kanagawa]] / Kawasaki
@@ -18,24 +21,6 @@ place: "Kawasaki Ward, Kawasaki, Kanagawa"
 
 ![Kawasaki, The Rokugo Ferry: travelers and horses wait to board ferries](../assets/aic-25555.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25555.jpg)*
-
-::: {.eyebrow}
-Station 2 · Kawasaki Ward, Kawasaki, Kanagawa
-:::
-
-::: {.numeral}
-2
-
-of 53
-:::
-
-::: {.slip}
-川崎
-:::
-
-::: {.subtitle}
-*Kawasaki, Rokugo watashibune*
-:::
 
 > Travelers and horses wait to board flat-bottomed ferries crossing the Tama River (Rokugo) at Kawasaki, with Mount Fuji faint in the distance.
 

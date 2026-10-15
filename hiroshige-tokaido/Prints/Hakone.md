@@ -11,6 +11,9 @@ ri: 24.97
 lat: 35.1904
 lng: 139.0264
 place: "Hakone, Kanagawa"
+stage: "Station 10"
+romaji: "Hakone, kosui no zu"
+station_no: "10 of 53"
 ---
 ::: {.trail}
 [[places|The Road]] / [[Tokyo & Kanagawa]] / Hakone
@@ -18,24 +21,6 @@ place: "Hakone, Kanagawa"
 
 ![Hakone, View of the Lake: A daimyo procession winds along a jagged mountain trail](../assets/aic-25585.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25585.jpg)*
-
-::: {.eyebrow}
-Station 10 · Hakone, Kanagawa
-:::
-
-::: {.numeral}
-10
-
-of 53
-:::
-
-::: {.slip}
-箱根
-:::
-
-::: {.subtitle}
-*Hakone, kosui no zu*
-:::
 
 > A daimyo procession winds along a jagged mountain trail above Lake Ashi, with the peaks of the Hakone range towering over the water.
 

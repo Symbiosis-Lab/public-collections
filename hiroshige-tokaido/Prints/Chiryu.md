@@ -11,6 +11,9 @@ ri: 84.46
 lat: 35.0081
 lng: 137.0409
 place: "Chiryū, Aichi"
+stage: "Station 39"
+romaji: "Chiryu, shuka uma ichi"
+station_no: "39 of 53"
 ---
 ::: {.trail}
 [[places|The Road]] / [[Aichi]] / Chiryū
@@ -18,24 +21,6 @@ place: "Chiryū, Aichi"
 
 ![Chiryū, Early Summer Horse Market: Horses are bought and sold in an open field](../assets/aic-25738.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25738.jpg)*
-
-::: {.eyebrow}
-Station 39 · Chiryū, Aichi
-:::
-
-::: {.numeral}
-39
-
-of 53
-:::
-
-::: {.slip}
-池鯉鮒
-:::
-
-::: {.subtitle}
-*Chiryu, shuka uma ichi*
-:::
 
 > Horses are bought and sold in an open field outside Chiryū during the town's famous early-summer horse market.
 

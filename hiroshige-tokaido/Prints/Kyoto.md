@@ -11,6 +11,9 @@ ri: 126.16
 lat: 35.0103
 lng: 135.7744
 place: "Nakagyo/Higashiyama Ward, Kyoto"
+stage: "The end of the road"
+romaji: "Keishi, Sanjo ohashi"
+station_no: "End"
 ---
 ::: {.trail}
 [[places|The Road]] / [[Shiga & Kyoto]] / Kyoto
@@ -18,22 +21,6 @@ place: "Nakagyo/Higashiyama Ward, Kyoto"
 
 ![Kyoto, The Great Bridge at Sanjo: travelers and ox-carts cross the bridge into Kyoto](../assets/aic-25789.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25789.jpg)*
-
-::: {.eyebrow}
-The end of the road · Nakagyo/Higashiyama Ward, Kyoto
-:::
-
-::: {.numeral}
-End
-:::
-
-::: {.slip}
-京都
-:::
-
-::: {.subtitle}
-*Keishi, Sanjo ohashi*
-:::
 
 > Travelers and ox-carts cross the Sanjō Ōhashi bridge into Kyoto, with the city and hills beyond marking the end of the Tōkaidō.
 

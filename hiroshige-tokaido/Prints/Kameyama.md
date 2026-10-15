@@ -11,6 +11,9 @@ ri: 104.63
 lat: 34.8543
 lng: 136.4541
 place: "Kameyama, Mie"
+stage: "Station 46"
+romaji: "Kameyama, yukibare"
+station_no: "46 of 53"
 weather: "Snow, clearing"
 ---
 ::: {.trail}
@@ -19,24 +22,6 @@ weather: "Snow, clearing"
 
 ![Kameyama, Weather Clearing after Snow: a procession climbs a snowy slope](../assets/aic-25762.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25762.jpg)*
-
-::: {.eyebrow}
-Station 46 · Kameyama, Mie
-:::
-
-::: {.numeral}
-46
-
-of 53
-:::
-
-::: {.slip}
-亀山
-:::
-
-::: {.subtitle}
-*Kameyama, yukibare*
-:::
 
 > A procession climbs a steep, snow-covered slope toward Kameyama Castle as the sky clears after a snowfall.
 

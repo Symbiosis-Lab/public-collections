@@ -11,6 +11,9 @@ ri: 56.54
 lat: 34.7729
 lng: 138.0159
 place: "Kakegawa, Shizuoka"
+stage: "Station 26"
+romaji: "Kakegawa, Akibasan enbo"
+station_no: "26 of 53"
 ---
 ::: {.trail}
 [[places|The Road]] / [[Shizuoka]] / Kakegawa
@@ -18,24 +21,6 @@ place: "Kakegawa, Shizuoka"
 
 ![Kakegawa, Distant View of Mount Akiba: A kite flies over a river crossing](../assets/aic-25663.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25663.jpg)*
-
-::: {.eyebrow}
-Station 26 · Kakegawa, Shizuoka
-:::
-
-::: {.numeral}
-26
-
-of 53
-:::
-
-::: {.slip}
-掛川
-:::
-
-::: {.subtitle}
-*Kakegawa, Akibasan enbo*
-:::
 
 > A kite flies over a river crossing near Kakegawa with the sacred peak of Mount Akiba visible on the horizon.
 

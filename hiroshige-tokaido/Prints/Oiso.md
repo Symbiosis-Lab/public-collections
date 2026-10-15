@@ -11,6 +11,9 @@ ri: 16.75
 lat: 35.309
 lng: 139.3153
 place: "Ōiso, Kanagawa"
+stage: "Station 8"
+romaji: "Oiso, Tora ga ame"
+station_no: "8 of 53"
 weather: "Rain"
 ---
 ::: {.trail}
@@ -19,24 +22,6 @@ weather: "Rain"
 
 ![Oiso, Tora's Rain: Travelers are caught in a sudden shower on the shore road](../assets/aic-25579.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25579.jpg)*
-
-::: {.eyebrow}
-Station 8 · Ōiso, Kanagawa
-:::
-
-::: {.numeral}
-8
-
-of 53
-:::
-
-::: {.slip}
-大磯
-:::
-
-::: {.subtitle}
-*Oiso, Tora ga ame*
-:::
 
 > Travelers are caught in a sudden shower on the shore road at Ōiso, a rain traditionally called "Tora ga ame" after the legendary courtesan Tora.
 

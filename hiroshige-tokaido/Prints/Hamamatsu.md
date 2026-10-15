@@ -11,6 +11,9 @@ ri: 64.68
 lat: 34.7051
 lng: 137.7319
 place: "Chūō Ward, Hamamatsu, Shizuoka"
+stage: "Station 29"
+romaji: "Hamamatsu, fuyugare no zu"
+station_no: "29 of 53"
 ---
 ::: {.trail}
 [[places|The Road]] / [[Shizuoka]] / Hamamatsu
@@ -18,24 +21,6 @@ place: "Chūō Ward, Hamamatsu, Shizuoka"
 
 ![Hamamatsu, Winter Scene: Travelers warm themselves at a bonfire beneath a huge bare tree](../assets/aic-25676.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25676.jpg)*
-
-::: {.eyebrow}
-Station 29 · Chūō Ward, Hamamatsu, Shizuoka
-:::
-
-::: {.numeral}
-29
-
-of 53
-:::
-
-::: {.slip}
-浜松
-:::
-
-::: {.subtitle}
-*Hamamatsu, fuyugare no zu*
-:::
 
 > Travelers warm themselves at a bonfire beneath a huge bare tree on the outskirts of Hamamatsu, Mount Fuji faint in the distance.
 

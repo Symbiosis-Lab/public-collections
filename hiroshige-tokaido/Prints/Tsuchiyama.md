@@ -11,6 +11,9 @@ ri: 110.3
 lat: 34.9344
 lng: 136.2838
 place: "Tsuchiyama, Kōka, Shiga"
+stage: "Station 49"
+romaji: "Tsuchiyama, haru no ame"
+station_no: "49 of 53"
 weather: "Spring shower"
 ---
 ::: {.trail}
@@ -19,24 +22,6 @@ weather: "Spring shower"
 
 ![Tsuchiyama, Spring Shower: Travelers cross a bridge over a swollen mountain stream at Tsuchiyama](../assets/aic-25772.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25772.jpg)*
-
-::: {.eyebrow}
-Station 49 · Tsuchiyama, Kōka, Shiga
-:::
-
-::: {.numeral}
-49
-
-of 53
-:::
-
-::: {.slip}
-土山
-:::
-
-::: {.subtitle}
-*Tsuchiyama, haru no ame*
-:::
 
 > Travelers cross a bridge over a swollen mountain stream at Tsuchiyama in a sudden spring downpour.
 

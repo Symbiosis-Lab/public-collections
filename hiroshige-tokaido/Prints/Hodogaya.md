@@ -11,6 +11,9 @@ ri: 8.25
 lat: 35.444
 lng: 139.5956
 place: "Hodogaya Ward, Yokohama"
+stage: "Station 4"
+romaji: "Hodogaya, Shinmachibashi"
+station_no: "4 of 53"
 ---
 ::: {.trail}
 [[places|The Road]] / [[Tokyo & Kanagawa]] / Hodogaya
@@ -18,24 +21,6 @@ place: "Hodogaya Ward, Yokohama"
 
 ![Hodogaya, Shinmachi Bridge: a pack-horse train crosses the bridge beneath windswept pines](../assets/aic-25561.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25561.jpg)*
-
-::: {.eyebrow}
-Station 4 · Hodogaya Ward, Yokohama
-:::
-
-::: {.numeral}
-4
-
-of 53
-:::
-
-::: {.slip}
-保土ヶ谷
-:::
-
-::: {.subtitle}
-*Hodogaya, Shinmachibashi*
-:::
 
 > A pack-horse train crosses the Shinmachi Bridge outside Hodogaya beneath windswept pines.
 

@@ -11,6 +11,9 @@ ri: 34.76
 lat: 35.1628
 lng: 138.6856
 place: "Fuji, Shizuoka"
+stage: "Station 14"
+romaji: "Yoshiwara, hidari Fuji"
+station_no: "14 of 53"
 ---
 ::: {.trail}
 [[places|The Road]] / [[Shizuoka]] / Yoshiwara
@@ -18,24 +21,6 @@ place: "Fuji, Shizuoka"
 
 ![Yoshiwara, Mount Fuji on the Left: riders and porters follow a bend in the road](../assets/aic-10929.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-10929.jpg)*
-
-::: {.eyebrow}
-Station 14 · Fuji, Shizuoka
-:::
-
-::: {.numeral}
-14
-
-of 53
-:::
-
-::: {.slip}
-吉原
-:::
-
-::: {.subtitle}
-*Yoshiwara, hidari Fuji*
-:::
 
 > Riders and porters follow a bend in the road at Yoshiwara from which Mount Fuji unusually appears on the left side of the frame.
 

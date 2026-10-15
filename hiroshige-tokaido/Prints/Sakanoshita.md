@@ -11,6 +11,9 @@ ri: 107.8
 lat: 34.8886
 lng: 136.3541
 place: "Sakashita, Kameyama, Mie"
+stage: "Station 48"
+romaji: "Sakanoshita, Fudesute mine"
+station_no: "48 of 53"
 ---
 ::: {.trail}
 [[places|The Road]] / [[Mie]] / Sakanoshita
@@ -18,24 +21,6 @@ place: "Sakashita, Kameyama, Mie"
 
 ![Sakanoshita, Peak of Fudesute Mountain: Travelers pause at a teahouse overlooking a dramatic gorge](../assets/aic-25769.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25769.jpg)*
-
-::: {.eyebrow}
-Station 48 · Sakashita, Kameyama, Mie
-:::
-
-::: {.numeral}
-48
-
-of 53
-:::
-
-::: {.slip}
-坂下
-:::
-
-::: {.subtitle}
-*Sakanoshita, Fudesute mine*
-:::
 
 > Travelers pause at a teahouse overlooking a dramatic gorge and waterfall near the peak of Fudesute-yama.
 

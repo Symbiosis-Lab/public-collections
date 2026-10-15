@@ -11,6 +11,9 @@ ri: 28.75
 lat: 35.1193
 lng: 138.9145
 place: "Mishima, Shizuoka"
+stage: "Station 11"
+romaji: "Mishima, asagiri"
+station_no: "11 of 53"
 weather: "Mist"
 ---
 ::: {.trail}
@@ -19,24 +22,6 @@ weather: "Mist"
 
 ![Mishima, Morning Mist: Travelers and a packhorse emerge from thick morning fog](../assets/aic-10926.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-10926.jpg)*
-
-::: {.eyebrow}
-Station 11 · Mishima, Shizuoka
-:::
-
-::: {.numeral}
-11
-
-of 53
-:::
-
-::: {.slip}
-三島
-:::
-
-::: {.subtitle}
-*Mishima, asagiri*
-:::
 
 > Travelers and a packhorse emerge from thick morning fog near the torii gate of Mishima Taisha, Mount Fuji hidden entirely from view.
 

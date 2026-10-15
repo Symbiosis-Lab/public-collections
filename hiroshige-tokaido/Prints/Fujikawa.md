@@ -11,6 +11,9 @@ ri: 78.95
 lat: 34.9111
 lng: 137.2222
 place: "Fujikawa, Okazaki, Aichi"
+stage: "Station 37"
+romaji: "Fujikawa, bohana no zu"
+station_no: "37 of 53"
 ---
 ::: {.trail}
 [[places|The Road]] / [[Aichi]] / Fujikawa
@@ -18,24 +21,6 @@ place: "Fujikawa, Okazaki, Aichi"
 
 ![Fujikawa, View of Post Outskirts: A small daimyo procession passes a solitary teahouse](../assets/aic-20264.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-20264.jpg)*
-
-::: {.eyebrow}
-Station 37 · Fujikawa, Okazaki, Aichi
-:::
-
-::: {.numeral}
-37
-
-of 53
-:::
-
-::: {.slip}
-藤川
-:::
-
-::: {.subtitle}
-*Fujikawa, bohana no zu*
-:::
 
 > A small daimyo procession passes a solitary teahouse at the edge of Fujikawa as evening approaches.
 

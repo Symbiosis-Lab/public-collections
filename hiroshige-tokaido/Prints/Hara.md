@@ -11,6 +11,9 @@ ri: 31.75
 lat: 35.1255
 lng: 138.7973
 place: "Hara, Numazu, Shizuoka"
+stage: "Station 13"
+romaji: "Hara, asa no Fuji"
+station_no: "13 of 53"
 ---
 ::: {.trail}
 [[places|The Road]] / [[Shizuoka]] / Hara
@@ -18,24 +21,6 @@ place: "Hara, Numazu, Shizuoka"
 
 ![Hara, Mount Fuji in the Morning: Two travelers cross a marshy plain at Hara](../assets/aic-13219.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-13219.jpg)*
-
-::: {.eyebrow}
-Station 13 · Hara, Numazu, Shizuoka
-:::
-
-::: {.numeral}
-13
-
-of 53
-:::
-
-::: {.slip}
-原
-:::
-
-::: {.subtitle}
-*Hara, asa no Fuji*
-:::
 
 > Two travelers cross a marshy plain at Hara beneath an enormous Mount Fuji filling the sky.
 

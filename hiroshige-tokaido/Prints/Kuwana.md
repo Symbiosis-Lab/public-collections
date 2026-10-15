@@ -11,6 +11,9 @@ ri: 95.96
 lat: 35.0687
 lng: 136.6955
 place: "Kuwana, Mie"
+stage: "Station 42"
+romaji: "Kuwana, Shichiri watashiguchi"
+station_no: "42 of 53"
 ---
 ::: {.trail}
 [[places|The Road]] / [[Mie]] / Kuwana
@@ -18,24 +21,6 @@ place: "Kuwana, Mie"
 
 ![Kuwana, The Landing of the Shichiri Ferry Crossing: Sailboats approach the pier at Kuwana](../assets/aic-25748.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25748.jpg)*
-
-::: {.eyebrow}
-Station 42 · Kuwana, Mie
-:::
-
-::: {.numeral}
-42
-
-of 53
-:::
-
-::: {.slip}
-桑名
-:::
-
-::: {.subtitle}
-*Kuwana, Shichiri watashiguchi*
-:::
 
 > Sailboats approach the pier at Kuwana after the seven-ri sea crossing from Miya, since no direct road linked the two towns.
 

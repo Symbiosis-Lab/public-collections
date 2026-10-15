@@ -11,6 +11,9 @@ ri: 60.48
 lat: 34.7268
 lng: 137.857
 place: "Iwata, Shizuoka"
+stage: "Station 28"
+romaji: "Mitsuke, Tenryugawa zu"
+station_no: "28 of 53"
 ---
 ::: {.trail}
 [[places|The Road]] / [[Shizuoka]] / Mitsuke
@@ -18,24 +21,6 @@ place: "Iwata, Shizuoka"
 
 ![Mitsuke, View of the Tenryu River: Ferrymen pole passengers across the broad Tenryū River](../assets/aic-18262.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-18262.jpg)*
-
-::: {.eyebrow}
-Station 28 · Iwata, Shizuoka
-:::
-
-::: {.numeral}
-28
-
-of 53
-:::
-
-::: {.slip}
-見付
-:::
-
-::: {.subtitle}
-*Mitsuke, Tenryugawa zu*
-:::
 
 > Ferrymen pole passengers across the broad Tenryū River near Mitsuke, with sandbars and distant hills beyond.
 

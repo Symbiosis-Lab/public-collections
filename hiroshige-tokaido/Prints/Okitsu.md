@@ -11,6 +11,9 @@ ri: 40.93
 lat: 35.0498
 lng: 138.5196
 place: "Okitsu, Shimizu-ku, Shizuoka City"
+stage: "Station 17"
+romaji: "Okitsu, Okitsugawa"
+station_no: "17 of 53"
 ---
 ::: {.trail}
 [[places|The Road]] / [[Shizuoka]] / Okitsu
@@ -18,24 +21,6 @@ place: "Okitsu, Shimizu-ku, Shizuoka City"
 
 ![Okitsu, The Okitsu River: Porters ford the shallow Okitsu River carrying a mounted traveler](../assets/aic-25618.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25618.jpg)*
-
-::: {.eyebrow}
-Station 17 · Okitsu, Shimizu-ku, Shizuoka City
-:::
-
-::: {.numeral}
-17
-
-of 53
-:::
-
-::: {.slip}
-興津
-:::
-
-::: {.subtitle}
-*Okitsu, Okitsugawa*
-:::
 
 > Porters ford the shallow Okitsu River carrying a mounted traveler and baggage toward the town.
 

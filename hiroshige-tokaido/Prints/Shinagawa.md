@@ -11,6 +11,9 @@ ri: 2.0
 lat: 35.6219
 lng: 139.7392
 place: "Shinagawa, Tokyo"
+stage: "Station 1"
+romaji: "Shinagawa, hinode"
+station_no: "1 of 53"
 ---
 ::: {.trail}
 [[places|The Road]] / [[Tokyo & Kanagawa]] / Shinagawa
@@ -18,24 +21,6 @@ place: "Shinagawa, Tokyo"
 
 ![Shinagawa, Sunrise: A daimyo's retinue departs from the inns of Shinagawa at sunrise](../assets/aic-25551.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25551.jpg)*
-
-::: {.eyebrow}
-Station 1 · Shinagawa, Tokyo
-:::
-
-::: {.numeral}
-1
-
-of 53
-:::
-
-::: {.slip}
-品川
-:::
-
-::: {.subtitle}
-*Shinagawa, hinode*
-:::
 
 > A daimyo's retinue departs from the inns of Shinagawa at sunrise, with the bay and moored boats visible beyond the rooftops.
 

@@ -11,6 +11,9 @@ ri: 72.09
 lat: 34.7231
 lng: 137.4645
 place: "Futagawa, Toyohashi, Aichi"
+stage: "Station 33"
+romaji: "Futakawa, Sarugababa"
+station_no: "33 of 53"
 ---
 ::: {.trail}
 [[places|The Road]] / [[Aichi]] / Futagawa
@@ -18,24 +21,6 @@ place: "Futagawa, Toyohashi, Aichi"
 
 ![Futagawa, Sarugababa Plateau: A modest teahouse stands alone on the windswept Sarugababa plateau](../assets/aic-25710.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25710.jpg)*
-
-::: {.eyebrow}
-Station 33 · Futagawa, Toyohashi, Aichi
-:::
-
-::: {.numeral}
-33
-
-of 53
-:::
-
-::: {.slip}
-二川
-:::
-
-::: {.subtitle}
-*Futakawa, Sarugababa*
-:::
 
 > A modest teahouse stands alone on the windswept Sarugababa plateau outside Futagawa as a samurai procession passes.
 

@@ -11,6 +11,9 @@ ri: 87.3
 lat: 35.0797
 lng: 136.9498
 place: "Midori Ward, Nagoya"
+stage: "Station 40"
+romaji: "Narumi, meibutsu Arimatsu shibori"
+station_no: "40 of 53"
 ---
 ::: {.trail}
 [[places|The Road]] / [[Aichi]] / Narumi
@@ -18,24 +21,6 @@ place: "Midori Ward, Nagoya"
 
 ![Narumi, Famous Tie-dyed Fabrics of Arimatsu: shops display bolts of tie-dyed cotton](../assets/aic-25741.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25741.jpg)*
-
-::: {.eyebrow}
-Station 40 · Midori Ward, Nagoya
-:::
-
-::: {.numeral}
-40
-
-of 53
-:::
-
-::: {.slip}
-鳴海
-:::
-
-::: {.subtitle}
-*Narumi, meibutsu Arimatsu shibori*
-:::
 
 > Shops in Narumi display bolts of the tie-dyed cotton (Arimatsu shibori) for which the town was famous, as travelers browse.
 

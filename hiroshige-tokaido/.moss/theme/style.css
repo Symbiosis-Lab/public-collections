@@ -77,7 +77,7 @@ h1, h2, h3, .moss-article-title { font-family: var(--moss-font-heading); font-we
 
 /* A heavy rule opens every section (brief), with a small caps label above the heading. */
 article > h2 { font-size: clamp(26px, 3vw, 34px); line-height: 1.15; margin: 64px 0 24px; border-top: 1px solid var(--moss-border-strong); padding-top: 14px; }
-.eyebrow, .eyebrow p { /* Small spaced caps for the label over a heading */
+.eyebrow, .eyebrow p, .moss-eyebrow { /* Small spaced caps for the label over a heading */
   /* Small spaced caps for the label over a heading. */
   margin: 0; font: 500 12px/1.4 var(--moss-font-body); letter-spacing: 0.14em; text-transform: uppercase;
   color: var(--moss-color-text-secondary);
@@ -222,32 +222,33 @@ article:has(> .vertical-title) > figure.moss-image { grid-column: 3; grid-row: 1
 /* ---- 6. Print page ------------------------------------------------------ */
 /* The article is a grid so the numeral, the vertical slip and the title sit side by side under the plate.
    moss puts its own title first in the DOM; grid rows put it under the plate where the design wants it. */
-article:has(> .numeral) { display: grid; grid-template-columns: 9rem 4.5rem minmax(0, 1fr); grid-template-rows: auto auto auto auto auto auto; column-gap: 24px; align-content: start; padding-top: 24px; }
-article:has(> .numeral) > * { grid-column: 1 / -1; } /* Print grid: every block spans the page unless placed below */
-article:has(> .numeral) > .trail { grid-row: 1; } /* Print grid: the road trail sits above the plate */
-article:has(> .numeral) > figure.moss-image { grid-row: 2; background: var(--moss-color-surface); padding: clamp(16px, 4vw, 48px); } /* Print grid: the plate on its mat */
-article:has(> .numeral) > figure.moss-image img { max-width: 1040px; margin: 0 auto; } /* The plate keeps a 1040px maximum and stays centred on the mat */
-article:has(> .numeral) > figure.moss-image figcaption { max-width: 1040px; margin-inline: auto; } /* The caption lines up with the plate edges */
-article:has(> .numeral) > .eyebrow { grid-row: 3; grid-column: 3; margin-top: 40px; } /* Print grid: station and place label above the title */
-article:has(> .numeral) > .moss-article-title { grid-row: 4; grid-column: 3; font-size: clamp(34px, 4.6vw, 58px); line-height: 1.06; margin: 4px 0 0; } /* Print grid: moss puts the title first in the DOM, the row puts it under the plate */
-article:has(> .numeral) > .numeral { grid-row: 3 / 7; grid-column: 1; margin-top: 40px; } /* Print grid: the numeral takes the first column beside the title block */
-article:has(> .numeral) > .slip { grid-row: 3 / 7; grid-column: 2; margin-top: 40px; } /* Print grid: the vertical slip sits between numeral and title */
-article:has(> .numeral) > .subtitle { grid-row: 5; grid-column: 3; } /* Print grid: the romanised title under the title */
-article:has(> .numeral) > blockquote { grid-row: 6; grid-column: 3; } /* Print grid: the note aligns with the title column */
-article:has(> .numeral) > .look { grid-column: 3; } /* Print grid: the look-for line aligns with the title column */
+article:has(> [data-field="station_no"]) { display: grid; grid-template-columns: 9rem 4.5rem minmax(0, 1fr); grid-template-rows: auto auto auto auto auto auto; column-gap: 24px; align-content: start; padding-top: 24px; }
+article:has(> [data-field="station_no"]) > * { grid-column: 1 / -1; } /* Print grid: every block spans the page unless placed below */
+article:has(> [data-field="station_no"]) > .trail { grid-row: 1; } /* Print grid: the road trail sits above the plate */
+article:has(> [data-field="station_no"]) > figure.moss-image { grid-row: 2; background: var(--moss-color-surface); padding: clamp(16px, 4vw, 48px); } /* Print grid: the plate on its mat */
+article:has(> [data-field="station_no"]) > figure.moss-image img { max-width: 1040px; margin: 0 auto; } /* The plate keeps a 1040px maximum and stays centred on the mat */
+article:has(> [data-field="station_no"]) > figure.moss-image figcaption { max-width: 1040px; margin-inline: auto; } /* The caption lines up with the plate edges */
+article:has(> [data-field="station_no"]) > .moss-eyebrow { grid-row: 3; grid-column: 3; margin-top: 40px; } /* Print grid: station and place label above the title */
+article:has(> [data-field="station_no"]) > .moss-article-title { grid-row: 4; grid-column: 3; font-size: clamp(34px, 4.6vw, 58px); line-height: 1.06; margin: 4px 0 0; } /* Print grid: moss puts the title first in the DOM, the row puts it under the plate */
+article:has(> [data-field="station_no"]) > [data-field="station_no"] { grid-row: 3 / 7; grid-column: 1; margin-top: 40px; } /* Print grid: the numeral takes the first column beside the title block */
+article:has(> [data-field="station_no"]) > [data-field="ja"] { grid-row: 3 / 7; grid-column: 2; margin-top: 40px; } /* Print grid: the vertical slip sits between numeral and title */
+article:has(> [data-field="station_no"]) > .moss-subtitle { grid-row: 5; grid-column: 3; } /* Print grid: the romanised title under the title */
+article:has(> [data-field="station_no"]) > blockquote { grid-row: 6; grid-column: 3; } /* Print grid: the note aligns with the title column */
+article:has(> [data-field="station_no"]) > .look { grid-column: 3; } /* Print grid: the look-for line aligns with the title column */
 .trail p { display: flex; flex-wrap: wrap; gap: 6px 10px; font: 400 13.5px/1.5 var(--moss-font-body); color: var(--moss-color-text-secondary); margin: 0 0 20px; } /* Quiet trail of links above the plate */
 .trail a { color: var(--moss-color-text-secondary); text-underline-offset: 3px; } /* Trail links stay secondary text */
-.numeral p:first-child { margin: 0; font: 400 clamp(64px, 8vw, 112px) / 0.85 var(--moss-font-heading); color: var(--moss-color-accent); font-variant-numeric: lining-nums; letter-spacing: -0.03em; } /* The station number, large, in Prussian */
-/* "of 53" sits small under the big number. */
-.numeral p + p { margin: 12px 0 0; font: 500 12px/1.3 var(--moss-font-body); letter-spacing: 0.1em; text-transform: uppercase; color: var(--moss-color-muted); }
-.slip p { writing-mode: vertical-rl; margin: 0; display: inline-block; font: 500 30px/1 var(--mincho); letter-spacing: 0.2em; border: 1px solid var(--moss-color-text); padding: 14px 9px; min-height: 132px; } /* The Japanese name on a vertical slip, as on the print */
-.subtitle p { font: italic 400 20px/1.4 var(--moss-font-heading); color: var(--moss-color-text-secondary); margin: 10px 0 0; } /* Italic romanised title in the serif */
-article:has(> .numeral) > blockquote { font: 400 21px/1.55 var(--moss-font-heading); margin: 24px 0 0; padding: 0 0 0 20px; border-inline-start: 3px solid var(--moss-color-accent); max-width: 42em; color: var(--moss-color-text); } /* The one-sentence note, set larger with a Prussian rule */
-article:has(> .numeral) > blockquote p { margin: 0; } /* No extra paragraph margin inside the note */
+[data-field="station_no"] { display: block; margin: 0; }
+[data-field="station_no"] data, [data-field="station_no"] > span:only-child { display: block; font: 400 clamp(64px, 8vw, 112px) / 0.85 var(--moss-font-heading); color: var(--moss-color-accent); font-variant-numeric: lining-nums; letter-spacing: -0.03em; } /* The station number (or Start / End), large, in Prussian */
+[data-field="station_no"] data + span { display: block; margin: 12px 0 0; font: 500 12px/1.3 var(--moss-font-body); letter-spacing: 0.1em; text-transform: uppercase; color: var(--moss-color-muted); } /* "of 53" sits small under the big number */
+[data-field="ja"] { display: block; margin: 0; } /* a block line box, so the inline-block slip keeps its baseline gap */
+[data-field="ja"] span { writing-mode: vertical-rl; display: inline-block; color: var(--moss-color-text); font: 500 30px/1 var(--mincho); letter-spacing: 0.2em; border: 1px solid var(--moss-color-text); padding: 14px 9px; min-height: 132px; } /* The Japanese name on a vertical slip, as on the print */
+.moss-subtitle { font: italic 400 20px/1.4 var(--moss-font-heading); color: var(--moss-color-text-secondary); margin: 10px 0 0; } /* Italic romanised title in the serif */
+article:has(> [data-field="station_no"]) > blockquote { font: 400 21px/1.55 var(--moss-font-heading); margin: 24px 0 0; padding: 0 0 0 20px; border-inline-start: 3px solid var(--moss-color-accent); max-width: 42em; color: var(--moss-color-text); } /* The one-sentence note, set larger with a Prussian rule */
+article:has(> [data-field="station_no"]) > blockquote p { margin: 0; } /* No extra paragraph margin inside the note */
 /* Small caps label over the "look" line and the ruler. */
-.look h3, article:has(> .numeral) > h3, article:has(> .map-hint) > h3 { font: 500 12px/1.4 var(--moss-font-body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--moss-color-text-secondary); margin: 22px 0 4px; }
+.look h3, article:has(> [data-field="station_no"]) > h3, article:has(> .map-hint) > h3 { font: 500 12px/1.4 var(--moss-font-body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--moss-color-text-secondary); margin: 22px 0 4px; }
 .look p { font: 400 17px/1.55 var(--moss-font-body); max-width: 42em; margin: 0; } /* The look-for line reads as body text */
-article:has(> .numeral) > h3, article:has(> .map-hint) > h3 { margin-top: 48px; } /* Space above each small-caps section label */
+article:has(> [data-field="station_no"]) > h3, article:has(> .map-hint) > h3 { margin-top: 48px; } /* Space above each small-caps section label */
 .credit p { margin: 40px 0 0; padding-top: 14px; border-top: 1px solid var(--moss-border-light); font-size: 12.5px; color: var(--moss-color-muted); } /* The credit is one quiet line under a hairline */
 .credit a { color: var(--moss-color-muted); text-underline-offset: 3px; } /* The source link matches the quiet line */
 
@@ -286,15 +287,15 @@ article:has(> .numeral) > h3, article:has(> .map-hint) > h3 { margin-top: 48px; 
 @media (max-width: 40rem) { .ruler-bands { overflow-x: auto; } .ruler-bands .axis, .ruler-bands .bands, .ruler-bands .bandlab { min-width: 640px; } }
 
 @media (max-width: 40rem) { /* Phone layout */
-  article:has(> .numeral) { grid-template-columns: auto minmax(0, 1fr); column-gap: 18px; padding-top: 16px; } /* Phone: numeral and slip share one row */
-  article:has(> .numeral) > .numeral { grid-row: 3; grid-column: 1; } /* Phone: numeral first in the row */
-  article:has(> .numeral) > .slip { grid-row: 3; grid-column: 2; justify-self: start; } /* Phone: slip beside the numeral */
-  article:has(> .numeral) > .slip p { font-size: 24px; min-height: 106px; } /* Phone: a smaller slip */
-  article:has(> .numeral) > .eyebrow { grid-row: 4; grid-column: 1 / -1; margin-top: 24px; } /* Phone: the label spans the width under the numeral */
-  article:has(> .numeral) > .moss-article-title { grid-row: 5; grid-column: 1 / -1; } /* Phone: the title spans the width */
-  article:has(> .numeral) > .subtitle { grid-row: 6; grid-column: 1 / -1; } /* Phone: the subtitle spans the width */
-  article:has(> .numeral) > blockquote { grid-row: 7; grid-column: 1 / -1; font-size: 19px; } /* Phone: the note spans the width, slightly smaller */
-  article:has(> .numeral) > .look { grid-column: 1 / -1; } /* Phone: the look-for line spans the width */
+  article:has(> [data-field="station_no"]) { grid-template-columns: auto minmax(0, 1fr); column-gap: 18px; padding-top: 16px; } /* Phone: numeral and slip share one row */
+  article:has(> [data-field="station_no"]) > [data-field="station_no"] { grid-row: 3; grid-column: 1; } /* Phone: numeral first in the row */
+  article:has(> [data-field="station_no"]) > [data-field="ja"] { grid-row: 3; grid-column: 2; justify-self: start; } /* Phone: slip beside the numeral */
+  article:has(> [data-field="station_no"]) > [data-field="ja"] span { font-size: 24px; min-height: 106px; } /* Phone: a smaller slip */
+  article:has(> [data-field="station_no"]) > .moss-eyebrow { grid-row: 4; grid-column: 1 / -1; margin-top: 24px; } /* Phone: the label spans the width under the numeral */
+  article:has(> [data-field="station_no"]) > .moss-article-title { grid-row: 5; grid-column: 1 / -1; } /* Phone: the title spans the width */
+  article:has(> [data-field="station_no"]) > .moss-subtitle { grid-row: 6; grid-column: 1 / -1; } /* Phone: the subtitle spans the width */
+  article:has(> [data-field="station_no"]) > blockquote { grid-row: 7; grid-column: 1 / -1; font-size: 19px; } /* Phone: the note spans the width, slightly smaller */
+  article:has(> [data-field="station_no"]) > .look { grid-column: 1 / -1; } /* Phone: the look-for line spans the width */
 }
 
 /* ---- 7. The Road ------------------------------------------------------- */
@@ -387,7 +388,7 @@ article > h1:first-child { font-size: clamp(36px, 5vw, 64px); line-height: 1.04;
 
 /* ---- 9. About ------------------------------------------------------------ */
 /* Prose pages keep a reading measure inside the 1240 column. */
-article:not(:has(> .numeral, > .vertical-title, > .map-hint)) > p { max-width: 38em; font: 400 18px/1.65 var(--moss-font-heading); color: var(--moss-color-text-secondary); }
+article:not(:has(> [data-field="station_no"], > .vertical-title, > .map-hint)) > p { max-width: 38em; font: 400 18px/1.65 var(--moss-font-heading); color: var(--moss-color-text-secondary); }
 article table { font-size: 15px; width: 100%; } /* Tables read at interface size */
 
 @media (prefers-reduced-motion: no-preference) { /* Motion only for readers who allow it */

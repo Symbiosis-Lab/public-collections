@@ -11,6 +11,9 @@ ri: 119.49
 lat: 35.0174
 lng: 135.9606
 place: "Kusatsu, Shiga"
+stage: "Station 52"
+romaji: "Kusatsu, Meibutsu tateba"
+station_no: "52 of 53"
 ---
 ::: {.trail}
 [[places|The Road]] / [[Shiga & Kyoto]] / Kusatsu
@@ -18,24 +21,6 @@ place: "Kusatsu, Shiga"
 
 ![Kusatsu, Famous Post House: Palanquin bearers and travelers crowd a large post-house courtyard](../assets/aic-25783.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25783.jpg)*
-
-::: {.eyebrow}
-Station 52 · Kusatsu, Shiga
-:::
-
-::: {.numeral}
-52
-
-of 53
-:::
-
-::: {.slip}
-草津
-:::
-
-::: {.subtitle}
-*Kusatsu, Meibutsu tateba*
-:::
 
 > Palanquin bearers and travelers crowd a large post-house courtyard at Kusatsu, where the Tōkaidō met the Nakasendō.
 

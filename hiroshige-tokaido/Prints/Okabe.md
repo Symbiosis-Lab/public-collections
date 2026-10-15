@@ -11,6 +11,9 @@ ri: 48.12
 lat: 34.9188
 lng: 138.2827
 place: "Okabe, Fujieda, Shizuoka"
+stage: "Station 21"
+romaji: "Okabe, Utsu no yama"
+station_no: "21 of 53"
 ---
 ::: {.trail}
 [[places|The Road]] / [[Shizuoka]] / Okabe
@@ -18,24 +21,6 @@ place: "Okabe, Fujieda, Shizuoka"
 
 ![Okabe, Utsu Mountain: a line of travelers on a tree-shaded mountain path](../assets/aic-18260.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-18260.jpg)*
-
-::: {.eyebrow}
-Station 21 · Okabe, Fujieda, Shizuoka
-:::
-
-::: {.numeral}
-21
-
-of 53
-:::
-
-::: {.slip}
-岡部
-:::
-
-::: {.subtitle}
-*Okabe, Utsu no yama*
-:::
 
 > A line of travelers threads a narrow, tree-shaded mountain path over the Utsu Pass near Okabe.
 

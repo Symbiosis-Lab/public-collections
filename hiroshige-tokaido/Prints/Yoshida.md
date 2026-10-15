@@ -11,6 +11,9 @@ ri: 73.65
 lat: 34.7666
 lng: 137.3897
 place: "Toyohashi, Aichi"
+stage: "Station 34"
+romaji: "Yoshida, Toyokawabashi"
+station_no: "34 of 53"
 ---
 ::: {.trail}
 [[places|The Road]] / [[Aichi]] / Yoshida
@@ -18,24 +21,6 @@ place: "Toyohashi, Aichi"
 
 ![Yoshida, The Toyo River Bridge: workers repair the long wooden bridge](../assets/aic-59092.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-59092.jpg)*
-
-::: {.eyebrow}
-Station 34 · Toyohashi, Aichi
-:::
-
-::: {.numeral}
-34
-
-of 53
-:::
-
-::: {.slip}
-吉田
-:::
-
-::: {.subtitle}
-*Yoshida, Toyokawabashi*
-:::
 
 > Workers repair the long wooden bridge over the Toyo River at Yoshida beneath the walls of Yoshida Castle.
 

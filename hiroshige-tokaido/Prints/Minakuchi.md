@@ -11,6 +11,9 @@ ri: 112.99
 lat: 34.9656
 lng: 136.1835
 place: "Minakuchi, Kōka, Shiga"
+stage: "Station 50"
+romaji: "Minakuchi, meibutsu kanpyo"
+station_no: "50 of 53"
 ---
 ::: {.trail}
 [[places|The Road]] / [[Shiga & Kyoto]] / Minakuchi
@@ -18,24 +21,6 @@ place: "Minakuchi, Kōka, Shiga"
 
 ![Minakuchi, Dried Gourd Shavings, A Local Specialty: women dry kanpyō](../assets/aic-25775.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25775.jpg)*
-
-::: {.eyebrow}
-Station 50 · Minakuchi, Kōka, Shiga
-:::
-
-::: {.numeral}
-50
-
-of 53
-:::
-
-::: {.slip}
-水口
-:::
-
-::: {.subtitle}
-*Minakuchi, meibutsu kanpyo*
-:::
 
 > Women prepare and dry kanpyō (gourd shavings), the local specialty of Minakuchi, on racks outside a farmhouse.
 

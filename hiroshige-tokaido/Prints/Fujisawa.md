@@ -11,6 +11,9 @@ ri: 12.5
 lat: 35.3457
 lng: 139.4863
 place: "Fujisawa, Kanagawa"
+stage: "Station 6"
+romaji: "Fujisawa, Yugyoji"
+station_no: "6 of 53"
 ---
 ::: {.trail}
 [[places|The Road]] / [[Tokyo & Kanagawa]] / Fujisawa
@@ -18,24 +21,6 @@ place: "Fujisawa, Kanagawa"
 
 ![Fujisawa, Yugyo Temple: Pilgrims and travelers cross a bridge into Fujisawa](../assets/aic-25569.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25569.jpg)*
-
-::: {.eyebrow}
-Station 6 · Fujisawa, Kanagawa
-:::
-
-::: {.numeral}
-6
-
-of 53
-:::
-
-::: {.slip}
-藤沢
-:::
-
-::: {.subtitle}
-*Fujisawa, Yugyoji*
-:::
 
 > Pilgrims and travelers cross a bridge into Fujisawa beneath the gate of Yugyōji, the town's namesake temple, seen on the hill above.
 

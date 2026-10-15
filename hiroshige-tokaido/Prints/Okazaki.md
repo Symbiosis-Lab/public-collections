@@ -11,6 +11,9 @@ ri: 80.65
 lat: 34.9579
 lng: 137.1692
 place: "Okazaki, Aichi"
+stage: "Station 38"
+romaji: "Okazaki, Yahagi no hashi"
+station_no: "38 of 53"
 ---
 ::: {.trail}
 [[places|The Road]] / [[Aichi]] / Okazaki
@@ -18,24 +21,6 @@ place: "Okazaki, Aichi"
 
 ![Okazaki, Yahagi Bridge: A daimyo procession crosses the immense Yahagi Bridge into Okazaki](../assets/aic-18268.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-18268.jpg)*
-
-::: {.eyebrow}
-Station 38 · Okazaki, Aichi
-:::
-
-::: {.numeral}
-38
-
-of 53
-:::
-
-::: {.slip}
-岡崎
-:::
-
-::: {.subtitle}
-*Okazaki, Yahagi no hashi*
-:::
 
 > A daimyo procession crosses the immense Yahagi Bridge into Okazaki beneath its castle, one of the longest bridges on the Tōkaidō.
 

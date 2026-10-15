@@ -11,6 +11,9 @@ ri: 16.0
 lat: 35.3273
 lng: 139.3378
 place: "Hiratsuka, Kanagawa"
+stage: "Station 7"
+romaji: "Hiratsuka, Nawate michi"
+station_no: "7 of 53"
 ---
 ::: {.trail}
 [[places|The Road]] / [[Tokyo & Kanagawa]] / Hiratsuka
@@ -18,24 +21,6 @@ place: "Hiratsuka, Kanagawa"
 
 ![Hiratsuka, Nawate Road: two travelers hurry along a straight embankment road](../assets/aic-25574.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25574.jpg)*
-
-::: {.eyebrow}
-Station 7 · Hiratsuka, Kanagawa
-:::
-
-::: {.numeral}
-7
-
-of 53
-:::
-
-::: {.slip}
-平塚
-:::
-
-::: {.subtitle}
-*Hiratsuka, Nawate michi*
-:::
 
 > Two travelers hurry along the straight embankment road (nawate) into Hiratsuka with Mount Ōyama rising behind them.
 

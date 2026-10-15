@@ -11,6 +11,9 @@ ri: 106.13
 lat: 34.8525
 lng: 136.3921
 place: "Seki, Kameyama, Mie"
+stage: "Station 47"
+romaji: "Seki, honjin hayadachi"
+station_no: "47 of 53"
 ---
 ::: {.trail}
 [[places|The Road]] / [[Mie]] / Seki
@@ -18,24 +21,6 @@ place: "Seki, Kameyama, Mie"
 
 ![Seki, Early Departure from the Main Camp: porters and a palanquin assemble before dawn](../assets/aic-25766.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25766.jpg)*
-
-::: {.eyebrow}
-Station 47 · Seki, Kameyama, Mie
-:::
-
-::: {.numeral}
-47
-
-of 53
-:::
-
-::: {.slip}
-関
-:::
-
-::: {.subtitle}
-*Seki, honjin hayadachi*
-:::
 
 > Porters and a palanquin assemble in the pre-dawn dark outside the honjin (main inn) at Seki as a party prepares to depart.
 

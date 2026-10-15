@@ -11,6 +11,9 @@ ri: 52.07
 lat: 34.8328
 lng: 138.1759
 place: "Shimada, Shizuoka"
+stage: "Station 23"
+romaji: "Shimada, Oigawa Sungan"
+station_no: "23 of 53"
 ---
 ::: {.trail}
 [[places|The Road]] / [[Shizuoka]] / Shimada
@@ -18,24 +21,6 @@ place: "Shimada, Shizuoka"
 
 ![Shimada, The Suruga Bank of the Oi River: porters and travelers gather on the bank](../assets/aic-25653.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25653.jpg)*
-
-::: {.eyebrow}
-Station 23 · Shimada, Shizuoka
-:::
-
-::: {.numeral}
-23
-
-of 53
-:::
-
-::: {.slip}
-島田
-:::
-
-::: {.subtitle}
-*Shimada, Oigawa Sungan*
-:::
 
 > Porters and mounted travelers gather on the Suruga-side bank of the Ōi River at Shimada, waiting to be carried across since no bridge was permitted.
 

@@ -11,6 +11,9 @@ ri: 102.63
 lat: 34.8834
 lng: 136.5248
 place: "Shōno, Suzuka, Mie"
+stage: "Station 45"
+romaji: "Shono hakuu"
+station_no: "45 of 53"
 weather: "Driving rain"
 ---
 ::: {.trail}
@@ -19,24 +22,6 @@ weather: "Driving rain"
 
 ![Shōno, Driving Rain: travelers and porters hurry through a driving rainstorm](../assets/aic-25761.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25761.jpg)*
-
-::: {.eyebrow}
-Station 45 · Shōno, Suzuka, Mie
-:::
-
-::: {.numeral}
-45
-
-of 53
-:::
-
-::: {.slip}
-庄野
-:::
-
-::: {.subtitle}
-*Shono hakuu*
-:::
 
 > Travelers and porters are caught in a sudden, driving rainstorm as they hurry along the road at Shōno.
 

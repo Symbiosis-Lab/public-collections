@@ -11,6 +11,9 @@ ri: 76.7
 lat: 34.8557
 lng: 137.3082
 place: "Akasaka, Toyokawa, Aichi"
+stage: "Station 36"
+romaji: "Akasaka, ryosha shofu no zu"
+station_no: "36 of 53"
 ---
 ::: {.trail}
 [[places|The Road]] / [[Aichi]] / Akasaka
@@ -18,24 +21,6 @@ place: "Akasaka, Toyokawa, Aichi"
 
 ![Akasaka, Waitresses at an Inn: Serving women prepare an evening meal and entertain guests](../assets/aic-25720.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25720.jpg)*
-
-::: {.eyebrow}
-Station 36 · Akasaka, Toyokawa, Aichi
-:::
-
-::: {.numeral}
-36
-
-of 53
-:::
-
-::: {.slip}
-赤坂
-:::
-
-::: {.subtitle}
-*Akasaka, ryosha shofu no zu*
-:::
 
 > Serving women prepare an evening meal and entertain guests in the courtyard of an inn at Akasaka.
 

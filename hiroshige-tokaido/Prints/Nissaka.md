@@ -11,6 +11,9 @@ ri: 54.73
 lat: 34.8041
 lng: 138.0754
 place: "Nissaka, Kakegawa, Shizuoka"
+stage: "Station 25"
+romaji: "Nissaka, Sayo no nakayama"
+station_no: "25 of 53"
 ---
 ::: {.trail}
 [[places|The Road]] / [[Shizuoka]] / Nissaka
@@ -18,24 +21,6 @@ place: "Nissaka, Kakegawa, Shizuoka"
 
 ![Nissaka, Sayo Mountain Pass: A traveler rests beside a huge roadside boulder](../assets/aic-25660.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25660.jpg)*
-
-::: {.eyebrow}
-Station 25 · Nissaka, Kakegawa, Shizuoka
-:::
-
-::: {.numeral}
-25
-
-of 53
-:::
-
-::: {.slip}
-日坂
-:::
-
-::: {.subtitle}
-*Nissaka, Sayo no nakayama*
-:::
 
 > A traveler rests beside a huge roadside boulder on the steep Sayo-no-Nakayama pass above Nissaka.
 

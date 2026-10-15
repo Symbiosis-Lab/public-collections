@@ -11,6 +11,9 @@ ri: 67.45
 lat: 34.6844
 lng: 137.6089
 place: "Maisaka, Chūō Ward, Hamamatsu, Shizuoka"
+stage: "Station 30"
+romaji: "Maisaka, Imagiri shinkei"
+station_no: "30 of 53"
 ---
 ::: {.trail}
 [[places|The Road]] / [[Shizuoka]] / Maisaka
@@ -18,24 +21,6 @@ place: "Maisaka, Chūō Ward, Hamamatsu, Shizuoka"
 
 ![Maisaka, View of Imagiri: Sailboats cross the calm waters of Lake Hamana](../assets/aic-25683.jpg)
 *Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25683.jpg)*
-
-::: {.eyebrow}
-Station 30 · Maisaka, Chūō Ward, Hamamatsu, Shizuoka
-:::
-
-::: {.numeral}
-30
-
-of 53
-:::
-
-::: {.slip}
-舞坂
-:::
-
-::: {.subtitle}
-*Maisaka, Imagiri shinkei*
-:::
 
 > Sailboats cross the calm waters of Lake Hamana at the Imagiri crossing near Maisaka, with Mount Fuji on the horizon.
 
