@@ -4,7 +4,6 @@ uid: "cc4d2c53"
 kind: Building
 years: 1923–1926
 figure: 1.300 Besucher gleichzeitig
-cover: ../../Sport/Amalienbad.jpg
 ---
 
 Ein städtisches Bad in Favoriten, errichtet 1923–1926.

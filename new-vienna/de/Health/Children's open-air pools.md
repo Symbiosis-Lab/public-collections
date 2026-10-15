@@ -5,7 +5,6 @@ kind: Building
 years: "1919/.."
 figure: 16 weitere Bäder eröffnet 1927–1931
 partners: [Julius Tandler]
-cover: ../../Health/Children's open-air pools.jpg
 ---
 
 Freibäder für Kinder, errichtet zur vorbeugenden Gesundheitspflege. Das erste eröffnete 1919 in Floridsdorf.

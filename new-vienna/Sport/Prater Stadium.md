@@ -5,7 +5,6 @@ kind: Building
 years: 1929–1931
 figure: 60,000 places at opening
 partners: [Otto Ernst Schweizer]
-cover: Prater Stadium.jpg
 ---
 
 The city's stadium, decided in 1928 for the Workers' Olympiad of 1931 and opened in time for it.

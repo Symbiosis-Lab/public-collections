@@ -5,7 +5,6 @@ kind: Building
 years: 1929–1931
 figure: 60.000 Plätze zur Eröffnung
 partners: [Otto Ernst Schweizer]
-cover: ../../Sport/Prater Stadium.jpg
 ---
 
 Das Stadion der Stadt, 1928 für die Arbeiterolympiade 1931 beschlossen und rechtzeitig dafür eröffnet.

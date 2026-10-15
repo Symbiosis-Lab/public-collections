@@ -5,7 +5,6 @@ kind: Event
 years: 1931
 figure: 25.000 Sportlerinnen und Sportler
 by: false
-cover: ../../Sport/Second Workers' Olympiad.jpg
 ---
 
 Eine Woche voller Wettkämpfe in 117 Disziplinen in Wien; das Praterstadion wurde dafür gebaut.

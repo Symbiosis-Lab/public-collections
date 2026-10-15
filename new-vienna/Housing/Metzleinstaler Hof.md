@@ -4,7 +4,6 @@ uid: "f608e712"
 kind: Building
 years: 1919–1924
 figure: 244 flats
-cover: Metzleinstaler Hof.jpg
 ---
 
 One of the first municipal housing blocks of the period, in Margareten, begun in 1919 and completed in 1924.

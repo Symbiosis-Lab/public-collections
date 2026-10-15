@@ -6,7 +6,6 @@ years: 1919–1934
 figure: one common school for ages 10 to 14
 partners: [Otto Glöckel, Alfred Adler]
 by: false
-cover: Vienna school reform.jpg
 ---
 
 A reform of the schools aiming at one common school for all children aged 10 to 14, begun nationally in 1919 and carried on in Vienna until 1934.

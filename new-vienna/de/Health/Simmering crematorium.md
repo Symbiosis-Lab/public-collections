@@ -3,7 +3,6 @@ title: Feuerhalle Simmering
 uid: "214bad43"
 kind: Building
 years: 1922
-cover: ../../Health/Simmering crematorium.jpg
 ---
 
 Das erste Krematorium Österreichs.

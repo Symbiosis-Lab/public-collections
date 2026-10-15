@@ -5,7 +5,6 @@ kind: Building
 years: 1923
 figure: 63,000 children taken in, 1926–1964
 partners: [Julius Tandler, Adolf Stöckl]
-cover: Children's reception centre.jpg
 ---
 
 A centre where children coming into the city's care were received, built on Julius Tandler's proposal to designs by Adolf Stöckl.

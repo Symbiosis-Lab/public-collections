@@ -5,7 +5,6 @@ kind: Building
 years: "1919/.."
 figure: 16 more pools opened 1927–1931
 partners: [Julius Tandler]
-cover: Children's open-air pools.jpg
 ---
 
 Open-air pools for children, built for preventive health. The first opened in Floridsdorf in 1919.

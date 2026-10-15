@@ -4,7 +4,6 @@ uid: "5b94aa49"
 kind: Building
 years: 1924–1929
 figure: 1.587 Wohnungen
-cover: ../../Housing/Sandleitenhof.jpg
 ---
 
 Die nach der Zahl der Wohnungen größte Wohnanlage auf dieser Tafel, in Ottakring, mit einem eigenen Café (abgebildet).

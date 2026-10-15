@@ -4,7 +4,6 @@ uid: "845dfb81"
 kind: Service
 years: "1917/.."
 figure: 35 Stellen im Jahr 1928
-cover: ../../Health/Maternity advice centres.jpg
 ---
 
 Beratungsstellen für Mütter, Teil der Bezirksjugendämter; ab 1923 auch in den neuen Gemeindebauten eingerichtet.

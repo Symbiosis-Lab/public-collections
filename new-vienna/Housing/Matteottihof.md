@@ -4,7 +4,6 @@ uid: "0b57fde3"
 kind: Building
 years: 1926–1927
 figure: 452 flats
-cover: Matteottihof.jpg
 ---
 
 A block in Margareten, built 1926–1927.

@@ -4,7 +4,6 @@ uid: "d491b9b0"
 kind: Building
 years: 1924–1929
 figure: 1,587 flats
-cover: Sandleitenhof.jpg
 ---
 
 The largest estate on this board by number of flats, in Ottakring, with a café of its own (pictured).

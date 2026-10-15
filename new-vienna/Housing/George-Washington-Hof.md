@@ -4,7 +4,6 @@ uid: "2fff7cd7"
 kind: Building
 years: 1927–1930
 partners: [Karl Krist, Robert Oerley]
-cover: George-Washington-Hof.jpg
 ---
 
 A garden estate in Favoriten built 1927–1930, to designs by Karl Krist and Robert Oerley.

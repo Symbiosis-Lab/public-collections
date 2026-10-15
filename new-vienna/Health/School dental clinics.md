@@ -6,7 +6,6 @@ years: 1922
 figure: 123,524 visits in 1928
 partners: [Julius Tandler]
 by: false
-cover: School dental clinics.jpg
 ---
 
 Dental clinics for schoolchildren, founded by a private society in 1911 and taken over by the city in 1922. By 1928 there were twelve.

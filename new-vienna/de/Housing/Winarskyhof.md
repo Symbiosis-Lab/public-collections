@@ -4,7 +4,6 @@ uid: "4d24d73a"
 kind: Building
 years: 1924–1925
 figure: 534 Wohnungen
-cover: ../../Housing/Winarskyhof.jpg
 ---
 
 Ein Baublock in der Brigittenau, errichtet 1924–1925.

@@ -4,7 +4,6 @@ uid: "c3049ab1"
 kind: Building
 years: 1921–1924
 figure: 481 flats
-cover: Fuchsenfeldhof.jpg
 ---
 
 A courtyard block in Meidling, built 1921–1924.

@@ -6,7 +6,6 @@ years: 1922
 figure: 123.524 Besuche im Jahr 1928
 partners: [Julius Tandler]
 by: false
-cover: ../../Health/School dental clinics.jpg
 ---
 
 Zahnkliniken für Schulkinder, 1911 von einem privaten Verein gegründet und 1922 von der Stadt übernommen. 1928 gab es zwölf.

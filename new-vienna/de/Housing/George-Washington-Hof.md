@@ -4,7 +4,6 @@ uid: "de76500b"
 kind: Building
 years: 1927–1930
 partners: [Karl Krist, Robert Oerley]
-cover: ../../Housing/George-Washington-Hof.jpg
 ---
 
 Eine Gartensiedlung in Favoriten, errichtet 1927–1930 nach Plänen von Karl Krist und Robert Oerley.

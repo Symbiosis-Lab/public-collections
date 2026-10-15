@@ -4,7 +4,6 @@ uid: "edaa1247"
 kind: Building
 years: 1923–1926
 figure: 1,300 visitors at a time
-cover: Amalienbad.jpg
 ---
 
 A municipal bath in Favoriten, built 1923–1926.

@@ -5,7 +5,6 @@ kind: Building
 years: 1923
 figure: 63.000 aufgenommene Kinder, 1926–1964
 partners: [Julius Tandler, Adolf Stöckl]
-cover: ../../Welfare/Children's reception centre.jpg
 ---
 
 Eine Stelle, in der Kinder empfangen wurden, die in die Obhut der Stadt kamen; errichtet auf Anregung Julius Tandlers nach Plänen von Adolf Stöckl.

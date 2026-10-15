@@ -5,7 +5,6 @@ kind: Building
 years: 1927–1933
 figure: 1,382 flats
 partners: [Karl Ehn]
-cover: Karl-Marx-Hof.jpg
 ---
 
 A single block about a kilometre long in Döbling, built by the city to designs by Karl Ehn, a pupil of Otto Wagner. Only 23 percent of the 150,000 square metre site was built on; the rest is courtyards and gardens.

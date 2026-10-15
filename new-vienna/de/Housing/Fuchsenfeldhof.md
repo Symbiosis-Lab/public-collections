@@ -4,7 +4,6 @@ uid: "39ce6957"
 kind: Building
 years: 1921–1924
 figure: 481 Wohnungen
-cover: ../../Housing/Fuchsenfeldhof.jpg
 ---
 
 Ein Hofbau in Meidling, errichtet 1921–1924.

@@ -4,7 +4,6 @@ uid: "712497ae"
 kind: Building
 years: 1930–1933
 figure: 1.467 Wohnungen
-cover: ../../Housing/Friedrich-Engels-Platz estate.jpg
 ---
 
 Die letzte große Wohnanlage der Zeit, in der Brigittenau. Geplant waren 2.300 Wohnungen; vor 1934 wurden 1.467 gebaut.

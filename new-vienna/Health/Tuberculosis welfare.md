@@ -5,7 +5,6 @@ kind: Programme
 years: "1918/.."
 figure: 12 municipal clinics by 1931
 partners: [Alfred Götzl]
-cover: Tuberculosis welfare.jpg
 ---
 
 From the end of 1918 the city took up the fight against tuberculosis with clinics of its own.

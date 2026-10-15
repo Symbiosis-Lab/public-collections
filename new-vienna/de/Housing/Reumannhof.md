@@ -4,7 +4,6 @@ uid: "14302c75"
 kind: Building
 years: 1924–1926
 figure: 478 Wohnungen
-cover: ../../Housing/Reumannhof.jpg
 ---
 
 Ein Baublock am Margaretengürtel, errichtet 1924–1926.

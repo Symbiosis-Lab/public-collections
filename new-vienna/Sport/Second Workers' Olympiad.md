@@ -5,7 +5,6 @@ kind: Event
 years: 1931
 figure: 25,000 athletes
 by: false
-cover: Second Workers' Olympiad.jpg
 ---
 
 A week of competitions in 117 disciplines held in Vienna; the Prater Stadium was built for it.

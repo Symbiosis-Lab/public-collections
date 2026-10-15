@@ -5,7 +5,6 @@ kind: Building
 years: 1927–1933
 figure: 1.382 Wohnungen
 partners: [Karl Ehn]
-cover: ../../Housing/Karl-Marx-Hof.jpg
 ---
 
 Ein einzelner, rund einen Kilometer langer Baublock in Döbling, von der Stadt errichtet nach Plänen von Karl Ehn, einem Schüler Otto Wagners. Nur 23 Prozent des 150.000 Quadratmeter großen Areals sind bebaut; der Rest sind Höfe und Gärten.
