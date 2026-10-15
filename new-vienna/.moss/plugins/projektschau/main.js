@@ -273,7 +273,6 @@
 			var fm = parsed[ p ].fm;
 			areas.push( { dir: parts[ 0 ], key: slug( parts[ 0 ] ), title: fm.title || parts[ 0 ], color: fm.color, icon: fm.icon, weight: fm.weight === undefined ? 0 : +fm.weight } );
 		} );
-		areas.sort( function ( a, b ) { return a.weight - b.weight || ( a.title < b.title ? -1 : a.title > b.title ? 1 : 0 ); } );
 		var areaByDir = {};
 		areas.forEach( function ( a ) { areaByDir[ a.dir ] = a; } );
 
@@ -289,6 +288,10 @@
 			if ( kindsSeen.indexOf( fm.kind ) < 0 ) { kindsSeen.push( fm.kind ); }
 		} );
 		projects.sort( function ( a, b ) { return a.years.start - b.years.start || ( a.title < b.title ? -1 : a.title > b.title ? 1 : 0 ); } );
+		// Areas in filter order: an explicit `weight` first, else the area with the most projects, so no field is needed for a sensible order.
+		var count = {};
+		projects.forEach( function ( pr ) { count[ pr.area.dir ] = ( count[ pr.area.dir ] || 0 ) + 1; } );
+		areas.sort( function ( a, b ) { return a.weight - b.weight || ( count[ b.dir ] || 0 ) - ( count[ a.dir ] || 0 ) || ( a.title < b.title ? -1 : a.title > b.title ? 1 : 0 ); } );
 
 		var kindNames = KINDS.map( function ( k ) { return k.name; } );
 		kindsSeen.sort( function ( a, b ) {
