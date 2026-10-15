@@ -1,0 +1,1471 @@
+{
+  "_generated": "by the projektschau plugin; do not edit",
+  "version": 1,
+  "sprachen": [
+    "en"
+  ],
+  "texte": {
+    "kopf": {
+      "titel": {
+        "en": "All 31 projects"
+      }
+    },
+    "filter": {
+      "bereich_label": {
+        "en": "Area"
+      },
+      "einordnung_label": {
+        "en": "Kind"
+      },
+      "aria_bereich": {
+        "en": "Filter by area"
+      },
+      "aria_einordnung": {
+        "en": "Filter by kind"
+      }
+    },
+    "ansicht": {
+      "karten": {
+        "en": "Cards"
+      },
+      "zeitleiste": {
+        "en": "Timeline"
+      },
+      "aria": {
+        "en": "Choose view"
+      }
+    },
+    "sprache": {
+      "aria": {
+        "en": "Choose language"
+      }
+    },
+    "leerzustand": {
+      "meldung": {
+        "en": "No project matches this selection."
+      },
+      "zuruecksetzen": {
+        "en": "Reset filters"
+      }
+    },
+    "zeitleiste": {
+      "aria": {
+        "en": "Project timeline"
+      }
+    }
+  },
+  "filter_alle": {
+    "bereich": {
+      "label": {
+        "en": "All"
+      },
+      "icon_svg": "<path d=\"M12 3v18\"/><path d=\"M3 12h18\"/><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/>"
+    }
+  },
+  "bereiche": [
+    {
+      "schluessel": "education-and-culture",
+      "label": {
+        "en": "Education & culture"
+      },
+      "icon_svg": "<path d=\"M12 7v14\"/><path d=\"M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z\"/>",
+      "farben": {
+        "hell": {
+          "area": "#467aaf",
+          "on": "#ffffff",
+          "fg": "#115087",
+          "brand": "#2f6aa3"
+        },
+        "dunkel": {
+          "area": "#467aaf",
+          "on": "#ffffff",
+          "fg": "#93b3d4",
+          "brand": "#2f6aa3"
+        }
+      }
+    },
+    {
+      "schluessel": "health",
+      "label": {
+        "en": "Health"
+      },
+      "icon_svg": "<path d=\"M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z\"/><path d=\"M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27\"/>",
+      "farben": {
+        "hell": {
+          "area": "#3c8273",
+          "on": "#ffffff",
+          "fg": "#045c4d",
+          "brand": "#2f7d6d"
+        },
+        "dunkel": {
+          "area": "#3c8273",
+          "on": "#ffffff",
+          "fg": "#91b9af",
+          "brand": "#2f7d6d"
+        }
+      }
+    },
+    {
+      "schluessel": "housing",
+      "label": {
+        "en": "Housing"
+      },
+      "icon_svg": "<path d=\"M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8\"/><path d=\"M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/>",
+      "farben": {
+        "hell": {
+          "area": "#b95349",
+          "on": "#ffffff",
+          "fg": "#8e1e1a",
+          "brand": "#a3312a"
+        },
+        "dunkel": {
+          "area": "#b95349",
+          "on": "#ffffff",
+          "fg": "#de9c93",
+          "brand": "#a3312a"
+        }
+      }
+    },
+    {
+      "schluessel": "sport",
+      "label": {
+        "en": "Sport"
+      },
+      "icon_svg": "<path d=\"M6 9H4.5a2.5 2.5 0 0 1 0-5H6\"/><path d=\"M18 9h1.5a2.5 2.5 0 0 0 0-5H18\"/><path d=\"M4 22h16\"/><path d=\"M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22\"/><path d=\"M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22\"/><path d=\"M18 2H6v7a6 6 0 0 0 12 0V2Z\"/>",
+      "farben": {
+        "hell": {
+          "area": "#598139",
+          "on": "#ffffff",
+          "fg": "#325b01",
+          "brand": "#4f7a2a"
+        },
+        "dunkel": {
+          "area": "#598139",
+          "on": "#ffffff",
+          "fg": "#9fb98d",
+          "brand": "#4f7a2a"
+        }
+      }
+    },
+    {
+      "schluessel": "welfare",
+      "label": {
+        "en": "Welfare"
+      },
+      "icon_svg": "<path d=\"M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2\"/><circle cx=\"9\" cy=\"7\" r=\"4\"/><path d=\"M22 21v-2a4 4 0 0 0-3-3.87\"/><path d=\"M16 3.13a4 4 0 0 1 0 7.75\"/>",
+      "farben": {
+        "hell": {
+          "area": "#b55c09",
+          "on": "#ffffff",
+          "fg": "#793a00",
+          "brand": "#b8611a"
+        },
+        "dunkel": {
+          "area": "#b55c09",
+          "on": "#ffffff",
+          "fg": "#daa17c",
+          "brand": "#b8611a"
+        }
+      }
+    }
+  ],
+  "einordnungen": [
+    {
+      "schluessel": "building",
+      "label": {
+        "en": "Building"
+      },
+      "label_zeitleiste": {
+        "en": "Building"
+      },
+      "als_filter_chip": true
+    },
+    {
+      "schluessel": "service",
+      "label": {
+        "en": "Service"
+      },
+      "label_zeitleiste": {
+        "en": "Service"
+      },
+      "als_filter_chip": true
+    },
+    {
+      "schluessel": "programme",
+      "label": {
+        "en": "Programme"
+      },
+      "label_zeitleiste": {
+        "en": "Programme"
+      },
+      "als_filter_chip": true
+    },
+    {
+      "schluessel": "event",
+      "label": {
+        "en": "Event"
+      },
+      "label_zeitleiste": {
+        "en": "Event"
+      },
+      "als_filter_chip": true
+    }
+  ],
+  "projekte": [
+    {
+      "nr": 1,
+      "bereich": "health",
+      "einordnung": "service",
+      "icon_svg": "<path d=\"M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z\"/><path d=\"M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27\"/>",
+      "titel": {
+        "en": "Maternity advice centres"
+      },
+      "status": {
+        "en": "Founded 1917"
+      },
+      "beschreibung": {
+        "en": "<p>Advice centres for mothers, part of the district youth offices; from 1923 also placed inside the new municipal blocks.</p>"
+      },
+      "abschnitte": [],
+      "kennzahl": {
+        "en": "35 centres in 1928"
+      },
+      "links": [
+        {
+          "url": "/health/maternity-advice-centres/",
+          "text": {
+            "en": "Project page and sources"
+          }
+        }
+      ],
+      "zeitleiste": {
+        "sortierung": 191701,
+        "zeitraum": {
+          "en": "from 1917"
+        }
+      }
+    },
+    {
+      "nr": 2,
+      "bereich": "health",
+      "einordnung": "programme",
+      "icon_svg": "<path d=\"M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z\"/><path d=\"M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27\"/>",
+      "titel": {
+        "en": "Tuberculosis welfare"
+      },
+      "status": {
+        "en": "Introduced 1918"
+      },
+      "beschreibung": {
+        "en": "<p>From the end of 1918 the city took up the fight against tuberculosis with clinics of its own.</p>"
+      },
+      "abschnitte": [
+        {
+          "typ": "liste",
+          "label": {
+            "en": "Partners"
+          },
+          "punkte": [
+            {
+              "en": "<a href=\"/partners/alfred-götzl/\">Alfred Götzl</a>"
+            }
+          ]
+        }
+      ],
+      "kennzahl": {
+        "en": "12 municipal clinics by 1931"
+      },
+      "links": [
+        {
+          "url": "/health/tuberculosis-welfare/",
+          "text": {
+            "en": "Project page and sources"
+          }
+        }
+      ],
+      "zeitleiste": {
+        "sortierung": 191801,
+        "zeitraum": {
+          "en": "from 1918"
+        }
+      }
+    },
+    {
+      "nr": 3,
+      "bereich": "health",
+      "einordnung": "building",
+      "icon_svg": "<path d=\"M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z\"/><path d=\"M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27\"/>",
+      "titel": {
+        "en": "Children's open-air pools"
+      },
+      "status": {
+        "en": "Built 1919"
+      },
+      "beschreibung": {
+        "en": "<p>Open-air pools for children, built for preventive health. The first opened in Floridsdorf in 1919.</p>"
+      },
+      "abschnitte": [
+        {
+          "typ": "liste",
+          "label": {
+            "en": "Partners"
+          },
+          "punkte": [
+            {
+              "en": "<a href=\"/partners/julius-tandler/\">Julius Tandler</a>"
+            }
+          ]
+        }
+      ],
+      "kennzahl": {
+        "en": "16 more pools opened 1927–1931"
+      },
+      "links": [
+        {
+          "url": "/health/children-s-open-air-pools/",
+          "text": {
+            "en": "Project page and sources"
+          }
+        }
+      ],
+      "zeitleiste": {
+        "sortierung": 191901,
+        "zeitraum": {
+          "en": "from 1919"
+        }
+      }
+    },
+    {
+      "nr": 4,
+      "bereich": "housing",
+      "einordnung": "building",
+      "icon_svg": "<path d=\"M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8\"/><path d=\"M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/>",
+      "titel": {
+        "en": "Metzleinstaler Hof"
+      },
+      "status": {
+        "en": "Built 1919–1924"
+      },
+      "beschreibung": {
+        "en": "<p>One of the first municipal housing blocks of the period, in Margareten, begun in 1919 and completed in 1924.</p>"
+      },
+      "abschnitte": [],
+      "kennzahl": {
+        "en": "244 flats"
+      },
+      "links": [
+        {
+          "url": "/housing/metzleinstaler-hof/",
+          "text": {
+            "en": "Project page and sources"
+          }
+        }
+      ],
+      "zeitleiste": {
+        "sortierung": 191901,
+        "zeitraum": {
+          "en": "1919–1924"
+        }
+      }
+    },
+    {
+      "nr": 5,
+      "bereich": "education-and-culture",
+      "einordnung": "service",
+      "icon_svg": "<path d=\"M12 7v14\"/><path d=\"M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z\"/>",
+      "titel": {
+        "en": "Schönbrunn school for educators"
+      },
+      "status": {
+        "en": "Founded 1919 · closed 1924"
+      },
+      "beschreibung": {
+        "en": "<p>A school for educators run by Otto Felix Kanitz of the Kinderfreunde, 1919–1924.</p>"
+      },
+      "abschnitte": [
+        {
+          "typ": "liste",
+          "label": {
+            "en": "Partners"
+          },
+          "punkte": [
+            {
+              "en": "<a href=\"/partners/otto-felix-kanitz/\">Otto Felix Kanitz</a>"
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "url": "/education-and-culture/schönbrunn-school-for-educators/",
+          "text": {
+            "en": "Project page and sources"
+          }
+        }
+      ],
+      "zeitleiste": {
+        "sortierung": 191901,
+        "zeitraum": {
+          "en": "1919–1924"
+        }
+      }
+    },
+    {
+      "nr": 6,
+      "bereich": "education-and-culture",
+      "einordnung": "programme",
+      "icon_svg": "<path d=\"M12 7v14\"/><path d=\"M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z\"/>",
+      "titel": {
+        "en": "Vienna school reform"
+      },
+      "status": {
+        "en": "Introduced 1919 · until 1934"
+      },
+      "beschreibung": {
+        "en": "<p>A reform of the schools aiming at one common school for all children aged 10 to 14, begun nationally in 1919 and carried on in Vienna until 1934.</p>"
+      },
+      "abschnitte": [
+        {
+          "typ": "liste",
+          "label": {
+            "en": "Partners"
+          },
+          "punkte": [
+            {
+              "en": "<a href=\"/partners/otto-glöckel/\">Otto Glöckel</a>"
+            },
+            {
+              "en": "<a href=\"/partners/alfred-adler/\">Alfred Adler</a>"
+            }
+          ]
+        }
+      ],
+      "kennzahl": {
+        "en": "one common school for ages 10 to 14"
+      },
+      "links": [
+        {
+          "url": "/education-and-culture/vienna-school-reform/",
+          "text": {
+            "en": "Project page and sources"
+          }
+        }
+      ],
+      "zeitleiste": {
+        "sortierung": 191901,
+        "zeitraum": {
+          "en": "1919–1934"
+        }
+      }
+    },
+    {
+      "nr": 7,
+      "bereich": "health",
+      "einordnung": "service",
+      "icon_svg": "<path d=\"M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z\"/><path d=\"M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27\"/>",
+      "titel": {
+        "en": "Municipal health office"
+      },
+      "status": {
+        "en": "Founded 1920"
+      },
+      "beschreibung": {
+        "en": "<p>In 1920 the old office of the city physician became a municipal health office.</p>"
+      },
+      "abschnitte": [],
+      "links": [
+        {
+          "url": "/health/municipal-health-office/",
+          "text": {
+            "en": "Project page and sources"
+          }
+        }
+      ],
+      "zeitleiste": {
+        "sortierung": 192001,
+        "zeitraum": {
+          "en": "1920"
+        }
+      }
+    },
+    {
+      "nr": 8,
+      "bereich": "housing",
+      "einordnung": "programme",
+      "icon_svg": "<path d=\"M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8\"/><path d=\"M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/>",
+      "titel": {
+        "en": "Settlement and allotment association"
+      },
+      "status": {
+        "en": "Introduced 1920"
+      },
+      "beschreibung": {
+        "en": "<p>An umbrella for the settler movement: direct help for settlers building their own houses, a school and exhibitions. Otto Neurath founded it and was its general secretary.</p>"
+      },
+      "abschnitte": [
+        {
+          "typ": "liste",
+          "label": {
+            "en": "Partners"
+          },
+          "punkte": [
+            {
+              "en": "<a href=\"/partners/otto-neurath/\">Otto Neurath</a>"
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "url": "/housing/settlement-and-allotment-association/",
+          "text": {
+            "en": "Project page and sources"
+          }
+        }
+      ],
+      "zeitleiste": {
+        "sortierung": 192001,
+        "zeitraum": {
+          "en": "1920"
+        }
+      }
+    },
+    {
+      "nr": 9,
+      "bereich": "housing",
+      "einordnung": "building",
+      "icon_svg": "<path d=\"M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8\"/><path d=\"M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/>",
+      "titel": {
+        "en": "Fuchsenfeldhof"
+      },
+      "status": {
+        "en": "Built 1921–1924"
+      },
+      "beschreibung": {
+        "en": "<p>A courtyard block in Meidling, built 1921–1924.</p>"
+      },
+      "abschnitte": [],
+      "kennzahl": {
+        "en": "481 flats"
+      },
+      "links": [
+        {
+          "url": "/housing/fuchsenfeldhof/",
+          "text": {
+            "en": "Project page and sources"
+          }
+        }
+      ],
+      "zeitleiste": {
+        "sortierung": 192101,
+        "zeitraum": {
+          "en": "1921–1924"
+        }
+      }
+    },
+    {
+      "nr": 10,
+      "bereich": "welfare",
+      "einordnung": "service",
+      "icon_svg": "<path d=\"M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2\"/><circle cx=\"9\" cy=\"7\" r=\"4\"/><path d=\"M22 21v-2a4 4 0 0 0-3-3.87\"/><path d=\"M16 3.13a4 4 0 0 1 0 7.75\"/>",
+      "titel": {
+        "en": "Welfare office"
+      },
+      "status": {
+        "en": "Founded 1921"
+      },
+      "beschreibung": {
+        "en": "<p>The city's welfare office, founded in 1921 under Julius Tandler.</p>"
+      },
+      "abschnitte": [
+        {
+          "typ": "liste",
+          "label": {
+            "en": "Partners"
+          },
+          "punkte": [
+            {
+              "en": "<a href=\"/partners/julius-tandler/\">Julius Tandler</a>"
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "url": "/welfare/welfare-office/",
+          "text": {
+            "en": "Project page and sources"
+          }
+        }
+      ],
+      "zeitleiste": {
+        "sortierung": 192101,
+        "zeitraum": {
+          "en": "1921"
+        }
+      }
+    },
+    {
+      "nr": 11,
+      "bereich": "health",
+      "einordnung": "service",
+      "icon_svg": "<path d=\"M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z\"/><path d=\"M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27\"/>",
+      "titel": {
+        "en": "School dental clinics"
+      },
+      "status": {
+        "en": "Founded 1922"
+      },
+      "beschreibung": {
+        "en": "<p>Dental clinics for schoolchildren, founded by a private society in 1911 and taken over by the city in 1922. By 1928 there were twelve.</p>"
+      },
+      "abschnitte": [
+        {
+          "typ": "liste",
+          "label": {
+            "en": "Partners"
+          },
+          "punkte": [
+            {
+              "en": "<a href=\"/partners/julius-tandler/\">Julius Tandler</a>"
+            }
+          ]
+        }
+      ],
+      "kennzahl": {
+        "en": "123,524 visits in 1928"
+      },
+      "links": [
+        {
+          "url": "/health/school-dental-clinics/",
+          "text": {
+            "en": "Project page and sources"
+          }
+        }
+      ],
+      "zeitleiste": {
+        "sortierung": 192201,
+        "zeitraum": {
+          "en": "1922"
+        }
+      }
+    },
+    {
+      "nr": 12,
+      "bereich": "health",
+      "einordnung": "building",
+      "icon_svg": "<path d=\"M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z\"/><path d=\"M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27\"/>",
+      "titel": {
+        "en": "Simmering crematorium"
+      },
+      "status": {
+        "en": "Built 1922"
+      },
+      "beschreibung": {
+        "en": "<p>Austria's first crematorium.</p>"
+      },
+      "abschnitte": [],
+      "links": [
+        {
+          "url": "/health/simmering-crematorium/",
+          "text": {
+            "en": "Project page and sources"
+          }
+        }
+      ],
+      "zeitleiste": {
+        "sortierung": 192201,
+        "zeitraum": {
+          "en": "1922"
+        }
+      }
+    },
+    {
+      "nr": 13,
+      "bereich": "sport",
+      "einordnung": "building",
+      "icon_svg": "<path d=\"M6 9H4.5a2.5 2.5 0 0 1 0-5H6\"/><path d=\"M18 9h1.5a2.5 2.5 0 0 0 0-5H18\"/><path d=\"M4 22h16\"/><path d=\"M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22\"/><path d=\"M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22\"/><path d=\"M18 2H6v7a6 6 0 0 0 12 0V2Z\"/>",
+      "titel": {
+        "en": "Amalienbad"
+      },
+      "status": {
+        "en": "Built 1923–1926"
+      },
+      "beschreibung": {
+        "en": "<p>A municipal bath in Favoriten, built 1923–1926.</p>"
+      },
+      "abschnitte": [],
+      "kennzahl": {
+        "en": "1,300 visitors at a time"
+      },
+      "links": [
+        {
+          "url": "/sport/amalienbad/",
+          "text": {
+            "en": "Project page and sources"
+          }
+        }
+      ],
+      "zeitleiste": {
+        "sortierung": 192301,
+        "zeitraum": {
+          "en": "1923–1926"
+        }
+      }
+    },
+    {
+      "nr": 14,
+      "bereich": "welfare",
+      "einordnung": "building",
+      "icon_svg": "<path d=\"M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2\"/><circle cx=\"9\" cy=\"7\" r=\"4\"/><path d=\"M22 21v-2a4 4 0 0 0-3-3.87\"/><path d=\"M16 3.13a4 4 0 0 1 0 7.75\"/>",
+      "titel": {
+        "en": "Children's reception centre"
+      },
+      "status": {
+        "en": "Built 1923"
+      },
+      "beschreibung": {
+        "en": "<p>A centre where children coming into the city's care were received, built on Julius Tandler's proposal to designs by Adolf Stöckl.</p>"
+      },
+      "abschnitte": [
+        {
+          "typ": "liste",
+          "label": {
+            "en": "Partners"
+          },
+          "punkte": [
+            {
+              "en": "<a href=\"/partners/julius-tandler/\">Julius Tandler</a>"
+            },
+            {
+              "en": "<a href=\"/partners/adolf-stöckl/\">Adolf Stöckl</a>"
+            }
+          ]
+        }
+      ],
+      "kennzahl": {
+        "en": "63,000 children taken in, 1926–1964"
+      },
+      "links": [
+        {
+          "url": "/welfare/children-s-reception-centre/",
+          "text": {
+            "en": "Project page and sources"
+          }
+        }
+      ],
+      "zeitleiste": {
+        "sortierung": 192301,
+        "zeitraum": {
+          "en": "1923"
+        }
+      }
+    },
+    {
+      "nr": 15,
+      "bereich": "housing",
+      "einordnung": "programme",
+      "icon_svg": "<path d=\"M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8\"/><path d=\"M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/>",
+      "titel": {
+        "en": "Housing construction tax"
+      },
+      "status": {
+        "en": "Introduced 1923"
+      },
+      "beschreibung": {
+        "en": "<p>A tax earmarked for building flats, the main source of money for the housing programme. In 1927 all of the city's new taxes together raised about 65 million schillings.</p>"
+      },
+      "abschnitte": [
+        {
+          "typ": "liste",
+          "label": {
+            "en": "Partners"
+          },
+          "punkte": [
+            {
+              "en": "<a href=\"/partners/hugo-breitner/\">Hugo Breitner</a>"
+            }
+          ]
+        }
+      ],
+      "kennzahl": {
+        "en": "about 65 million schillings from all of the city's new taxes, 1927"
+      },
+      "links": [
+        {
+          "url": "/housing/housing-construction-tax/",
+          "text": {
+            "en": "Project page and sources"
+          }
+        }
+      ],
+      "zeitleiste": {
+        "sortierung": 192301,
+        "zeitraum": {
+          "en": "from 1923"
+        }
+      }
+    },
+    {
+      "nr": 16,
+      "bereich": "housing",
+      "einordnung": "programme",
+      "icon_svg": "<path d=\"M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8\"/><path d=\"M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/>",
+      "titel": {
+        "en": "Municipal housing programme"
+      },
+      "status": {
+        "en": "Introduced 1923 · until 1934"
+      },
+      "beschreibung": {
+        "en": "<p>The programme behind every block on this board: flats built and owned by the city, financed mainly from the housing construction tax.</p>"
+      },
+      "abschnitte": [],
+      "kennzahl": {
+        "en": "61,617 flats owned by the city, end of 1933"
+      },
+      "links": [
+        {
+          "url": "/housing/municipal-housing-programme/",
+          "text": {
+            "en": "Project page and sources"
+          }
+        }
+      ],
+      "zeitleiste": {
+        "sortierung": 192301,
+        "zeitraum": {
+          "en": "1923–1934"
+        }
+      }
+    },
+    {
+      "nr": 17,
+      "bereich": "education-and-culture",
+      "einordnung": "service",
+      "icon_svg": "<path d=\"M12 7v14\"/><path d=\"M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z\"/>",
+      "titel": {
+        "en": "Pedagogical Institute of the City of Vienna"
+      },
+      "status": {
+        "en": "Founded 1923"
+      },
+      "beschreibung": {
+        "en": "<p>Opened by Otto Glöckel, with a psychological-pedagogical laboratory led by Karl Bühler; Alfred Adler lectured there.</p>"
+      },
+      "abschnitte": [
+        {
+          "typ": "liste",
+          "label": {
+            "en": "Partners"
+          },
+          "punkte": [
+            {
+              "en": "<a href=\"/partners/otto-glöckel/\">Otto Glöckel</a>"
+            },
+            {
+              "en": "<a href=\"/partners/karl-bühler/\">Karl Bühler</a>"
+            },
+            {
+              "en": "<a href=\"/partners/alfred-adler/\">Alfred Adler</a>"
+            }
+          ]
+        }
+      ],
+      "kennzahl": {
+        "en": "300 seats in the large lecture hall"
+      },
+      "links": [
+        {
+          "url": "/education-and-culture/pedagogical-institute-of-the-city-of-vienna/",
+          "text": {
+            "en": "Project page and sources"
+          }
+        }
+      ],
+      "zeitleiste": {
+        "sortierung": 192301,
+        "zeitraum": {
+          "en": "1923"
+        }
+      }
+    },
+    {
+      "nr": 18,
+      "bereich": "housing",
+      "einordnung": "building",
+      "icon_svg": "<path d=\"M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8\"/><path d=\"M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/>",
+      "titel": {
+        "en": "Reumannhof"
+      },
+      "status": {
+        "en": "Built 1924–1926"
+      },
+      "beschreibung": {
+        "en": "<p>A block on the Margaretengürtel, built 1924–1926.</p>"
+      },
+      "abschnitte": [],
+      "kennzahl": {
+        "en": "478 flats"
+      },
+      "links": [
+        {
+          "url": "/housing/reumannhof/",
+          "text": {
+            "en": "Project page and sources"
+          }
+        }
+      ],
+      "zeitleiste": {
+        "sortierung": 192401,
+        "zeitraum": {
+          "en": "1924–1926"
+        }
+      }
+    },
+    {
+      "nr": 19,
+      "bereich": "housing",
+      "einordnung": "building",
+      "icon_svg": "<path d=\"M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8\"/><path d=\"M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/>",
+      "titel": {
+        "en": "Sandleitenhof"
+      },
+      "status": {
+        "en": "Built 1924–1929"
+      },
+      "beschreibung": {
+        "en": "<p>The largest estate on this board by number of flats, in Ottakring, with a café of its own (pictured).</p>"
+      },
+      "abschnitte": [],
+      "kennzahl": {
+        "en": "1,587 flats"
+      },
+      "links": [
+        {
+          "url": "/housing/sandleitenhof/",
+          "text": {
+            "en": "Project page and sources"
+          }
+        }
+      ],
+      "zeitleiste": {
+        "sortierung": 192401,
+        "zeitraum": {
+          "en": "1924–1929"
+        }
+      }
+    },
+    {
+      "nr": 20,
+      "bereich": "housing",
+      "einordnung": "building",
+      "icon_svg": "<path d=\"M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8\"/><path d=\"M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/>",
+      "titel": {
+        "en": "Winarskyhof"
+      },
+      "status": {
+        "en": "Built 1924–1925"
+      },
+      "beschreibung": {
+        "en": "<p>A block in Brigittenau, built 1924–1925.</p>"
+      },
+      "abschnitte": [],
+      "kennzahl": {
+        "en": "534 flats"
+      },
+      "links": [
+        {
+          "url": "/housing/winarskyhof/",
+          "text": {
+            "en": "Project page and sources"
+          }
+        }
+      ],
+      "zeitleiste": {
+        "sortierung": 192401,
+        "zeitraum": {
+          "en": "1924–1925"
+        }
+      }
+    },
+    {
+      "nr": 21,
+      "bereich": "housing",
+      "einordnung": "building",
+      "icon_svg": "<path d=\"M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8\"/><path d=\"M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/>",
+      "titel": {
+        "en": "Rabenhof"
+      },
+      "status": {
+        "en": "Built 1925–1928"
+      },
+      "beschreibung": {
+        "en": "<p>A block in Landstraße, built 1925–1928; a renovation later made 1,138 units out of the original 1,100.</p>"
+      },
+      "abschnitte": [],
+      "kennzahl": {
+        "en": "1,100 flats"
+      },
+      "links": [
+        {
+          "url": "/housing/rabenhof/",
+          "text": {
+            "en": "Project page and sources"
+          }
+        }
+      ],
+      "zeitleiste": {
+        "sortierung": 192501,
+        "zeitraum": {
+          "en": "1925–1928"
+        }
+      }
+    },
+    {
+      "nr": 22,
+      "bereich": "education-and-culture",
+      "einordnung": "service",
+      "icon_svg": "<path d=\"M12 7v14\"/><path d=\"M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z\"/>",
+      "titel": {
+        "en": "Society and Economy Museum"
+      },
+      "status": {
+        "en": "Founded 1925 · closed 1934"
+      },
+      "beschreibung": {
+        "en": "<p>A museum that explained the city and its economy to everyone in counted pictures, the Vienna Method of Pictorial Statistics. Founded as an association in January 1925 with the support of the city and the trade unions.</p>"
+      },
+      "abschnitte": [
+        {
+          "typ": "liste",
+          "label": {
+            "en": "Partners"
+          },
+          "punkte": [
+            {
+              "en": "<a href=\"/partners/otto-neurath/\">Otto Neurath</a>"
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "url": "/education-and-culture/society-and-economy-museum/",
+          "text": {
+            "en": "Project page and sources"
+          }
+        }
+      ],
+      "zeitleiste": {
+        "sortierung": 192501,
+        "zeitraum": {
+          "en": "1925–1934"
+        }
+      }
+    },
+    {
+      "nr": 23,
+      "bereich": "housing",
+      "einordnung": "building",
+      "icon_svg": "<path d=\"M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8\"/><path d=\"M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/>",
+      "titel": {
+        "en": "Matteottihof"
+      },
+      "status": {
+        "en": "Built 1926–1927"
+      },
+      "beschreibung": {
+        "en": "<p>A block in Margareten, built 1926–1927.</p>"
+      },
+      "abschnitte": [],
+      "kennzahl": {
+        "en": "452 flats"
+      },
+      "links": [
+        {
+          "url": "/housing/matteottihof/",
+          "text": {
+            "en": "Project page and sources"
+          }
+        }
+      ],
+      "zeitleiste": {
+        "sortierung": 192601,
+        "zeitraum": {
+          "en": "1926–1927"
+        }
+      }
+    },
+    {
+      "nr": 24,
+      "bereich": "education-and-culture",
+      "einordnung": "service",
+      "icon_svg": "<path d=\"M12 7v14\"/><path d=\"M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z\"/>",
+      "titel": {
+        "en": "Workers' Academy"
+      },
+      "status": {
+        "en": "Founded 1926 · closed 1930"
+      },
+      "beschreibung": {
+        "en": "<p>A school for working people in the Maria-Theresien-Schlössel in Döbling, closed in 1930 for financial reasons.</p>"
+      },
+      "abschnitte": [
+        {
+          "typ": "liste",
+          "label": {
+            "en": "Partners"
+          },
+          "punkte": [
+            {
+              "en": "<a href=\"/partners/josef-luitpold-stern/\">Josef Luitpold Stern</a>"
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "url": "/education-and-culture/workers-academy/",
+          "text": {
+            "en": "Project page and sources"
+          }
+        }
+      ],
+      "zeitleiste": {
+        "sortierung": 192601,
+        "zeitraum": {
+          "en": "1926–1930"
+        }
+      }
+    },
+    {
+      "nr": 25,
+      "bereich": "housing",
+      "einordnung": "building",
+      "icon_svg": "<path d=\"M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8\"/><path d=\"M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/>",
+      "titel": {
+        "en": "George-Washington-Hof"
+      },
+      "status": {
+        "en": "Built 1927–1930"
+      },
+      "beschreibung": {
+        "en": "<p>A garden estate in Favoriten built 1927–1930, to designs by Karl Krist and Robert Oerley.</p>"
+      },
+      "abschnitte": [
+        {
+          "typ": "liste",
+          "label": {
+            "en": "Partners"
+          },
+          "punkte": [
+            {
+              "en": "<a href=\"/partners/karl-krist/\">Karl Krist</a>"
+            },
+            {
+              "en": "<a href=\"/partners/robert-oerley/\">Robert Oerley</a>"
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "url": "/housing/george-washington-hof/",
+          "text": {
+            "en": "Project page and sources"
+          }
+        }
+      ],
+      "zeitleiste": {
+        "sortierung": 192701,
+        "zeitraum": {
+          "en": "1927–1930"
+        }
+      }
+    },
+    {
+      "nr": 26,
+      "bereich": "welfare",
+      "einordnung": "programme",
+      "icon_svg": "<path d=\"M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2\"/><circle cx=\"9\" cy=\"7\" r=\"4\"/><path d=\"M22 21v-2a4 4 0 0 0-3-3.87\"/><path d=\"M16 3.13a4 4 0 0 1 0 7.75\"/>",
+      "titel": {
+        "en": "Infant layette package"
+      },
+      "status": {
+        "en": "Introduced 1927"
+      },
+      "beschreibung": {
+        "en": "<p>Women assigned to the city received a package of baby linen at the birth of a child, handed over by a social worker on a home visit. The council decided it on 3 June 1927.</p>"
+      },
+      "abschnitte": [
+        {
+          "typ": "liste",
+          "label": {
+            "en": "Partners"
+          },
+          "punkte": [
+            {
+              "en": "<a href=\"/partners/julius-tandler/\">Julius Tandler</a>"
+            }
+          ]
+        }
+      ],
+      "kennzahl": {
+        "en": "9,781 packages handed out in 1927"
+      },
+      "links": [
+        {
+          "url": "/welfare/infant-layette-package/",
+          "text": {
+            "en": "Project page and sources"
+          }
+        }
+      ],
+      "zeitleiste": {
+        "sortierung": 192701,
+        "zeitraum": {
+          "en": "from 1927"
+        }
+      }
+    },
+    {
+      "nr": 27,
+      "bereich": "housing",
+      "einordnung": "building",
+      "icon_svg": "<path d=\"M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8\"/><path d=\"M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/>",
+      "titel": {
+        "en": "Karl-Marx-Hof"
+      },
+      "status": {
+        "en": "Built 1927–1933"
+      },
+      "beschreibung": {
+        "en": "<p>A single block about a kilometre long in Döbling, built by the city to designs by Karl Ehn, a pupil of Otto Wagner. Only 23 percent of the 150,000 square metre site was built on; the rest is courtyards and gardens.</p>"
+      },
+      "abschnitte": [
+        {
+          "typ": "liste",
+          "label": {
+            "en": "Inside the block"
+          },
+          "punkte": [
+            {
+              "en": "Two kindergartens and a maternity advice centre"
+            },
+            {
+              "en": "A youth home and a library"
+            },
+            {
+              "en": "An outpatient clinic, a dental clinic and a pharmacy"
+            },
+            {
+              "en": "A post office, shops and a central laundry"
+            }
+          ]
+        },
+        {
+          "typ": "liste",
+          "label": {
+            "en": "Afterwards"
+          },
+          "punkte": [
+            {
+              "en": "February 1934: members of the Republican Defence League held the block until the army shelled it"
+            },
+            {
+              "en": "1934–1953: renamed twice; the original name returned in 1953"
+            },
+            {
+              "en": "1980s: comprehensive renovation"
+            }
+          ]
+        },
+        {
+          "typ": "liste",
+          "label": {
+            "en": "Partners"
+          },
+          "punkte": [
+            {
+              "en": "<a href=\"/partners/karl-ehn/\">Karl Ehn</a>"
+            }
+          ]
+        }
+      ],
+      "kennzahl": {
+        "en": "1,382 flats"
+      },
+      "links": [
+        {
+          "url": "/housing/karl-marx-hof/",
+          "text": {
+            "en": "Project page and sources"
+          }
+        }
+      ],
+      "zeitleiste": {
+        "sortierung": 192701,
+        "zeitraum": {
+          "en": "1927–1933"
+        }
+      }
+    },
+    {
+      "nr": 28,
+      "bereich": "sport",
+      "einordnung": "building",
+      "icon_svg": "<path d=\"M6 9H4.5a2.5 2.5 0 0 1 0-5H6\"/><path d=\"M18 9h1.5a2.5 2.5 0 0 0 0-5H18\"/><path d=\"M4 22h16\"/><path d=\"M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22\"/><path d=\"M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22\"/><path d=\"M18 2H6v7a6 6 0 0 0 12 0V2Z\"/>",
+      "titel": {
+        "en": "Kongressbad"
+      },
+      "status": {
+        "en": "Built 1928"
+      },
+      "beschreibung": {
+        "en": "<p>A summer swimming, air and sun bath in Ottakring with a 100-metre pool, designed by Erich Leischner of the city building office.</p>"
+      },
+      "abschnitte": [
+        {
+          "typ": "liste",
+          "label": {
+            "en": "Partners"
+          },
+          "punkte": [
+            {
+              "en": "<a href=\"/partners/erich-leischner/\">Erich Leischner</a>"
+            }
+          ]
+        }
+      ],
+      "kennzahl": {
+        "en": "a 100-metre pool"
+      },
+      "links": [
+        {
+          "url": "/sport/kongressbad/",
+          "text": {
+            "en": "Project page and sources"
+          }
+        }
+      ],
+      "zeitleiste": {
+        "sortierung": 192801,
+        "zeitraum": {
+          "en": "1928"
+        }
+      }
+    },
+    {
+      "nr": 29,
+      "bereich": "sport",
+      "einordnung": "building",
+      "icon_svg": "<path d=\"M6 9H4.5a2.5 2.5 0 0 1 0-5H6\"/><path d=\"M18 9h1.5a2.5 2.5 0 0 0 0-5H18\"/><path d=\"M4 22h16\"/><path d=\"M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22\"/><path d=\"M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22\"/><path d=\"M18 2H6v7a6 6 0 0 0 12 0V2Z\"/>",
+      "titel": {
+        "en": "Prater Stadium"
+      },
+      "status": {
+        "en": "Built 1929–1931"
+      },
+      "beschreibung": {
+        "en": "<p>The city's stadium, decided in 1928 for the Workers' Olympiad of 1931 and opened in time for it.</p>"
+      },
+      "abschnitte": [
+        {
+          "typ": "liste",
+          "label": {
+            "en": "Partners"
+          },
+          "punkte": [
+            {
+              "en": "<a href=\"/partners/otto-ernst-schweizer/\">Otto Ernst Schweizer</a>"
+            }
+          ]
+        }
+      ],
+      "kennzahl": {
+        "en": "60,000 places at opening"
+      },
+      "links": [
+        {
+          "url": "/sport/prater-stadium/",
+          "text": {
+            "en": "Project page and sources"
+          }
+        }
+      ],
+      "zeitleiste": {
+        "sortierung": 192901,
+        "zeitraum": {
+          "en": "1929–1931"
+        }
+      }
+    },
+    {
+      "nr": 30,
+      "bereich": "housing",
+      "einordnung": "building",
+      "icon_svg": "<path d=\"M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8\"/><path d=\"M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/>",
+      "titel": {
+        "en": "Friedrich-Engels-Platz estate"
+      },
+      "status": {
+        "en": "Built 1930–1933"
+      },
+      "beschreibung": {
+        "en": "<p>The last large estate of the period, in Brigittenau. 2,300 flats were planned; 1,467 were built before 1934.</p>"
+      },
+      "abschnitte": [],
+      "kennzahl": {
+        "en": "1,467 flats"
+      },
+      "links": [
+        {
+          "url": "/housing/friedrich-engels-platz-estate/",
+          "text": {
+            "en": "Project page and sources"
+          }
+        }
+      ],
+      "zeitleiste": {
+        "sortierung": 193001,
+        "zeitraum": {
+          "en": "1930–1933"
+        }
+      }
+    },
+    {
+      "nr": 31,
+      "bereich": "sport",
+      "einordnung": "event",
+      "icon_svg": "<path d=\"M6 9H4.5a2.5 2.5 0 0 1 0-5H6\"/><path d=\"M18 9h1.5a2.5 2.5 0 0 0 0-5H18\"/><path d=\"M4 22h16\"/><path d=\"M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22\"/><path d=\"M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22\"/><path d=\"M18 2H6v7a6 6 0 0 0 12 0V2Z\"/>",
+      "titel": {
+        "en": "Second Workers' Olympiad"
+      },
+      "status": {
+        "en": "Held 1931"
+      },
+      "beschreibung": {
+        "en": "<p>A week of competitions in 117 disciplines held in Vienna; the Prater Stadium was built for it.</p>"
+      },
+      "abschnitte": [],
+      "kennzahl": {
+        "en": "25,000 athletes"
+      },
+      "links": [
+        {
+          "url": "/sport/second-workers-olympiad/",
+          "text": {
+            "en": "Project page and sources"
+          }
+        }
+      ],
+      "zeitleiste": {
+        "sortierung": 193101,
+        "zeitraum": {
+          "en": "1931"
+        }
+      }
+    }
+  ]
+}
