@@ -2,6 +2,11 @@
 title: The New Vienna, 1919–1934
 uid: "64390dbd"
 children_style: projektschau
+breadcrumb: label
+nav: true
+content_width: full
+nav_label: Projects
+weight: 1
 by: the City of Vienna
 highlights: [Municipal housing programme, Infant layette package, Maternity advice centres]
 ---
