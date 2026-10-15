@@ -295,6 +295,10 @@
 	// What the mount's data-* attributes tell the browser renderer (its init()); the build-time render must use the same.
 	var OPT = { ansicht: 'karten', bereich: 'all', ebene: 2, sprache: '', zeitleiste: true, einordnungsfilter: true, sprachumschalter: false, symbole: null, symbolschalter: false };
 
+	// Without JavaScript the filter and view buttons do nothing, so the control bar is hidden there. Kept out of board.css so that
+	// file stays exactly the renderer's own rules.
+	var NO_SCRIPT_CSS = '@media (scripting: none) { .ps-controls { display: none; } }\n';
+
 	// render() returns '<style>rules</style>' + markup; the rules go to a file (strict content-security policies refuse inline <style>).
 	function splitRender( out ) {
 		var end = out.indexOf( '</style>' );
@@ -318,11 +322,11 @@
 		var built = buildPackage( ctx ), files = [ { path: 'projekte.json', text: JSON.stringify( built.pkg, null, 2 ) + '\n' } ], src = {};
 		for ( var i = 0; i < ASSETS.length; i++ ) { src[ ASSETS[ i ] ] = await readOwn( ASSETS[ i ] ); files.push( { path: 'projektschau/' + ASSETS[ i ], text: src[ ASSETS[ i ] ] } ); }
 		var board = drawBoard( built.pkg, src[ 'projektschau.js' ], await readOwn( 'engine-shim.js' ) );
-		files.push( { path: 'projektschau/board.css', text: board.css } );
+		files.push( { path: 'projektschau/board.css', text: board.css }, { path: 'projektschau/noscript.css', text: NO_SCRIPT_CSS } );
 		return {
 			html: '<div data-projektschau data-src="projekte.json" data-ebene="2" data-sprachumschalter="nein" data-sprache-vorgabe="' + built.lang + '">' + board.html + '</div>',
 			// moss defers head scripts, so the renderer runs once the mount exists.
-			head: [ { stylesheet: 'projektschau/projektschau.css' }, { stylesheet: 'projektschau/board.css' }, { script: 'projektschau/projektschau.js' } ],
+			head: [ { stylesheet: 'projektschau/projektschau.css' }, { stylesheet: 'projektschau/board.css' }, { stylesheet: 'projektschau/noscript.css' }, { script: 'projektschau/projektschau.js' } ],
 			files: files,
 			warnings: built.warnings
 		};
