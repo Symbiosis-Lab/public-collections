@@ -303,7 +303,7 @@
 	}
 	// Runs the unchanged renderer under the engine shim, then puts the engine's globals back as they were.
 	function drawBoard( pkg, rendererSource, shimSource ) {
-		var g = globalThis, names = [ 'document', 'DOMParser', 'Projektschau' ], had = names.map( function ( n ) { return n in g; } ), old = names.map( function ( n ) { return g[ n ]; } );
+		var g = globalThis, names = [ 'document', 'DOMParser', 'URL', 'Projektschau' ], had = names.map( function ( n ) { return n in g; } ), old = names.map( function ( n ) { return g[ n ]; } );
 		try {
 			( 0, eval )( shimSource );
 			( 0, eval )( rendererSource );

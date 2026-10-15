@@ -8,6 +8,8 @@
  *   DOMParser                                      svg() (image/svg+xml) and kses() (text/html) parse the plugin's own
  *                                                  markup: documentElement, body, children, childNodes, nodeType 1 and 3,
  *                                                  nodeValue (entity-decoded), localName, getAttribute, hasAttribute.
+ *   URL.protocol                                   the engine's URL resolves addresses (href) but has no protocol, which url()
+ *                                                  reads to refuse javascript: and data: links; without it every link is dropped.
  * Parsing is defensive: unknown tags, unclosed tags and a stray "<" never throw. HTML follows the browser's forgiving
  * rules in the few cases the board's markup can reach (void tags, <p> and <li> closing on the next one, raw-text
  * script/style); the XML mode is strict, and malformed input yields a "parsererror" document, as in a browser.
@@ -129,6 +131,14 @@
 		return { documentElement: html, body: r.root };
 	};
 
+	var EngineURL = globalThis.URL;
+	if ( typeof EngineURL === 'function' && new EngineURL( 'a:b', 'https://example.org/' ).protocol === undefined ) {
+		globalThis.URL = function URL( u, base ) {
+			var o = new EngineURL( u, base ), m = /^([a-zA-Z][a-zA-Z0-9+.-]*:)/.exec( o.href );
+			this.href = o.href;
+			this.protocol = m ? m[ 1 ].toLowerCase() : '';
+		};
+	}
 	globalThis.DOMParser = DOMParser;
 	globalThis.document = { baseURI: 'https://example.org/', querySelectorAll: function () { return []; } };
 }() );
