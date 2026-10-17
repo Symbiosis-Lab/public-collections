@@ -155,13 +155,15 @@ body > footer p { font-size: .875rem; color: var(--moss-color-text-secondary); m
 body > footer p a { color: var(--moss-color-accent); text-decoration: underline; text-underline-offset: 3px; }
 
 /* ---- Home page: the title and its paragraph on KERN's pale band, full bleed; then the board. ---- */
-body[data-page="home"] > header { margin-block-end: 0; /* the band starts at the header rule */ }
+body[data-page="home"] { --moss-header-rule: transparent; /* the band's top edge is the divider here, so the hairline would draw a second one */ }
+body[data-page="home"] > header,
+body[data-page="home"] .main-nav { margin-block-end: 0; padding-block-end: 0; /* the band starts right under the header's last line, where the rule sits on other pages */ }
 body[data-page="home"] article > .moss-folder-title {
   position: static; inline-size: auto; block-size: auto; margin: 0; overflow: visible; clip: auto; white-space: normal; /* undo moss's visually-hidden: here the title is the page's display heading */
-  padding-block: var(--moss-space-xl, 2rem) var(--moss-space-sm); margin-block-end: -1px; /* overlaps the paragraph by a pixel so no hairline shows where the two band pieces meet */
+  padding-block: clamp(var(--moss-space-lg), 6vw, var(--moss-space-2xl)) var(--moss-space-sm); margin-block-end: -1px; /* the band's top air grows with the display heading; the pixel overlap hides the seam between the two band pieces */
   font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.1; font-weight: 600; text-wrap: balance; /* KERN display heading */
 }
-body[data-page="home"] article > .moss-folder-title + p { margin: 0; padding-block-end: var(--moss-space-xl, 2rem); font-size: 1.25rem; max-inline-size: 68ch; /* KERN large body at the reading measure */ }
+body[data-page="home"] article > .moss-folder-title + p { margin: 0; padding-block-end: clamp(var(--moss-space-lg), 6vw, var(--moss-space-2xl)); font-size: 1.25rem; max-inline-size: 68ch; /* KERN large body at the reading measure */ }
 body[data-page="home"] article > .moss-folder-title,
 body[data-page="home"] article > .moss-folder-title + p {
   background: var(--moss-color-surface); /* KERN pale grey band, level 1 */
