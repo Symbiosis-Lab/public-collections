@@ -1,9 +1,6 @@
 [terms.partners]
 fields = ["partners"]
-nav = true
 title = "Partners"
-# Second in the header, after Projects (the home page, weight 1); About the sources has no weight, so it follows.
-weight = 2
 
 [fields.kind]
 type = "choice"

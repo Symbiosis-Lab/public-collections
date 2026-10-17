@@ -180,20 +180,14 @@ body[data-page="home"] article > [data-projektschau] { margin-block-start: var(-
 /* ---- Picture sets: a gallery sits in the 68ch text column, so its rows start lower than moss's default and two landscape photos share a row. ---- */
 .moss-gallery[data-layout="rows"] { --moss-gallery-row-height: 11rem; /* two 3:2 photos fit side by side in the text column, then grow to fill it */ }
 
-/* ---- Partners index: a grid of people, portrait above name and role line; three to a row wide, two on a tablet and a phone. ---- */
-body[data-path$="/partners/"] { --moss-content-width: var(--moss-site-max-width); /* the generated English page has no frontmatter to widen it; the German index sets content_width: full */ }
-body[data-path$="/partners/"] .moss-cards[data-layout="grid"] {
-  --moss-card-cover-ratio: 3 / 4; /* the portraits are upright; moss crops card covers to 4:3 landscape */
-  --moss-cover-color: transparent; --moss-cover-ink: var(--moss-color-text); /* plain pale cards: moss would otherwise tint each caption with its portrait's average colour and set it in white */
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-@media (min-width: 64rem) { body[data-path$="/partners/"] .moss-cards[data-layout="grid"] { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-body[data-path$="/partners/"] .moss-card-cover[data-cover="quote"],
-body[data-path$="/partners/"] .moss-card-cover.moss-card-no-cover { display: none; /* a partner with no portrait shows name and role line only: moss's stand-in box repeats the name, or is empty */ }
-body[data-path$="/partners/"] .moss-card[href$="/otto-neurath/"] .moss-card-cover[data-cover="quote"] { display: block; order: 1; aspect-ratio: auto; padding: 0 1rem 1rem; background: none; /* the one portrait-less partner with a page: moss puts the role line in the stand-in box, so it is brought back as the line under the name */ }
-body[data-path$="/partners/"] .moss-card[href$="/otto-neurath/"] .moss-card-cover[data-cover="quote"] p { font: inherit; font-size: .9375rem; color: var(--moss-color-text-secondary); }
-body[data-path$="/partners/"] .moss-card[href$="/otto-neurath/"] .moss-card-content { flex: 0 0 auto; min-block-size: 0; padding-block-end: .25rem; /* the content box keeps a minimum height meant for a card with a picture */ }
-body[data-path$="/partners/"] .moss-card { display: flex; grid-row: auto; /* moss's cards share portrait and text rows across a grid row, which would give a card without a portrait the portrait's height; each card keeps its own height instead */ }
-body[data-path$="/partners/"] .moss-card:not(:has(.moss-card-cover:not([data-cover="quote"], .moss-card-no-cover))) { align-self: start; /* without a portrait a card keeps its own height instead of stretching to the row's tallest portrait */ }
-body[data-path$="/partners/"] .moss-card-description { display: block; max-block-size: none; overflow: visible; -webkit-line-clamp: unset; line-clamp: unset; text-wrap: balance; /* the role line is the card's second fact: moss clips a description at two lines, and balancing keeps a life span such as 1873–1946 on one line */ }
-@media (max-width: 48rem) { body[data-path$="/partners/"] .moss-card-title { font-size: 1.0625rem; /* two cards share a phone row, so a name needs the smaller size to break less */ } }
+/* ---- Partners index: one row per person, a 4:5 portrait (or an initials tile) on the left, name and role line on the right; three cards to a row wide, two on a tablet, one on a phone. ---- */
+body[data-path$="/partners/"] .moss-cards[data-layout="list"] { grid-template-columns: 1fr; /* a phone gets one column */ }
+@media (min-width: 40rem) { body[data-path$="/partners/"] .moss-cards[data-layout="list"] { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 64rem) { body[data-path$="/partners/"] .moss-cards[data-layout="list"] { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+body[data-path$="/partners/"] .moss-cards[data-layout="list"] .moss-card { background: var(--moss-color-surface); border-color: transparent; /* the partner cards are plain neutral tiles: there is no area colour to tint them with */ }
+body[data-path$="/partners/"] .moss-card-row { flex-direction: row-reverse; align-items: center; justify-content: flex-end; /* moss puts the picture after the text; here it leads */ }
+body[data-path$="/partners/"] .moss-card-cover { flex: 0 0 5.5rem; inline-size: 5.5rem; aspect-ratio: 4 / 5; /* a thumbnail the same shape for every person */ }
+body[data-path$="/partners/"] .moss-card-cover img { inline-size: 100%; block-size: 100%; object-fit: cover; object-position: top; border-radius: var(--a-radius); /* cropped from the top so the face stays in */ }
+body[data-path$="/partners/"] .moss-cards[data-layout="list"] .moss-card-title { color: var(--moss-color-text); /* the area-coloured title rule above would otherwise win */ }
+body[data-path$="/partners/"] .moss-cards[data-layout="list"] .moss-card-description { display: block; max-block-size: none; overflow: visible; -webkit-line-clamp: unset; line-clamp: unset; /* the role line is the card's second fact: moss clips a description at two lines */ }
+body[data-path$="/partners/"] .partner-initials { display: grid; place-items: center; background: var(--moss-color-bg); border: 1px solid var(--moss-border-light); border-radius: var(--a-radius); font-family: var(--moss-font-heading); font-weight: 600; font-size: 1.75rem; letter-spacing: .02em; color: var(--moss-color-text-secondary); /* a partner without a portrait gets a plain neutral tile with their initials, so every card has one shape */ }
