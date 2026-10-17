@@ -98,8 +98,8 @@ body[data-section] article a.moss-parent-label {
   text-decoration: none; /* a badge, not a prose link: the prose-link rule above must not underline or recolour it */
   padding: 2px 10px;
   border-radius: var(--a-radius); /* KERN badge radius */
-  background: var(--moss-section-color); /* the base colour as fill, as the prototype's badge */
-  color: #fff; /* white on every base colour passes 4.5:1 */
+  background: color-mix(in oklab, var(--moss-section-color) 85%, black); /* the base colour as fill, deepened: white on the plain Welfare orange is 4.41:1 */
+  color: #fff;
   font-size: 1rem; font-weight: 600; line-height: 1.5; /* a name, not a spaced-capital label */
 }
 
@@ -116,7 +116,7 @@ article h2#sources + ul li + li { margin-block-start: var(--moss-space-sm); }
 /* ---- Listing cards: tinted from each card's section colour; a card with none (a person on the Partners index) falls back to the neutral border grey, which gives a pale neutral tile. ---- */
 .moss-cards[data-layout="list"] { display: grid; grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr)); gap: var(--moss-space-md); /* one card per row in the text column: two would leave the text beside its picture a few words wide */ }
 .moss-cards[data-layout="list"] .moss-card { border-radius: var(--a-radius-lg); border: 1px solid color-mix(in srgb, var(--moss-section-color, var(--moss-border-strong)) 35%, transparent); background: color-mix(in srgb, var(--moss-section-color, var(--moss-border-strong)) 8%, var(--moss-color-bg)); padding: var(--moss-space-md); text-decoration: none; /* tinted like Projektschau's cards */ }
-.moss-cards[data-layout="list"] .moss-card-title { color: var(--moss-section-text, var(--moss-color-text)); font-size: 1.125rem; font-weight: 600; margin: 0; /* title in the area's text colour */ }
+.moss-cards[data-layout="list"] .moss-card-title { color: color-mix(in oklab, var(--moss-section-text, var(--moss-color-text)) 70%, var(--moss-color-text)); font-size: 1.125rem; font-weight: 600; margin: 0; /* the area's text colour, 30% toward the body text: moss tunes it to 4.5:1 on the page, and on these tinted cards it fell just under */ }
 .moss-cards[data-layout="list"] .moss-card-description { color: var(--moss-color-text-secondary); font-size: .9375rem; margin: 4px 0 0; }
 
 /* ---- Phone header: name and switch share line one, the pages take line two (the prototype's order). ---- */
