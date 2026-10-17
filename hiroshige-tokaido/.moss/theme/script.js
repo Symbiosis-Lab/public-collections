@@ -4,8 +4,8 @@
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
     var esc = function (t) { return String(t).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
-  var rulers = $$(".ruler"), map = $(".road-map:not(.road-map-compact)");
-  if (!rulers.length && !map) return;
+  var rulers = $$(".ruler"), map = $(".road-map:not(.road-map-compact)"), strip = $(".moss-grid.strip[data-scroll]");
+  if (!rulers.length && !map && !strip) return;
 
   fetch("/assets/road.json").then(function (r) { return r.json(); }).then(function (D) {
     var S = D.stations, LAST = D.last;
@@ -32,6 +32,92 @@
       el.setAttribute("data-drawn", "");
     }
     rulers.forEach(function (el) { ruler(el, el.classList.contains("ruler-bands") ? null : here); });
+
+    // The home strip's position: the same ruler, a slider over the 55 prints.
+    // moss reports where the row is (moss-scroll-position); this draws it on
+    // the road by distance, and a tap, drag or key moves the row there.
+    if (strip) (function (row) {
+      var cards = Array.prototype.slice.call(row.children);
+      if (cards.length !== S.length) { row.setAttribute("data-road", "off"); return; }
+      var N = S.length, pos = S.map(function (s) { return s.ri / LAST; });
+      var pct = function (f) { return (f * 100).toFixed(3) + "%"; };
+      var tag = function (i) { return i === 0 ? "Start" : i === N - 1 ? "End" : "No. " + i; };
+      var el = document.createElement("div");
+      el.className = "road-strip";
+      el.tabIndex = 0;
+      el.setAttribute("role", "slider");
+      el.setAttribute("aria-label", row.getAttribute("aria-label") || "Prints along the road");
+      el.setAttribute("aria-valuemin", "1");
+      el.setAttribute("aria-valuemax", String(N));
+      el.innerHTML = '<span class="road-axis" aria-hidden="true">' + S.map(function (s, i) {
+        return '<i style="left:' + pct(pos[i]) + '"></i>';
+      }).join("") + '<b class="road-band"></b><i class="here"></i><span class="lab"></span>' +
+        '<span class="ends"><span>Nihonbashi</span><span>Kyoto · ' + S[N - 1].ri_s + " ri</span></span></span>";
+      row.insertAdjacentElement("afterend", el);
+      var band = $(".road-band", el), mark = $(".here", el), lab = $(".lab", el);
+      var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      function draw(cur, a, b) {
+        band.style.left = pct(pos[a]);
+        band.style.width = pct(Math.max(0, pos[b] - pos[a]));
+        mark.style.left = pct(pos[cur]);
+        var l = pos[cur] * 100;
+        lab.className = "lab" + (l > 78 ? " r" : l < 22 ? " l" : "");
+        lab.style.left = pct(pos[cur]);
+        lab.innerHTML = tag(cur) + " · <b>" + esc(S[cur].name) + "</b> · " + S[cur].ri_s + " ri";
+        el.setAttribute("aria-valuenow", String(cur + 1));
+        el.setAttribute("aria-valuetext", S[cur].name + ", " + tag(cur).toLowerCase() + "; " + S[cur].ri_s + " of " + S[N - 1].ri_s + " ri");
+      }
+      // Prints that fit in the row at once, from its width and the card spacing.
+      function view() {
+        var step = cards[1].getBoundingClientRect().left - cards[0].getBoundingClientRect().left;
+        return Math.max(1, Math.floor((row.clientWidth + 1) / step));
+      }
+      // The last view cannot bring its first print to the row's start, so it
+      // scrolls the row to its end instead.
+      // The print the reader picked on the ruler stays marked while it is in
+      // view; moss's current print takes over once the row moves past it.
+      var picked = null;
+      function go(i, instant) {
+        i = Math.max(0, Math.min(N - 1, i));
+        var behavior = instant || reduce ? "auto" : "smooth", v = view();
+        if (i > N - v) row.scrollTo({ left: row.scrollWidth, behavior: behavior });
+        else cards[i].scrollIntoView({ inline: "start", block: "nearest", behavior: behavior });
+        picked = i;
+        draw(i, Math.min(i, N - v), Math.min(N - 1, Math.max(i, N - v) + v - 1));
+      }
+      function follow(p) {
+        var a = p.first - 1, b = p.last - 1;
+        if (picked !== null && (picked < a || picked > b)) picked = null;
+        draw(picked !== null ? picked : p.current - 1, a, b);
+      }
+      row.addEventListener("moss-scroll-position", function (e) { follow(e.detail); });
+      // moss may have reported before this listener was added; its indicator keeps the numbers.
+      var own = row.parentNode.querySelector(".moss-scroll-dots[data-current]");
+      if (own) follow({ current: +own.dataset.current, first: +own.dataset.first, last: +own.dataset.last });
+      else draw(0, 0, 0);
+
+      // A tap or drag lands on the station nearest the pointer, by distance.
+      function at(x) {
+        var r = el.getBoundingClientRect(), f = (x - r.left) / r.width, best = 0;
+        pos.forEach(function (p, i) { if (Math.abs(p - f) < Math.abs(pos[best] - f)) best = i; });
+        return best;
+      }
+      var dragging = null;
+      el.addEventListener("pointerdown", function (e) {
+        if (e.button !== 0) return;
+        dragging = e.pointerId; el.setPointerCapture(e.pointerId); go(at(e.clientX), true);
+      });
+      el.addEventListener("pointermove", function (e) { if (dragging === e.pointerId) go(at(e.clientX), true); });
+      el.addEventListener("pointerup", function () { dragging = null; });
+      el.addEventListener("pointercancel", function () { dragging = null; });
+      el.addEventListener("keydown", function (e) {
+        var v = view(), now = Number(el.getAttribute("aria-valuenow")) - 1;
+        var to = { ArrowRight: now + 1, ArrowUp: now + 1, ArrowLeft: now - 1, ArrowDown: now - 1, PageDown: now + v, PageUp: now - v, Home: 0, End: N - 1 }[e.key];
+        if (to === undefined) return;
+        e.preventDefault(); go(to);
+      });
+    })(strip);
 
     if (!map) return;
     var fig = map, panel = document.createElement("div");
@@ -62,5 +148,8 @@
       a.addEventListener("click", function (e) { if (matchMedia("(pointer: coarse)").matches && cur !== n) { e.preventDefault(); select(n); } });
     });
     select(10);
+  }, function () {
+    // Without the road data the strip keeps moss's own count (see style.css).
+    if (strip) strip.setAttribute("data-road", "off");
   });
 })();

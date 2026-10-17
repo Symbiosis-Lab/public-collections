@@ -188,6 +188,22 @@ article:has(> .vertical-title) > figure.moss-image { grid-column: 3; grid-row: 1
 .moss-grid.strip[data-scroll] { grid-auto-columns: 190px; } /* moss sizes a scroll track from its 1-4 column count; 55 cards want a fixed card width */
 .moss-grid.strip[data-scroll] { scrollbar-width: none; } /* The strip shows no scrollbar: it scrolls by drag, wheel, keys and the indicator below it */
 .moss-grid.strip[data-scroll]::-webkit-scrollbar { display: none; } /* The same for engines without scrollbar-width */
+.moss-grid.strip[data-scroll] { margin-block-end: calc(var(--moss-space-sm) + 72px); } /* Room for the road ruler below, kept before script.js draws it so nothing moves */
+.moss-grid.strip + .moss-scroll-dots, .road-strip + .moss-scroll-dots { display: none; } /* The road ruler replaces moss's own count under the strip */
+.moss-grid.strip[data-road="off"] { margin-block-end: revert-layer; } /* Without the road data there is no ruler: moss's spacing and count come back */
+.moss-grid.strip[data-road="off"] + .moss-scroll-dots { display: flex; }
+.road-strip { position: relative; block-size: 72px; margin-block: -72px 0; touch-action: pan-y; cursor: pointer; } /* Drawn into the room the strip left; drag sideways to scrub, scroll the page vertically */
+.road-strip:focus-visible { outline: 2px solid var(--moss-color-accent); outline-offset: 3px; }
+.road-axis { position: absolute; inset: 0; pointer-events: none; }
+.road-axis::before { content: ""; position: absolute; inset-inline: 0; top: 34px; height: 1px; background: var(--moss-border-strong); } /* The road */
+.road-axis > i { position: absolute; top: 28px; width: 1px; height: 13px; background: var(--moss-color-muted); } /* One tick per station, placed by distance */
+.road-axis > b.road-band { position: absolute; top: 32px; height: 5px; min-width: 3px; background: var(--madder); opacity: 0.45; } /* The prints in view */
+.road-axis > i.here { top: 20px; width: 3px; height: 29px; margin-left: -1px; background: var(--madder); } /* The current print, "you are here", as on a print page */
+.road-axis .lab { position: absolute; top: 0; font-size: 12.5px; line-height: 18px; white-space: nowrap; color: var(--moss-color-text-secondary); transform: translateX(-50%); } /* Its number, name and distance above the tick */
+.road-axis .lab.l { transform: translateX(-2px); } /* Near the left end the label starts at the tick */
+.road-axis .lab.r { transform: translateX(calc(-100% + 2px)); } /* Near the right end it ends at the tick */
+.road-axis .lab b { color: var(--moss-color-text); font-weight: 500; }
+.road-axis .ends { position: absolute; inset-inline: 0; top: 52px; display: flex; justify-content: space-between; font-size: 12.5px; color: var(--moss-color-muted); } /* Nihonbashi and Kyoto at the ends */
 .moss-grid.strip .moss-card { counter-increment: station; }
 .moss-grid.strip .moss-card-description { display: none; } /* The strip shows plates and names only */
 .moss-grid.strip .moss-card-title { font-size: 15px; } /* Strip names stay small so six fit a row */
