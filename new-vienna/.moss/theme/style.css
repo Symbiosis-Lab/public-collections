@@ -113,10 +113,10 @@ article h2#sources { margin-block-start: var(--moss-space-2xl); padding-block-st
 article h2#sources + ul { font-size: 1rem; /* sources are reference, one step smaller */ }
 article h2#sources + ul li + li { margin-block-start: var(--moss-space-sm); }
 
-/* ---- Partner page: projects as small tinted cards, the tint from each card's section colour. ---- */
+/* ---- Listing cards: tinted from each card's section colour; a card with none (a person on the Partners index) falls back to the neutral border grey, which gives a pale neutral tile. ---- */
 .moss-cards[data-layout="list"] { display: grid; grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr)); gap: var(--moss-space-md); /* one card per row in the text column: two would leave the text beside its picture a few words wide */ }
-.moss-cards[data-layout="list"] .moss-card { border-radius: var(--a-radius-lg); border: 1px solid color-mix(in srgb, var(--moss-section-color) 35%, transparent); background: color-mix(in srgb, var(--moss-section-color) 8%, var(--moss-color-bg)); padding: var(--moss-space-md); text-decoration: none; /* tinted like Projektschau's cards */ }
-.moss-cards[data-layout="list"] .moss-card-title { color: var(--moss-section-text); font-size: 1.125rem; font-weight: 600; margin: 0; /* title in the area's text colour */ }
+.moss-cards[data-layout="list"] .moss-card { border-radius: var(--a-radius-lg); border: 1px solid color-mix(in srgb, var(--moss-section-color, var(--moss-border-strong)) 35%, transparent); background: color-mix(in srgb, var(--moss-section-color, var(--moss-border-strong)) 8%, var(--moss-color-bg)); padding: var(--moss-space-md); text-decoration: none; /* tinted like Projektschau's cards */ }
+.moss-cards[data-layout="list"] .moss-card-title { color: var(--moss-section-text, var(--moss-color-text)); font-size: 1.125rem; font-weight: 600; margin: 0; /* title in the area's text colour */ }
 .moss-cards[data-layout="list"] .moss-card-description { color: var(--moss-color-text-secondary); font-size: .9375rem; margin: 4px 0 0; }
 
 /* ---- Phone header: name and switch share line one, the pages take line two (the prototype's order). ---- */
@@ -159,7 +159,7 @@ body[data-page="home"] { --moss-header-rule: transparent; /* the band's top edge
 body[data-page="home"] > header,
 body[data-page="home"] .main-nav { margin-block-end: 0; padding-block-end: 0; /* the band starts right under the header's last line, where the rule sits on other pages */ }
 body[data-page="home"] article > .home-band {
-  --moss-grid-image-ratio: auto; --moss-grid-image-radius: var(--a-radius); /* the photograph keeps its own shape; moss's default crops a grid picture to a square */
+  --moss-grid-image-ratio: auto; /* moss crops a grid picture to a square; the photograph keeps its own shape */
   margin: 0; align-items: start; column-gap: clamp(var(--moss-space-md), 4vw, var(--moss-space-2xl));
   padding-block: clamp(var(--moss-space-lg), 6vw, var(--moss-space-2xl)); /* the band's air grows with the display heading */
   background: var(--moss-color-surface); /* KERN pale grey band, level 1 */
@@ -180,14 +180,16 @@ body[data-page="home"] article > [data-projektschau] { margin-block-start: var(-
 /* ---- Picture sets: a gallery sits in the 68ch text column, so its rows start lower than moss's default and two landscape photos share a row. ---- */
 .moss-gallery[data-layout="rows"] { --moss-gallery-row-height: 11rem; /* two 3:2 photos fit side by side in the text column, then grow to fill it */ }
 
-/* ---- Partners index: one row per person, a 4:5 portrait (or an initials tile) on the left, name and role line on the right; three cards to a row wide, two on a tablet, one on a phone. ---- */
-body[data-path$="/partners/"] .moss-cards[data-layout="list"] { grid-template-columns: 1fr; /* a phone gets one column */ }
-@media (min-width: 40rem) { body[data-path$="/partners/"] .moss-cards[data-layout="list"] { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (min-width: 64rem) { body[data-path$="/partners/"] .moss-cards[data-layout="list"] { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-body[data-path$="/partners/"] .moss-cards[data-layout="list"] .moss-card { background: var(--moss-color-surface); border-color: transparent; /* the partner cards are plain neutral tiles: there is no area colour to tint them with */ }
-body[data-path$="/partners/"] .moss-card-row { flex-direction: row-reverse; align-items: center; justify-content: flex-end; /* moss puts the picture after the text; here it leads */ }
-body[data-path$="/partners/"] .moss-card-cover { flex: 0 0 5.5rem; inline-size: 5.5rem; aspect-ratio: 4 / 5; /* a thumbnail the same shape for every person */ }
-body[data-path$="/partners/"] .moss-card-cover img { inline-size: 100%; block-size: 100%; object-fit: cover; object-position: top; border-radius: var(--a-radius); /* cropped from the top so the face stays in */ }
-body[data-path$="/partners/"] .moss-cards[data-layout="list"] .moss-card-title { color: var(--moss-color-text); /* the area-coloured title rule above would otherwise win */ }
-body[data-path$="/partners/"] .moss-cards[data-layout="list"] .moss-card-description { display: block; max-block-size: none; overflow: visible; -webkit-line-clamp: unset; line-clamp: unset; /* the role line is the card's second fact: moss clips a description at two lines */ }
-body[data-path$="/partners/"] .partner-initials { display: grid; place-items: center; background: var(--moss-color-bg); border: 1px solid var(--moss-border-light); border-radius: var(--a-radius); font-family: var(--moss-font-heading); font-weight: 600; font-size: 1.75rem; letter-spacing: .02em; color: var(--moss-color-text-secondary); /* a partner without a portrait gets a plain neutral tile with their initials, so every card has one shape */ }
+/* ---- Partners index: one list card per person, three to a row wide. ---- */
+body[data-path$="/partners/"] {
+  --thumb: 5.5rem; /* a 4:5 face wide enough to read, leaving a three-up card (about 20rem) 11rem for the role line */
+  .moss-cards[data-layout="list"] { grid-template-columns: 1fr; }
+  @media (min-width: 48rem) { .moss-cards[data-layout="list"] { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (min-width: 64rem) { .moss-cards[data-layout="list"] { grid-template-columns: repeat(3, minmax(0, 1fr)); /* three cards of 20rem need about this width; below it the role lines wrap to four lines */ } }
+  .moss-card-row { flex-direction: row-reverse; align-items: center; justify-content: flex-end; min-block-size: calc(var(--thumb) * 5 / 4); /* moss puts the picture after the text; the row keeps the thumbnail's height whether or not it has one, so the script adding a tile moves nothing */ }
+  .moss-card-cover { flex: 0 0 var(--thumb); inline-size: var(--thumb); aspect-ratio: 4 / 5; }
+  .moss-card-cover img { inline-size: 100%; block-size: 100%; object-fit: cover; object-position: top; border-radius: var(--a-radius); /* from the top, so the face stays in */ }
+  .moss-card-description { max-block-size: none; /* moss caps a description at 48px, which cut a three-line role line; its overflow, display and line-clamp settings change nothing once the cap is gone */ }
+  .moss-card-row:not(:has(.moss-card-cover))::before { content: attr(data-initials); order: 1; flex: 0 0 var(--thumb); inline-size: var(--thumb); aspect-ratio: 4 / 5; box-sizing: border-box; display: grid; place-items: center; border-radius: var(--a-radius); font: 600 1.75rem/1 var(--moss-font-heading); letter-spacing: .02em; color: var(--moss-color-text-secondary); /* the initials fill about a third of the tile; the slight tracking opens capitals set tight */ }
+  .moss-card-row[data-initials]::before { background: var(--moss-color-bg); border: 1px solid var(--moss-border-light); /* drawn only once the script has the initials, so without it the tile is blank space, not an empty box */ }
+}
