@@ -6,6 +6,8 @@ weight: 1
 sort: weight
 series: true
 children_style: grid
+cascade:
+  title_block: after-picture
 description: The fifty-five prints in the order of the road.
 ---
 # Fifty-five prints, in road order

@@ -221,20 +221,18 @@ article:has(> .vertical-title) > figure.moss-image { grid-column: 3; grid-row: 1
 
 /* ---- 6. Print page ------------------------------------------------------ */
 /* The article is a grid so the numeral, the vertical slip and the title sit side by side under the plate.
-   moss puts its own title first in the DOM; grid rows put it under the plate where the design wants it. */
+   The prints folder sets title_block: after-picture, so the page already reads trail, plate, title; only
+   the numeral and the slip are placed, and every other block takes the next free row in reading order. */
 article:has(> [data-field="station_no"]) { display: grid; grid-template-columns: 9rem 4.5rem minmax(0, 1fr); grid-template-rows: auto auto auto auto auto auto; column-gap: 24px; align-content: start; padding-top: 24px; }
 article:has(> [data-field="station_no"]) > * { grid-column: 1 / -1; } /* Print grid: every block spans the page unless placed below */
-article:has(> [data-field="station_no"]) > .trail { grid-row: 1; } /* Print grid: the road trail sits above the plate */
-article:has(> [data-field="station_no"]) > figure.moss-image { grid-row: 2; background: var(--moss-color-surface); padding: clamp(16px, 4vw, 48px); } /* Print grid: the plate on its mat */
+article:has(> [data-field="station_no"]) > figure.moss-image { background: var(--moss-color-surface); padding: clamp(16px, 4vw, 48px); } /* Print grid: the plate on its mat */
 article:has(> [data-field="station_no"]) > figure.moss-image img { max-width: 1040px; margin: 0 auto; } /* The plate keeps a 1040px maximum and stays centred on the mat */
 article:has(> [data-field="station_no"]) > figure.moss-image figcaption { max-width: 1040px; margin-inline: auto; } /* The caption lines up with the plate edges */
-article:has(> [data-field="station_no"]) > .moss-eyebrow { grid-row: 3; grid-column: 3; margin-top: 40px; } /* Print grid: station and place label above the title */
-article:has(> [data-field="station_no"]) > .moss-article-title { grid-row: 4; grid-column: 3; font-size: clamp(34px, 4.6vw, 58px); line-height: 1.06; margin: 4px 0 0; } /* Print grid: moss puts the title first in the DOM, the row puts it under the plate */
+article:has(> [data-field="station_no"]) > :is(.moss-eyebrow, .moss-article-title, .moss-subtitle, blockquote, .look) { grid-column: 3; } /* Print grid: the title block and the note take the third column */
+article:has(> [data-field="station_no"]) > .moss-eyebrow { margin-top: 40px; } /* The label starts level with the numeral */
+article:has(> [data-field="station_no"]) > .moss-article-title { font-size: clamp(34px, 4.6vw, 58px); line-height: 1.06; margin: 4px 0 0; } /* The print's title, set large */
 article:has(> [data-field="station_no"]) > [data-field="station_no"] { grid-row: 3 / 7; grid-column: 1; margin-top: 40px; } /* Print grid: the numeral takes the first column beside the title block */
 article:has(> [data-field="station_no"]) > [data-field="ja"] { grid-row: 3 / 7; grid-column: 2; margin-top: 40px; } /* Print grid: the vertical slip sits between numeral and title */
-article:has(> [data-field="station_no"]) > .moss-subtitle { grid-row: 5; grid-column: 3; } /* Print grid: the romanised title under the title */
-article:has(> [data-field="station_no"]) > blockquote { grid-row: 6; grid-column: 3; } /* Print grid: the note aligns with the title column */
-article:has(> [data-field="station_no"]) > .look { grid-column: 3; } /* Print grid: the look-for line aligns with the title column */
 .trail p { display: flex; flex-wrap: wrap; gap: 6px 10px; font: 400 13.5px/1.5 var(--moss-font-body); color: var(--moss-color-text-secondary); margin: 0 0 20px; } /* Quiet trail of links above the plate */
 .trail a { color: var(--moss-color-text-secondary); text-underline-offset: 3px; } /* Trail links stay secondary text */
 [data-field="station_no"] { display: block; margin: 0; }
@@ -291,11 +289,9 @@ article:has(> [data-field="station_no"]) > h3, article:has(> .map-hint) > h3 { m
   article:has(> [data-field="station_no"]) > [data-field="station_no"] { grid-row: 3; grid-column: 1; } /* Phone: numeral first in the row */
   article:has(> [data-field="station_no"]) > [data-field="ja"] { grid-row: 3; grid-column: 2; justify-self: start; } /* Phone: slip beside the numeral */
   article:has(> [data-field="station_no"]) > [data-field="ja"] span { font-size: 24px; min-height: 106px; } /* Phone: a smaller slip */
-  article:has(> [data-field="station_no"]) > .moss-eyebrow { grid-row: 4; grid-column: 1 / -1; margin-top: 24px; } /* Phone: the label spans the width under the numeral */
-  article:has(> [data-field="station_no"]) > .moss-article-title { grid-row: 5; grid-column: 1 / -1; } /* Phone: the title spans the width */
-  article:has(> [data-field="station_no"]) > .moss-subtitle { grid-row: 6; grid-column: 1 / -1; } /* Phone: the subtitle spans the width */
-  article:has(> [data-field="station_no"]) > blockquote { grid-row: 7; grid-column: 1 / -1; font-size: 19px; } /* Phone: the note spans the width, slightly smaller */
-  article:has(> [data-field="station_no"]) > .look { grid-column: 1 / -1; } /* Phone: the look-for line spans the width */
+  article:has(> [data-field="station_no"]) > :is(.moss-eyebrow, .moss-article-title, .moss-subtitle, blockquote, .look) { grid-column: 1 / -1; } /* Phone: the title block spans the width under the numeral row */
+  article:has(> [data-field="station_no"]) > .moss-eyebrow { margin-top: 24px; }
+  article:has(> [data-field="station_no"]) > blockquote { font-size: 19px; } /* Phone: a slightly smaller note */
 }
 
 /* ---- 7. The Road ------------------------------------------------------- */
