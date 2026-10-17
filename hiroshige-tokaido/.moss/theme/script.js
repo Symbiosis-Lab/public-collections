@@ -84,7 +84,8 @@
         if (i > N - v) row.scrollTo({ left: row.scrollWidth, behavior: behavior });
         else cards[i].scrollIntoView({ inline: "start", block: "nearest", behavior: behavior });
         picked = i;
-        draw(i, Math.min(i, N - v), Math.min(N - 1, Math.max(i, N - v) + v - 1));
+        var a = Math.max(0, Math.min(i, N - v));
+        draw(i, a, Math.min(N - 1, a + v - 1));
       }
       function follow(p) {
         var a = p.first - 1, b = p.last - 1;
