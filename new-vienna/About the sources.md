@@ -3,6 +3,8 @@ title: About the sources
 uid: "9d4854e7"
 ---
 
+![Cover of Das Neue Wien. Städtewerk. Edited with the official collaboration of the City of Vienna; date not given in the record. Wienbibliothek im Rathaus, record 1952660, PDM.|align-right 30%](Das%20Neue%20Wien%20cover.jpg)
+
 In 1926 the City of Vienna published its own overview of the municipal programme, *Das Neue Wien. Städtewerk*, four volumes, 1926–1928. This board rebuilds that overview from what today's archives keep: the Wien Geschichte Wiki run by the city's archive, Wikipedia articles that cite the period records, and the Wien Museum's online collection.
 
 ## How a project gets on the board
@@ -14,10 +16,11 @@ In 1926 the City of Vienna published its own overview of the municipal programme
 
 ## Pictures
 
-The pictures on the project pages and on the area pages that list them come from three holders, each marking its pictures CC0 or Public Domain Mark:
+The pictures on the project pages and on the area pages that list them come from four holders, each marking its pictures CC0, Public Domain Mark or public domain:
 
-- Wien Museum online collection: 46 pictures, CC0
-- Wienbibliothek im Rathaus, through Europeana: 7 pictures, Public Domain Mark
+- Wien Museum online collection: 47 pictures, CC0
+- Wienbibliothek im Rathaus, through Europeana: 8 pictures, Public Domain Mark
+- Austrian National Library, through Wikimedia Commons: 2 pictures, public domain (the photographer, Georg Fayer, died in 1950)
 - Rijksmuseum, Amsterdam, through Wikimedia Commons: 1 picture, CC0
 
 Each caption gives the photographer or author, the date as the holder gives it, the inventory or record number and the mark. Wien Museum photographs are cropped to the print: the museum's scans include the mount and a colour target.
