@@ -186,6 +186,8 @@ article:has(> .vertical-title) > figure.moss-image { grid-column: 3; grid-row: 1
 /* The strip of all 55: one line, scrolled sideways, number from the order, description hidden. */
 .moss-grid.strip { counter-reset: station -1; gap: 14px; }
 .moss-grid.strip[data-scroll] { grid-auto-columns: 190px; } /* moss sizes a scroll track from its 1-4 column count; 55 cards want a fixed card width */
+.moss-grid.strip[data-scroll] { scrollbar-width: none; } /* The strip shows no scrollbar: it scrolls by drag, wheel, keys and the indicator below it */
+.moss-grid.strip[data-scroll]::-webkit-scrollbar { display: none; } /* The same for engines without scrollbar-width */
 .moss-grid.strip .moss-card { counter-increment: station; }
 .moss-grid.strip .moss-card-description { display: none; } /* The strip shows plates and names only */
 .moss-grid.strip .moss-card-title { font-size: 15px; } /* Strip names stay small so six fit a row */
