@@ -154,21 +154,20 @@ body > footer { margin-block-start: var(--moss-space-2xl); }
 body > footer p { font-size: .875rem; color: var(--moss-color-text-secondary); max-inline-size: 90ch; /* the prototype's credit line: small, muted, long measure */ }
 body > footer p a { color: var(--moss-color-accent); text-decoration: underline; text-underline-offset: 3px; }
 
-/* ---- Home page: the title and its paragraph on KERN's pale band, full bleed; then the board. ---- */
+/* ---- Home page: the title, its paragraph and one period photograph on KERN's pale band, full bleed; then the board. ---- */
 body[data-page="home"] { --moss-header-rule: transparent; /* the band's top edge is the divider here, so the hairline would draw a second one */ }
 body[data-page="home"] > header,
 body[data-page="home"] .main-nav { margin-block-end: 0; padding-block-end: 0; /* the band starts right under the header's last line, where the rule sits on other pages */ }
-body[data-page="home"] article > .moss-folder-title {
-  position: static; inline-size: auto; block-size: auto; margin: 0; overflow: visible; clip: auto; white-space: normal; /* undo moss's visually-hidden: here the title is the page's display heading */
-  padding-block: clamp(var(--moss-space-lg), 6vw, var(--moss-space-2xl)) var(--moss-space-sm); margin-block-end: -1px; /* the band's top air grows with the display heading; the pixel overlap hides the seam between the two band pieces */
-  font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.1; font-weight: 600; text-wrap: balance; /* KERN display heading */
-}
-body[data-page="home"] article > .moss-folder-title + p { margin: 0; padding-block-end: clamp(var(--moss-space-lg), 6vw, var(--moss-space-2xl)); font-size: 1.25rem; max-inline-size: 68ch; /* KERN large body at the reading measure */ }
-body[data-page="home"] article > .moss-folder-title,
-body[data-page="home"] article > .moss-folder-title + p {
+body[data-page="home"] article > .home-band {
+  --moss-grid-image-ratio: auto; --moss-grid-image-radius: var(--a-radius); /* the photograph keeps its own shape; moss's default crops a grid picture to a square */
+  margin: 0; align-items: start; column-gap: clamp(var(--moss-space-md), 4vw, var(--moss-space-2xl));
+  padding-block: clamp(var(--moss-space-lg), 6vw, var(--moss-space-2xl)); /* the band's air grows with the display heading */
   background: var(--moss-color-surface); /* KERN pale grey band, level 1 */
   box-shadow: 0 0 0 100vmax var(--moss-color-surface); clip-path: inset(0 -100vmax); /* runs to the viewport edges without a wrapper element */
 }
+body[data-page="home"] .home-band h1 { margin: 0 0 var(--moss-space-md); font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.1; font-weight: 600; text-wrap: balance; /* KERN display heading */ }
+body[data-page="home"] .home-band .moss-image { margin-block: 0; /* the picture starts level with the title and ends at the band's bottom padding, not 40px off either */ }
+body[data-page="home"] .home-band p { font-size: 1.25rem; max-inline-size: 68ch; /* KERN large body at the reading measure */ }
 body[data-page="home"] article > [data-projektschau] { margin-block-start: var(--moss-space-xl, 2rem); }
 
 /* ---- A project's further pictures: two to a row, each whole, caption small and grey as under the lead picture. ---- */
