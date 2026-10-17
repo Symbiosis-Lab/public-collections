@@ -192,7 +192,7 @@ article:has(> .vertical-title) > figure.moss-image { grid-column: 3; grid-row: 1
 .moss-grid.strip + .moss-scroll-dots, .road-strip + .moss-scroll-dots { display: none; } /* The road ruler replaces moss's own count under the strip */
 .moss-grid.strip[data-road="off"] { margin-block-end: revert-layer; } /* Without the road data there is no ruler: moss's spacing and count come back */
 .moss-grid.strip[data-road="off"] + .moss-scroll-dots { display: flex; }
-.road-strip { position: relative; block-size: 72px; margin-block: -72px 0; touch-action: pan-y; cursor: pointer; } /* Drawn into the room the strip left; drag sideways to scrub, scroll the page vertically */
+.road-strip { position: relative; block-size: 72px; margin-block: -72px 0; touch-action: pan-y; cursor: pointer; -webkit-user-select: none; user-select: none; } /* Drawn into the room the strip left; drag sideways to scrub, scroll the page vertically. Its labels are not text to select (the slider's value is read out), like a native range input's. */
 .road-strip:focus-visible { outline: 2px solid var(--moss-color-accent); outline-offset: 3px; }
 .road-axis { position: absolute; inset: 0; pointer-events: none; }
 .road-axis::before { content: ""; position: absolute; inset-inline: 0; top: 34px; height: 1px; background: var(--moss-border-strong); } /* The road */

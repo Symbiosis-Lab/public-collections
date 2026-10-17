@@ -107,6 +107,9 @@
       var dragging = null;
       el.addEventListener("pointerdown", function (e) {
         if (e.button !== 0) return;
+        // A drag must not start a text selection, which Safari carries onto the
+        // titles above; cancelling the press also cancels its focus, so focus here.
+        e.preventDefault(); el.focus({ preventScroll: true });
         dragging = e.pointerId; el.setPointerCapture(e.pointerId); go(at(e.clientX), true);
       });
       el.addEventListener("pointermove", function (e) { if (dragging === e.pointerId) go(at(e.clientX), true); });
