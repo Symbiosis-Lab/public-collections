@@ -1,3 +1,5 @@
+schema_version = 6
+environment = "production"
 [terms.partners]
 fields = ["partners"]
 title = "Partners"
