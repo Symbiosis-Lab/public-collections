@@ -1,5 +1,9 @@
-# Each collection's own .moss/.gitignore, written by moss, keeps its publishing key out.
-# These two moss tracks on purpose, as facts about the site; here they would point
+# This repo is public and its folders publish, so their keys sit beside the content.
+# Each folder's own .moss/.gitignore, written by moss, already ignores the key;
+# these lines repeat it so a folder missing that file still cannot leak one.
+**/.moss/identity/
+**/.moss/keys/
+# moss tracks these two on purpose, as facts about the site; here they would point
 # someone who takes a folder at our address. Delete once moss handles a folder
 # whose publish target belongs to another account.
 **/.moss/state.toml
