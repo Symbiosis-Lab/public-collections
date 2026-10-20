@@ -1,0 +1,25 @@
+{
+  "articles": {
+    "Illuminated Books/Songs of Experience/london/": {
+      "source_path": "./Illuminated Books/Songs of Experience/london.md",
+      "title": "London",
+      "content": "![[songs-of-experience-19-london.jpg]]\n\nI wander thro' each charter'd street,  \nNear where the charter'd Thames does flow.  \nAnd mark in every face I meet  \nMarks of weakness, marks of woe.  \n\nIn every cry of every Man,  \nIn every Infants cry of fear,  \nIn every voice: in every ban,  \nThe mind-forg'd manacles I hear  \n\nHow the Chimney-sweepers cry  \nEvery blackning Church appalls,  \nAnd the hapless Soldiers sigh  \nRuns in blood down Palace walls  \n\nBut most thro' midnight streets I hear  \nHow the youthful Harlots curse  \nBlasts the new-born Infants tear  \nAnd blights with plagues the Marriage hearse  ",
+      "html_content": "<p>![[songs-of-experience-19-london.jpg]]</p>\n<p>I wander thro' each charter'd street,<br />\nNear where the charter'd Thames does flow.<br />\nAnd mark in every face I meet<br />\nMarks of weakness, marks of woe.</p>\n<p>In every cry of every Man,<br />\nIn every Infants cry of fear,<br />\nIn every voice: in every ban,<br />\nThe mind-forg'd manacles I hear</p>\n<p>How the Chimney-sweepers cry<br />\nEvery blackning Church appalls,<br />\nAnd the hapless Soldiers sigh<br />\nRuns in blood down Palace walls</p>\n<p>But most thro' midnight streets I hear<br />\nHow the youthful Harlots curse<br />\nBlasts the new-born Infants tear<br />\nAnd blights with plagues the Marriage hearse</p>\n",
+      "frontmatter": {},
+      "url_path": "Illuminated Books/Songs of Experience/london/",
+      "date": "1794-07-01",
+      "tags": [],
+      "uid": "blk-songs-exp-london"
+    },
+    "Writings/writings/": {
+      "source_path": "./Writings/writings.md",
+      "title": "Writings",
+      "content": "",
+      "frontmatter": {},
+      "url_path": "Writings/writings/",
+      "date": null,
+      "tags": [],
+      "uid": "blk-writings"
+    }
+  }
+}

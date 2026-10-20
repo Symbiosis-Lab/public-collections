@@ -1,0 +1,35 @@
+---
+title: "Sakanoshita: Peak of Fudesute Mountain"
+uid: "762a4eb1"
+description: "Station 48 · Sakashita, Kameyama, Mie · 107.8 ri"
+author: Utagawa Hiroshige
+weight: 49
+cover: ../assets/aic-25769.jpg
+station: "Sakanoshita"
+ja: 坂下
+ri: 107.8
+lat: 34.8886
+lng: 136.3541
+place: "Sakashita, Kameyama, Mie"
+stage: "Station 48"
+romaji: "Sakanoshita, Fudesute mine"
+station_no: "48 of 53"
+---
+::: {.trail}
+[[places|The Road]] / [[Mie]] / Sakanoshita
+:::
+
+![Sakanoshita, Peak of Fudesute Mountain: Travelers pause at a teahouse overlooking a dramatic gorge](../assets/aic-25769.jpg)
+*Utagawa Hiroshige, 1833–34, colour woodblock. [Full size](../assets/aic-25769.jpg)*
+
+> Travelers pause at a teahouse overlooking a dramatic gorge and waterfall near the peak of Fudesute-yama.
+
+### Where it falls on the road
+
+::: {.ruler}
+107.8 ri, about 423 km from Nihonbashi.
+:::
+
+::: {.credit}
+Art Institute of Chicago · Public domain (CC0) · [Source record](https://www.artic.edu/artworks/25769)
+:::

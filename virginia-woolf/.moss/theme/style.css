@@ -1,0 +1,70 @@
+/* Essays theme: one hue, a fixed measure, fluid type, colours as variables.
+   Fraunces for headings and Literata for text, both in fonts/ with their
+   licences. To use other fonts, change these @font-face blocks and the
+   --moss-font-* variables below. */
+
+@font-face { font-family: "Fraunces"; font-weight: 400; font-style: normal;
+  font-display: swap; src: url("fonts/fraunces-display.woff2") format("woff2"); }
+@font-face { font-family: "Literata"; font-weight: 400; font-style: normal;
+  font-display: swap; src: url("fonts/literata-400.woff2") format("woff2"); }
+@font-face { font-family: "Literata"; font-weight: 400; font-style: italic;
+  font-display: swap; src: url("fonts/literata-400-italic.woff2") format("woff2"); }
+@font-face { font-family: "Literata"; font-weight: 700; font-style: normal;
+  font-display: swap; src: url("fonts/literata-700.woff2") format("woff2"); }
+
+:root {
+  /* Light colours. The dark block below has its own values; change both.
+     Keep body text at 7:1 contrast against the page, and accent and muted
+     at 4.5:1 or more. */
+  --moss-color-bg: hsl(150 20% 94%);
+  --moss-color-text: hsl(150 20% 14%);
+  --moss-color-accent: hsl(150 20% 36%);
+  --moss-color-muted: hsl(150 20% 37%);
+  --moss-font-heading: "Fraunces", Georgia, "Times New Roman", serif;
+  --moss-font-heading-weight: 400;
+  --moss-font-body: "Literata", Georgia, serif;
+  /* Body text grows from 19px on a phone to 21px on a wide screen. */
+  --moss-reading-size-base: clamp(1.1875rem, 1.1458rem + 0.2083vw, 1.3125rem);
+  --moss-read-leading: 1.6;
+}
+:root[data-theme="dark"] {
+  --moss-color-bg: hsl(150 20% 14%);
+  --moss-color-text: hsl(150 20% 94%);
+  --moss-color-accent: hsl(150 20% 62%);
+  --moss-color-muted: hsl(150 20% 54%);
+}
+
+/* moss gives page titles the heading font; this gives it to headings
+   written in a page too, such as the name on the home page. */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--moss-font-heading);
+}
+
+/* The home page is set like a title page: the name about a third of the
+   way down, the line under it in italic. Both rules need `home: true` on
+   the home page and a body that is a `#` heading followed by a paragraph. */
+body[data-page="home"] h1 {
+  font-size: clamp(2.5rem, 7vw, 5.25rem);
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  margin-top: calc(23vh - 1.5em);
+  margin-bottom: clamp(0.5rem, 2vh, 1rem);
+}
+
+body[data-page="home"] article.container > h1 + p {
+  font-family: var(--moss-font-body);
+  font-style: italic;
+  color: var(--moss-color-muted);
+  text-align: center;
+  /* 88vw keeps the line inside a phone screen. */
+  max-width: min(32ch, 88vw);
+  margin: clamp(2rem, 6vh, 3.5rem) auto 0;
+}
+
+/* A narrower gap keeps a short nav on one row on a phone. */
+@media (max-width: 48rem), (pointer: coarse) {
+  .nav-links {
+    column-gap: 16px;
+  }
+}

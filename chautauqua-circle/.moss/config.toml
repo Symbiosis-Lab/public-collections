@@ -1,0 +1,11 @@
+schema_version = 6
+environment = "production"
+
+[site]
+header = "nav"
+
+[terms.places]
+type = "place"
+fields = ["location"]
+line = false
+title = "Places"
