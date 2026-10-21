@@ -1,0 +1,40 @@
+name: Propose a collection
+description: Suggest a body of work that should stand on the shelf.
+title: "Proposal: "
+labels: ["proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Every proposal is public, and so is every decision. We mark each one with its stage: proposed, checking rights, being made, on the shelf. A work not yet free waits for its Public Domain Day, and a declined proposal says why. For examples, see [the collections in the works](https://github.com/Symbiosis-Lab/public-collections/issues?q=label%3Aproposal).
+  - type: input
+    id: work
+    attributes:
+      label: The work
+      description: A series, a book, a life's work or a movement that holds together as one site.
+    validations:
+      required: true
+  - type: input
+    id: maker
+    attributes:
+      label: Who made it, and when
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it matters
+      description: Tell us why it matters to you.
+    validations:
+      required: true
+  - type: textarea
+    id: where
+    attributes:
+      label: Where to find it
+      description: A library, archive or website that holds good copies. Optional.
+  - type: checkboxes
+    id: credit
+    attributes:
+      label: Credit
+      options:
+        - label: If this is built, credit me as its co-curator.
